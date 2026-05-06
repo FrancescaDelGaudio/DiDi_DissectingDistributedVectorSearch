@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++14 -mavx -mavx2 -msse3  -fopenmp  -O2 -DNDEBUG   CMakeFiles/ELPIS.dir/main.cpp.o  -o ELPIS liblibelpis.a /usr/lib64/libboost_chrono.so /usr/lib64/libboost_timer.so /usr/lib64/libboost_system.so /usr/lib64/libboost_program_options.so 
