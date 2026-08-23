@@ -1,0 +1,2 @@
+/usr/bin/ar qc librdma_anns.a CMakeFiles/rdma_anns.dir/src/anns/anns_param.cc.o CMakeFiles/rdma_anns.dir/src/get_clock.cc.o CMakeFiles/rdma_anns.dir/src/load_data_utils.cc.o CMakeFiles/rdma_anns.dir/src/rdma/ip_config.cc.o CMakeFiles/rdma_anns.dir/src/rdma/rdma_comm.cc.o CMakeFiles/rdma_anns.dir/src/rdma/rdma_context.cc.o CMakeFiles/rdma_anns.dir/src/rdma/rdma_param.cc.o CMakeFiles/rdma_anns.dir/src/rdma/server_connect.cc.o
+/usr/bin/ranlib librdma_anns.a

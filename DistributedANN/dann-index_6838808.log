@@ -1,0 +1,164 @@
+launcher: mpirun -np 4 --host ncpu004:1,ncpu031:1,ncpu032:1,ncpu033:1 --map-by ppr:1:node --bind-to none
+############################################################
+# DistributedANN full indexing pipeline
+#   BASE_PATH : /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs
+#   INDEX_DIR : /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix
+#   nodes=4 ntasks=4 omp=8
+#   K=32 eps=0.2 R=72 m(pq)=16 head_frac=0.05 metric=ip
+############################################################
+
+==================== PREFLIGHT: MPI wireup ====================
+MPI_COMM_WORLD size reported = 4 (expected 4)
+
+==================== STEP 1: clustering ====================
+
+>>> mpirun -np 4 --host ncpu004:1,ncpu031:1,ncpu032:1,ncpu033:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/script/../build_ip/bin/build_index --base_path /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix --K 32 --kmeans_iter 20 --kmeans_tol 1e-4 --epsilon 0.2 --max_replicas 3 --metric ip
+2026-07-07 10:45:48
+[rank 0] Dataset: N=10000000  dim=200  K=32  nranks=4  metric=ip
+[rank 0] Params: epsilon=0.200  max_replicas=3  kmeans_iter=20  tol=0.0001
+[rank 0] Loading 2500000 vectors [0, 2500000)
+[rank 2] Loading 2500000 vectors [5000000, 7500000)
+[rank 3] Loading 2500000 vectors [7500000, 10000000)
+[rank 1] Loading 2500000 vectors [2500000, 5000000)
+[rank 0] All ranks loaded data.
+
+[rank 0] k-means++ initialisation complete (sample size=8000)
+[rank 0]  k-means iter  1/20  max_disp=0.868453
+[rank 0]  k-means iter  2/20  max_disp=0.301204
+[rank 0]  k-means iter  3/20  max_disp=0.204678
+[rank 0]  k-means iter  4/20  max_disp=0.145331
+[rank 0]  k-means iter  5/20  max_disp=0.120382
+[rank 0]  k-means iter  6/20  max_disp=0.128142
+[rank 0]  k-means iter  7/20  max_disp=0.131337
+[rank 0]  k-means iter  8/20  max_disp=0.125784
+[rank 0]  k-means iter  9/20  max_disp=0.106989
+[rank 0]  k-means iter 10/20  max_disp=0.081195
+[rank 0]  k-means iter 11/20  max_disp=0.058045
+[rank 0]  k-means iter 12/20  max_disp=0.043693
+[rank 0]  k-means iter 13/20  max_disp=0.035994
+[rank 0]  k-means iter 14/20  max_disp=0.043772
+[rank 0]  k-means iter 15/20  max_disp=0.053468
+[rank 0]  k-means iter 16/20  max_disp=0.063100
+[rank 0]  k-means iter 17/20  max_disp=0.071559
+[rank 0]  k-means iter 18/20  max_disp=0.072913
+[rank 0]  k-means iter 19/20  max_disp=0.065849
+[rank 0]  k-means iter 20/20  max_disp=0.056063
+[rank 0] k-means done: 20 iters  final_disp=0.056063
+
+[rank 0] Running epsilon-replication (eps=0.200 max_rep=3)...
+[rank 0] Replication done: total=10289129  avg replicas/vec=1.03
+
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix/centroids.fvecs
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix/assignments.bin  (N=10000000  total_assignments=10289129  avg=1.03)
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix/meta.json
+
+[rank 0] === Step 1 complete ===
+
+==================== STEP 2: per-cluster Vamana ====================
+
+>>> mpirun -np 4 --host ncpu004:1,ncpu031:1,ncpu032:1,ncpu033:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/script/../build_ip/bin/build_graph --base_path /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix --R 72 --L 100 --alpha 1.2 --passes 2 --threads 8
+2026-07-07 10:50:24
+[rank 0] Step 2: N=10000000  K=32  dim=200  W=4  metric=ip
+[rank 0] Vamana params: R=72 L=100 alpha=1.20 passes=2
+[rank 0] owns 8 clusters, needs 2709823 vectors
+[rank 2] owns 8 clusters, needs 2730295 vectors
+[rank 1] owns 8 clusters, needs 2645320 vectors
+[rank 3] owns 8 clusters, needs 2147339 vectors
+[rank 0] All ranks loaded cluster vectors.
+[rank 0] built cluster 0: n=178385 medoid_gid=377186 -> cluster_0.graph
+[rank 3] built cluster 3: n=250061 medoid_gid=9615295 -> cluster_3.graph
+[rank 1] built cluster 1: n=283175 medoid_gid=1091648 -> cluster_1.graph
+[rank 2] built cluster 2: n=400343 medoid_gid=6461002 -> cluster_2.graph
+[rank 0] built cluster 4: n=330060 medoid_gid=7820504 -> cluster_4.graph
+[rank 3] built cluster 7: n=375006 medoid_gid=621711 -> cluster_7.graph
+[rank 0] built cluster 8: n=249201 medoid_gid=1021042 -> cluster_8.graph
+[rank 1] built cluster 5: n=429249 medoid_gid=78352 -> cluster_5.graph
+[rank 3] built cluster 11: n=217092 medoid_gid=6667501 -> cluster_11.graph
+[rank 2] built cluster 6: n=392123 medoid_gid=1545768 -> cluster_6.graph
+[rank 3] built cluster 15: n=176915 medoid_gid=2982621 -> cluster_15.graph
+[rank 0] built cluster 12: n=276951 medoid_gid=3699967 -> cluster_12.graph
+[rank 1] built cluster 9: n=269000 medoid_gid=2433855 -> cluster_9.graph
+[rank 2] built cluster 10: n=374756 medoid_gid=2166613 -> cluster_10.graph
+[rank 3] built cluster 19: n=466626 medoid_gid=8307277 -> cluster_19.graph
+[rank 0] built cluster 16: n=464805 medoid_gid=3920835 -> cluster_16.graph
+[rank 1] built cluster 13: n=405097 medoid_gid=4825949 -> cluster_13.graph
+[rank 2] built cluster 14: n=269126 medoid_gid=1912055 -> cluster_14.graph
+[rank 3] built cluster 23: n=194215 medoid_gid=6138011 -> cluster_23.graph
+[rank 3] built cluster 27: n=207369 medoid_gid=931777 -> cluster_27.graph
+[rank 0] built cluster 20: n=360734 medoid_gid=8965653 -> cluster_20.graph
+[rank 1] built cluster 17: n=363325 medoid_gid=7198395 -> cluster_17.graph
+[rank 2] built cluster 18: n=385749 medoid_gid=956824 -> cluster_18.graph
+[rank 3] built cluster 31: n=274940 medoid_gid=8389934 -> cluster_31.graph
+[rank 2] built cluster 22: n=222731 medoid_gid=8130189 -> cluster_22.graph
+[rank 1] built cluster 21: n=336293 medoid_gid=1870487 -> cluster_21.graph
+[rank 0] built cluster 24: n=408771 medoid_gid=9768936 -> cluster_24.graph
+[rank 2] built cluster 26: n=345126 medoid_gid=8855788 -> cluster_26.graph
+[rank 1] built cluster 25: n=302057 medoid_gid=6195780 -> cluster_25.graph
+[rank 0] built cluster 28: n=456633 medoid_gid=7479962 -> cluster_28.graph
+[rank 1] built cluster 29: n=273143 medoid_gid=8599078 -> cluster_29.graph
+[rank 2] built cluster 30: n=350072 medoid_gid=7117255 -> cluster_30.graph
+
+[rank 0] === Step 2 complete ===
+
+==================== STEP 3: global stitching ====================
+
+>>> mpirun -np 4 --host ncpu004:1,ncpu031:1,ncpu032:1,ncpu033:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/script/../build_ip/bin/build_stitch --base_path /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix --R 72 --alpha 1.2
+2026-07-07 11:01:27
+[rank 0] Step 3 (stitching): N=10000000 K=32 dim=200 W=4 R=72 alpha=1.20 metric=ip
+[rank 0] All ranks accumulated neighbour lists.
+[rank 0] clusters read=32  total_edges=34828505  avg_degree=3.5
+[rank 0] replicated nodes (in >1 cluster, merged): 288486 (2.88%)
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix/global_graph.bin
+
+[rank 0] === Step 3 complete ===
+
+==================== STEP 4: PQ ====================
+
+>>> mpirun -np 4 --host ncpu004:1,ncpu031:1,ncpu032:1,ncpu033:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/script/../build_ip/bin/build_pq --base_path /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix --m 16 --train_size 100000 --iters 25
+2026-07-07 11:01:31
+[rank 0] Step 4 (PQ): N=10000000 dim=200 m=16 ksub=256 -> code=16 bytes metric=ip
+[rank 0] train_size=100000 iters=25
+[rank 0] Training PQ on 100000 vectors...
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix/pq_codebook.bin
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix/codes.bin (10000000 codes x 16 bytes)
+
+[rank 0] === Step 4 complete ===
+
+==================== STEP 5: head index ====================
+
+>>> mpirun -np 4 --host ncpu004:1,ncpu031:1,ncpu032:1,ncpu033:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/script/../build_ip/bin/build_head --base_path /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix --head_frac 0.05 --M 16 --efc 200 --method random
+2026-07-07 11:01:47
+[rank 0] Step 5 (head index): N=10000000 K=32 dim=200 W=4 metric=ip
+[rank 0] head_frac=0.050 -> C~=500000  method=random  M=16 efC=200
+[rank 2] collected 137001 head representatives
+[rank 3] collected 108111 head representatives
+[rank 1] collected 133067 head representatives
+[rank 0] collected 136278 head representatives
+[rank 0] Building HNSW head index over 514457 vectors...
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix/head/head.hnsw (514457 vectors)
+
+[rank 0] === Step 5 complete ===
+
+==================== STEP 6: KV store ====================
+
+>>> mpirun -np 4 --host ncpu004:1,ncpu031:1,ncpu032:1,ncpu033:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/script/../build_ip/bin/build_kvstore --base_path /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix
+2026-07-07 11:02:20
+[rank 0] Step 6 (KV store): N=10000000 dim=200 R=72 m=16 total_edges=34828505
+[rank 0] All ranks assembled node records.
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix/nodes.bin
+
+[rank 0] === Step 6 complete ===
+
+############################################################
+# INDEXING COMPLETE — artifacts in /gpfs/scratch/delgaudio/dann/index_tti10m_k32_ipfix
+total 5.8G
+-rw-r--r-- 1 delgaudio exter  78M Jul  7 10:50 assignments.bin
+-rw-r--r-- 1 delgaudio exter  26K Jul  7 10:50 centroids.fvecs
+drwxr-xr-x 2 delgaudio exter 4.0K Jul  7 11:01 clusters
+-rw-r--r-- 1 delgaudio exter 153M Jul  7 11:01 codes.bin
+-rw-r--r-- 1 delgaudio exter 210M Jul  7 11:01 global_graph.bin
+drwxr-xr-x 2 delgaudio exter 4.0K Jul  7 11:02 head
+-rw-r--r-- 1 delgaudio exter  304 Jul  7 10:50 meta.json
+-rw-r--r-- 1 delgaudio exter 8.2G Jul  7 11:02 nodes.bin
+-rw-r--r-- 1 delgaudio exter 201K Jul  7 11:01 pq_codebook.bin
+############################################################

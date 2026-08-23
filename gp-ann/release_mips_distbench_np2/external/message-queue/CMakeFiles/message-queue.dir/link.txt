@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmessage-queue.a "CMakeFiles/message-queue.dir/src/queue.cpp.o" "CMakeFiles/message-queue.dir/src/buffered_queue.cpp.o" "CMakeFiles/message-queue.dir/src/datatype.cpp.o" "CMakeFiles/message-queue.dir/src/debug_print.cpp.o" "CMakeFiles/message-queue.dir/src/concepts.cpp.o" "CMakeFiles/message-queue.dir/src/aggregators.cpp.o" "CMakeFiles/message-queue.dir/src/definitions.cpp.o" "CMakeFiles/message-queue.dir/src/indirection.cpp.o"
+/usr/bin/ranlib libmessage-queue.a

@@ -1,0 +1,1 @@
+/softs/gcc/10.3.0/bin/c++  -O2 -DNDEBUG  -L/softs/openmpi/gcc-10.3.0/4.1.1/lib CMakeFiles/build_head.dir/src/build_head.cpp.o  -o bin/build_head -Wl,-rpath -Wl,/softs/openmpi/gcc-10.3.0/4.1.1/lib -Wl,--enable-new-dtags -pthread /gpfs/softs/openmpi/gcc-10.3.0/4.1.1/lib/libmpi.so /gpfs/softs/gcc/10.3.0/lib64/libgomp.so /lib64/libpthread.so 

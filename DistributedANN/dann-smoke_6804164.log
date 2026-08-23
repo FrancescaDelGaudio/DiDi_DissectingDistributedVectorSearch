@@ -1,0 +1,14 @@
+launcher: mpirun -np 2 --host ncpu019:1,ncpu031:1 --map-by ppr:1:node --bind-to none
+############################################################
+# DistributedANN full indexing pipeline
+#   BASE_PATH : /gpfs/scratch/delgaudio/dann/test/base_1m.fvecs
+#   INDEX_DIR : /gpfs/scratch/delgaudio/dann/index_smoke_1m
+#   nodes=2 ntasks=2 omp=8
+#   K=16 eps=0.2 R=72 m(pq)=16 head_frac=0.05
+############################################################
+
+==================== PREFLIGHT: MPI wireup ====================
+MPI_COMM_WORLD size reported = 1 (expected 2)
+FATAL: MPI wireup failed (world size 1 != 2 tasks).
+       The pipeline would run as isolated singletons (non-distributed).
+       Re-submit (often a transient/node-specific OOB failure).

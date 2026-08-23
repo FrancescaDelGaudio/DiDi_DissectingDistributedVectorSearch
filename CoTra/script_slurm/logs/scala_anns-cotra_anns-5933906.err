@@ -1,0 +1,71 @@
+[machine 0] rdma qp connect: 16 threads serial ibv_modify_qp
+[machine 0] ctx->connect thread 1/16
+[machine 3] rdma qp connect: 16 threads serial ibv_modify_qp
+[machine 3] ctx->connect thread 1/16
+[machine 1] rdma qp connect: 16 threads serial ibv_modify_qp
+[machine 1] ctx->connect thread 1/16
+[machine 2] rdma qp connect: 16 threads serial ibv_modify_qp
+[machine 2] ctx->connect thread 1/16
+[machine 0] ctx->connect thread 2/16
+[machine 3] ctx->connect thread 2/16
+[machine 2] ctx->connect thread 2/16
+[machine 0] ctx->connect thread 3/16
+[machine 1] ctx->connect thread 2/16
+[machine 3] ctx->connect thread 3/16
+[machine 2] ctx->connect thread 3/16
+[machine 0] ctx->connect thread 4/16
+[machine 1] ctx->connect thread 3/16
+[machine 3] ctx->connect thread 4/16
+[machine 2] ctx->connect thread 4/16
+[machine 0] ctx->connect thread 5/16
+[machine 1] ctx->connect thread 4/16
+[machine 3] ctx->connect thread 5/16
+[machine 2] ctx->connect thread 5/16
+[machine 0] ctx->connect thread 6/16
+[machine 1] ctx->connect thread 5/16
+[machine 3] ctx->connect thread 6/16
+[machine 2] ctx->connect thread 6/16
+[machine 0] ctx->connect thread 7/16
+[machine 1] ctx->connect thread 6/16
+[machine 3] ctx->connect thread 7/16
+[machine 2] ctx->connect thread 7/16
+[machine 0] ctx->connect thread 8/16
+[machine 1] ctx->connect thread 7/16
+[machine 3] ctx->connect thread 8/16
+[machine 2] ctx->connect thread 8/16
+[machine 0] ctx->connect thread 9/16
+[machine 1] ctx->connect thread 8/16
+[machine 3] ctx->connect thread 9/16
+[machine 2] ctx->connect thread 9/16
+[machine 0] ctx->connect thread 10/16
+[machine 1] ctx->connect thread 9/16
+[machine 3] ctx->connect thread 10/16
+[machine 2] ctx->connect thread 10/16
+[machine 0] ctx->connect thread 11/16
+[machine 1] ctx->connect thread 10/16
+[machine 3] ctx->connect thread 11/16
+[machine 2] ctx->connect thread 11/16
+[machine 0] ctx->connect thread 12/16
+[machine 1] ctx->connect thread 11/16
+[machine 3] ctx->connect thread 12/16
+[machine 2] ctx->connect thread 12/16
+[machine 0] ctx->connect thread 13/16
+[machine 1] ctx->connect thread 12/16
+[machine 3] ctx->connect thread 13/16
+[machine 2] ctx->connect thread 13/16
+[machine 0] ctx->connect thread 14/16
+[machine 1] ctx->connect thread 13/16
+[machine 3] ctx->connect thread 14/16
+[machine 2] ctx->connect thread 14/16
+[machine 0] ctx->connect thread 15/16
+[machine 1] ctx->connect thread 14/16
+[machine 3] ctx->connect thread 15/16
+[machine 2] ctx->connect thread 15/16
+[machine 0] ctx->connect thread 16/16
+[machine 1] ctx->connect thread 15/16
+[machine 3] ctx->connect thread 16/16
+[machine 2] ctx->connect thread 16/16
+[machine 1] ctx->connect thread 16/16
+srun: Job step aborted: Waiting up to 202 seconds for job step to finish.
+slurmstepd: error: *** STEP 5933906.1 ON ncpum001 CANCELLED AT 2026-06-17T04:58:25 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 5933906 ON ncpum001 CANCELLED AT 2026-06-17T04:58:25 DUE TO TIME LIMIT ***

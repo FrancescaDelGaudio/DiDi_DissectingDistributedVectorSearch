@@ -1,0 +1,13 @@
+==== setup_cluster start 2026-06-11T12:11:14+02:00 job=5923339 ====
+==== CoTra cluster conf generated ====
+CONF_FILE=/gpfs/users/delgaudio/exp_eval/CoTra/script_slurm/runtime/cluster-job5923339.conf
+Leader (machine 0): ncpum011
+Nodes (4): ncpum011 ncpum012 ncpum013 ncpum014
+--- conf contents ---
+ncpum011
+2378
+ncpum011=0
+ncpum012=1
+ncpum013=2
+ncpum014=3
+---------------------

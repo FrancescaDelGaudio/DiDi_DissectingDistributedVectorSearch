@@ -1,0 +1,10 @@
+/gpfs/users/delgaudio/exp_eval/DistributedANN/build_ip/CMakeFiles/edit_cache.dir
+/gpfs/users/delgaudio/exp_eval/DistributedANN/build_ip/CMakeFiles/mpi_size_test.dir
+/gpfs/users/delgaudio/exp_eval/DistributedANN/build_ip/CMakeFiles/build_kvstore.dir
+/gpfs/users/delgaudio/exp_eval/DistributedANN/build_ip/CMakeFiles/build_head.dir
+/gpfs/users/delgaudio/exp_eval/DistributedANN/build_ip/CMakeFiles/build_pq.dir
+/gpfs/users/delgaudio/exp_eval/DistributedANN/build_ip/CMakeFiles/rebuild_cache.dir
+/gpfs/users/delgaudio/exp_eval/DistributedANN/build_ip/CMakeFiles/build_stitch.dir
+/gpfs/users/delgaudio/exp_eval/DistributedANN/build_ip/CMakeFiles/build_graph.dir
+/gpfs/users/delgaudio/exp_eval/DistributedANN/build_ip/CMakeFiles/run_query.dir
+/gpfs/users/delgaudio/exp_eval/DistributedANN/build_ip/CMakeFiles/build_index.dir

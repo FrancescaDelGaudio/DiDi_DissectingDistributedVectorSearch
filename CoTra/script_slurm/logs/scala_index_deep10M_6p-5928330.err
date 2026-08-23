@@ -1,0 +1,97 @@
+poll_send: Completion with error at client
+  Failed status 12: qid 4 buff 0 syndrom 0x81
+poll_recv: Completion with error at client
+  Failed status 5: machine 5 true_wr_id 0 syndrom 0xf4
+poll_recv: Completion with error at client
+  Failed status 5: machine 5 true_wr_id 61 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 4 true_wr_id 61 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 1 true_wr_id 61 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 2 true_wr_id 61 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 5 true_wr_id 125 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 4 true_wr_id 125 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 1 true_wr_id 125 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 2 true_wr_id 125 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 5 true_wr_id 189 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 4 true_wr_id 189 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 1 true_wr_id 189 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 2 true_wr_id 189 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 5 true_wr_id 253 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 4 true_wr_id 253 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 1 true_wr_id 253 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 2 true_wr_id 253 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 5 true_wr_id 317 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 4 true_wr_id 317 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 1 true_wr_id 317 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 5 true_wr_id 381 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 4 true_wr_id 381 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 2 true_wr_id 317 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 5 true_wr_id 445 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 1 true_wr_id 381 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 4 true_wr_id 445 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 2 true_wr_id 381 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 5 true_wr_id 509 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 1 true_wr_id 446 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 4 true_wr_id 510 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 1 true_wr_id 511 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 2 true_wr_id 448 syndrom 0xf9
+poll_send: Completion with error at client
+  Failed status 5: qid 1 buff 1 syndrom 0xf9
+poll_send: Completion with error at client
+  Failed status 5: qid 5 buff 1 syndrom 0xf9
+poll_send: Completion with error at client
+  Failed status 5: qid 4 buff 1 syndrom 0xf9
+poll_send: Completion with error at client
+  Failed status 5: qid 2 buff 1 syndrom 0xf9
+poll_send: Completion with error at client
+  Failed status 12: qid 3 buff 1 syndrom 0x81
+poll_recv: Completion with error at client
+  Failed status 5: machine 3 true_wr_id 0 syndrom 0xf4
+poll_recv: Completion with error at client
+  Failed status 5: machine 3 true_wr_id 1 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 3 true_wr_id 65 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 3 true_wr_id 129 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 3 true_wr_id 193 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 3 true_wr_id 257 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 3 true_wr_id 321 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 3 true_wr_id 385 syndrom 0xf9
+poll_recv: Completion with error at client
+  Failed status 5: machine 3 true_wr_id 449 syndrom 0xf9
+srun: Job step aborted: Waiting up to 202 seconds for job step to finish.
+slurmstepd: error: *** STEP 5928330.1 ON ncpum003 CANCELLED AT 2026-06-13T11:55:18 ***
+slurmstepd: error: *** JOB 5928330 ON ncpum003 CANCELLED AT 2026-06-13T11:55:18 ***

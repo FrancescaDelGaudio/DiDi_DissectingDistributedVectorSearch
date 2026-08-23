@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblibspac.a  CMakeFiles/libspac.dir/lib/spac/spac.cpp.o
+/usr/bin/ranlib liblibspac.a

@@ -1,0 +1,55 @@
+[1;33mMode: Group   [0m
+[1;31mset warmupSearchListSize to k[0m
+sub_nlist: 49 sub_nprobe: 49
+Added optimization levels: 0
+[1;33m[dim:96, nb:10000000, nq:10000, k:100, worker:4][0m
+Faiss time file /gpfs/scratch/delgaudio/vectors/DEEP/result/faiss_result_nlist_4096.txt does not exist
+Loading groundtruth file /gpfs/scratch/delgaudio/vectors/DEEP/result/groundtruth_100.bin
+Groundtruth file loaded
+Iteration 1 of 20
+Iteration 2 of 20
+Iteration 3 of 20
+Iteration 4 of 20
+Iteration 5 of 20
+Iteration 6 of 20
+Iteration 7 of 20
+Iteration 8 of 20
+Iteration 9 of 20
+Iteration 10 of 20
+Iteration 11 of 20
+Iteration 12 of 20
+Iteration 13 of 20
+Iteration 14 of 20
+Iteration 15 of 20
+Iteration 16 of 20
+Iteration 17 of 20
+Iteration 18 of 20
+Iteration 19 of 20
+Iteration 20 of 20
+train elapsed: 20.43s
+nearest search elapsed: 15.1987s
+sort and add elapsed: 4.05395s
+build: 100.00%
+train: -nan%    add: -nan%    search: -nan%    total: 0.00
+Recall    SUBNN_IP top5: 0.00%    topk: 0.00%    SUBNN_L2 top5: 0.00%    topk: 0.00%    49/49
+build: 100.0%
+train: 0.00   add: 0.00    search: 0.00    total: 0.00
+add elapsed: 19.53s
+Index trained
+Index saved to /gpfs/scratch/delgaudio/vectors/DEEP/index/index_nlist_4096_opt_0_subNprobeRatio_1.index
+[1;32mInitInfo: [d:96, nlist:3162, nprobe:32, worker:4, block_dim:48, nb:10000000, presume:0GB, groupCount:2, teamCount:2, teamSize:2, startIVFId:0, ivfCount:1581, teamId:1, rankInsideTeam:1][0m
+[1;32mInitInfo: [d:96, nlist:3162, nprobe:32, worker:4, block_dim:48, nb:10000000, presume:0GB, groupCount:2, teamCount:2, teamSize:2, startIVFId:0, ivfCount:1581, teamId:1, rankInsideTeam:2][0m
+[1;32mInitInfo: [d:96, nlist:3162, nprobe:32, worker:4, block_dim:48, nb:10000000, presume:0GB, groupCount:2, teamCount:2, teamSize:2, startIVFId:1581, ivfCount:1581, teamId:2, rankInsideTeam:1][0m
+[1;32mInitInfo: [d:96, nlist:3162, nprobe:32, worker:4, block_dim:48, nb:10000000, presume:0GB, groupCount:2, teamCount:2, teamSize:2, startIVFId:1581, ivfCount:1581, teamId:2, rankInsideTeam:2][0m
+preSearch 7.742158556
+[1;34mGroup version of search[0m
+[1;33mIndex:[d:96,nlist:3162,nprobe:32,node:4]
+[1;32m[warmupSearchList 10, warmupSearchListSize 100][0m
+nprobe:32 opt_level: 0 simi_ratio: 1
+time_speedup: 0.00% pruning_speedup: 0.00% faiss_query_time: 0.000000 query_time: 3.371553
+recall: 0.9496939778327942 r2: 0.004394054412841797
+[1;36mreturn worker:2[0m
+[1;36mreturn worker:4[0m
+[1;36mreturn worker:3[0m
+[1;36mreturn worker:1[0m
+[1;36mreturn worker:0[0m

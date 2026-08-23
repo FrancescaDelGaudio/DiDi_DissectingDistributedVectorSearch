@@ -1,0 +1,5 @@
+srun: error: ncpum001: task 0: Aborted (core dumped)
+srun: launch/slurm: _step_signal: Terminating StepId=5924555.0
+srun: error: ncpum005: task 2: Aborted (core dumped)
+srun: error: ncpum002: task 1: Aborted (core dumped)
+srun: error: ncpum006: task 3: Aborted (core dumped)

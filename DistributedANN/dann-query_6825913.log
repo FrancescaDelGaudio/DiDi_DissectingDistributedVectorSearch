@@ -1,0 +1,28 @@
+=== DistributedANN query (distributed) ===
+jobid       : 6825913
+nodes       : ncpu[019,032]
+ntasks      : 2  omp=8
+launcher    : mpirun -np 2 --host ncpu019:1,ncpu032:1 --map-by ppr:1:node --bind-to none
+INDEX_DIR   : /gpfs/scratch/delgaudio/dann/index_smoke_1m
+QUERY_PATH  : /gpfs/scratch/delgaudio/vectors/DEEP/query.public.10K.fbin
+GT_PATH     : /gpfs/scratch/delgaudio/dann/test/gt_1m_100q_k10.bin
+k=10 L=200 BW=128 H=5 k_head=100 ef_head=200
+num_queries : 100  warmup=5
+==========================================
+
+=== PREFLIGHT: MPI wireup ===
+MPI_COMM_WORLD size = 2 (expected 2)
+
+=== QUERY RUN ===
+[rank 0] KV shard loaded: N=1000000 dim=96 m=16 W=2 owned=500000
+[rank 0] Query answering: W=2  N=1000000  dim=96
+[rank 0] params: k=10 L=200 BW=128 H=5 k_head=100 ef_head=200
+[rank 0] queries=10000  gt=/gpfs/scratch/delgaudio/dann/test/gt_1m_100q_k10.bin
+
+[rank 0] === Query results ===
+  queries     : 100
+  latency avg : 1.180 ms
+  QPS         : 847.7
+  nodes/hop avg: 292.6
+  recall@10   : 0.9580
+[rank 0] === Done ===

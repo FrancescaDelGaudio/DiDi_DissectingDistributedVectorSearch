@@ -1,0 +1,644 @@
+launcher: mpirun -np 4 --host ncpu030:1,ncpu035:1,ncpu036:1,ncpu040:1 --map-by ppr:1:node --bind-to none
+############################################################
+# DistributedANN full indexing pipeline
+#   BASE_PATH : /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs
+#   INDEX_DIR : /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k
+#   nodes=4 ntasks=4 omp=8
+#   K=512 eps=0.2 replica_r=10000 R=72 m(pq)=16 head_frac=0.05 metric=ip
+############################################################
+
+==================== PREFLIGHT: MPI wireup ====================
+MPI_COMM_WORLD size reported = 4 (expected 4)
+
+==================== STEP 1: clustering ====================
+
+>>> mpirun -np 4 --host ncpu030:1,ncpu035:1,ncpu036:1,ncpu040:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/script/../build_ip/bin/build_index --base_path /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k --K 512 --kmeans_iter 20 --kmeans_tol 1e-4 --epsilon 0.2 --max_replicas 3 --replica_r 10000 --metric ip
+2026-07-09 13:11:24
+[rank 0] Dataset: N=10000000  dim=200  K=512  nranks=4  metric=ip
+[rank 0] Params: epsilon=0.200  max_replicas=3  replica_r=10000  kmeans_iter=20  tol=0.0001
+[rank 0] Loading 2500000 vectors [0, 2500000)
+[rank 2] Loading 2500000 vectors [5000000, 7500000)
+[rank 1] Loading 2500000 vectors [2500000, 5000000)
+[rank 3] Loading 2500000 vectors [7500000, 10000000)
+[rank 0] All ranks loaded data.
+
+[rank 0] k-means++ initialisation complete (sample size=8000)
+[rank 0]  k-means iter  1/20  max_disp=0.783514
+[rank 0]  k-means iter  2/20  max_disp=0.377133
+[rank 0]  k-means iter  3/20  max_disp=0.337864
+[rank 0]  k-means iter  4/20  max_disp=0.261844
+[rank 0]  k-means iter  5/20  max_disp=0.264910
+[rank 0]  k-means iter  6/20  max_disp=0.224851
+[rank 0]  k-means iter  7/20  max_disp=0.139779
+[rank 0]  k-means iter  8/20  max_disp=0.187350
+[rank 0]  k-means iter  9/20  max_disp=0.153159
+[rank 0]  k-means iter 10/20  max_disp=0.136965
+[rank 0]  k-means iter 11/20  max_disp=0.118906
+[rank 0]  k-means iter 12/20  max_disp=0.124688
+[rank 0]  k-means iter 13/20  max_disp=0.085157
+[rank 0]  k-means iter 14/20  max_disp=0.101835
+[rank 0]  k-means iter 15/20  max_disp=0.106756
+[rank 0]  k-means iter 16/20  max_disp=0.098647
+[rank 0]  k-means iter 17/20  max_disp=0.095535
+[rank 0]  k-means iter 18/20  max_disp=0.088638
+[rank 0]  k-means iter 19/20  max_disp=0.103579
+[rank 0]  k-means iter 20/20  max_disp=0.117756
+[rank 0] k-means done: 20 iters  final_disp=0.117756
+
+[rank 0] Running Pyramid top-r MIPS replication (r=10000 per centroid)...
+[rank 0] Replication done: total=10895438  avg replicas/vec=1.09
+
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k/centroids.fvecs
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k/assignments.bin  (N=10000000  total_assignments=10895438  avg=1.09)
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k/meta.json
+
+[rank 0] === Step 1 complete ===
+
+==================== STEP 2: per-cluster Vamana ====================
+
+>>> mpirun -np 4 --host ncpu030:1,ncpu035:1,ncpu036:1,ncpu040:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/script/../build_ip/bin/build_graph --base_path /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k --R 72 --L 100 --alpha 1.2 --passes 2 --threads 8
+2026-07-09 14:26:21
+[rank 0] Step 2: N=10000000  K=512  dim=200  W=4  metric=ip
+[rank 0] Vamana params: R=72 L=100 alpha=1.20 passes=2
+[rank 2] owns 128 clusters, needs 2571647 vectors
+[rank 3] owns 128 clusters, needs 2703568 vectors
+[rank 1] owns 128 clusters, needs 2838989 vectors
+[rank 0] owns 128 clusters, needs 2550687 vectors
+[rank 0] All ranks loaded cluster vectors.
+[rank 2] built cluster 2: n=20514 medoid_gid=4696913 -> cluster_2.graph
+[rank 1] built cluster 1: n=21939 medoid_gid=7570317 -> cluster_1.graph
+[rank 0] built cluster 0: n=16178 medoid_gid=1622028 -> cluster_0.graph
+[rank 3] built cluster 3: n=28650 medoid_gid=9217937 -> cluster_3.graph
+[rank 2] built cluster 6: n=15809 medoid_gid=4392242 -> cluster_6.graph
+[rank 3] built cluster 7: n=19142 medoid_gid=2131330 -> cluster_7.graph
+[rank 0] built cluster 4: n=22845 medoid_gid=5887321 -> cluster_4.graph
+[rank 2] built cluster 10: n=20704 medoid_gid=7619943 -> cluster_10.graph
+[rank 1] built cluster 5: n=35039 medoid_gid=5582486 -> cluster_5.graph
+[rank 3] built cluster 11: n=24105 medoid_gid=9023295 -> cluster_11.graph
+[rank 2] built cluster 14: n=22596 medoid_gid=3260450 -> cluster_14.graph
+[rank 1] built cluster 9: n=19355 medoid_gid=9621987 -> cluster_9.graph
+[rank 3] built cluster 15: n=15921 medoid_gid=6546244 -> cluster_15.graph
+[rank 0] built cluster 8: n=27859 medoid_gid=4450971 -> cluster_8.graph
+[rank 2] built cluster 18: n=13568 medoid_gid=3796526 -> cluster_18.graph
+[rank 3] built cluster 19: n=13081 medoid_gid=9848915 -> cluster_19.graph
+[rank 0] built cluster 12: n=19419 medoid_gid=8220524 -> cluster_12.graph
+[rank 3] built cluster 23: n=22058 medoid_gid=9534561 -> cluster_23.graph
+[rank 2] built cluster 22: n=30937 medoid_gid=3693950 -> cluster_22.graph
+[rank 0] built cluster 16: n=17906 medoid_gid=4164535 -> cluster_16.graph
+[rank 3] built cluster 27: n=18566 medoid_gid=5185915 -> cluster_27.graph
+[rank 0] built cluster 20: n=13753 medoid_gid=8800308 -> cluster_20.graph
+[rank 3] built cluster 31: n=20263 medoid_gid=1856892 -> cluster_31.graph
+[rank 0] built cluster 24: n=19914 medoid_gid=690104 -> cluster_24.graph
+[rank 2] built cluster 26: n=31929 medoid_gid=2848657 -> cluster_26.graph
+[rank 2] built cluster 30: n=16911 medoid_gid=8222520 -> cluster_30.graph
+[rank 3] built cluster 35: n=22101 medoid_gid=8349151 -> cluster_35.graph
+[rank 2] built cluster 34: n=16842 medoid_gid=3700497 -> cluster_34.graph
+[rank 3] built cluster 39: n=20580 medoid_gid=1642059 -> cluster_39.graph
+[rank 2] built cluster 38: n=22798 medoid_gid=9350298 -> cluster_38.graph
+[rank 1] built cluster 13: n=94633 medoid_gid=33305 -> cluster_13.graph
+[rank 3] built cluster 43: n=24574 medoid_gid=4023853 -> cluster_43.graph
+[rank 0] built cluster 28: n=45615 medoid_gid=3770970 -> cluster_28.graph
+[rank 2] built cluster 42: n=21989 medoid_gid=6358925 -> cluster_42.graph
+[rank 3] built cluster 47: n=15529 medoid_gid=8613717 -> cluster_47.graph
+[rank 0] built cluster 32: n=14507 medoid_gid=2029785 -> cluster_32.graph
+[rank 3] built cluster 51: n=15855 medoid_gid=6552707 -> cluster_51.graph
+[rank 2] built cluster 46: n=18789 medoid_gid=1251835 -> cluster_46.graph
+[rank 2] built cluster 50: n=18822 medoid_gid=9806907 -> cluster_50.graph
+[rank 0] built cluster 36: n=22667 medoid_gid=3479017 -> cluster_36.graph
+[rank 3] built cluster 55: n=25709 medoid_gid=5955077 -> cluster_55.graph
+[rank 2] built cluster 54: n=17332 medoid_gid=4585935 -> cluster_54.graph
+[rank 0] built cluster 40: n=19029 medoid_gid=9945969 -> cluster_40.graph
+[rank 0] built cluster 44: n=13476 medoid_gid=8618367 -> cluster_44.graph
+[rank 1] built cluster 17: n=62614 medoid_gid=8490440 -> cluster_17.graph
+[rank 3] built cluster 59: n=26998 medoid_gid=4491484 -> cluster_59.graph
+[rank 2] built cluster 58: n=26814 medoid_gid=42830 -> cluster_58.graph
+[rank 0] built cluster 48: n=19506 medoid_gid=9730035 -> cluster_48.graph
+[rank 3] built cluster 63: n=17065 medoid_gid=5892597 -> cluster_63.graph
+[rank 1] built cluster 21: n=22372 medoid_gid=6833506 -> cluster_21.graph
+[rank 2] built cluster 62: n=16147 medoid_gid=2682652 -> cluster_62.graph
+[rank 3] built cluster 67: n=18153 medoid_gid=8954791 -> cluster_67.graph
+[rank 3] built cluster 71: n=14889 medoid_gid=5462012 -> cluster_71.graph
+[rank 0] built cluster 52: n=24752 medoid_gid=9256644 -> cluster_52.graph
+[rank 1] built cluster 25: n=23431 medoid_gid=9278838 -> cluster_25.graph
+[rank 2] built cluster 66: n=29121 medoid_gid=7641368 -> cluster_66.graph
+[rank 3] built cluster 75: n=25794 medoid_gid=5442777 -> cluster_75.graph
+[rank 1] built cluster 29: n=20512 medoid_gid=9461469 -> cluster_29.graph
+[rank 2] built cluster 70: n=21405 medoid_gid=8006553 -> cluster_70.graph
+[rank 0] built cluster 56: n=21558 medoid_gid=594328 -> cluster_56.graph
+[rank 2] built cluster 74: n=15658 medoid_gid=4446206 -> cluster_74.graph
+[rank 1] built cluster 33: n=17423 medoid_gid=2134821 -> cluster_33.graph
+[rank 2] built cluster 78: n=12901 medoid_gid=487704 -> cluster_78.graph
+[rank 3] built cluster 79: n=30105 medoid_gid=7418932 -> cluster_79.graph
+[rank 1] built cluster 37: n=22122 medoid_gid=6440327 -> cluster_37.graph
+[rank 0] built cluster 60: n=26484 medoid_gid=2048468 -> cluster_60.graph
+[rank 2] built cluster 82: n=17601 medoid_gid=943574 -> cluster_82.graph
+[rank 3] built cluster 83: n=17686 medoid_gid=4386355 -> cluster_83.graph
+[rank 2] built cluster 86: n=14015 medoid_gid=3590146 -> cluster_86.graph
+[rank 3] built cluster 87: n=24691 medoid_gid=4671895 -> cluster_87.graph
+[rank 1] built cluster 41: n=30611 medoid_gid=4441961 -> cluster_41.graph
+[rank 2] built cluster 90: n=28338 medoid_gid=5232389 -> cluster_90.graph
+[rank 3] built cluster 91: n=17091 medoid_gid=7405228 -> cluster_91.graph
+[rank 0] built cluster 64: n=33080 medoid_gid=4806245 -> cluster_64.graph
+[rank 2] built cluster 94: n=14062 medoid_gid=7445857 -> cluster_94.graph
+[rank 1] built cluster 45: n=20111 medoid_gid=7125620 -> cluster_45.graph
+[rank 3] built cluster 95: n=15274 medoid_gid=6353864 -> cluster_95.graph
+[rank 1] built cluster 49: n=14547 medoid_gid=6670201 -> cluster_49.graph
+[rank 2] built cluster 98: n=19231 medoid_gid=8411248 -> cluster_98.graph
+[rank 3] built cluster 99: n=19402 medoid_gid=7116138 -> cluster_99.graph
+[rank 0] built cluster 68: n=22247 medoid_gid=5673369 -> cluster_68.graph
+[rank 1] built cluster 53: n=20456 medoid_gid=6138718 -> cluster_53.graph
+[rank 0] built cluster 72: n=14517 medoid_gid=526198 -> cluster_72.graph
+[rank 3] built cluster 103: n=19500 medoid_gid=2515022 -> cluster_103.graph
+[rank 2] built cluster 102: n=20608 medoid_gid=5894245 -> cluster_102.graph
+[rank 1] built cluster 57: n=16028 medoid_gid=3052134 -> cluster_57.graph
+[rank 2] built cluster 106: n=14036 medoid_gid=7988514 -> cluster_106.graph
+[rank 0] built cluster 76: n=25248 medoid_gid=1951344 -> cluster_76.graph
+[rank 2] built cluster 110: n=19101 medoid_gid=6807782 -> cluster_110.graph
+[rank 1] built cluster 61: n=24718 medoid_gid=8922751 -> cluster_61.graph
+[rank 3] built cluster 107: n=26781 medoid_gid=3449669 -> cluster_107.graph
+[rank 0] built cluster 80: n=11076 medoid_gid=5359121 -> cluster_80.graph
+[rank 3] built cluster 111: n=11964 medoid_gid=6225013 -> cluster_111.graph
+[rank 2] built cluster 114: n=19284 medoid_gid=9473908 -> cluster_114.graph
+[rank 1] built cluster 65: n=20619 medoid_gid=8929769 -> cluster_65.graph
+[rank 3] built cluster 115: n=16928 medoid_gid=3067210 -> cluster_115.graph
+[rank 0] built cluster 84: n=19017 medoid_gid=8341009 -> cluster_84.graph
+[rank 1] built cluster 69: n=23887 medoid_gid=7095281 -> cluster_69.graph
+[rank 2] built cluster 118: n=22721 medoid_gid=749754 -> cluster_118.graph
+[rank 3] built cluster 119: n=22278 medoid_gid=5800931 -> cluster_119.graph
+[rank 0] built cluster 88: n=23090 medoid_gid=4819042 -> cluster_88.graph
+[rank 2] built cluster 122: n=18022 medoid_gid=9866557 -> cluster_122.graph
+[rank 1] built cluster 73: n=20566 medoid_gid=6092181 -> cluster_73.graph
+[rank 3] built cluster 123: n=20173 medoid_gid=1888541 -> cluster_123.graph
+[rank 0] built cluster 92: n=14750 medoid_gid=5169016 -> cluster_92.graph
+[rank 1] built cluster 77: n=11824 medoid_gid=2129552 -> cluster_77.graph
+[rank 2] built cluster 126: n=21159 medoid_gid=6810934 -> cluster_126.graph
+[rank 0] built cluster 96: n=17696 medoid_gid=6544491 -> cluster_96.graph
+[rank 3] built cluster 127: n=32616 medoid_gid=1288892 -> cluster_127.graph
+[rank 2] built cluster 130: n=20562 medoid_gid=108580 -> cluster_130.graph
+[rank 0] built cluster 100: n=24998 medoid_gid=1010621 -> cluster_100.graph
+[rank 3] built cluster 131: n=16652 medoid_gid=1058899 -> cluster_131.graph
+[rank 3] built cluster 135: n=20841 medoid_gid=4448512 -> cluster_135.graph
+[rank 2] built cluster 134: n=30874 medoid_gid=1144060 -> cluster_134.graph
+[rank 0] built cluster 104: n=28313 medoid_gid=3776995 -> cluster_104.graph
+[rank 1] built cluster 81: n=64079 medoid_gid=1174443 -> cluster_81.graph
+[rank 2] built cluster 138: n=15819 medoid_gid=1384486 -> cluster_138.graph
+[rank 0] built cluster 108: n=16538 medoid_gid=1270108 -> cluster_108.graph
+[rank 3] built cluster 139: n=24934 medoid_gid=9262362 -> cluster_139.graph
+[rank 1] built cluster 85: n=21287 medoid_gid=464080 -> cluster_85.graph
+[rank 0] built cluster 112: n=20248 medoid_gid=4827890 -> cluster_112.graph
+[rank 3] built cluster 143: n=19956 medoid_gid=1895293 -> cluster_143.graph
+[rank 1] built cluster 89: n=20008 medoid_gid=3367011 -> cluster_89.graph
+[rank 2] built cluster 142: n=34999 medoid_gid=5489109 -> cluster_142.graph
+[rank 1] built cluster 93: n=13675 medoid_gid=7832409 -> cluster_93.graph
+[rank 3] built cluster 147: n=22331 medoid_gid=9214633 -> cluster_147.graph
+[rank 0] built cluster 116: n=25754 medoid_gid=3748796 -> cluster_116.graph
+[rank 2] built cluster 146: n=21364 medoid_gid=2060823 -> cluster_146.graph
+[rank 2] built cluster 150: n=12662 medoid_gid=2332495 -> cluster_150.graph
+[rank 1] built cluster 97: n=25110 medoid_gid=5841976 -> cluster_97.graph
+[rank 0] built cluster 120: n=17874 medoid_gid=4641549 -> cluster_120.graph
+[rank 3] built cluster 151: n=34336 medoid_gid=3942697 -> cluster_151.graph
+[rank 2] built cluster 154: n=20837 medoid_gid=9946567 -> cluster_154.graph
+[rank 0] built cluster 124: n=21605 medoid_gid=4153684 -> cluster_124.graph
+[rank 3] built cluster 155: n=17512 medoid_gid=5880125 -> cluster_155.graph
+[rank 3] built cluster 159: n=17481 medoid_gid=7800316 -> cluster_159.graph
+[rank 2] built cluster 158: n=25558 medoid_gid=6299566 -> cluster_158.graph
+[rank 1] built cluster 101: n=33033 medoid_gid=4590230 -> cluster_101.graph
+[rank 0] built cluster 128: n=21639 medoid_gid=5711220 -> cluster_128.graph
+[rank 2] built cluster 162: n=16629 medoid_gid=5204356 -> cluster_162.graph
+[rank 3] built cluster 163: n=17284 medoid_gid=7269095 -> cluster_163.graph
+[rank 3] built cluster 167: n=12365 medoid_gid=3166536 -> cluster_167.graph
+[rank 1] built cluster 105: n=21544 medoid_gid=1437293 -> cluster_105.graph
+[rank 2] built cluster 166: n=17934 medoid_gid=1031199 -> cluster_166.graph
+[rank 0] built cluster 132: n=25677 medoid_gid=2751598 -> cluster_132.graph
+[rank 1] built cluster 109: n=17038 medoid_gid=5378665 -> cluster_109.graph
+[rank 3] built cluster 171: n=20589 medoid_gid=17915 -> cluster_171.graph
+[rank 2] built cluster 170: n=20001 medoid_gid=4710004 -> cluster_170.graph
+[rank 0] built cluster 136: n=15551 medoid_gid=7861584 -> cluster_136.graph
+[rank 1] built cluster 113: n=21429 medoid_gid=9167339 -> cluster_113.graph
+[rank 3] built cluster 175: n=20622 medoid_gid=6382747 -> cluster_175.graph
+[rank 0] built cluster 140: n=15484 medoid_gid=5451256 -> cluster_140.graph
+[rank 2] built cluster 174: n=23902 medoid_gid=4558921 -> cluster_174.graph
+[rank 1] built cluster 117: n=20465 medoid_gid=68728 -> cluster_117.graph
+[rank 3] built cluster 179: n=16874 medoid_gid=8502438 -> cluster_179.graph
+[rank 1] built cluster 121: n=18343 medoid_gid=6492549 -> cluster_121.graph
+[rank 0] built cluster 144: n=24927 medoid_gid=2554076 -> cluster_144.graph
+[rank 2] built cluster 178: n=23062 medoid_gid=1841180 -> cluster_178.graph
+[rank 3] built cluster 183: n=22575 medoid_gid=5858320 -> cluster_183.graph
+[rank 1] built cluster 125: n=23317 medoid_gid=2701676 -> cluster_125.graph
+[rank 0] built cluster 148: n=21694 medoid_gid=2259841 -> cluster_148.graph
+[rank 3] built cluster 187: n=24344 medoid_gid=4088333 -> cluster_187.graph
+[rank 1] built cluster 129: n=23391 medoid_gid=419896 -> cluster_129.graph
+[rank 0] built cluster 152: n=18436 medoid_gid=1309461 -> cluster_152.graph
+[rank 2] built cluster 182: n=32082 medoid_gid=7709871 -> cluster_182.graph
+[rank 1] built cluster 133: n=16825 medoid_gid=5450710 -> cluster_133.graph
+[rank 2] built cluster 186: n=22887 medoid_gid=8964428 -> cluster_186.graph
+[rank 1] built cluster 137: n=17509 medoid_gid=656534 -> cluster_137.graph
+[rank 3] built cluster 191: n=36572 medoid_gid=2065907 -> cluster_191.graph
+[rank 0] built cluster 156: n=27726 medoid_gid=7610770 -> cluster_156.graph
+[rank 2] built cluster 190: n=16920 medoid_gid=1903794 -> cluster_190.graph
+[rank 1] built cluster 141: n=21472 medoid_gid=7928397 -> cluster_141.graph
+[rank 2] built cluster 194: n=19626 medoid_gid=2672707 -> cluster_194.graph
+[rank 0] built cluster 160: n=20620 medoid_gid=4568107 -> cluster_160.graph
+[rank 3] built cluster 195: n=27689 medoid_gid=7964599 -> cluster_195.graph
+[rank 1] built cluster 145: n=22825 medoid_gid=8316442 -> cluster_145.graph
+[rank 3] built cluster 199: n=17923 medoid_gid=3295325 -> cluster_199.graph
+[rank 2] built cluster 198: n=23218 medoid_gid=8931945 -> cluster_198.graph
+[rank 0] built cluster 164: n=23712 medoid_gid=9712386 -> cluster_164.graph
+[rank 1] built cluster 149: n=16332 medoid_gid=941610 -> cluster_149.graph
+[rank 1] built cluster 153: n=15116 medoid_gid=3615568 -> cluster_153.graph
+[rank 0] built cluster 168: n=17820 medoid_gid=9219117 -> cluster_168.graph
+[rank 3] built cluster 203: n=24512 medoid_gid=9386494 -> cluster_203.graph
+[rank 2] built cluster 202: n=26090 medoid_gid=385800 -> cluster_202.graph
+[rank 1] built cluster 157: n=17699 medoid_gid=4636230 -> cluster_157.graph
+[rank 0] built cluster 172: n=17603 medoid_gid=8780247 -> cluster_172.graph
+[rank 3] built cluster 207: n=19698 medoid_gid=7761233 -> cluster_207.graph
+[rank 1] built cluster 161: n=15067 medoid_gid=8170872 -> cluster_161.graph
+[rank 3] built cluster 211: n=14158 medoid_gid=8128226 -> cluster_211.graph
+[rank 2] built cluster 206: n=21519 medoid_gid=4926687 -> cluster_206.graph
+[rank 0] built cluster 176: n=17046 medoid_gid=5594232 -> cluster_176.graph
+[rank 3] built cluster 215: n=12606 medoid_gid=7944704 -> cluster_215.graph
+[rank 1] built cluster 165: n=18562 medoid_gid=2661541 -> cluster_165.graph
+[rank 2] built cluster 210: n=17290 medoid_gid=7752603 -> cluster_210.graph
+[rank 0] built cluster 180: n=23413 medoid_gid=9908727 -> cluster_180.graph
+[rank 3] built cluster 219: n=22118 medoid_gid=1055392 -> cluster_219.graph
+[rank 1] built cluster 169: n=25118 medoid_gid=1375415 -> cluster_169.graph
+[rank 0] built cluster 184: n=17548 medoid_gid=6638457 -> cluster_184.graph
+[rank 2] built cluster 214: n=26826 medoid_gid=1432506 -> cluster_214.graph
+[rank 3] built cluster 223: n=21655 medoid_gid=4898441 -> cluster_223.graph
+[rank 0] built cluster 188: n=17170 medoid_gid=9362282 -> cluster_188.graph
+[rank 3] built cluster 227: n=13461 medoid_gid=2422916 -> cluster_227.graph
+[rank 1] built cluster 173: n=31756 medoid_gid=8116093 -> cluster_173.graph
+[rank 2] built cluster 218: n=31176 medoid_gid=1101133 -> cluster_218.graph
+[rank 0] built cluster 192: n=19554 medoid_gid=9802472 -> cluster_192.graph
+[rank 3] built cluster 231: n=22251 medoid_gid=6070538 -> cluster_231.graph
+[rank 2] built cluster 222: n=21753 medoid_gid=2686201 -> cluster_222.graph
+[rank 0] built cluster 196: n=16651 medoid_gid=6410838 -> cluster_196.graph
+[rank 3] built cluster 235: n=21594 medoid_gid=1599235 -> cluster_235.graph
+[rank 1] built cluster 177: n=34596 medoid_gid=2958196 -> cluster_177.graph
+[rank 2] built cluster 226: n=18558 medoid_gid=9905617 -> cluster_226.graph
+[rank 2] built cluster 230: n=10117 medoid_gid=3747303 -> cluster_230.graph
+[rank 1] built cluster 181: n=17308 medoid_gid=2325693 -> cluster_181.graph
+[rank 3] built cluster 239: n=21393 medoid_gid=6425947 -> cluster_239.graph
+[rank 2] built cluster 234: n=21327 medoid_gid=7164964 -> cluster_234.graph
+[rank 3] built cluster 243: n=17121 medoid_gid=678829 -> cluster_243.graph
+[rank 0] built cluster 200: n=36168 medoid_gid=1209359 -> cluster_200.graph
+[rank 2] built cluster 238: n=12695 medoid_gid=1406562 -> cluster_238.graph
+[rank 3] built cluster 247: n=18273 medoid_gid=5559083 -> cluster_247.graph
+[rank 1] built cluster 185: n=30307 medoid_gid=9993716 -> cluster_185.graph
+[rank 0] built cluster 204: n=16985 medoid_gid=7176544 -> cluster_204.graph
+[rank 2] built cluster 242: n=18570 medoid_gid=3848723 -> cluster_242.graph
+[rank 3] built cluster 251: n=21927 medoid_gid=7144542 -> cluster_251.graph
+[rank 1] built cluster 189: n=17511 medoid_gid=9477501 -> cluster_189.graph
+[rank 2] built cluster 246: n=17729 medoid_gid=3553197 -> cluster_246.graph
+[rank 1] built cluster 193: n=18667 medoid_gid=7431299 -> cluster_193.graph
+[rank 0] built cluster 208: n=26909 medoid_gid=6860574 -> cluster_208.graph
+[rank 2] built cluster 250: n=22339 medoid_gid=60728 -> cluster_250.graph
+[rank 1] built cluster 197: n=13036 medoid_gid=5471307 -> cluster_197.graph
+[rank 2] built cluster 254: n=16904 medoid_gid=6206500 -> cluster_254.graph
+[rank 1] built cluster 201: n=19109 medoid_gid=3870221 -> cluster_201.graph
+[rank 3] built cluster 255: n=40077 medoid_gid=7680318 -> cluster_255.graph
+[rank 0] built cluster 212: n=28080 medoid_gid=7427717 -> cluster_212.graph
+[rank 2] built cluster 258: n=19247 medoid_gid=6693736 -> cluster_258.graph
+[rank 3] built cluster 259: n=19853 medoid_gid=2439197 -> cluster_259.graph
+[rank 1] built cluster 205: n=23262 medoid_gid=1587062 -> cluster_205.graph
+[rank 0] built cluster 216: n=21206 medoid_gid=2969330 -> cluster_216.graph
+[rank 2] built cluster 262: n=21443 medoid_gid=2280577 -> cluster_262.graph
+[rank 2] built cluster 266: n=14975 medoid_gid=6099678 -> cluster_266.graph
+[rank 0] built cluster 220: n=17226 medoid_gid=3938313 -> cluster_220.graph
+[rank 1] built cluster 209: n=28230 medoid_gid=9230345 -> cluster_209.graph
+[rank 2] built cluster 270: n=13389 medoid_gid=371490 -> cluster_270.graph
+[rank 3] built cluster 263: n=32605 medoid_gid=9383039 -> cluster_263.graph
+[rank 1] built cluster 213: n=20319 medoid_gid=5886862 -> cluster_213.graph
+[rank 0] built cluster 224: n=21024 medoid_gid=108493 -> cluster_224.graph
+[rank 2] built cluster 274: n=19926 medoid_gid=6838 -> cluster_274.graph
+[rank 3] built cluster 267: n=21978 medoid_gid=2667407 -> cluster_267.graph
+[rank 1] built cluster 217: n=20186 medoid_gid=9915481 -> cluster_217.graph
+[rank 0] built cluster 228: n=17083 medoid_gid=8395530 -> cluster_228.graph
+[rank 2] built cluster 278: n=19990 medoid_gid=3625121 -> cluster_278.graph
+[rank 3] built cluster 271: n=22313 medoid_gid=241773 -> cluster_271.graph
+[rank 2] built cluster 282: n=18414 medoid_gid=6311973 -> cluster_282.graph
+[rank 1] built cluster 221: n=24555 medoid_gid=438838 -> cluster_221.graph
+[rank 0] built cluster 232: n=21040 medoid_gid=2419303 -> cluster_232.graph
+[rank 3] built cluster 275: n=15006 medoid_gid=1995183 -> cluster_275.graph
+[rank 3] built cluster 279: n=15529 medoid_gid=6170089 -> cluster_279.graph
+[rank 1] built cluster 225: n=22768 medoid_gid=7834481 -> cluster_225.graph
+[rank 3] built cluster 283: n=15469 medoid_gid=4608598 -> cluster_283.graph
+[rank 1] built cluster 229: n=19626 medoid_gid=8989570 -> cluster_229.graph
+[rank 2] built cluster 286: n=34529 medoid_gid=7506677 -> cluster_286.graph
+[rank 3] built cluster 287: n=14569 medoid_gid=3761290 -> cluster_287.graph
+[rank 0] built cluster 236: n=28051 medoid_gid=3161899 -> cluster_236.graph
+[rank 1] built cluster 233: n=11511 medoid_gid=7666535 -> cluster_233.graph
+[rank 2] built cluster 290: n=19043 medoid_gid=4142085 -> cluster_290.graph
+[rank 3] built cluster 291: n=23383 medoid_gid=1975490 -> cluster_291.graph
+[rank 0] built cluster 240: n=25795 medoid_gid=9545596 -> cluster_240.graph
+[rank 1] built cluster 237: n=27828 medoid_gid=5068998 -> cluster_237.graph
+[rank 2] built cluster 294: n=22518 medoid_gid=7337601 -> cluster_294.graph
+[rank 1] built cluster 241: n=11546 medoid_gid=6419384 -> cluster_241.graph
+[rank 0] built cluster 244: n=16626 medoid_gid=5183186 -> cluster_244.graph
+[rank 3] built cluster 295: n=28782 medoid_gid=4606269 -> cluster_295.graph
+[rank 1] built cluster 245: n=17358 medoid_gid=9194878 -> cluster_245.graph
+[rank 2] built cluster 298: n=26710 medoid_gid=8748373 -> cluster_298.graph
+[rank 1] built cluster 249: n=19360 medoid_gid=431926 -> cluster_249.graph
+[rank 3] built cluster 299: n=22709 medoid_gid=4006465 -> cluster_299.graph
+[rank 0] built cluster 248: n=27433 medoid_gid=7566044 -> cluster_248.graph
+[rank 2] built cluster 302: n=20357 medoid_gid=384279 -> cluster_302.graph
+[rank 0] built cluster 252: n=17843 medoid_gid=7793018 -> cluster_252.graph
+[rank 1] built cluster 253: n=34829 medoid_gid=1605004 -> cluster_253.graph
+[rank 0] built cluster 256: n=16120 medoid_gid=7423997 -> cluster_256.graph
+[rank 3] built cluster 303: n=42541 medoid_gid=4057175 -> cluster_303.graph
+[rank 2] built cluster 306: n=31223 medoid_gid=1494079 -> cluster_306.graph
+[rank 1] built cluster 257: n=20175 medoid_gid=2462195 -> cluster_257.graph
+[rank 0] built cluster 260: n=16037 medoid_gid=3141853 -> cluster_260.graph
+[rank 3] built cluster 307: n=19352 medoid_gid=6289965 -> cluster_307.graph
+[rank 0] built cluster 264: n=17560 medoid_gid=3896684 -> cluster_264.graph
+[rank 2] built cluster 310: n=22894 medoid_gid=8695420 -> cluster_310.graph
+[rank 3] built cluster 311: n=17062 medoid_gid=3578822 -> cluster_311.graph
+[rank 2] built cluster 314: n=15915 medoid_gid=5306197 -> cluster_314.graph
+[rank 1] built cluster 261: n=27588 medoid_gid=3770448 -> cluster_261.graph
+[rank 2] built cluster 318: n=14788 medoid_gid=8131317 -> cluster_318.graph
+[rank 3] built cluster 315: n=25592 medoid_gid=7869353 -> cluster_315.graph
+[rank 2] built cluster 322: n=14678 medoid_gid=7509186 -> cluster_322.graph
+[rank 0] built cluster 268: n=31433 medoid_gid=3586364 -> cluster_268.graph
+[rank 1] built cluster 265: n=29950 medoid_gid=667748 -> cluster_265.graph
+[rank 3] built cluster 319: n=17419 medoid_gid=5026299 -> cluster_319.graph
+[rank 0] built cluster 272: n=13304 medoid_gid=7643627 -> cluster_272.graph
+[rank 2] built cluster 326: n=17457 medoid_gid=6360036 -> cluster_326.graph
+[rank 0] built cluster 276: n=14308 medoid_gid=2933206 -> cluster_276.graph
+[rank 3] built cluster 323: n=16951 medoid_gid=5495851 -> cluster_323.graph
+[rank 1] built cluster 269: n=24037 medoid_gid=2064291 -> cluster_269.graph
+[rank 2] built cluster 330: n=22633 medoid_gid=3073898 -> cluster_330.graph
+[rank 3] built cluster 327: n=19897 medoid_gid=3181709 -> cluster_327.graph
+[rank 1] built cluster 273: n=23171 medoid_gid=6649263 -> cluster_273.graph
+[rank 3] built cluster 331: n=17215 medoid_gid=5332054 -> cluster_331.graph
+[rank 2] built cluster 334: n=24247 medoid_gid=2045812 -> cluster_334.graph
+[rank 0] built cluster 280: n=32169 medoid_gid=6408860 -> cluster_280.graph
+[rank 3] built cluster 335: n=18645 medoid_gid=3910079 -> cluster_335.graph
+[rank 1] built cluster 277: n=24384 medoid_gid=8641051 -> cluster_277.graph
+[rank 2] built cluster 338: n=26319 medoid_gid=9091815 -> cluster_338.graph
+[rank 1] built cluster 281: n=19132 medoid_gid=1448828 -> cluster_281.graph
+[rank 2] built cluster 342: n=14451 medoid_gid=4761136 -> cluster_342.graph
+[rank 2] built cluster 346: n=16544 medoid_gid=6118178 -> cluster_346.graph
+[rank 1] built cluster 285: n=20483 medoid_gid=5829383 -> cluster_285.graph
+[rank 0] built cluster 284: n=39687 medoid_gid=7982826 -> cluster_284.graph
+[rank 3] built cluster 339: n=38765 medoid_gid=9802174 -> cluster_339.graph
+[rank 2] built cluster 350: n=13552 medoid_gid=8050582 -> cluster_350.graph
+[rank 0] built cluster 288: n=12347 medoid_gid=855523 -> cluster_288.graph
+[rank 1] built cluster 289: n=21579 medoid_gid=7790118 -> cluster_289.graph
+[rank 2] built cluster 354: n=15838 medoid_gid=5021535 -> cluster_354.graph
+[rank 3] built cluster 343: n=26890 medoid_gid=467676 -> cluster_343.graph
+[rank 1] built cluster 293: n=16225 medoid_gid=8632091 -> cluster_293.graph
+[rank 2] built cluster 358: n=16001 medoid_gid=764717 -> cluster_358.graph
+[rank 1] built cluster 297: n=13913 medoid_gid=4778337 -> cluster_297.graph
+[rank 3] built cluster 347: n=25326 medoid_gid=113685 -> cluster_347.graph
+[rank 0] built cluster 292: n=32463 medoid_gid=9631394 -> cluster_292.graph
+[rank 1] built cluster 301: n=19894 medoid_gid=9870167 -> cluster_301.graph
+[rank 2] built cluster 362: n=27239 medoid_gid=2705443 -> cluster_362.graph
+[rank 3] built cluster 351: n=21554 medoid_gid=3378673 -> cluster_351.graph
+[rank 0] built cluster 296: n=18198 medoid_gid=2668333 -> cluster_296.graph
+[rank 1] built cluster 305: n=16498 medoid_gid=9629168 -> cluster_305.graph
+[rank 2] built cluster 366: n=16569 medoid_gid=7436751 -> cluster_366.graph
+[rank 0] built cluster 300: n=17558 medoid_gid=9688746 -> cluster_300.graph
+[rank 1] built cluster 309: n=23885 medoid_gid=6889740 -> cluster_309.graph
+[rank 2] built cluster 370: n=19625 medoid_gid=8506449 -> cluster_370.graph
+[rank 0] built cluster 304: n=18533 medoid_gid=8046263 -> cluster_304.graph
+[rank 1] built cluster 313: n=16674 medoid_gid=1971339 -> cluster_313.graph
+[rank 0] built cluster 308: n=15411 medoid_gid=2543267 -> cluster_308.graph
+[rank 2] built cluster 374: n=23134 medoid_gid=5019988 -> cluster_374.graph
+[rank 3] built cluster 355: n=48176 medoid_gid=3694834 -> cluster_355.graph
+[rank 0] built cluster 312: n=13615 medoid_gid=7792172 -> cluster_312.graph
+[rank 1] built cluster 317: n=26021 medoid_gid=8465232 -> cluster_317.graph
+[rank 2] built cluster 378: n=14560 medoid_gid=5229413 -> cluster_378.graph
+[rank 2] built cluster 382: n=17865 medoid_gid=3753582 -> cluster_382.graph
+[rank 0] built cluster 316: n=20193 medoid_gid=652842 -> cluster_316.graph
+[rank 3] built cluster 359: n=21693 medoid_gid=524522 -> cluster_359.graph
+[rank 1] built cluster 321: n=23914 medoid_gid=4102898 -> cluster_321.graph
+[rank 0] built cluster 320: n=14601 medoid_gid=3870950 -> cluster_320.graph
+[rank 1] built cluster 325: n=15525 medoid_gid=3516270 -> cluster_325.graph
+[rank 3] built cluster 363: n=18165 medoid_gid=5258624 -> cluster_363.graph
+[rank 2] built cluster 386: n=28190 medoid_gid=4427822 -> cluster_386.graph
+[rank 3] built cluster 367: n=16140 medoid_gid=7379590 -> cluster_367.graph
+[rank 1] built cluster 329: n=21125 medoid_gid=1233013 -> cluster_329.graph
+[rank 0] built cluster 324: n=20731 medoid_gid=962615 -> cluster_324.graph
+[rank 2] built cluster 390: n=15714 medoid_gid=8085558 -> cluster_390.graph
+[rank 3] built cluster 371: n=11878 medoid_gid=4820732 -> cluster_371.graph
+[rank 0] built cluster 328: n=18854 medoid_gid=252385 -> cluster_328.graph
+[rank 1] built cluster 333: n=22031 medoid_gid=2230879 -> cluster_333.graph
+[rank 3] built cluster 375: n=18320 medoid_gid=2636647 -> cluster_375.graph
+[rank 2] built cluster 394: n=23579 medoid_gid=1408026 -> cluster_394.graph
+[rank 3] built cluster 379: n=14351 medoid_gid=6293798 -> cluster_379.graph
+[rank 1] built cluster 337: n=20865 medoid_gid=7229330 -> cluster_337.graph
+[rank 2] built cluster 398: n=20613 medoid_gid=3648643 -> cluster_398.graph
+[rank 1] built cluster 341: n=14554 medoid_gid=6722726 -> cluster_341.graph
+[rank 0] built cluster 332: n=27235 medoid_gid=1910196 -> cluster_332.graph
+[rank 3] built cluster 383: n=23991 medoid_gid=2488932 -> cluster_383.graph
+[rank 2] built cluster 402: n=19936 medoid_gid=3756761 -> cluster_402.graph
+[rank 1] built cluster 345: n=25073 medoid_gid=8386247 -> cluster_345.graph
+[rank 3] built cluster 387: n=18677 medoid_gid=8018925 -> cluster_387.graph
+[rank 2] built cluster 406: n=16013 medoid_gid=8963904 -> cluster_406.graph
+[rank 0] built cluster 336: n=24543 medoid_gid=2992400 -> cluster_336.graph
+[rank 1] built cluster 349: n=14911 medoid_gid=8444888 -> cluster_349.graph
+[rank 0] built cluster 340: n=18668 medoid_gid=6785247 -> cluster_340.graph
+[rank 0] built cluster 344: n=16062 medoid_gid=5375395 -> cluster_344.graph
+[rank 3] built cluster 391: n=34475 medoid_gid=5105167 -> cluster_391.graph
+[rank 1] built cluster 353: n=35250 medoid_gid=1254697 -> cluster_353.graph
+[rank 2] built cluster 410: n=47303 medoid_gid=276447 -> cluster_410.graph
+[rank 0] built cluster 348: n=23467 medoid_gid=474447 -> cluster_348.graph
+[rank 1] built cluster 357: n=20897 medoid_gid=9006336 -> cluster_357.graph
+[rank 2] built cluster 414: n=15072 medoid_gid=5356319 -> cluster_414.graph
+[rank 3] built cluster 395: n=30981 medoid_gid=3254497 -> cluster_395.graph
+[rank 0] built cluster 352: n=18323 medoid_gid=5279209 -> cluster_352.graph
+[rank 2] built cluster 418: n=16832 medoid_gid=1628740 -> cluster_418.graph
+[rank 1] built cluster 361: n=19425 medoid_gid=8315295 -> cluster_361.graph
+[rank 3] built cluster 399: n=13516 medoid_gid=9325483 -> cluster_399.graph
+[rank 3] built cluster 403: n=10370 medoid_gid=338668 -> cluster_403.graph
+[rank 2] built cluster 422: n=14212 medoid_gid=2754569 -> cluster_422.graph
+[rank 1] built cluster 365: n=14224 medoid_gid=2165979 -> cluster_365.graph
+[rank 0] built cluster 356: n=18829 medoid_gid=1346772 -> cluster_356.graph
+[rank 3] built cluster 407: n=13989 medoid_gid=5790839 -> cluster_407.graph
+[rank 2] built cluster 426: n=16125 medoid_gid=5861619 -> cluster_426.graph
+[rank 0] built cluster 360: n=18589 medoid_gid=486909 -> cluster_360.graph
+[rank 1] built cluster 369: n=24848 medoid_gid=1343476 -> cluster_369.graph
+[rank 3] built cluster 411: n=21753 medoid_gid=604985 -> cluster_411.graph
+[rank 1] built cluster 373: n=18584 medoid_gid=275646 -> cluster_373.graph
+[rank 2] built cluster 430: n=27195 medoid_gid=5986578 -> cluster_430.graph
+[rank 3] built cluster 415: n=16348 medoid_gid=5070797 -> cluster_415.graph
+[rank 0] built cluster 364: n=25908 medoid_gid=6505436 -> cluster_364.graph
+[rank 0] built cluster 368: n=10416 medoid_gid=1959798 -> cluster_368.graph
+[rank 1] built cluster 377: n=27868 medoid_gid=3496752 -> cluster_377.graph
+[rank 3] built cluster 419: n=20814 medoid_gid=3892176 -> cluster_419.graph
+[rank 1] built cluster 381: n=14381 medoid_gid=7893653 -> cluster_381.graph
+[rank 0] built cluster 372: n=15935 medoid_gid=6979947 -> cluster_372.graph
+[rank 2] built cluster 434: n=26487 medoid_gid=3901603 -> cluster_434.graph
+[rank 2] built cluster 438: n=19143 medoid_gid=3230777 -> cluster_438.graph
+[rank 1] built cluster 385: n=24784 medoid_gid=9465310 -> cluster_385.graph
+[rank 0] built cluster 376: n=23880 medoid_gid=707182 -> cluster_376.graph
+[rank 3] built cluster 423: n=31944 medoid_gid=5876323 -> cluster_423.graph
+[rank 1] built cluster 389: n=15101 medoid_gid=9986564 -> cluster_389.graph
+[rank 2] built cluster 442: n=20225 medoid_gid=7515916 -> cluster_442.graph
+[rank 3] built cluster 427: n=15888 medoid_gid=4493895 -> cluster_427.graph
+[rank 1] built cluster 393: n=18260 medoid_gid=6468444 -> cluster_393.graph
+[rank 0] built cluster 380: n=23303 medoid_gid=429950 -> cluster_380.graph
+[rank 2] built cluster 446: n=21636 medoid_gid=2001486 -> cluster_446.graph
+[rank 3] built cluster 431: n=18030 medoid_gid=8057671 -> cluster_431.graph
+[rank 0] built cluster 384: n=16458 medoid_gid=3689655 -> cluster_384.graph
+[rank 2] built cluster 450: n=20326 medoid_gid=7618172 -> cluster_450.graph
+[rank 3] built cluster 435: n=27770 medoid_gid=4366966 -> cluster_435.graph
+[rank 0] built cluster 388: n=18826 medoid_gid=2770395 -> cluster_388.graph
+[rank 2] built cluster 454: n=24039 medoid_gid=968886 -> cluster_454.graph
+[rank 1] built cluster 397: n=43569 medoid_gid=8052005 -> cluster_397.graph
+[rank 3] built cluster 439: n=18355 medoid_gid=3441985 -> cluster_439.graph
+[rank 2] built cluster 458: n=17618 medoid_gid=8095664 -> cluster_458.graph
+[rank 0] built cluster 392: n=18648 medoid_gid=5315772 -> cluster_392.graph
+[rank 3] built cluster 443: n=15440 medoid_gid=1615226 -> cluster_443.graph
+[rank 1] built cluster 401: n=21210 medoid_gid=6221970 -> cluster_401.graph
+[rank 0] built cluster 396: n=16412 medoid_gid=1657406 -> cluster_396.graph
+[rank 1] built cluster 405: n=16576 medoid_gid=9374036 -> cluster_405.graph
+[rank 3] built cluster 447: n=19009 medoid_gid=2343985 -> cluster_447.graph
+[rank 0] built cluster 400: n=16097 medoid_gid=1187702 -> cluster_400.graph
+[rank 1] built cluster 409: n=11970 medoid_gid=871904 -> cluster_409.graph
+[rank 2] built cluster 462: n=29841 medoid_gid=8012601 -> cluster_462.graph
+[rank 2] built cluster 466: n=23101 medoid_gid=677940 -> cluster_466.graph
+[rank 1] built cluster 413: n=23950 medoid_gid=3017386 -> cluster_413.graph
+[rank 0] built cluster 404: n=24823 medoid_gid=3569455 -> cluster_404.graph
+[rank 3] built cluster 451: n=31149 medoid_gid=3064194 -> cluster_451.graph
+[rank 0] built cluster 408: n=15273 medoid_gid=7170351 -> cluster_408.graph
+[rank 2] built cluster 470: n=22080 medoid_gid=5349342 -> cluster_470.graph
+[rank 1] built cluster 417: n=22299 medoid_gid=9166128 -> cluster_417.graph
+[rank 3] built cluster 455: n=18650 medoid_gid=122813 -> cluster_455.graph
+[rank 0] built cluster 412: n=14217 medoid_gid=9766108 -> cluster_412.graph
+[rank 0] built cluster 416: n=10778 medoid_gid=6789523 -> cluster_416.graph
+[rank 2] built cluster 474: n=19323 medoid_gid=6778442 -> cluster_474.graph
+[rank 0] built cluster 420: n=15007 medoid_gid=5155493 -> cluster_420.graph
+[rank 1] built cluster 421: n=25613 medoid_gid=6674669 -> cluster_421.graph
+[rank 2] built cluster 478: n=14394 medoid_gid=3562140 -> cluster_478.graph
+[rank 3] built cluster 459: n=26917 medoid_gid=500874 -> cluster_459.graph
+[rank 0] built cluster 424: n=18931 medoid_gid=2915885 -> cluster_424.graph
+[rank 1] built cluster 425: n=19858 medoid_gid=2432735 -> cluster_425.graph
+[rank 2] built cluster 482: n=30132 medoid_gid=1737972 -> cluster_482.graph
+[rank 3] built cluster 463: n=27222 medoid_gid=1841083 -> cluster_463.graph
+[rank 1] built cluster 429: n=15598 medoid_gid=14140 -> cluster_429.graph
+[rank 2] built cluster 486: n=14350 medoid_gid=9276455 -> cluster_486.graph
+[rank 3] built cluster 467: n=18674 medoid_gid=9893880 -> cluster_467.graph
+[rank 1] built cluster 433: n=21262 medoid_gid=6404342 -> cluster_433.graph
+[rank 2] built cluster 490: n=12889 medoid_gid=839052 -> cluster_490.graph
+[rank 0] built cluster 428: n=30377 medoid_gid=5395824 -> cluster_428.graph
+[rank 1] built cluster 437: n=17932 medoid_gid=4323122 -> cluster_437.graph
+[rank 3] built cluster 471: n=23835 medoid_gid=8543896 -> cluster_471.graph
+[rank 2] built cluster 494: n=19548 medoid_gid=5757398 -> cluster_494.graph
+[rank 0] built cluster 432: n=18287 medoid_gid=1902368 -> cluster_432.graph
+[rank 1] built cluster 441: n=17346 medoid_gid=1830788 -> cluster_441.graph
+[rank 2] built cluster 498: n=19742 medoid_gid=8550415 -> cluster_498.graph
+[rank 0] built cluster 436: n=20712 medoid_gid=4670038 -> cluster_436.graph
+[rank 1] built cluster 445: n=16604 medoid_gid=8037535 -> cluster_445.graph
+[rank 2] built cluster 502: n=18356 medoid_gid=5845494 -> cluster_502.graph
+[rank 0] built cluster 440: n=20053 medoid_gid=7399881 -> cluster_440.graph
+[rank 2] built cluster 506: n=18642 medoid_gid=2076776 -> cluster_506.graph
+[rank 0] built cluster 444: n=15163 medoid_gid=8072687 -> cluster_444.graph
+[rank 2] built cluster 510: n=14740 medoid_gid=8508858 -> cluster_510.graph
+[rank 1] built cluster 449: n=35101 medoid_gid=5972764 -> cluster_449.graph
+[rank 0] built cluster 448: n=11045 medoid_gid=1367012 -> cluster_448.graph
+[rank 3] built cluster 475: n=62132 medoid_gid=6530007 -> cluster_475.graph
+[rank 0] built cluster 452: n=22588 medoid_gid=2054632 -> cluster_452.graph
+[rank 3] built cluster 479: n=24843 medoid_gid=4498906 -> cluster_479.graph
+[rank 0] built cluster 456: n=16265 medoid_gid=9882659 -> cluster_456.graph
+[rank 3] built cluster 483: n=19960 medoid_gid=6430587 -> cluster_483.graph
+[rank 1] built cluster 453: n=39020 medoid_gid=2140806 -> cluster_453.graph
+[rank 0] built cluster 460: n=16348 medoid_gid=7417709 -> cluster_460.graph
+[rank 3] built cluster 487: n=18591 medoid_gid=1985334 -> cluster_487.graph
+[rank 1] built cluster 457: n=17443 medoid_gid=9866731 -> cluster_457.graph
+[rank 0] built cluster 464: n=18903 medoid_gid=8748062 -> cluster_464.graph
+[rank 3] built cluster 491: n=16273 medoid_gid=3210174 -> cluster_491.graph
+[rank 1] built cluster 461: n=12607 medoid_gid=5758503 -> cluster_461.graph
+[rank 0] built cluster 468: n=13110 medoid_gid=8233421 -> cluster_468.graph
+[rank 1] built cluster 465: n=14454 medoid_gid=9709648 -> cluster_465.graph
+[rank 3] built cluster 495: n=23946 medoid_gid=8592642 -> cluster_495.graph
+[rank 0] built cluster 472: n=24527 medoid_gid=1080445 -> cluster_472.graph
+[rank 3] built cluster 499: n=17244 medoid_gid=1411504 -> cluster_499.graph
+[rank 1] built cluster 469: n=27763 medoid_gid=7285924 -> cluster_469.graph
+[rank 3] built cluster 503: n=14579 medoid_gid=371629 -> cluster_503.graph
+[rank 0] built cluster 476: n=25692 medoid_gid=4689236 -> cluster_476.graph
+[rank 1] built cluster 473: n=20978 medoid_gid=8154852 -> cluster_473.graph
+[rank 3] built cluster 507: n=18564 medoid_gid=8297003 -> cluster_507.graph
+[rank 0] built cluster 480: n=20207 medoid_gid=5265479 -> cluster_480.graph
+[rank 1] built cluster 477: n=24669 medoid_gid=8239265 -> cluster_477.graph
+[rank 0] built cluster 484: n=16896 medoid_gid=3739914 -> cluster_484.graph
+[rank 3] built cluster 511: n=24711 medoid_gid=3681276 -> cluster_511.graph
+[rank 1] built cluster 481: n=25315 medoid_gid=1800627 -> cluster_481.graph
+[rank 0] built cluster 488: n=21814 medoid_gid=2868901 -> cluster_488.graph
+[rank 0] built cluster 492: n=27495 medoid_gid=7898949 -> cluster_492.graph
+[rank 0] built cluster 496: n=18201 medoid_gid=2458395 -> cluster_496.graph
+[rank 1] built cluster 485: n=48560 medoid_gid=376161 -> cluster_485.graph
+[rank 0] built cluster 500: n=15674 medoid_gid=3480536 -> cluster_500.graph
+[rank 1] built cluster 489: n=18524 medoid_gid=5348337 -> cluster_489.graph
+[rank 0] built cluster 504: n=14889 medoid_gid=8290744 -> cluster_504.graph
+[rank 0] built cluster 508: n=14489 medoid_gid=5186229 -> cluster_508.graph
+[rank 1] built cluster 493: n=21823 medoid_gid=7776353 -> cluster_493.graph
+[rank 1] built cluster 497: n=12905 medoid_gid=2931706 -> cluster_497.graph
+[rank 1] built cluster 501: n=16338 medoid_gid=4363062 -> cluster_501.graph
+[rank 1] built cluster 505: n=16435 medoid_gid=1251512 -> cluster_505.graph
+[rank 1] built cluster 509: n=19948 medoid_gid=7243707 -> cluster_509.graph
+
+[rank 0] === Step 2 complete ===
+
+==================== STEP 3: global stitching ====================
+
+>>> mpirun -np 4 --host ncpu030:1,ncpu035:1,ncpu036:1,ncpu040:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/script/../build_ip/bin/build_stitch --base_path /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k --R 72 --alpha 1.2
+2026-07-09 14:32:03
+[rank 0] Step 3 (stitching): N=10000000 K=512 dim=200 W=4 R=72 alpha=1.20 metric=ip
+[rank 0] All ranks accumulated neighbour lists.
+[rank 0] clusters read=512  total_edges=28200573  avg_degree=2.8
+[rank 0] replicated nodes (in >1 cluster, merged): 836778 (8.37%)
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k/global_graph.bin
+
+[rank 0] === Step 3 complete ===
+
+==================== STEP 4: PQ ====================
+
+>>> mpirun -np 4 --host ncpu030:1,ncpu035:1,ncpu036:1,ncpu040:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/script/../build_ip/bin/build_pq --base_path /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k --m 16 --train_size 100000 --iters 25
+2026-07-09 14:32:29
+[rank 0] Step 4 (PQ): N=10000000 dim=200 m=16 ksub=256 -> code=16 bytes metric=ip
+[rank 0] train_size=100000 iters=25
+[rank 0] Training PQ on 100000 vectors...
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k/pq_codebook.bin
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k/codes.bin (10000000 codes x 16 bytes)
+
+[rank 0] === Step 4 complete ===
+
+==================== STEP 5: head index ====================
+
+>>> mpirun -np 4 --host ncpu030:1,ncpu035:1,ncpu036:1,ncpu040:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/script/../build_ip/bin/build_head --base_path /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k --head_frac 0.05 --M 16 --efc 200 --method random
+2026-07-09 14:32:56
+[rank 0] Step 5 (head index): N=10000000 K=512 dim=200 W=4 metric=ip
+[rank 0] head_frac=0.050 -> C~=500000  method=random  M=16 efC=200
+[rank 3] collected 138607 head representatives
+[rank 1] collected 144833 head representatives
+[rank 2] collected 131255 head representatives
+[rank 0] collected 130087 head representatives
+[rank 0] Building HNSW head index over 544782 vectors...
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k/head/head.hnsw (544782 vectors)
+
+[rank 0] === Step 5 complete ===
+
+==================== STEP 6: KV store ====================
+
+>>> mpirun -np 4 --host ncpu030:1,ncpu035:1,ncpu036:1,ncpu040:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/script/../build_ip/bin/build_kvstore --base_path /gpfs/scratch/delgaudio/vectors/TTI/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k
+2026-07-09 14:33:39
+[rank 0] Step 6 (KV store): N=10000000 dim=200 R=72 m=16 total_edges=28200573
+[rank 0] All ranks assembled node records.
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k/nodes.bin
+
+[rank 0] === Step 6 complete ===
+
+############################################################
+# INDEXING COMPLETE — artifacts in /gpfs/scratch/delgaudio/dann/index_tti10m_k512_topr10k
+total 4.6G
+-rw-r--r-- 1 delgaudio exter  80M Jul  9 14:26 assignments.bin
+-rw-r--r-- 1 delgaudio exter 402K Jul  9 14:26 centroids.fvecs
+drwxr-xr-x 2 delgaudio exter  32K Jul  9 14:32 clusters
+-rw-r--r-- 1 delgaudio exter 153M Jul  9 14:32 codes.bin
+-rw-r--r-- 1 delgaudio exter 184M Jul  9 14:32 global_graph.bin
+drwxr-xr-x 2 delgaudio exter 4.0K Jul  9 14:33 head
+-rw-r--r-- 1 delgaudio exter  330 Jul  9 14:26 meta.json
+-rw-r--r-- 1 delgaudio exter 8.1G Jul  9 14:33 nodes.bin
+-rw-r--r-- 1 delgaudio exter 201K Jul  9 14:32 pq_codebook.bin
+############################################################

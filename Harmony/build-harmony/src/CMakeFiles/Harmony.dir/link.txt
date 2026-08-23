@@ -1,0 +1,2 @@
+/gpfs/users/delgaudio/local/gcc13/bin/x86_64-conda-linux-gnu-ar qc ../lib/libHarmony.a CMakeFiles/Harmony.dir/Clustering.cpp.o CMakeFiles/Harmony.dir/Index.cpp.o CMakeFiles/Harmony.dir/IVF.cpp.o CMakeFiles/Harmony.dir/node.cpp.o
+/gpfs/users/delgaudio/local/gcc13/bin/x86_64-conda-linux-gnu-ranlib ../lib/libHarmony.a

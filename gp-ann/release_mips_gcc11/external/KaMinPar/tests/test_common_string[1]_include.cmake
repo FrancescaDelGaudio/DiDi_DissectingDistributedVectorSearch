@@ -1,0 +1,5 @@
+if(EXISTS "/gpfs/users/delgaudio/exp_eval/gp-ann/release_mips_gcc11/external/KaMinPar/tests/test_common_string[1]_tests.cmake")
+  include("/gpfs/users/delgaudio/exp_eval/gp-ann/release_mips_gcc11/external/KaMinPar/tests/test_common_string[1]_tests.cmake")
+else()
+  add_test(test_common_string_NOT_BUILT test_common_string_NOT_BUILT)
+endif()

@@ -1,0 +1,76 @@
+==== dist_smoke start 2026-04-24T12:35:32+02:00 jobid=2630439 batch_host=ncpu005 ====
+Se i module falliscono: nodo compute puo usare Lmod/mirror diverso. Su login, esegui: module avail openmpi
+Prima di openmpi: scarico eventuali gcc/intel/mpi in conflitto (come suggerisce Lmod).
+Currently Loaded Modulefiles:
+ 1) openmpi/gcc-10.3.0/4.1.1   2) mpfr/4.1.0   3) gmp/6.2.1   4) mpc/1.2.1  
+/softs/openmpi/gcc-10.3.0/4.1.1/bin/mpirun
+mpirun (Open MPI) 4.1.1
+
+Report bugs to http://www.open-mpi.org/community/help/
+MPIROOT=/softs/openmpi/gcc-10.3.0/4.1.1
+LD_LIBRARY_PATH=/softs/openmpi/gcc-10.3.0/4.1.1/lib64:/softs/openmpi/gcc-10.3.0/4.1.1/lib:/softs/mpc/1.2.1/lib:/softs/gmp/6.2.1/lib:/softs/mpfr/4.1.0/lib:/softs/openmpi/gcc-10.3.0/4.1.1/lib
+CXX runtime: prepended /softs/gcc/11.3.0/lib64 for libstdc++ (g++-11 builds)
+========== allocazione slurm ==========
+NODELIST: ncpu[005-006]
+NNODES=2  NTASKS=2  NTASKS_PER_NODE=1
+========== controllo: stesso n? =========
+rank=1 host=ncpu006
+rank=0 host=ncpu005
+========== DistributedBench ==========
+[ncpu006:4048570:0:4048570] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[ncpu005:576569:0:576569] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+BFD: Dwarf Error: Can't find .debug_ranges section.
+BFD: Dwarf Error: Can't find .debug_ranges section.
+BFD: Dwarf Error: Can't find .debug_ranges section.
+BFD: Dwarf Error: Can't find .debug_ranges section.
+BFD: Dwarf Error: Can't find .debug_ranges section.
+BFD: Dwarf Error: Can't find .debug_ranges section.
+==== backtrace (tid: 576569) ====
+ 0 0x0000000000056c89 ucs_debug_print_backtrace()  ???:0
+ 1 0x0000000000012dd0 .annobin_sigaction.c()  sigaction.c:0
+ 2 0x0000000000413a15 DistributedQueryBenchmark::LoadShardPointSet()  ???:0
+ 3 0x0000000000406271 main()  ???:0
+ 4 0x00000000000236a3 __libc_start_main()  ???:0
+ 5 0x0000000000406c4e _start()  ???:0
+=================================
+[ncpu005:576569] *** Process received signal ***
+[ncpu005:576569] Signal: Segmentation fault (11)
+[ncpu005:576569] Signal code:  (-6)
+[ncpu005:576569] Failing at address: 0x4f5f0008cc39
+[ncpu005:576569] [ 0] /lib64/libpthread.so.0(+0x12dd0)[0x14a804fb0dd0]
+[ncpu005:576569] [ 1] /gpfs/users/delgaudio/exp_eval/gp-ann/release_l2/DistributedBench[0x413a15]
+[ncpu005:576569] [ 2] /gpfs/users/delgaudio/exp_eval/gp-ann/release_l2/DistributedBench[0x406271]
+[ncpu005:576569] [ 3] /lib64/libc.so.6(__libc_start_main+0xf3)[0x14a803f1d6a3]
+[ncpu005:576569] [ 4] /gpfs/users/delgaudio/exp_eval/gp-ann/release_l2/DistributedBench[0x406c4e]
+[ncpu005:576569] *** End of error message ***
+BFD: Dwarf Error: Can't find .debug_ranges section.
+BFD: Dwarf Error: Can't find .debug_ranges section.
+BFD: Dwarf Error: Can't find .debug_ranges section.
+BFD: Dwarf Error: Can't find .debug_ranges section.
+BFD: Dwarf Error: Can't find .debug_ranges section.
+BFD: Dwarf Error: Can't find .debug_ranges section.
+==== backtrace (tid:4048570) ====
+ 0 0x0000000000056c89 ucs_debug_print_backtrace()  ???:0
+ 1 0x0000000000012dd0 .annobin_sigaction.c()  sigaction.c:0
+ 2 0x0000000000413a15 DistributedQueryBenchmark::LoadShardPointSet()  ???:0
+ 3 0x0000000000406271 main()  ???:0
+ 4 0x00000000000236a3 __libc_start_main()  ???:0
+ 5 0x0000000000406c4e _start()  ???:0
+=================================
+[ncpu006:4048570] *** Process received signal ***
+[ncpu006:4048570] Signal: Segmentation fault (11)
+[ncpu006:4048570] Signal code:  (-6)
+[ncpu006:4048570] Failing at address: 0x4f5f003dc6ba
+[ncpu006:4048570] [ 0] /lib64/libpthread.so.0(+0x12dd0)[0x153c4379bdd0]
+[ncpu006:4048570] [ 1] /gpfs/users/delgaudio/exp_eval/gp-ann/release_l2/DistributedBench[0x413a15]
+[ncpu006:4048570] [ 2] /gpfs/users/delgaudio/exp_eval/gp-ann/release_l2/DistributedBench[0x406271]
+[ncpu006:4048570] [ 3] /lib64/libc.so.6(__libc_start_main+0xf3)[0x153c427086a3]
+[ncpu006:4048570] [ 4] /gpfs/users/delgaudio/exp_eval/gp-ann/release_l2/DistributedBench[0x406c4e]
+[ncpu006:4048570] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 4048570 on node ncpu006 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

@@ -1,0 +1,142 @@
+launcher: mpirun -np 2 --host ncpu032:1,ncpu037:1 --map-by ppr:1:node --bind-to none
+############################################################
+# DistributedANN full indexing pipeline
+#   BASE_PATH : /gpfs/scratch/delgaudio/dann/test/base_1m.fvecs
+#   INDEX_DIR : /gpfs/scratch/delgaudio/dann/index_smoke_1m
+#   nodes=2 ntasks=2 omp=8
+#   K=16 eps=0.2 R=72 m(pq)=16 head_frac=0.05
+############################################################
+
+==================== PREFLIGHT: MPI wireup ====================
+MPI_COMM_WORLD size reported = 2 (expected 2)
+
+==================== STEP 1: clustering ====================
+
+>>> mpirun -np 2 --host ncpu032:1,ncpu037:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/build/bin/build_index --base_path /gpfs/scratch/delgaudio/dann/test/base_1m.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_smoke_1m --K 16 --kmeans_iter 20 --kmeans_tol 1e-4 --epsilon 0.2 --max_replicas 3
+2026-06-29 13:23:33
+[rank 0] Dataset: N=1000000  dim=96  K=16  nranks=2
+[rank 0] Params: epsilon=0.200  max_replicas=3  kmeans_iter=20  tol=0.0001
+[rank 0] Loading 500000 vectors [0, 500000)
+[rank 1] Loading 500000 vectors [500000, 1000000)
+[rank 0] All ranks loaded data.
+
+[rank 0] k-means++ initialisation complete (sample size=4000)
+[rank 0]  k-means iter  1/20  max_disp=0.771609
+[rank 0]  k-means iter  2/20  max_disp=0.179051
+[rank 0]  k-means iter  3/20  max_disp=0.119414
+[rank 0]  k-means iter  4/20  max_disp=0.069366
+[rank 0]  k-means iter  5/20  max_disp=0.060660
+[rank 0]  k-means iter  6/20  max_disp=0.044814
+[rank 0]  k-means iter  7/20  max_disp=0.046821
+[rank 0]  k-means iter  8/20  max_disp=0.050698
+[rank 0]  k-means iter  9/20  max_disp=0.053257
+[rank 0]  k-means iter 10/20  max_disp=0.051524
+[rank 0]  k-means iter 11/20  max_disp=0.044202
+[rank 0]  k-means iter 12/20  max_disp=0.033217
+[rank 0]  k-means iter 13/20  max_disp=0.027526
+[rank 0]  k-means iter 14/20  max_disp=0.028279
+[rank 0]  k-means iter 15/20  max_disp=0.031308
+[rank 0]  k-means iter 16/20  max_disp=0.030933
+[rank 0]  k-means iter 17/20  max_disp=0.029212
+[rank 0]  k-means iter 18/20  max_disp=0.023393
+[rank 0]  k-means iter 19/20  max_disp=0.019444
+[rank 0]  k-means iter 20/20  max_disp=0.016803
+[rank 0] k-means done: 20 iters  final_disp=0.016803
+
+[rank 0] Running epsilon-replication (eps=0.200 max_rep=3)...
+[rank 0] Replication done: total=1000328  avg replicas/vec=1.00
+
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_smoke_1m/centroids.fvecs
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_smoke_1m/assignments.bin  (N=1000000  total_assignments=1000328  avg=1.00)
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_smoke_1m/meta.json
+
+[rank 0] === Step 1 complete ===
+
+==================== STEP 2: per-cluster Vamana ====================
+
+>>> mpirun -np 2 --host ncpu032:1,ncpu037:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/build/bin/build_graph --base_path /gpfs/scratch/delgaudio/dann/test/base_1m.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_smoke_1m --R 72 --L 100 --alpha 1.2 --passes 2 --threads 8
+2026-06-29 13:23:45
+[rank 0] Step 2: N=1000000  K=16  dim=96  W=2
+[rank 0] Vamana params: R=72 L=100 alpha=1.20 passes=2
+[rank 0] owns 8 clusters, needs 523615 vectors
+[rank 1] owns 8 clusters, needs 476496 vectors
+[rank 0] All ranks loaded cluster vectors.
+[rank 1] built cluster 1: n=65195 medoid_gid=176222 -> cluster_1.graph
+[rank 0] built cluster 0: n=78570 medoid_gid=575262 -> cluster_0.graph
+[rank 1] built cluster 3: n=57519 medoid_gid=860830 -> cluster_3.graph
+[rank 1] built cluster 5: n=54871 medoid_gid=907649 -> cluster_5.graph
+[rank 0] built cluster 2: n=93059 medoid_gid=959695 -> cluster_2.graph
+[rank 1] built cluster 7: n=85389 medoid_gid=276260 -> cluster_7.graph
+[rank 1] built cluster 9: n=45557 medoid_gid=178140 -> cluster_9.graph
+[rank 0] built cluster 4: n=56527 medoid_gid=134195 -> cluster_4.graph
+[rank 0] built cluster 6: n=51332 medoid_gid=149963 -> cluster_6.graph
+[rank 0] built cluster 8: n=44222 medoid_gid=172220 -> cluster_8.graph
+[rank 0] built cluster 10: n=36425 medoid_gid=355917 -> cluster_10.graph
+[rank 1] built cluster 11: n=72062 medoid_gid=76731 -> cluster_11.graph
+[rank 1] built cluster 13: n=36747 medoid_gid=112201 -> cluster_13.graph
+[rank 1] built cluster 15: n=59159 medoid_gid=292631 -> cluster_15.graph
+[rank 0] built cluster 12: n=81053 medoid_gid=25762 -> cluster_12.graph
+[rank 0] built cluster 14: n=82641 medoid_gid=69524 -> cluster_14.graph
+
+[rank 0] === Step 2 complete ===
+
+==================== STEP 3: global stitching ====================
+
+>>> mpirun -np 2 --host ncpu032:1,ncpu037:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/build/bin/build_stitch --base_path /gpfs/scratch/delgaudio/dann/test/base_1m.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_smoke_1m --R 72 --alpha 1.2
+2026-06-29 13:25:16
+[rank 0] Step 3 (stitching): N=1000000 K=16 dim=96 W=2 R=72 alpha=1.20
+[rank 0] All ranks accumulated neighbour lists.
+[rank 0] clusters read=16  total_edges=43166283  avg_degree=43.2
+[rank 0] replicated nodes (in >1 cluster, merged): 328 (0.03%)
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_smoke_1m/global_graph.bin
+
+[rank 0] === Step 3 complete ===
+
+==================== STEP 4: PQ ====================
+
+>>> mpirun -np 2 --host ncpu032:1,ncpu037:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/build/bin/build_pq --base_path /gpfs/scratch/delgaudio/dann/test/base_1m.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_smoke_1m --m 16 --train_size 100000 --iters 25
+2026-06-29 13:25:18
+[rank 0] Step 4 (PQ): N=1000000 dim=96 m=16 ksub=256 -> code=16 bytes
+[rank 0] train_size=100000 iters=25
+[rank 0] Training PQ on 100000 vectors...
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_smoke_1m/pq_codebook.bin
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_smoke_1m/codes.bin (1000000 codes x 16 bytes)
+
+[rank 0] === Step 4 complete ===
+
+==================== STEP 5: head index ====================
+
+>>> mpirun -np 2 --host ncpu032:1,ncpu037:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/build/bin/build_head --base_path /gpfs/scratch/delgaudio/dann/test/base_1m.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_smoke_1m --head_frac 0.05 --M 16 --efc 200 --method random
+2026-06-29 13:25:24
+[rank 0] Step 5 (head index): N=1000000 K=16 dim=96 W=2
+[rank 0] head_frac=0.050 -> C~=50000  method=random  M=16 efC=200
+[rank 0] collected 26192 head representatives
+[rank 1] collected 23825 head representatives
+[rank 0] Building HNSW head index over 50017 vectors...
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_smoke_1m/head/head.hnsw (50017 vectors)
+
+[rank 0] === Step 5 complete ===
+
+==================== STEP 6: KV store ====================
+
+>>> mpirun -np 2 --host ncpu032:1,ncpu037:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/build/bin/build_kvstore --base_path /gpfs/scratch/delgaudio/dann/test/base_1m.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_smoke_1m
+2026-06-29 13:25:26
+[rank 0] Step 6 (KV store): N=1000000 dim=96 R=72 m=16 total_edges=43166283
+[rank 0] All ranks assembled node records.
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_smoke_1m/nodes.bin
+
+[rank 0] === Step 6 complete ===
+
+############################################################
+# INDEXING COMPLETE — artifacts in /gpfs/scratch/delgaudio/dann/index_smoke_1m
+total 1.1G
+-rw-r--r-- 1 delgaudio exter 7.7M Jun 29 13:23 assignments.bin
+-rw-r--r-- 1 delgaudio exter 6.1K Jun 29 13:23 centroids.fvecs
+drwxr-xr-x 2 delgaudio exter  16K Jun 29 13:25 clusters
+-rw-r--r-- 1 delgaudio exter  16M Jun 29 13:25 codes.bin
+-rw-r--r-- 1 delgaudio exter 173M Jun 29 13:25 global_graph.bin
+drwxr-xr-x 2 delgaudio exter 4.0K Jun 29 13:25 head
+-rw-r--r-- 1 delgaudio exter  277 Jun 29 13:23 meta.json
+-rw-r--r-- 1 delgaudio exter 1.2G Jun 29 13:25 nodes.bin
+-rw-r--r-- 1 delgaudio exter  97K Jun 29 13:25 pq_codebook.bin
+############################################################

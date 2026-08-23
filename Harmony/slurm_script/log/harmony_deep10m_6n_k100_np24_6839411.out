@@ -1,0 +1,32 @@
+=== Harmony DEEP 6n: NNODES=6 NTASKS=7 NODELIST=ncpu[025-026,028-029,038-039] ===
+=== HARMONY_K=100 HARMONY_NPROBE=24 group=4 team=3 ===
+[1;33mMode: Group   [0m
+[1;31mset warmupSearchListSize to k[0m
+sub_nlist: 49 sub_nprobe: 49
+Added optimization levels: 0
+[1;33m[dim:96, nb:10000000, nq:10000, k:100, worker:6][0m
+Faiss time file /gpfs/scratch/delgaudio/vectors/DEEP/result/faiss_result_nlist_4096.txt does not exist
+Loading groundtruth file /gpfs/scratch/delgaudio/vectors/DEEP/result/groundtruth_100.bin
+Groundtruth file loaded
+Loading index from /gpfs/scratch/delgaudio/vectors/DEEP/index/index_nlist_4096_opt_0_subNprobeRatio_1.index
+Index loaded
+[1;32mInitInfo: [d:96, nlist:3162, nprobe:24, worker:6, block_dim:48, nb:10000000, presume:0GB, groupCount:4, teamCount:3, teamSize:2, startIVFId:0, ivfCount:1054, teamId:1, rankInsideTeam:1][0m
+[1;32mInitInfo: [d:96, nlist:3162, nprobe:24, worker:6, block_dim:48, nb:10000000, presume:0GB, groupCount:4, teamCount:3, teamSize:2, startIVFId:0, ivfCount:1054, teamId:1, rankInsideTeam:2][0m
+[1;32mInitInfo: [d:96, nlist:3162, nprobe:24, worker:6, block_dim:48, nb:10000000, presume:0GB, groupCount:4, teamCount:3, teamSize:2, startIVFId:1054, ivfCount:1054, teamId:2, rankInsideTeam:1][0m
+[1;32mInitInfo: [d:96, nlist:3162, nprobe:24, worker:6, block_dim:48, nb:10000000, presume:0GB, groupCount:4, teamCount:3, teamSize:2, startIVFId:1054, ivfCount:1054, teamId:2, rankInsideTeam:2][0m
+[1;32mInitInfo: [d:96, nlist:3162, nprobe:24, worker:6, block_dim:48, nb:10000000, presume:0GB, groupCount:4, teamCount:3, teamSize:2, startIVFId:2108, ivfCount:1054, teamId:3, rankInsideTeam:1][0m
+[1;32mInitInfo: [d:96, nlist:3162, nprobe:24, worker:6, block_dim:48, nb:10000000, presume:0GB, groupCount:4, teamCount:3, teamSize:2, startIVFId:2108, ivfCount:1054, teamId:3, rankInsideTeam:2][0m
+preSearch 63.41578693
+[1;34mGroup version of search[0m
+[1;33mIndex:[d:96,nlist:3162,nprobe:24,node:6]
+[1;32m[warmupSearchList 10, warmupSearchListSize 100][0m
+nprobe:24 opt_level: 0 simi_ratio: 1
+time_speedup: 0.00% pruning_speedup: 0.00% faiss_query_time: 0.000000 query_time: 24.126717
+recall: 0.9293529987335205 r2: 0.006446242332458496
+[1;36mreturn worker:6[0m
+[1;36mreturn worker:4[0m
+[1;36mreturn worker:5[0m
+[1;36mreturn worker:1[0m
+[1;36mreturn worker:3[0m
+[1;36mreturn worker:2[0m
+[1;36mreturn worker:0[0m

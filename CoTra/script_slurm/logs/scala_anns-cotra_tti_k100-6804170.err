@@ -1,0 +1,632 @@
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 1] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 1] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 2][WATCHDOG@sub] STUCK q66 state=2 leader=2 term=0 post=313 recv=273 ncpost=0 ncrecv=0
+[m 2][WATCHDOG@sub] STUCK q68 state=2 leader=2 term=0 post=161 recv=135 ncpost=1 ncrecv=1
+[m 2][WATCHDOG@sub] STUCK q229 state=2 leader=1 term=0 post=344 recv=333 ncpost=9 ncrecv=7
+[m 2][WATCHDOG@sub] STUCK q232 state=2 leader=2 term=0 post=52 recv=36 ncpost=1 ncrecv=0
+[m 2][WATCHDOG@sub] STUCK q381 state=2 leader=2 term=0 post=700 recv=691 ncpost=21 ncrecv=21
+[m 2][WATCHDOG@sub] STUCK q382 state=2 leader=0 term=0 post=673 recv=659 ncpost=8 ncrecv=8
+[m 2][WATCHDOG@sub] STUCK q386 state=2 leader=2 term=0 post=123 recv=114 ncpost=1 ncrecv=1
+[m 2][WATCHDOG@sub] STUCK q387 state=2 leader=2 term=0 post=46 recv=28 ncpost=6 ncrecv=6
+[m 2][WATCHDOG@sub] STUCK q536 state=2 leader=2 term=0 post=171 recv=163 ncpost=3 ncrecv=1
+[m 2][WATCHDOG@sub] STUCK q537 state=2 leader=2 term=0 post=95 recv=88 ncpost=0 ncrecv=0
+[m 0][WATCHDOG@sub] STUCK q524298497 state=466879488 leader=1681455167 term=63 post=475296000 recv=1470538815 ncpost=445624832 ncrecv=1800973887
+[m 0][WATCHDOG@sub] STUCK q327541761 state=277175808 leader=2256308543 term=63 post=216846336 recv=2295186239 ncpost=181354496 ncrecv=1966573887
+[m 0][WATCHDOG@sub] STUCK q2968031 state=2 leader=5242 term=0 post=3 recv=2 ncpost=7534682 ncrecv=0
+[m 0][WATCHDOG@sub] STUCK q7506 state=-700956888 leader=2616721455 term=64 post=3267089 recv=1059406247 ncpost=3202133 ncrecv=1059570869
+[m 0][WATCHDOG@sub] STUCK q205981185 state=147303680 leader=1352531006 term=62 post=137424384 recv=1817505087 ncpost=55876352 ncrecv=1728684095
+[m 0][WATCHDOG@sub] STUCK q494417665 state=346152960 leader=2045956159 term=63 post=465600512 recv=2143779647 ncpost=230453504 ncrecv=1904252991
+[m 0][WATCHDOG@sub] STUCK q2 state=492503040 leader=50397184 term=29 post=769 recv=1923840 ncpost=512 ncrecv=65528576
+[m 0][WATCHDOG@sub] STUCK q2535 state=4949636 leader=1659240532 term=91 post=3704488013 recv=1563508513 ncpost=603193425 ncrecv=1064714003
+[m 0][WATCHDOG@sub] STUCK q2535 state=-751042486 leader=17 term=0 post=930349158 recv=3426959144 ncpost=572784717 ncrecv=4010622766
+[m 0][WATCHDOG@sub] STUCK q7532 state=5794663 leader=1060162550 term=53 post=1059407778 recv=5602909 ncpost=1059286068 ncrecv=5876721
+[m 2][WATCHDOG@sub] scan done=1283 pending=8717 stuck=166 qsize=10000 recv_sum=89093447618
+[m 1][WATCHDOG@sub] STUCK q267817473 state=99973120 leader=2026725951 term=63 post=196704256 recv=435629887 ncpost=224626688 ncrecv=81820479
+[m 3][WATCHDOG@sub] STUCK q388 state=2 leader=0 term=0 post=695 recv=687 ncpost=43 ncrecv=42
+[m 3][WATCHDOG@sub] STUCK q2265 state=2 leader=0 term=0 post=435 recv=408 ncpost=26 ncrecv=18
+[m 3][WATCHDOG@sub] STUCK q2586 state=2 leader=3 term=0 post=1234 recv=1191 ncpost=31 ncrecv=1
+[m 3][WATCHDOG@sub] STUCK q2587 state=2 leader=3 term=0 post=182 recv=125 ncpost=0 ncrecv=0
+[m 3][WATCHDOG@sub] STUCK q2506 state=1823057 leader=1812789 term=245 post=1059898022 recv=841690 ncpost=1059692236 ncrecv=276101
+[m 3][WATCHDOG@sub] STUCK q2510 state=1059346182 leader=185351 term=218 post=1058108534 recv=268360 ncpost=1058614805 ncrecv=352840
+[m 3][WATCHDOG@sub] STUCK q7505 state=-527155404 leader=1903227 term=186 post=2118401819 recv=821755906 ncpost=1598504770 ncrecv=771227648
+[m 3][WATCHDOG@sub] STUCK q11 state=342887 leader=387933 term=158 post=1060488111 recv=281793 ncpost=1059696288 ncrecv=402774
+[m 3][WATCHDOG@sub] STUCK q7513 state=5064792 leader=1058769957 term=96 post=7079961 recv=7513 ncpost=0 ncrecv=5
+[m 3][WATCHDOG@sub] STUCK q267174657 state=189256192 leader=251136575 term=63 post=123699712 recv=446679615 ncpost=175699456 ncrecv=315771967
+[m 3][WATCHDOG@sub] scan done=1615 pending=8385 stuck=331 qsize=10000 recv_sum=346330459029
+[m 0][WATCHDOG@sub] scan done=1285 pending=8715 stuck=387 qsize=10000 recv_sum=740580157753
+[m 1][WATCHDOG@sub] STUCK q480549377 state=447256576 leader=1867456319 term=63 post=426480384 recv=1272724287 ncpost=461497600 ncrecv=1256300095
+[m 1][WATCHDOG@sub] STUCK q2516 state=2516 leader=1058928098 term=52 post=1058173177 recv=7035496 ncpost=2516 ncrecv=1
+[m 1][WATCHDOG@sub] STUCK q7509 state=1059520800 leader=1480035 term=119 post=1513079 recv=1060248048 ncpost=1573275 ncrecv=1059062240
+[m 1][WATCHDOG@sub] STUCK q7514 state=7514 leader=364511336 term=84 post=1060466833 recv=5773808 ncpost=1058946868 ncrecv=5677613
+[m 1][WATCHDOG@sub] STUCK q166036225 state=151044352 leader=117387839 term=63 post=112083200 recv=619735615 ncpost=165273088 ncrecv=501082431
+[m 1][WATCHDOG@sub] STUCK q494417665 state=346152960 leader=2045956159 term=63 post=465600512 recv=2143779647 ncpost=230453504 ncrecv=1904252991
+[m 1][WATCHDOG@sub] STUCK q267174657 state=189256192 leader=251136575 term=63 post=123699712 recv=446679615 ncpost=175699456 ncrecv=315771967
+[m 1][WATCHDOG@sub] STUCK q3 state=493617152 leader=65536 term=29 post=1 recv=1928192 ncpost=2304 ncrecv=972104704
+[m 1][WATCHDOG@sub] STUCK q2537 state=5008480 leader=7 term=177 post=196609 recv=1408696320 ncpost=2593341233 ncrecv=739835999
+[m 1][WATCHDOG@sub] scan done=1458 pending=8542 stuck=278 qsize=10000 recv_sum=351360422749
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search

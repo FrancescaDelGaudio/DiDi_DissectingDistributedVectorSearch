@@ -1,0 +1,1171 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Linux - 4.18.0-193.el8.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicc 
+      Build flags: -I/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/3.29.1/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/3.29.1/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-FsOgUT"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-FsOgUT"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-I/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-FsOgUT'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_795a5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_795a5.dir/build.make CMakeFiles/cmTC_795a5.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-FsOgUT'
+        Building C object CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicc   -I/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include    -v -o CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o -c /gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/softs/gcc/10.3.0/bin/gcc
+        Target: x86_64-pc-linux-gnu
+        Configured with: ../configure --enable-languages=c,c++,fortran --disable-multilib --prefix=/softs/gcc/10.3.0
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 10.3.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-I' '/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include' '-v' '-o' 'CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o' '-c' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-mtune=generic' '-march=x86-64'
+         /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/cc1 -quiet -v -I /softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include -I /softs/openmpi/gcc-10.3.0/4.1.1/include -iprefix /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/ -D_REENTRANT /gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o -version -o /tmp/cc0bWXKT.s
+        GNU C17 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 10.3.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include"
+        ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed"
+        ignoring nonexistent directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring nonexistent directory "/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /softs/openmpi/gcc-10.3.0/4.1.1/include
+         /gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/include
+         /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include
+         /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed
+         /usr/local/include
+         /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../include
+         /usr/include
+        End of search list.
+        GNU C17 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 10.3.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 5640f99ecf969900180c9d09dda3280b
+        COLLECT_GCC_OPTIONS='-I' '/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include' '-v' '-o' 'CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o' '-c' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-mtune=generic' '-march=x86-64'
+         as -v -I /softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include -I /softs/openmpi/gcc-10.3.0/4.1.1/include --64 -o CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o /tmp/cc0bWXKT.s
+        GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-73.el8
+        COMPILER_PATH=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/
+        LIBRARY_PATH=/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-I' '/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include' '-v' '-o' 'CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o' '-c' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-mtune=generic' '-march=x86-64'
+        Linking C executable cmTC_795a5
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_795a5.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicc -I/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include   -v -Wl,-v -rdynamic CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o -o cmTC_795a5
+        Using built-in specs.
+        COLLECT_GCC=/softs/gcc/10.3.0/bin/gcc
+        COLLECT_LTO_WRAPPER=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: ../configure --enable-languages=c,c++,fortran --disable-multilib --prefix=/softs/gcc/10.3.0
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 10.3.0 (GCC) 
+        COMPILER_PATH=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/
+        LIBRARY_PATH=/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-I' '/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include' '-v' '-rdynamic' '-o' 'cmTC_795a5' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-L/softs/openmpi/gcc-10.3.0/4.1.1/lib' '-mtune=generic' '-march=x86-64'
+         /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/collect2 -plugin /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so -plugin-opt=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cceXxanW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_795a5 /lib/../lib64/crt1.o /lib/../lib64/crti.o /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/softs/openmpi/gcc-10.3.0/4.1.1/lib -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. -v CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o -rpath /softs/openmpi/gcc-10.3.0/4.1.1/lib --enable-new-dtags -lmpi -lgcc --push-state --as-needed -lgcc_s --pop-state -lpthread -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o
+        collect2 version 10.3.0
+        /usr/bin/ld -plugin /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so -plugin-opt=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cceXxanW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_795a5 /lib/../lib64/crt1.o /lib/../lib64/crti.o /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/softs/openmpi/gcc-10.3.0/4.1.1/lib -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. -v CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o -rpath /softs/openmpi/gcc-10.3.0/4.1.1/lib --enable-new-dtags -lmpi -lgcc --push-state --as-needed -lgcc_s --pop-state -lpthread -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o
+        GNU ld version 2.30-73.el8
+        COLLECT_GCC_OPTIONS='-I' '/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include' '-v' '-rdynamic' '-o' 'cmTC_795a5' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-L/softs/openmpi/gcc-10.3.0/4.1.1/lib' '-mtune=generic' '-march=x86-64'
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-FsOgUT'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:134 (message)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/softs/openmpi/gcc-10.3.0/4.1.1/include]
+          add: [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/include]
+          add: [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include]
+          add: [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed]
+          add: [/usr/local/include]
+          add: [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/softs/openmpi/gcc-10.3.0/4.1.1/include] ==> [/softs/openmpi/gcc-10.3.0/4.1.1/include]
+        collapse include dir [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/include] ==> [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/include]
+        collapse include dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include] ==> [/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include]
+        collapse include dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed] ==> [/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../include] ==> [/gpfs/softs/gcc/10.3.0/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/softs/openmpi/gcc-10.3.0/4.1.1/include;/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/include;/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include;/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed;/usr/local/include;/gpfs/softs/gcc/10.3.0/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-FsOgUT']
+        ignore line: []
+        ignore line: [Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_795a5/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_795a5.dir/build.make CMakeFiles/cmTC_795a5.dir/build]
+        ignore line: [gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-FsOgUT']
+        ignore line: [Building C object CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicc   -I/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include    -v -o CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o -c /gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/softs/gcc/10.3.0/bin/gcc]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ../configure --enable-languages=c c++ fortran --disable-multilib --prefix=/softs/gcc/10.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 10.3.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include' '-v' '-o' 'CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o' '-c' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/cc1 -quiet -v -I /softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include -I /softs/openmpi/gcc-10.3.0/4.1.1/include -iprefix /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/ -D_REENTRANT /gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o -version -o /tmp/cc0bWXKT.s]
+        ignore line: [GNU C17 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 10.3.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include"]
+        ignore line: [ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /softs/openmpi/gcc-10.3.0/4.1.1/include]
+        ignore line: [ /gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/include]
+        ignore line: [ /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include]
+        ignore line: [ /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 10.3.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 5640f99ecf969900180c9d09dda3280b]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include' '-v' '-o' 'CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o' '-c' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-mtune=generic' '-march=x86-64']
+        ignore line: [ as -v -I /softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include -I /softs/openmpi/gcc-10.3.0/4.1.1/include --64 -o CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o /tmp/cc0bWXKT.s]
+        ignore line: [GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-73.el8]
+        ignore line: [COMPILER_PATH=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include' '-v' '-o' 'CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o' '-c' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking C executable cmTC_795a5]
+        ignore line: [/gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_795a5.dir/link.txt --verbose=1]
+        ignore line: [/softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicc -I/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include   -v -Wl -v -rdynamic CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o -o cmTC_795a5]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/softs/gcc/10.3.0/bin/gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ../configure --enable-languages=c c++ fortran --disable-multilib --prefix=/softs/gcc/10.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 10.3.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-I' '/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include' '-v' '-rdynamic' '-o' 'cmTC_795a5' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-L/softs/openmpi/gcc-10.3.0/4.1.1/lib' '-mtune=generic' '-march=x86-64']
+        link line: [ /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/collect2 -plugin /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so -plugin-opt=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cceXxanW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_795a5 /lib/../lib64/crt1.o /lib/../lib64/crti.o /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/softs/openmpi/gcc-10.3.0/4.1.1/lib -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. -v CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o -rpath /softs/openmpi/gcc-10.3.0/4.1.1/lib --enable-new-dtags -lmpi -lgcc --push-state --as-needed -lgcc_s --pop-state -lpthread -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cceXxanW.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_795a5] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o] ==> obj [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o]
+          arg [-L/softs/openmpi/gcc-10.3.0/4.1.1/lib] ==> dir [/softs/openmpi/gcc-10.3.0/4.1.1/lib]
+          arg [-L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0] ==> dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+          arg [-L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc] ==> dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc]
+          arg [-L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
+          arg [-L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
+          arg [-L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..] ==> dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/softs/openmpi/gcc-10.3.0/4.1.1/lib] ==> ignore
+          arg [--enable-new-dtags] ==> ignore
+          arg [-lmpi] ==> lib [mpi]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lpthread] ==> lib [pthread]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o] ==> obj [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        ignore line: [collect2 version 10.3.0]
+        ignore line: [/usr/bin/ld -plugin /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so -plugin-opt=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cceXxanW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_795a5 /lib/../lib64/crt1.o /lib/../lib64/crti.o /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/softs/openmpi/gcc-10.3.0/4.1.1/lib -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. -v CMakeFiles/cmTC_795a5.dir/CMakeCCompilerABI.c.o -rpath /softs/openmpi/gcc-10.3.0/4.1.1/lib --enable-new-dtags -lmpi -lgcc --push-state --as-needed -lgcc_s --pop-state -lpthread -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o]
+        linker tool for 'C': /usr/bin/ld
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o] ==> [/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o]
+        collapse obj [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o] ==> [/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/softs/openmpi/gcc-10.3.0/4.1.1/lib] ==> [/softs/openmpi/gcc-10.3.0/4.1.1/lib]
+        collapse library dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0] ==> [/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        collapse library dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc] ==> [/gpfs/softs/gcc/10.3.0/lib/gcc]
+        collapse library dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> [/gpfs/softs/gcc/10.3.0/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
+        collapse library dir [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
+        collapse library dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..] ==> [/gpfs/softs/gcc/10.3.0/lib]
+        implicit libs: [mpi;gcc;gcc_s;pthread;c;gcc;gcc_s]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o;/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/softs/openmpi/gcc-10.3.0/4.1.1/lib;/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0;/gpfs/softs/gcc/10.3.0/lib/gcc;/gpfs/softs/gcc/10.3.0/lib64;/lib64;/usr/lib64;/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin;/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin;/gpfs/softs/gcc/10.3.0/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld version 2.30-73.el8
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-G2uRvC"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-G2uRvC"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-G2uRvC'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ff253/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ff253.dir/build.make CMakeFiles/cmTC_ff253.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-G2uRvC'
+        Building CXX object CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -v -o CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o -c /gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/softs/gcc/10.3.0/bin/g++
+        Target: x86_64-pc-linux-gnu
+        Configured with: ../configure --enable-languages=c,c++,fortran --disable-multilib --prefix=/softs/gcc/10.3.0
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 10.3.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/cc1plus -quiet -v -I /softs/openmpi/gcc-10.3.0/4.1.1/include -iprefix /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/ -D_GNU_SOURCE -D_REENTRANT /gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/cciXGlo0.s
+        GNU C++14 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 10.3.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0"
+        ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu"
+        ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward"
+        ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include"
+        ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed"
+        ignoring nonexistent directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /softs/openmpi/gcc-10.3.0/4.1.1/include
+         /gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/include
+         /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0
+         /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu
+         /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward
+         /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include
+         /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed
+         /usr/local/include
+         /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../include
+         /usr/include
+        End of search list.
+        GNU C++14 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 10.3.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: cbf5778ef1b74019fda05150d03dd2f1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         as -v -I /softs/openmpi/gcc-10.3.0/4.1.1/include --64 -o CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o /tmp/cciXGlo0.s
+        GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-73.el8
+        COMPILER_PATH=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/
+        LIBRARY_PATH=/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        Linking CXX executable cmTC_ff253
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff253.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx  -v -Wl,-v -rdynamic CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ff253
+        Using built-in specs.
+        COLLECT_GCC=/softs/gcc/10.3.0/bin/g++
+        COLLECT_LTO_WRAPPER=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: ../configure --enable-languages=c,c++,fortran --disable-multilib --prefix=/softs/gcc/10.3.0
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 10.3.0 (GCC) 
+        COMPILER_PATH=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/
+        LIBRARY_PATH=/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ff253' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-L/softs/openmpi/gcc-10.3.0/4.1.1/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/collect2 -plugin /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so -plugin-opt=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccin2Kt3.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ff253 /lib/../lib64/crt1.o /lib/../lib64/crti.o /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/softs/openmpi/gcc-10.3.0/4.1.1/lib -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. -v CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o -rpath /softs/openmpi/gcc-10.3.0/4.1.1/lib --enable-new-dtags -lmpi -lstdc++ -lm -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o
+        collect2 version 10.3.0
+        /usr/bin/ld -plugin /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so -plugin-opt=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccin2Kt3.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ff253 /lib/../lib64/crt1.o /lib/../lib64/crti.o /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/softs/openmpi/gcc-10.3.0/4.1.1/lib -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. -v CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o -rpath /softs/openmpi/gcc-10.3.0/4.1.1/lib --enable-new-dtags -lmpi -lstdc++ -lm -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o
+        GNU ld version 2.30-73.el8
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ff253' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-L/softs/openmpi/gcc-10.3.0/4.1.1/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-G2uRvC'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:134 (message)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/softs/openmpi/gcc-10.3.0/4.1.1/include]
+          add: [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/include]
+          add: [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0]
+          add: [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu]
+          add: [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward]
+          add: [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include]
+          add: [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed]
+          add: [/usr/local/include]
+          add: [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/softs/openmpi/gcc-10.3.0/4.1.1/include] ==> [/softs/openmpi/gcc-10.3.0/4.1.1/include]
+        collapse include dir [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/include] ==> [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/include]
+        collapse include dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0] ==> [/gpfs/softs/gcc/10.3.0/include/c++/10.3.0]
+        collapse include dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu] ==> [/gpfs/softs/gcc/10.3.0/include/c++/10.3.0/x86_64-pc-linux-gnu]
+        collapse include dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward] ==> [/gpfs/softs/gcc/10.3.0/include/c++/10.3.0/backward]
+        collapse include dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include] ==> [/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include]
+        collapse include dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed] ==> [/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../include] ==> [/gpfs/softs/gcc/10.3.0/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/softs/openmpi/gcc-10.3.0/4.1.1/include;/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/include;/gpfs/softs/gcc/10.3.0/include/c++/10.3.0;/gpfs/softs/gcc/10.3.0/include/c++/10.3.0/x86_64-pc-linux-gnu;/gpfs/softs/gcc/10.3.0/include/c++/10.3.0/backward;/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include;/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed;/usr/local/include;/gpfs/softs/gcc/10.3.0/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-G2uRvC']
+        ignore line: []
+        ignore line: [Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ff253/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_ff253.dir/build.make CMakeFiles/cmTC_ff253.dir/build]
+        ignore line: [gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-G2uRvC']
+        ignore line: [Building CXX object CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -v -o CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o -c /gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/softs/gcc/10.3.0/bin/g++]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ../configure --enable-languages=c c++ fortran --disable-multilib --prefix=/softs/gcc/10.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 10.3.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/cc1plus -quiet -v -I /softs/openmpi/gcc-10.3.0/4.1.1/include -iprefix /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/ -D_GNU_SOURCE -D_REENTRANT /gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/cciXGlo0.s]
+        ignore line: [GNU C++14 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 10.3.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0"]
+        ignore line: [ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu"]
+        ignore line: [ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward"]
+        ignore line: [ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include"]
+        ignore line: [ignoring duplicate directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /softs/openmpi/gcc-10.3.0/4.1.1/include]
+        ignore line: [ /gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/include]
+        ignore line: [ /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0]
+        ignore line: [ /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu]
+        ignore line: [ /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward]
+        ignore line: [ /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include]
+        ignore line: [ /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/../../include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++14 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 10.3.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: cbf5778ef1b74019fda05150d03dd2f1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ as -v -I /softs/openmpi/gcc-10.3.0/4.1.1/include --64 -o CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o /tmp/cciXGlo0.s]
+        ignore line: [GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-73.el8]
+        ignore line: [COMPILER_PATH=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking CXX executable cmTC_ff253]
+        ignore line: [/gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff253.dir/link.txt --verbose=1]
+        ignore line: [/softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx  -v -Wl -v -rdynamic CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ff253]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/softs/gcc/10.3.0/bin/g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ../configure --enable-languages=c c++ fortran --disable-multilib --prefix=/softs/gcc/10.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 10.3.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin/:/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin/:/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ff253' '-I' '/softs/openmpi/gcc-10.3.0/4.1.1/include' '-pthread' '-L/softs/openmpi/gcc-10.3.0/4.1.1/lib' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        link line: [ /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/collect2 -plugin /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so -plugin-opt=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccin2Kt3.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ff253 /lib/../lib64/crt1.o /lib/../lib64/crti.o /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/softs/openmpi/gcc-10.3.0/4.1.1/lib -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. -v CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o -rpath /softs/openmpi/gcc-10.3.0/4.1.1/lib --enable-new-dtags -lmpi -lstdc++ -lm -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccin2Kt3.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_ff253] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o] ==> obj [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o]
+          arg [-L/softs/openmpi/gcc-10.3.0/4.1.1/lib] ==> dir [/softs/openmpi/gcc-10.3.0/4.1.1/lib]
+          arg [-L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0] ==> dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+          arg [-L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc] ==> dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc]
+          arg [-L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> dir [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
+          arg [-L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> dir [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
+          arg [-L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..] ==> dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/softs/openmpi/gcc-10.3.0/4.1.1/lib] ==> ignore
+          arg [--enable-new-dtags] ==> ignore
+          arg [-lmpi] ==> lib [mpi]
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o] ==> obj [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        ignore line: [collect2 version 10.3.0]
+        ignore line: [/usr/bin/ld -plugin /gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so -plugin-opt=/gpfs/softs/gcc/10.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccin2Kt3.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ff253 /lib/../lib64/crt1.o /lib/../lib64/crti.o /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/softs/openmpi/gcc-10.3.0/4.1.1/lib -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin -L/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin -L/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. -v CMakeFiles/cmTC_ff253.dir/CMakeCXXCompilerABI.cpp.o -rpath /softs/openmpi/gcc-10.3.0/4.1.1/lib --enable-new-dtags -lmpi -lstdc++ -lm -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/../lib64/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o] ==> [/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o]
+        collapse obj [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o] ==> [/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/softs/openmpi/gcc-10.3.0/4.1.1/lib] ==> [/softs/openmpi/gcc-10.3.0/4.1.1/lib]
+        collapse library dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0] ==> [/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+        collapse library dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc] ==> [/gpfs/softs/gcc/10.3.0/lib/gcc]
+        collapse library dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> [/gpfs/softs/gcc/10.3.0/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin] ==> [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin]
+        collapse library dir [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin] ==> [/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin]
+        collapse library dir [/gpfs/softs/gcc/10.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..] ==> [/gpfs/softs/gcc/10.3.0/lib]
+        implicit libs: [mpi;stdc++;m;gcc_s;gcc;pthread;c;gcc_s;gcc]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o;/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/softs/openmpi/gcc-10.3.0/4.1.1/lib;/gpfs/softs/gcc/10.3.0/lib/gcc/x86_64-pc-linux-gnu/10.3.0;/gpfs/softs/gcc/10.3.0/lib/gcc;/gpfs/softs/gcc/10.3.0/lib64;/lib64;/usr/lib64;/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/compiler/lib/intel64_lin;/gpfs/softs/intel/2020U4/compilers_and_libraries_2020.4.304/linux/mkl/lib/intel64_lin;/gpfs/softs/gcc/10.3.0/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld version 2.30-73.el8
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "src/include/kahiplib/CMakeLists.txt:46 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-LGgFRQ"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-LGgFRQ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib"
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-LGgFRQ'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fde20/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fde20.dir/build.make CMakeFiles/cmTC_fde20.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-LGgFRQ'
+        Building CXX object CMakeFiles/cmTC_fde20.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fPIE -o CMakeFiles/cmTC_fde20.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-LGgFRQ/test_mpi.cpp
+        Linking CXX executable cmTC_fde20
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fde20.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx -L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib  CMakeFiles/cmTC_fde20.dir/test_mpi.cpp.o -o cmTC_fde20
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-LGgFRQ'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindBoost.cmake:2144 (find_package)"
+      - "CMakeLists.txt:29 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-MX4ZgC"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-MX4ZgC"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-I/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib"
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake/Modules/"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-MX4ZgC'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_236ab/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_236ab.dir/build.make CMakeFiles/cmTC_236ab.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-MX4ZgC'
+        Building C object CMakeFiles/cmTC_236ab.dir/src.c.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicc -DCMAKE_HAVE_LIBC_PTHREAD  -I/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include  -o CMakeFiles/cmTC_236ab.dir/src.c.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-MX4ZgC/src.c
+        Linking C executable cmTC_236ab
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_236ab.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicc -I/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/include:-I/softs/ucx/1.10.1/include  -L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib  CMakeFiles/cmTC_236ab.dir/src.c.o -o cmTC_236ab
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-MX4ZgC'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:35 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-1anhJX"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-1anhJX"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp "
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake/Modules/"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-1anhJX'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9abd6/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9abd6.dir/build.make CMakeFiles/cmTC_9abd6.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-1anhJX'
+        Building CXX object CMakeFiles/cmTC_9abd6.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fopenmp   -o CMakeFiles/cmTC_9abd6.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-1anhJX/test_mpi.cpp
+        Linking CXX executable cmTC_9abd6
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9abd6.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx  -std=c++11 -fopenmp   -rdynamic CMakeFiles/cmTC_9abd6.dir/test_mpi.cpp.o -o cmTC_9abd6
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-1anhJX'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "src/include/kahiplib/CMakeLists.txt:46 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-LFDXn2"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-LFDXn2"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib"
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-LFDXn2'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_41655/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_41655.dir/build.make CMakeFiles/cmTC_41655.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-LFDXn2'
+        Building CXX object CMakeFiles/cmTC_41655.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fPIE -o CMakeFiles/cmTC_41655.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-LFDXn2/test_mpi.cpp
+        Linking CXX executable cmTC_41655
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41655.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx -L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib  CMakeFiles/cmTC_41655.dir/test_mpi.cpp.o -o cmTC_41655
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-LFDXn2'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:35 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-E7Xhr7"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-E7Xhr7"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp "
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake;/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake/Modules/"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-E7Xhr7'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_971f1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_971f1.dir/build.make CMakeFiles/cmTC_971f1.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-E7Xhr7'
+        Building CXX object CMakeFiles/cmTC_971f1.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fopenmp   -o CMakeFiles/cmTC_971f1.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-E7Xhr7/test_mpi.cpp
+        Linking CXX executable cmTC_971f1
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_971f1.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx  -std=c++11 -fopenmp   -rdynamic CMakeFiles/cmTC_971f1.dir/test_mpi.cpp.o -o cmTC_971f1
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-E7Xhr7'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "src/include/kahiplib/CMakeLists.txt:46 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-dMwO1p"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-dMwO1p"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib"
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-dMwO1p'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1cd92/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1cd92.dir/build.make CMakeFiles/cmTC_1cd92.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-dMwO1p'
+        Building CXX object CMakeFiles/cmTC_1cd92.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fPIE -o CMakeFiles/cmTC_1cd92.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-dMwO1p/test_mpi.cpp
+        Linking CXX executable cmTC_1cd92
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1cd92.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx -L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib  CMakeFiles/cmTC_1cd92.dir/test_mpi.cpp.o -o cmTC_1cd92
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-dMwO1p'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:35 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-7ALVef"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-7ALVef"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp "
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake;/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake/Modules/"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-7ALVef'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fe3ac/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fe3ac.dir/build.make CMakeFiles/cmTC_fe3ac.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-7ALVef'
+        Building CXX object CMakeFiles/cmTC_fe3ac.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fopenmp   -o CMakeFiles/cmTC_fe3ac.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-7ALVef/test_mpi.cpp
+        Linking CXX executable cmTC_fe3ac
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe3ac.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx  -std=c++11 -fopenmp   -L/softs/openmpi/gcc-10.3.0/4.1.1/lib  -rdynamic CMakeFiles/cmTC_fe3ac.dir/test_mpi.cpp.o -o cmTC_fe3ac
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-7ALVef'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "src/include/kahiplib/CMakeLists.txt:46 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-JC2i0n"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-JC2i0n"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib"
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-JC2i0n'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3ac55/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3ac55.dir/build.make CMakeFiles/cmTC_3ac55.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-JC2i0n'
+        Building CXX object CMakeFiles/cmTC_3ac55.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fPIE -o CMakeFiles/cmTC_3ac55.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-JC2i0n/test_mpi.cpp
+        Linking CXX executable cmTC_3ac55
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ac55.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx -L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib  CMakeFiles/cmTC_3ac55.dir/test_mpi.cpp.o -o cmTC_3ac55
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-JC2i0n'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:35 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-DWzUtE"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-DWzUtE"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp "
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake;/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake/Modules/"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-DWzUtE'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_46227/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_46227.dir/build.make CMakeFiles/cmTC_46227.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-DWzUtE'
+        Building CXX object CMakeFiles/cmTC_46227.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fopenmp   -o CMakeFiles/cmTC_46227.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-DWzUtE/test_mpi.cpp
+        Linking CXX executable cmTC_46227
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46227.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx  -std=c++11 -fopenmp   -L/softs/openmpi/gcc-10.3.0/4.1.1/lib  -rdynamic CMakeFiles/cmTC_46227.dir/test_mpi.cpp.o -o cmTC_46227
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-DWzUtE'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "src/include/kahiplib/CMakeLists.txt:46 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-SJTCjY"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-SJTCjY"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib"
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-SJTCjY'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d64e8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d64e8.dir/build.make CMakeFiles/cmTC_d64e8.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-SJTCjY'
+        Building CXX object CMakeFiles/cmTC_d64e8.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fPIE -o CMakeFiles/cmTC_d64e8.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-SJTCjY/test_mpi.cpp
+        Linking CXX executable cmTC_d64e8
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d64e8.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx -L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib  CMakeFiles/cmTC_d64e8.dir/test_mpi.cpp.o -o cmTC_d64e8
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-SJTCjY'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:35 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-1LzzTG"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-1LzzTG"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp "
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake;/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake/Modules/"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-1LzzTG'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_08374/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_08374.dir/build.make CMakeFiles/cmTC_08374.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-1LzzTG'
+        Building CXX object CMakeFiles/cmTC_08374.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fopenmp   -o CMakeFiles/cmTC_08374.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-1LzzTG/test_mpi.cpp
+        Linking CXX executable cmTC_08374
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08374.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx  -std=c++11 -fopenmp   -L/softs/openmpi/gcc-10.3.0/4.1.1/lib  -rdynamic CMakeFiles/cmTC_08374.dir/test_mpi.cpp.o -o cmTC_08374
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-1LzzTG'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "src/include/kahiplib/CMakeLists.txt:46 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-mmytGz"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-mmytGz"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib"
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-mmytGz'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5b215/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5b215.dir/build.make CMakeFiles/cmTC_5b215.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-mmytGz'
+        Building CXX object CMakeFiles/cmTC_5b215.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fPIE -o CMakeFiles/cmTC_5b215.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-mmytGz/test_mpi.cpp
+        Linking CXX executable cmTC_5b215
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b215.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx -L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib  CMakeFiles/cmTC_5b215.dir/test_mpi.cpp.o -o cmTC_5b215
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-mmytGz'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:35 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-dMVUF1"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-dMVUF1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp "
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake;/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake/Modules/"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-dMVUF1'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c3472/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c3472.dir/build.make CMakeFiles/cmTC_c3472.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-dMVUF1'
+        Building CXX object CMakeFiles/cmTC_c3472.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fopenmp   -o CMakeFiles/cmTC_c3472.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-dMVUF1/test_mpi.cpp
+        Linking CXX executable cmTC_c3472
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3472.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx  -std=c++11 -fopenmp   -L/softs/openmpi/gcc-10.3.0/4.1.1/lib  -rdynamic CMakeFiles/cmTC_c3472.dir/test_mpi.cpp.o -o cmTC_c3472
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-dMVUF1'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "src/include/kahiplib/CMakeLists.txt:46 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-gYTnKb"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-gYTnKb"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib"
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-gYTnKb'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ab1a1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ab1a1.dir/build.make CMakeFiles/cmTC_ab1a1.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-gYTnKb'
+        Building CXX object CMakeFiles/cmTC_ab1a1.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fPIE -o CMakeFiles/cmTC_ab1a1.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-gYTnKb/test_mpi.cpp
+        Linking CXX executable cmTC_ab1a1
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab1a1.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx -L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib  CMakeFiles/cmTC_ab1a1.dir/test_mpi.cpp.o -o cmTC_ab1a1
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-gYTnKb'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:35 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-F0KvI9"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-F0KvI9"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp "
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake;/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake/Modules/"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-F0KvI9'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c30d3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c30d3.dir/build.make CMakeFiles/cmTC_c30d3.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-F0KvI9'
+        Building CXX object CMakeFiles/cmTC_c30d3.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fopenmp   -o CMakeFiles/cmTC_c30d3.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-F0KvI9/test_mpi.cpp
+        Linking CXX executable cmTC_c30d3
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c30d3.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx  -std=c++11 -fopenmp   -L/softs/openmpi/gcc-10.3.0/4.1.1/lib  -rdynamic CMakeFiles/cmTC_c30d3.dir/test_mpi.cpp.o -o cmTC_c30d3
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-F0KvI9'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "src/include/kahiplib/CMakeLists.txt:46 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-qgUqSe"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-qgUqSe"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib"
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-qgUqSe'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bafd6/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bafd6.dir/build.make CMakeFiles/cmTC_bafd6.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-qgUqSe'
+        Building CXX object CMakeFiles/cmTC_bafd6.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fPIE -o CMakeFiles/cmTC_bafd6.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-qgUqSe/test_mpi.cpp
+        Linking CXX executable cmTC_bafd6
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bafd6.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx -L/softs/openmpi/intel-21U2/4.1.1-ucx-1.10.1/lib:-L/softs/ucx/1.10.1/lib  CMakeFiles/cmTC_bafd6.dir/test_mpi.cpp.o -o cmTC_bafd6
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-qgUqSe'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/gpfs/softs/cmake/3.29.1/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:35 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-DL8IRn"
+      binary: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-DL8IRn"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp "
+      CMAKE_MODULE_PATH: "/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake;/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/cmake/Modules/"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-DL8IRn'
+        
+        Run Build Command(s): /gpfs/softs/cmake/3.29.1/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bcaf6/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bcaf6.dir/build.make CMakeFiles/cmTC_bcaf6.dir/build
+        gmake[1]: Entering directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-DL8IRn'
+        Building CXX object CMakeFiles/cmTC_bcaf6.dir/test_mpi.cpp.o
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx   -std=c++11 -fopenmp   -o CMakeFiles/cmTC_bcaf6.dir/test_mpi.cpp.o -c /gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-DL8IRn/test_mpi.cpp
+        Linking CXX executable cmTC_bcaf6
+        /gpfs/softs/cmake/3.29.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bcaf6.dir/link.txt --verbose=1
+        /softs/openmpi/gcc-10.3.0/4.1.1/bin/mpicxx  -std=c++11 -fopenmp   -L/softs/openmpi/gcc-10.3.0/4.1.1/lib  -rdynamic CMakeFiles/cmTC_bcaf6.dir/test_mpi.cpp.o -o cmTC_bcaf6
+        gmake[1]: Leaving directory '/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/build/CMakeFiles/CMakeScratch/TryCompile-DL8IRn'
+        
+      exitCode: 0
+...

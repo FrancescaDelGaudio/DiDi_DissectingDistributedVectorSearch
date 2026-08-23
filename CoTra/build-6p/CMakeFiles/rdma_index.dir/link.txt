@@ -1,0 +1,2 @@
+/usr/bin/ar qc librdma_index.a CMakeFiles/rdma_index.dir/src/index/disk_utils.cc.o CMakeFiles/rdma_index.dir/src/index/index_param.cc.o CMakeFiles/rdma_index.dir/src/index/math_utils.cc.o CMakeFiles/rdma_index.dir/src/index/partition.cc.o CMakeFiles/rdma_index.dir/src/index/scala_build.cc.o CMakeFiles/rdma_index.dir/src/index/top_index.cc.o
+/usr/bin/ranlib librdma_index.a

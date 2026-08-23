@@ -1,0 +1,26 @@
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+[ncpu026:1503896] *** Process received signal ***
+[ncpu026:1503896] Signal: Aborted (6)
+[ncpu026:1503896] Signal code:  (-6)
+[ncpu026:1503896] [ 0] /lib64/libpthread.so.0(+0x12dd0)[0x14e40385bdd0]
+[ncpu026:1503896] [ 1] /lib64/libc.so.6(gsignal+0x10f)[0x14e402b8c70f]
+[ncpu026:1503896] [ 2] /lib64/libc.so.6(abort+0x127)[0x14e402b76b25]
+[ncpu026:1503896] [ 3] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xaeaa4)[0x14e403347aa4]
+[ncpu026:1503896] [ 4] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xc0ffa)[0x14e403359ffa]
+[ncpu026:1503896] [ 5] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(_ZSt10unexpectedv+0x0)[0x14e40334762e]
+[ncpu026:1503896] [ 6] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xc1297)[0x14e40335a297]
+[ncpu026:1503896] [ 7] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xae6a2)[0x14e4033476a2]
+[ncpu026:1503896] [ 8] ./build-harmony/bin/query(+0x6392b)[0x55950119f92b]
+[ncpu026:1503896] [ 9] ./build-harmony/bin/query(+0x1f90b)[0x55950115b90b]
+[ncpu026:1503896] [10] ./build-harmony/bin/query(+0xe070)[0x55950114a070]
+[ncpu026:1503896] [11] /lib64/libc.so.6(__libc_start_main+0xf3)[0x14e402b786a3]
+[ncpu026:1503896] [12] ./build-harmony/bin/query(+0x1147e)[0x55950114d47e]
+[ncpu026:1503896] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 1503896 on node ncpu026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

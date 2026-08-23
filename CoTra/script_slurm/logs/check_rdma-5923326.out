@@ -1,0 +1,120 @@
+==== CoTra RDMA probe start 2026-06-11T11:56:49+02:00 jobid=5923326 ====
+nodelist=ncpum[011-014] nnodes=4 ntasks=4
+
+[2026-06-11T11:56:49+02:00] [ncpum011] === node probe start ===
+[2026-06-11T11:56:49+02:00] [ncpum013] === node probe start ===
+[2026-06-11T11:56:49+02:00] [ncpum012] === node probe start ===
+[2026-06-11T11:56:49+02:00] [ncpum014] === node probe start ===
+[2026-06-11T11:56:49+02:00] [ncpum011] SLURM_NODEID=0 SLURM_PROCID=0
+[2026-06-11T11:56:49+02:00] [ncpum011] --- ibv_devices ---
+    device          	   node GUID
+    ------          	----------------
+    mlx5_0          	b8cef603000664ca
+
+[2026-06-11T11:56:49+02:00] [ncpum011] --- ibstat ---
+CA 'mlx5_0'
+	CA type: MT4123
+	Number of ports: 1
+	Firmware version: 20.29.1016
+	Hardware version: 0
+	Node GUID: 0xb8cef603000664ca
+	System image GUID: 0xb8cef603000664ca
+	Port 1:
+		State: Active
+		Physical state: LinkUp
+		Rate: 100
+		Base lid: 64
+		LMC: 0
+		SM lid: 1
+		Capability mask: 0x2651e848
+		Port GUID: 0xb8cef603000664ca
+		Link layer: InfiniBand
+
+[2026-06-11T11:56:49+02:00] [ncpum011] RESULT: PASS (Active IB port)
+[2026-06-11T11:56:49+02:00] [ncpum011] === node probe end ===
+
+[2026-06-11T11:56:49+02:00] [ncpum013] SLURM_NODEID=2 SLURM_PROCID=2
+[2026-06-11T11:56:49+02:00] [ncpum013] --- ibv_devices ---
+    device          	   node GUID
+    ------          	----------------
+    mlx5_0          	043f720300dd678e
+
+[2026-06-11T11:56:49+02:00] [ncpum013] --- ibstat ---
+CA 'mlx5_0'
+	CA type: MT4123
+	Number of ports: 1
+	Firmware version: 20.29.1016
+	Hardware version: 0
+	Node GUID: 0x043f720300dd678e
+	System image GUID: 0x043f720300dd678e
+	Port 1:
+		State: Active
+		Physical state: LinkUp
+		Rate: 100
+		Base lid: 46
+		LMC: 0
+		SM lid: 1
+		Capability mask: 0x2651e848
+		Port GUID: 0x043f720300dd678e
+		Link layer: InfiniBand
+
+[2026-06-11T11:56:49+02:00] [ncpum013] RESULT: PASS (Active IB port)
+[2026-06-11T11:56:49+02:00] [ncpum013] === node probe end ===
+
+[2026-06-11T11:56:49+02:00] [ncpum012] SLURM_NODEID=1 SLURM_PROCID=1
+[2026-06-11T11:56:49+02:00] [ncpum012] --- ibv_devices ---
+    device          	   node GUID
+    ------          	----------------
+    mlx5_0          	043f720300dd6a9e
+
+[2026-06-11T11:56:49+02:00] [ncpum012] --- ibstat ---
+CA 'mlx5_0'
+	CA type: MT4123
+	Number of ports: 1
+	Firmware version: 20.29.1016
+	Hardware version: 0
+	Node GUID: 0x043f720300dd6a9e
+	System image GUID: 0x043f720300dd6a9e
+	Port 1:
+		State: Active
+		Physical state: LinkUp
+		Rate: 100
+		Base lid: 49
+		LMC: 0
+		SM lid: 1
+		Capability mask: 0x2651e848
+		Port GUID: 0x043f720300dd6a9e
+		Link layer: InfiniBand
+
+[2026-06-11T11:56:49+02:00] [ncpum012] RESULT: PASS (Active IB port)
+[2026-06-11T11:56:49+02:00] [ncpum012] === node probe end ===
+
+[2026-06-11T11:56:49+02:00] [ncpum014] SLURM_NODEID=3 SLURM_PROCID=3
+[2026-06-11T11:56:49+02:00] [ncpum014] --- ibv_devices ---
+    device          	   node GUID
+    ------          	----------------
+    mlx5_0          	b8cef60300066542
+
+[2026-06-11T11:56:49+02:00] [ncpum014] --- ibstat ---
+CA 'mlx5_0'
+	CA type: MT4123
+	Number of ports: 1
+	Firmware version: 20.29.1016
+	Hardware version: 0
+	Node GUID: 0xb8cef60300066542
+	System image GUID: 0xb8cef60300066542
+	Port 1:
+		State: Active
+		Physical state: LinkUp
+		Rate: 100
+		Base lid: 17
+		LMC: 0
+		SM lid: 1
+		Capability mask: 0x2651e848
+		Port GUID: 0xb8cef60300066542
+		Link layer: InfiniBand
+
+[2026-06-11T11:56:49+02:00] [ncpum014] RESULT: PASS (Active IB port)
+[2026-06-11T11:56:49+02:00] [ncpum014] === node probe end ===
+
+==== CoTra RDMA probe end 2026-06-11T11:56:49+02:00 ====

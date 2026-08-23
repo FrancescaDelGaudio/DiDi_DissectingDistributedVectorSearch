@@ -1,0 +1,6 @@
+srun: error: ncpu003: task 0: Segmentation fault (core dumped)
+srun: launch/slurm: _step_signal: Terminating StepId=5933117.1
+srun: error: ncpu005: task 1: Terminated
+srun: error: ncpu015: task 3: Terminated
+srun: error: ncpu011: task 2: Terminated
+srun: Force Terminated StepId=5933117.1

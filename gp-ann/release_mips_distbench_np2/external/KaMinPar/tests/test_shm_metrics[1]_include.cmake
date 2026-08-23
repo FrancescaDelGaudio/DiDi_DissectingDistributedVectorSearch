@@ -1,0 +1,5 @@
+if(EXISTS "/gpfs/users/delgaudio/exp_eval/gp-ann/release_mips_distbench_np2/external/KaMinPar/tests/test_shm_metrics[1]_tests.cmake")
+  include("/gpfs/users/delgaudio/exp_eval/gp-ann/release_mips_distbench_np2/external/KaMinPar/tests/test_shm_metrics[1]_tests.cmake")
+else()
+  add_test(test_shm_metrics_NOT_BUILT test_shm_metrics_NOT_BUILT)
+endif()

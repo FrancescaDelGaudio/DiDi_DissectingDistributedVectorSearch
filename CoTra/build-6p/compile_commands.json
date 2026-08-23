@@ -1,0 +1,428 @@
+[
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_anns.dir/src/anns/anns_param.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/anns/anns_param.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/anns/anns_param.cc",
+  "output": "CMakeFiles/rdma_anns.dir/src/anns/anns_param.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_anns.dir/src/get_clock.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/get_clock.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/get_clock.cc",
+  "output": "CMakeFiles/rdma_anns.dir/src/get_clock.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_anns.dir/src/load_data_utils.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/load_data_utils.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/load_data_utils.cc",
+  "output": "CMakeFiles/rdma_anns.dir/src/load_data_utils.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_anns.dir/src/rdma/ip_config.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/rdma/ip_config.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/rdma/ip_config.cc",
+  "output": "CMakeFiles/rdma_anns.dir/src/rdma/ip_config.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_anns.dir/src/rdma/rdma_comm.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/rdma/rdma_comm.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/rdma/rdma_comm.cc",
+  "output": "CMakeFiles/rdma_anns.dir/src/rdma/rdma_comm.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_anns.dir/src/rdma/rdma_context.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/rdma/rdma_context.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/rdma/rdma_context.cc",
+  "output": "CMakeFiles/rdma_anns.dir/src/rdma/rdma_context.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_anns.dir/src/rdma/rdma_param.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/rdma/rdma_param.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/rdma/rdma_param.cc",
+  "output": "CMakeFiles/rdma_anns.dir/src/rdma/rdma_param.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_anns.dir/src/rdma/server_connect.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/rdma/server_connect.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/rdma/server_connect.cc",
+  "output": "CMakeFiles/rdma_anns.dir/src/rdma/server_connect.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_index.dir/src/index/disk_utils.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/index/disk_utils.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/index/disk_utils.cc",
+  "output": "CMakeFiles/rdma_index.dir/src/index/disk_utils.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_index.dir/src/index/index_param.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/index/index_param.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/index/index_param.cc",
+  "output": "CMakeFiles/rdma_index.dir/src/index/index_param.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_index.dir/src/index/math_utils.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/index/math_utils.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/index/math_utils.cc",
+  "output": "CMakeFiles/rdma_index.dir/src/index/math_utils.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_index.dir/src/index/partition.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/index/partition.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/index/partition.cc",
+  "output": "CMakeFiles/rdma_index.dir/src/index/partition.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_index.dir/src/index/scala_build.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/index/scala_build.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/index/scala_build.cc",
+  "output": "CMakeFiles/rdma_index.dir/src/index/scala_build.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/rdma_index.dir/src/index/top_index.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/src/index/top_index.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/src/index/top_index.cc",
+  "output": "CMakeFiles/rdma_index.dir/src/index/top_index.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/abstract_data_store.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/abstract_data_store.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/abstract_data_store.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/abstract_data_store.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/abstract_index.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/abstract_index.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/abstract_index.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/abstract_index.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/ann_exception.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/ann_exception.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/ann_exception.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/ann_exception.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/disk_utils.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/disk_utils.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/disk_utils.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/disk_utils.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/distance.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/distance.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/distance.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/distance.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/filter_utils.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/filter_utils.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/filter_utils.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/filter_utils.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/in_mem_data_store.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/in_mem_data_store.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/in_mem_data_store.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/in_mem_data_store.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/in_mem_graph_store.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/in_mem_graph_store.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/in_mem_graph_store.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/in_mem_graph_store.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/index.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/index.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/index.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/index.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/index_factory.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/index_factory.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/index_factory.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/index_factory.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/linux_aligned_file_reader.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/linux_aligned_file_reader.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/linux_aligned_file_reader.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/linux_aligned_file_reader.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/logger.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/logger.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/logger.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/logger.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/math_utils.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/math_utils.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/math_utils.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/math_utils.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/memory_mapper.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/memory_mapper.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/memory_mapper.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/memory_mapper.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/natural_number_map.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/natural_number_map.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/natural_number_map.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/natural_number_map.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/natural_number_set.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/natural_number_set.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/natural_number_set.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/natural_number_set.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/partition.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/partition.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/partition.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/partition.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/pq.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/pq.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/pq.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/pq.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/pq_data_store.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/pq_data_store.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/pq_data_store.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/pq_data_store.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/pq_flash_index.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/pq_flash_index.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/pq_flash_index.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/pq_flash_index.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/pq_l2_distance.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/pq_l2_distance.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/pq_l2_distance.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/pq_l2_distance.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/scratch.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/scratch.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/scratch.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/scratch.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/utils.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/utils.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/utils.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/utils.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/third_party",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -DMKL_ILP64 -DRELEASE_UNUSED_TCMALLOC_MEMORY_AT_CHECKPOINTS -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/include -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss -I/gpfs/softs/intel/oneapi/mkl/latest/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -mavx2 -mfma -msse2 -ftree-vectorize -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fopenmp -fopenmp-simd -funroll-loops -Wfatal-errors -DUSE_AVX2 -O3 -DNDEBUG -DNDEBUG -fPIC -std=gnu++2a -fPIC -m64 -Wl,--no-as-needed -o CMakeFiles/diskann.dir/diskann/src/windows_aligned_file_reader.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/windows_aligned_file_reader.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/third_party/diskann/src/windows_aligned_file_reader.cpp",
+  "output": "third_party/CMakeFiles/diskann.dir/diskann/src/windows_aligned_file_reader.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/barrier.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/barrier.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/barrier.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/barrier.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/barrier_mcs.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/barrier_mcs.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/barrier_mcs.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/barrier_mcs.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/context.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/context.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/context.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/context.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/mem.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/mem.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/mem.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/mem.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/numa_mem.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/numa_mem.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/numa_mem.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/numa_mem.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/backend.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/backend.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/backend.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/backend.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/ptr_lock.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/ptr_lock.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/ptr_lock.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/ptr_lock.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/simple_lock.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/simple_lock.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/simple_lock.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/simple_lock.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/termination.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/termination.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/termination.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/termination.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/threadpool.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/threadpool.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/threadpool.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/threadpool.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/utils.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/utils.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/utils.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/utils.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/hwtopo.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/hwtopo.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/hwtopo.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/hwtopo.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/hugepage.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/hugepage.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/hugepage.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/hugepage.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DGALOIS_USE_NUMA -DGALOIS_USE_SCHED_SETAFFINITY -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -isystem /gpfs/scratch/delgaudio/cotra/deps/include  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIC -o CMakeFiles/coromem.dir/src/share_mem.cpp.o -c /gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/share_mem.cpp",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/coromem/src/share_mem.cpp",
+  "output": "coromem/CMakeFiles/coromem.dir/src/share_mem.cpp.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/scala_anns_6p.dir/scala_anns.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/scala_anns.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/scala_anns.cc",
+  "output": "tests/CMakeFiles/scala_anns_6p.dir/scala_anns.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/scala_index_6p.dir/scala_index.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/scala_index.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/scala_index.cc",
+  "output": "tests/CMakeFiles/scala_index_6p.dir/scala_index.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/rdma",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/test_read.dir/test_read.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/rdma/test_read.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/rdma/test_read.cc",
+  "output": "tests/rdma/CMakeFiles/test_read.dir/test_read.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/rdma",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/test_send.dir/test_send.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/rdma/test_send.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/rdma/test_send.cc",
+  "output": "tests/rdma/CMakeFiles/test_send.dir/test_send.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/rdma",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/test_write.dir/test_write.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/rdma/test_write.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/rdma/test_write.cc",
+  "output": "tests/rdma/CMakeFiles/test_write.dir/test_write.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/rdma",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/test_bw.dir/test_bw.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/rdma/test_bw.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/rdma/test_bw.cc",
+  "output": "tests/rdma/CMakeFiles/test_bw.dir/test_bw.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/rdma",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/tt.dir/for_test.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/rdma/for_test.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/rdma/for_test.cc",
+  "output": "tests/rdma/CMakeFiles/tt.dir/for_test.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/rdma",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/pool.dir/test_pool.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/rdma/test_pool.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/rdma/test_pool.cc",
+  "output": "tests/rdma/CMakeFiles/pool.dir/test_pool.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/anns",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/test_hashmap.dir/test_hashmap.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/anns/test_hashmap.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/anns/test_hashmap.cc",
+  "output": "tests/anns/CMakeFiles/test_hashmap.dir/test_hashmap.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/anns",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/test_querymsg.dir/test_querymsg.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/anns/test_querymsg.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/anns/test_querymsg.cc",
+  "output": "tests/anns/CMakeFiles/test_querymsg.dir/test_querymsg.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/anns",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/log.dir/log.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/anns/log.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/anns/log.cc",
+  "output": "tests/anns/CMakeFiles/log.dir/log.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/anns",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/test_bq.dir/test_bq.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/anns/test_bq.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/anns/test_bq.cc",
+  "output": "tests/anns/CMakeFiles/test_bq.dir/test_bq.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/index",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/profiling.dir/profiling.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/index/profiling.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/index/profiling.cc",
+  "output": "tests/index/CMakeFiles/profiling.dir/profiling.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/index",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/kmeans.dir/kmeans_reorder.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/index/kmeans_reorder.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/index/kmeans_reorder.cc",
+  "output": "tests/index/CMakeFiles/kmeans.dir/kmeans_reorder.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/index",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/cluster.dir/kmeans_cluster.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/index/kmeans_cluster.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/index/kmeans_cluster.cc",
+  "output": "tests/index/CMakeFiles/cluster.dir/kmeans_cluster.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/index",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/top_index.dir/top_index.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/index/top_index.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/index/top_index.cc",
+  "output": "tests/index/CMakeFiles/top_index.dir/top_index.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/index",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/amplq.dir/ampl_query.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/index/ampl_query.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/index/ampl_query.cc",
+  "output": "tests/index/CMakeFiles/amplq.dir/ampl_query.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/index",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/trans_hnsw.dir/trans_hnsw_top.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/index/trans_hnsw_top.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/index/trans_hnsw_top.cc",
+  "output": "tests/index/CMakeFiles/trans_hnsw.dir/trans_hnsw_top.cc.o"
+},
+{
+  "directory": "/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/tests/index",
+  "command": "/softs/gcc/10.3.0/bin/g++ -DMACHINE_NUM=6 -I/gpfs/users/delgaudio/exp_eval/CoTra/./third_party -I/gpfs/users/delgaudio/exp_eval/CoTra -I/gpfs/scratch/delgaudio/cotra/deps/include -I/gpfs/softs/intel/oneapi/mkl/latest/include -I/gpfs/users/delgaudio/exp_eval/CoTra/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/build-6p/coromem/include -I/gpfs/users/delgaudio/exp_eval/CoTra/include -I/gpfs/users/delgaudio/exp_eval/Distributed-HNSW/third_party/faiss  -Ofast -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -shared-libgcc -fcoroutines -O3 -DNDEBUG -std=gnu++2a -fPIE -o CMakeFiles/create_hnsw_top.dir/create_hnsw_top.cc.o -c /gpfs/users/delgaudio/exp_eval/CoTra/tests/index/create_hnsw_top.cc",
+  "file": "/gpfs/users/delgaudio/exp_eval/CoTra/tests/index/create_hnsw_top.cc",
+  "output": "tests/index/CMakeFiles/create_hnsw_top.dir/create_hnsw_top.cc.o"
+}
+]

@@ -1,0 +1,474 @@
+==== scala_anns start 2026-06-16T03:23:33+02:00 job=5933448 ====
+dataset=deep dist_fn=l2 res_knn=100
+nodes=ncpum[009-012]
+DATA=/gpfs/scratch/delgaudio/vectors/DEEP/base.10M.fbin
+QUERY=/gpfs/scratch/delgaudio/vectors/DEEP/query.public.10K.fbin
+GT=/gpfs/scratch/delgaudio/vectors/DEEP/computedGT_deep10M_10kqueries_k100_cotra.bin
+INDEX_PREFIX=/gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index
+IB_DEV=mlx5_0
+==== CoTra cluster conf generated ====
+CONF_FILE=/gpfs/users/delgaudio/exp_eval/CoTra/script_slurm/runtime/cluster-job5933448.conf
+Leader (machine 0): ncpum009
+Nodes (4): ncpum009 ncpum010 ncpum011 ncpum012
+--- conf contents ---
+ncpum009
+2378
+ncpum009=0
+ncpum010=1
+ncpum011=2
+ncpum012=3
+---------------------
+[ncpum009] stopping stale memcached on 10.141.3.9:2378 (if any)
+[ncpum009] starting memcached on 10.141.3.9:2378 (host ncpum009)
+memcached keys initialized on 10.141.3.9:2378
+[ncpum009] memcached ready (pid file: /tmp/memcached-cotra-5933448.pid)
+
+==== verify IP mapping ====
+[ncpum010] hostname=ncpum010 id=1 dns_ip=10.141.3.10 local_ips=10.141.3.10 10.149.3.10
+[ncpum010] IP OK (10.141.3.10)
+[ncpum011] hostname=ncpum011 id=2 dns_ip=10.141.3.11 local_ips=10.141.3.11 10.149.3.11
+[ncpum011] IP OK (10.141.3.11)
+[ncpum012] hostname=ncpum012 id=3 dns_ip=10.141.3.12 local_ips=10.141.3.12 10.149.3.12
+[ncpum012] IP OK (10.141.3.12)
+[ncpum009] hostname=ncpum009 id=0 dns_ip=10.141.3.9 local_ips=10.141.3.9 10.149.3.9
+[ncpum009] IP OK (10.141.3.9)
+
+==== launching scala_anns (ef sweep in one run; recall@100) ====
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+Local machine IP addr: 10.141.3.9
+Local machine ID: 0
+qp num per machine = 4
+Using meta_data_ratio: 0.01
+Local machine IP addr: 10.141.3.9
+Local machine ID: 0
+Local machine IP addr: 10.141.3.9
+Local machine ID: 0
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+Local machine IP addr: 10.141.3.10
+Local machine ID: 1
+qp num per machine = 4
+Using meta_data_ratio: 0.01
+Local machine IP addr: 10.141.3.10
+Local machine ID: 1
+Local machine IP addr: 10.141.3.10
+Local machine ID: 1
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+Local machine IP addr: 10.141.3.12
+Local machine ID: 3
+qp num per machine = 4
+Using meta_data_ratio: 0.01
+Local machine IP addr: 10.141.3.12
+Local machine ID: 3
+Local machine IP addr: 10.141.3.12
+Local machine ID: 3
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+Local machine IP addr: 10.141.3.11
+Local machine ID: 2
+qp num per machine = 4
+Using meta_data_ratio: 0.01
+Local machine IP addr: 10.141.3.11
+Local machine ID: 2
+Local machine IP addr: 10.141.3.11
+Local machine ID: 2
+Set thread num = 16
+Run RDMA-ANNS machine number: 4
+This is leader machine 0, name ncpum009
+Loading Top index from /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_top.index
+Read vec_num 100335 hop_num 5
+Top index vec_num 100335 hop_num 5
+Hop 0 cnt 2
+Hop 1 cnt 21
+Hop 2 cnt 353
+Hop 3 cnt 5992
+Hop 4 cnt 93967
+Last level bar 6368
+Loading GT from: /gpfs/scratch/delgaudio/vectors/DEEP/computedGT_deep10M_10kqueries_k100_cotra.bin
+Query number: 10000 K-NN: 100
+Loading queries from: /gpfs/scratch/delgaudio/vectors/DEEP/query.public.10K.fbin
+Query number: 10000 Dim: 96
+Parsing gt:
+qsize: 10000 gt_knn: 100 res_knn: 100
+Loaded gt
+ScalaGraph init ...
+ScalaGraph V3 loading index ...
+vec_size 10000000
+part_num 4
+2348532 2530522 2578002 2542944 
+Loading partition index 0 from /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_scala.index 
+partid 0 partnum 4 local_vec_num 2348532 local_ngh_ele_size 200 remote_ngh_num 30562009 enter_point 3961666
+read v3 index size 591954436
+Loading partition 0 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_scala.data
+partid 0 partnum 4 part_vec_num 2348532 all_vec_num 10000000
+Loading partition 1 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_scala.data
+partid 1 partnum 4 part_vec_num 2530522 all_vec_num 10000000
+Loading partition 2 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_scala.data
+partid 2 partnum 4 part_vec_num 2578002 all_vec_num 10000000
+Loading partition 3 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_scala.data
+partid 3 partnum 4 part_vec_num 2542944 all_vec_num 10000000
+partition_ofs: 0
+ScalaGraph V3 Load Over
+max out read num: 16
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Create main mr success. length: 920624544 align length: 920624576
+Switch metadata with remote machine..
+Establish eathnet connection ...
+Machine 0 1 2 3 
+Set thread num = 16
+Run RDMA-ANNS machine number: 4
+This is follower machine 2, name: ncpum011
+Loading Top index from /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_top.index
+Read vec_num 100335 hop_num 5
+Top index vec_num 100335 hop_num 5
+Hop 0 cnt 2
+Hop 1 cnt 21
+Hop 2 cnt 353
+Hop 3 cnt 5992
+Hop 4 cnt 93967
+Last level bar 6368
+Loading GT from: /gpfs/scratch/delgaudio/vectors/DEEP/computedGT_deep10M_10kqueries_k100_cotra.bin
+Query number: 10000 K-NN: 100
+Loading queries from: /gpfs/scratch/delgaudio/vectors/DEEP/query.public.10K.fbin
+Query number: 10000 Dim: 96
+Parsing gt:
+qsize: 10000 gt_knn: 100 res_knn: 100
+Loaded gt
+ScalaGraph init ...
+ScalaGraph V3 loading index ...
+vec_size 10000000
+part_num 4
+2348532 2530522 2578002 2542944 
+Loading partition index 2 from /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_scala.index 
+partid 2 partnum 4 local_vec_num 2578002 local_ngh_ele_size 200 remote_ngh_num 16541876 enter_point 7318006
+read v3 index size 581767904
+Loading partition 0 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_scala.data
+partid 0 partnum 4 part_vec_num 2348532 all_vec_num 10000000
+Loading partition 1 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_scala.data
+partid 1 partnum 4 part_vec_num 2530522 all_vec_num 10000000
+Loading partition 2 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_scala.data
+partid 2 partnum 4 part_vec_num 2578002 all_vec_num 10000000
+Loading partition 3 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_scala.data
+partid 3 partnum 4 part_vec_num 2542944 all_vec_num 10000000
+partition_ofs: 4879054
+ScalaGraph V3 Load Over
+max out read num: 16
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Create main mr success. length: 1010576784 align length: 1010576832
+Switch metadata with remote machine..
+Establish eathnet connection ...
+Machine 0 1 2 3 
+Set thread num = 16
+Run RDMA-ANNS machine number: 4
+This is follower machine 1, name: ncpum010
+Loading Top index from /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_top.index
+Read vec_num 100335 hop_num 5
+Top index vec_num 100335 hop_num 5
+Hop 0 cnt 2
+Hop 1 cnt 21
+Hop 2 cnt 353
+Hop 3 cnt 5992
+Hop 4 cnt 93967
+Last level bar 6368
+Loading GT from: /gpfs/scratch/delgaudio/vectors/DEEP/computedGT_deep10M_10kqueries_k100_cotra.bin
+Query number: 10000 K-NN: 100
+Loading queries from: /gpfs/scratch/delgaudio/vectors/DEEP/query.public.10K.fbin
+Query number: 10000 Dim: 96
+Parsing gt:
+qsize: 10000 gt_knn: 100 res_knn: 100
+Loaded gt
+ScalaGraph init ...
+ScalaGraph V3 loading index ...
+vec_size 10000000
+part_num 4
+2348532 2530522 2578002 2542944 
+Loading partition index 1 from /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_scala.index 
+partid 1 partnum 4 local_vec_num 2530522 local_ngh_ele_size 200 remote_ngh_num 29608191 enter_point 4838290
+read v3 index size 624537164
+Loading partition 0 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_scala.data
+partid 0 partnum 4 part_vec_num 2348532 all_vec_num 10000000
+Loading partition 1 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_scala.data
+partid 1 partnum 4 part_vec_num 2530522 all_vec_num 10000000
+Loading partition 2 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_scala.data
+partid 2 partnum 4 part_vec_num 2578002 all_vec_num 10000000
+Loading partition 3 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_scala.data
+partid 3 partnum 4 part_vec_num 2542944 all_vec_num 10000000
+partition_ofs: 2348532
+ScalaGraph V3 Load Over
+max out read num: 16
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Create main mr success. length: 991964624 align length: 991964672
+Switch metadata with remote machine..
+Establish eathnet connection ...
+Machine 0 1 2 3 
+Set thread num = 16
+Run RDMA-ANNS machine number: 4
+This is follower machine 3, name: ncpum012
+Loading Top index from /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_top.index
+Read vec_num 100335 hop_num 5
+Top index vec_num 100335 hop_num 5
+Hop 0 cnt 2
+Hop 1 cnt 21
+Hop 2 cnt 353
+Hop 3 cnt 5992
+Hop 4 cnt 93967
+Last level bar 6368
+Loading GT from: /gpfs/scratch/delgaudio/vectors/DEEP/computedGT_deep10M_10kqueries_k100_cotra.bin
+Query number: 10000 K-NN: 100
+Loading queries from: /gpfs/scratch/delgaudio/vectors/DEEP/query.public.10K.fbin
+Query number: 10000 Dim: 96
+Parsing gt:
+qsize: 10000 gt_knn: 100 res_knn: 100
+Loaded gt
+ScalaGraph init ...
+ScalaGraph V3 loading index ...
+vec_size 10000000
+part_num 4
+2348532 2530522 2578002 2542944 
+Loading partition index 3 from /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_scala.index 
+partid 3 partnum 4 local_vec_num 2542944 local_ngh_ele_size 200 remote_ngh_num 23286002 enter_point 1440835
+read v3 index size 601732808
+Loading partition 0 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_scala.data
+partid 0 partnum 4 part_vec_num 2348532 all_vec_num 10000000
+Loading partition 1 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_scala.data
+partid 1 partnum 4 part_vec_num 2530522 all_vec_num 10000000
+Loading partition 2 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_scala.data
+partid 2 partnum 4 part_vec_num 2578002 all_vec_num 10000000
+Loading partition 3 meta data form /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_scala.data
+partid 3 partnum 4 part_vec_num 2542944 all_vec_num 10000000
+partition_ofs: 7457056
+ScalaGraph V3 Load Over
+max out read num: 16
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Create main mr success. length: 996834048 align length: 996834048
+Switch metadata with remote machine..
+Establish eathnet connection ...
+Machine 0 1 2 3 
+Connect × × × × Connect √ × × × Connect √ × √ × Connect √ √ √ × Connect √ √ √ √ 
+RDMA communication init over. 
+Init over ...
+query size: 10000 vecsize: 384
+3 	 0.93826 	 0.00 	 31576.322 	 
+4 	 0.93828 	 0.00 	 29815.857 	 
+5 	 0.93819 	 0.00 	 31037.105 	 
+6 	 0.93816 	 0.00 	 31570.838 	 
+8 	 0.93814 	 0.00 	 31883.893 	 
+10 	 0.93815 	 0.00 	 32373.041 	 
+15 	 0.93807 	 0.00 	 32262.123 	 
+20 	 0.93815 	 0.00 	 31435.963 	 
+30 	 0.93826 	 0.00 	 32150.723 	 
+40 	 0.93819 	 0.00 	 31947.045 	 
+50 	 0.93804 	 0.00 	 32228.852 	 
+70 	 0.93813 	 0.00 	 31817.141 	 
+100 	 0.93817 	 0.00 	 32362.564 	 
+150 	 0.96621 	 0.00 	 23443.691 	 
+200 	 0.97913 	 0.00 	 18693.686 	 
+250 	 0.98646 	 0.00 	 15273.495 	 
+300 	 0.99072 	 0.00 	 13189.376 	 
+400 	 0.99496 	 0.00 	 10339.241 	 
+500 	 0.99688 	 0.00 	 8545.372 	 
+600 	 0.99796 	 0.00 	 7194.379 	 
+700 	 0.99858 	 0.00 	 6407.135 	 
+Actual memory usage: 26817 Mb 
+Connect × × × × Connect × × √ × Connect √ × √ × Connect √ √ √ × Connect √ √ √ √ 
+RDMA communication init over. 
+Init over ...
+query size: 10000 vecsize: 384
+3	0.937356	206.86 us	4834.2 /s
+4	0.937252	167.035 us	5986.76 /s
+5	0.937424	141 us	7092.2 /s
+6	0.93718	135.424 us	7384.24 /s
+8	0.937464	132.697 us	7535.98 /s
+10	0.93736	135.079 us	7403.06 /s
+15	0.937104	138.956 us	7196.54 /s
+20	0.937056	140.216 us	7131.87 /s
+30	0.93726	131.571 us	7600.45 /s
+40	0.937448	138.196 us	7236.08 /s
+50	0.937228	136.903 us	7304.45 /s
+70	0.937204	139.326 us	7177.43 /s
+100	0.937216	136.658 us	7317.56 /s
+150	0.966192	179.077 us	5584.2 /s
+200	0.979324	222.207 us	4500.31 /s
+250	0.98708	269.811 us	3706.3 /s
+300	0.99126	312.331 us	3201.73 /s
+400	0.995456	396.265 us	2523.56 /s
+500	0.997252	478.951 us	2087.9 /s
+600	0.998216	565.927 us	1767.01 /s
+700	0.998808	632.995 us	1579.79 /s
+Actual memory usage: 26998 Mb 
+Connect × × × × Connect × × × √ Connect √ × × √ Connect √ × √ √ Connect √ √ √ √ 
+RDMA communication init over. 
+Init over ...
+query size: 10000 vecsize: 384
+3	0.937296	205.172 us	4873.97 /s
+4	0.937208	166.877 us	5992.43 /s
+5	0.936984	140.234 us	7130.92 /s
+6	0.937244	135.292 us	7391.42 /s
+8	0.93716	133.21 us	7506.92 /s
+10	0.936872	135.471 us	7381.66 /s
+15	0.936996	139.065 us	7190.87 /s
+20	0.936936	140.623 us	7111.22 /s
+30	0.93722	132.255 us	7561.14 /s
+40	0.936736	139.771 us	7154.55 /s
+50	0.936916	138.251 us	7233.21 /s
+70	0.936816	139.547 us	7166.05 /s
+100	0.937044	137.196 us	7288.82 /s
+150	0.965612	179.032 us	5585.61 /s
+200	0.978408	221.561 us	4513.43 /s
+250	0.985616	269.001 us	3717.46 /s
+300	0.990076	313.076 us	3194.11 /s
+400	0.994472	396.017 us	2525.15 /s
+500	0.9967	478.73 us	2088.86 /s
+600	0.997856	564.873 us	1770.31 /s
+700	0.998576	633.542 us	1578.43 /s
+Actual memory usage: 26995 Mb 
+Connect × × × × Connect × √ × × Connect √ √ × × Connect √ √ √ × Connect √ √ √ √ 
+RDMA communication init over. 
+Init over ...
+query size: 10000 vecsize: 384
+3	0.938972	207.133 us	4827.81 /s
+4	0.939496	167.146 us	5982.81 /s
+5	0.939252	141.464 us	7068.92 /s
+6	0.93914	134.546 us	7432.42 /s
+8	0.93898	132.234 us	7562.33 /s
+10	0.939412	135.744 us	7366.79 /s
+15	0.939392	138.504 us	7220.03 /s
+20	0.939584	139.734 us	7156.48 /s
+30	0.93942	131.39 us	7610.95 /s
+40	0.93922	139.836 us	7151.21 /s
+50	0.939052	137.84 us	7254.81 /s
+70	0.939216	140.369 us	7124.07 /s
+100	0.939192	136.92 us	7303.56 /s
+150	0.966868	178.05 us	5616.4 /s
+200	0.979608	221.562 us	4513.4 /s
+250	0.986896	269.434 us	3711.49 /s
+300	0.991156	311.917 us	3205.98 /s
+400	0.99526	385.508 us	2593.98 /s
+500	0.997128	465.13 us	2149.94 /s
+600	0.99814	564 us	1773.05 /s
+700	0.998688	633.84 us	1577.68 /s
+Actual memory usage: 26873 Mb 
+==== scala_anns done 2026-06-16T03:23:58+02:00 ====
+Log: script_slurm/logs/scala_anns-cotra_deep_k100-5933448.out
+Columns per ef line: ef  recall  avg_lat_us  qps

@@ -1,0 +1,7 @@
+srun: error: ncpu022: task 3: Segmentation fault (core dumped)
+srun: launch/slurm: _step_signal: Terminating StepId=5933256.1
+slurmstepd: error: *** STEP 5933256.1 ON ncpu019 CANCELLED AT 2026-06-15T16:31:25 ***
+srun: error: ncpu019: task 0: Terminated
+srun: error: ncpu020: task 1: Terminated
+srun: error: ncpu021: task 2: Terminated
+srun: Force Terminated StepId=5933256.1

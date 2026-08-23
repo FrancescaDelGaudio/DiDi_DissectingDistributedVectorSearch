@@ -1,0 +1,14 @@
+=== DistributedANN Step 5 (head index) ===
+INDEX_DIR : /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs
+head_frac : 0.05   method: random   M/efC: 16/200
+==========================================
+[rank 0] Step 5 (head index): N=10000000 K=32 dim=96 W=4
+[rank 0] head_frac=0.050 -> C~=500000  method=random  M=16 efC=200
+[rank 1] collected 126484 head representatives
+[rank 2] collected 127355 head representatives
+[rank 3] collected 128787 head representatives
+[rank 0] collected 118862 head representatives
+[rank 0] Building HNSW head index over 501488 vectors...
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs/head/head.hnsw (501488 vectors)
+
+[rank 0] === Step 5 complete ===

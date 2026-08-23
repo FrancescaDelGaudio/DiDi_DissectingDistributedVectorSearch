@@ -1,0 +1,28 @@
+=== Harmony TTI 5n (IP): HARMONY_K=10 HARMONY_NPROBE=384 ===
+[1;33mMode: Group   [0m
+[1;31mset warmupSearchListSize to k[0m
+sub_nlist: 49 sub_nprobe: 49
+Added optimization levels: 0
+[1;33m[dim:200, nb:10000000, nq:10000, k:10, worker:4][0m
+Faiss time file /gpfs/scratch/delgaudio/vectors/TTI/result/faiss_result_nlist_4096.txt does not exist
+Loading groundtruth file /gpfs/scratch/delgaudio/vectors/TTI/result/groundtruth_10.bin
+Groundtruth file loaded
+Loading index from /gpfs/scratch/delgaudio/vectors/TTI/index/index_nlist_4096_opt_0_subNprobeRatio_1.index
+loaded list 1976/3162, size 3892
+Index loaded
+[1;32mInitInfo: [d:200, nlist:3162, nprobe:384, worker:4, block_dim:100, nb:10000000, presume:2GB, groupCount:2, teamCount:2, teamSize:2, startIVFId:0, ivfCount:1581, teamId:1, rankInsideTeam:1][0m
+[1;32mInitInfo: [d:200, nlist:3162, nprobe:384, worker:4, block_dim:100, nb:10000000, presume:2GB, groupCount:2, teamCount:2, teamSize:2, startIVFId:0, ivfCount:1581, teamId:1, rankInsideTeam:2][0m
+[1;32mInitInfo: [d:200, nlist:3162, nprobe:384, worker:4, block_dim:100, nb:10000000, presume:2GB, groupCount:2, teamCount:2, teamSize:2, startIVFId:1581, ivfCount:1581, teamId:2, rankInsideTeam:1][0m
+[1;32mInitInfo: [d:200, nlist:3162, nprobe:384, worker:4, block_dim:100, nb:10000000, presume:2GB, groupCount:2, teamCount:2, teamSize:2, startIVFId:1581, ivfCount:1581, teamId:2, rankInsideTeam:2][0m
+preSearch 27.669118342
+[1;34mGroup version of search[0m
+[1;33mIndex:[d:200,nlist:3162,nprobe:384,node:4]
+[1;32m[warmupSearchList 10, warmupSearchListSize 10][0m
+nprobe:384 opt_level: 0 simi_ratio: 1
+time_speedup: 0.00% pruning_speedup: 0.00% faiss_query_time: 0.000000 query_time: 21.075047
+recall: 0.4039100110530853 r2: 0.8491179943084717
+[1;36mreturn worker:0[0m
+[1;36mreturn worker:3[0m
+[1;36mreturn worker:4[0m
+[1;36mreturn worker:1[0m
+[1;36mreturn worker:2[0m

@@ -1,0 +1,16 @@
+=== Harmony TTI 5n (IP): HARMONY_K=100 HARMONY_NPROBE=1024 ===
+[1;33mMode: Group   [0m
+[1;31mset warmupSearchListSize to k[0m
+sub_nlist: 49 sub_nprobe: 49
+Added optimization levels: 0
+[1;33m[dim:200, nb:10000000, nq:10000, k:100, worker:4][0m
+Faiss time file /gpfs/scratch/delgaudio/vectors/TTI/result/faiss_result_nlist_4096.txt does not exist
+Loading groundtruth file /gpfs/scratch/delgaudio/vectors/TTI/result/groundtruth_100.bin
+Groundtruth file loaded
+Loading index from /gpfs/scratch/delgaudio/vectors/TTI/index/index_nlist_4096_opt_0_subNprobeRatio_1.index
+loaded list 2344/3162, size 4936
+Index loaded
+[1;32mInitInfo: [d:200, nlist:3162, nprobe:1024, worker:4, block_dim:100, nb:10000000, presume:6GB, groupCount:2, teamCount:2, teamSize:2, startIVFId:0, ivfCount:1581, teamId:1, rankInsideTeam:1][0m
+[1;32mInitInfo: [d:200, nlist:3162, nprobe:1024, worker:4, block_dim:100, nb:10000000, presume:6GB, groupCount:2, teamCount:2, teamSize:2, startIVFId:0, ivfCount:1581, teamId:1, rankInsideTeam:2][0m
+[1;32mInitInfo: [d:200, nlist:3162, nprobe:1024, worker:4, block_dim:100, nb:10000000, presume:6GB, groupCount:2, teamCount:2, teamSize:2, startIVFId:1581, ivfCount:1581, teamId:2, rankInsideTeam:1][0m
+[1;32mInitInfo: [d:200, nlist:3162, nprobe:1024, worker:4, block_dim:100, nb:10000000, presume:6GB, groupCount:2, teamCount:2, teamSize:2, startIVFId:1581, ivfCount:1581, teamId:2, rankInsideTeam:2][0m

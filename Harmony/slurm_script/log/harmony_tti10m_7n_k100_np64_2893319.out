@@ -1,0 +1,6 @@
+=== Harmony TTI 7n (IP): HARMONY_K=100 HARMONY_NPROBE=64 ===
+[1;33mMode: Group   [0m
+[1;31mset warmupSearchListSize to k[0m
+sub_nlist: 49 sub_nprobe: 49
+Added optimization levels: 0
+[1;33m[dim:200, nb:10000000, nq:10000, k:100, worker:6][0m

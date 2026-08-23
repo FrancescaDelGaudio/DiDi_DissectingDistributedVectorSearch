@@ -1,0 +1,7 @@
+srun: error: ncpum007: task 2: Segmentation fault (core dumped)
+srun: launch/slurm: _step_signal: Terminating StepId=5932348.1
+slurmstepd: error: *** STEP 5932348.1 ON ncpum005 CANCELLED AT 2026-06-14T14:58:56 ***
+srun: error: ncpum006: task 1: Segmentation fault (core dumped)
+srun: error: ncpum005: task 0: Terminated
+srun: error: ncpum008: task 3: Segmentation fault (core dumped)
+srun: Force Terminated StepId=5932348.1

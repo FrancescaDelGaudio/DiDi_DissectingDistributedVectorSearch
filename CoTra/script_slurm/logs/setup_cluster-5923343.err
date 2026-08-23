@@ -1,0 +1,2 @@
+FATAL: memcached not found on leader ncpum011
+  On login node run: module avail memcached  OR  sbatch script_slurm/find_memcached.slurm

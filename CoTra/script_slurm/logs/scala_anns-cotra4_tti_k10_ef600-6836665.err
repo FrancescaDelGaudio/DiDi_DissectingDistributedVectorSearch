@@ -1,0 +1,32 @@
+[CoTra] COTRA_EF=600 (single ef, no sweep)
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=10
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[CoTra] COTRA_EF=600 (single ef, no sweep)
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=10
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[CoTra] COTRA_EF=600 (single ef, no sweep)
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=10
+[CoTra] COTRA_EF=600 (single ef, no sweep)
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=10
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search

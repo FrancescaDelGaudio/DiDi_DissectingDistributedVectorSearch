@@ -1,0 +1,5 @@
+if(EXISTS "/gpfs/users/delgaudio/exp_eval/gp-ann/build_clean10/external/KaMinPar/tests/test_shm_graph[1]_tests.cmake")
+  include("/gpfs/users/delgaudio/exp_eval/gp-ann/build_clean10/external/KaMinPar/tests/test_shm_graph[1]_tests.cmake")
+else()
+  add_test(test_shm_graph_NOT_BUILT test_shm_graph_NOT_BUILT)
+endif()

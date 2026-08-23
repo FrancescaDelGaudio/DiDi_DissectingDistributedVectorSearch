@@ -1,0 +1,89 @@
+WARNING: $CFLAGS does not agree with $CFLAGS_modshare counter. The following directories' usage counters were adjusted to match. Note that this may mean that module unloading may not work correctly.
+ -I/softs/openmpi/gcc-10.3.0/4.1.1/include -I/gpfs/softs/eigen/3.4.0/include
+WARNING: $CPPFLAGS does not agree with $CPPFLAGS_modshare counter. The following directories' usage counters were adjusted to match. Note that this may mean that module unloading may not work correctly.
+ -I/softs/openmpi/gcc-10.3.0/4.1.1/include
+WARNING: $LDFLAGS does not agree with $LDFLAGS_modshare counter. The following directories' usage counters were adjusted to match. Note that this may mean that module unloading may not work correctly.
+ -L/softs/openmpi/gcc-10.3.0/4.1.1/lib
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+[ncpu005:3202985] *** Process received signal ***
+[ncpu005:3202985] Signal: Aborted (6)
+[ncpu005:3202985] Signal code:  (-6)
+[ncpu005:3202985] [ 0] /lib64/libpthread.so.0(+0x12dd0)[0x146a610f9dd0]
+[ncpu005:3202985] [ 1] /lib64/libc.so.6(gsignal+0x10f)[0x146a6042a70f]
+[ncpu005:3202985] [ 2] /lib64/libc.so.6(abort+0x127)[0x146a60414b25]
+[ncpu005:3202985] [ 3] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xaeaa4)[0x146a60be5aa4]
+[ncpu005:3202985] [ 4] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xc0ffa)[0x146a60bf7ffa]
+[ncpu005:3202985] [ 5] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(_ZSt10unexpectedv+0x0)[0x146a60be562e]
+[ncpu005:3202985] [ 6] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xc1297)[0x146a60bf8297]
+[ncpu005:3202985] [ 7] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xae6a2)[0x146a60be56a2]
+[ncpu005:3202985] [ 8] ./build-harmony/bin/query(+0x6392b)[0x55ce6a4ba92b]
+[ncpu005:3202985] [ 9] ./build-harmony/bin/query(+0x1f90b)[0x55ce6a47690b]
+[ncpu005:3202985] [10] ./build-harmony/bin/query(+0xe070)[0x55ce6a465070]
+[ncpu005:3202985] [11] /lib64/libc.so.6(__libc_start_main+0xf3)[0x146a604166a3]
+[ncpu005:3202985] [12] ./build-harmony/bin/query(+0x1147e)[0x55ce6a46847e]
+[ncpu005:3202985] *** End of error message ***
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+[ncpu006:286230] *** Process received signal ***
+[ncpu006:286230] Signal: Aborted (6)
+[ncpu006:286230] Signal code:  (-6)
+[ncpu006:286230] [ 0] /lib64/libpthread.so.0(+0x12dd0)[0x14aabe981dd0]
+[ncpu006:286230] [ 1] /lib64/libc.so.6(gsignal+0x10f)[0x14aabdcb270f]
+[ncpu006:286230] [ 2] /lib64/libc.so.6(abort+0x127)[0x14aabdc9cb25]
+[ncpu006:286230] [ 3] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xaeaa4)[0x14aabe46daa4]
+[ncpu006:286230] [ 4] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xc0ffa)[0x14aabe47fffa]
+[ncpu006:286230] [ 5] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(_ZSt10unexpectedv+0x0)[0x14aabe46d62e]
+[ncpu006:286230] [ 6] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xc1297)[0x14aabe480297]
+[ncpu006:286230] [ 7] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xae6a2)[0x14aabe46d6a2]
+[ncpu006:286230] [ 8] ./build-harmony/bin/query(+0x6392b)[0x55a9c399b92b]
+[ncpu006:286230] [ 9] ./build-harmony/bin/query(+0x1f90b)[0x55a9c395790b]
+[ncpu006:286230] [10] ./build-harmony/bin/query(+0xe070)[0x55a9c3946070]
+[ncpu006:286230] [11] /lib64/libc.so.6(__libc_start_main+0xf3)[0x14aabdc9e6a3]
+[ncpu006:286230] [12] ./build-harmony/bin/query(+0x1147e)[0x55a9c394947e]
+[ncpu006:286230] *** End of error message ***
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+[ncpu009:3276879] *** Process received signal ***
+[ncpu009:3276879] Signal: Aborted (6)
+[ncpu009:3276879] Signal code:  (-6)
+[ncpu009:3276879] [ 0] /lib64/libpthread.so.0(+0x12dd0)[0x1541aefc5dd0]
+[ncpu009:3276879] [ 1] /lib64/libc.so.6(gsignal+0x10f)[0x1541ae2f670f]
+[ncpu009:3276879] [ 2] /lib64/libc.so.6(abort+0x127)[0x1541ae2e0b25]
+[ncpu009:3276879] [ 3] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xaeaa4)[0x1541aeab1aa4]
+[ncpu009:3276879] [ 4] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xc0ffa)[0x1541aeac3ffa]
+[ncpu009:3276879] [ 5] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(_ZSt10unexpectedv+0x0)[0x1541aeab162e]
+[ncpu009:3276879] [ 6] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xc1297)[0x1541aeac4297]
+[ncpu009:3276879] [ 7] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xae6a2)[0x1541aeab16a2]
+[ncpu009:3276879] [ 8] ./build-harmony/bin/query(+0x6392b)[0x563453ea292b]
+[ncpu009:3276879] [ 9] ./build-harmony/bin/query(+0x1f90b)[0x563453e5e90b]
+[ncpu009:3276879] [10] ./build-harmony/bin/query(+0xe070)[0x563453e4d070]
+[ncpu009:3276879] [11] /lib64/libc.so.6(__libc_start_main+0xf3)[0x1541ae2e26a3]
+[ncpu009:3276879] [12] ./build-harmony/bin/query(+0x1147e)[0x563453e5047e]
+[ncpu009:3276879] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+[ncpu010:335762] *** Process received signal ***
+[ncpu010:335762] Signal: Aborted (6)
+[ncpu010:335762] Signal code:  (-6)
+[ncpu010:335762] [ 0] /lib64/libpthread.so.0(+0x12dd0)[0x149ed67c0dd0]
+[ncpu010:335762] [ 1] /lib64/libc.so.6(gsignal+0x10f)[0x149ed5af170f]
+[ncpu010:335762] [ 2] /lib64/libc.so.6(abort+0x127)[0x149ed5adbb25]
+[ncpu010:335762] [ 3] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xaeaa4)[0x149ed62acaa4]
+[ncpu010:335762] [ 4] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xc0ffa)[0x149ed62beffa]
+[ncpu010:335762] [ 5] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(_ZSt10unexpectedv+0x0)[0x149ed62ac62e]
+[ncpu010:335762] [ 6] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xc1297)[0x149ed62bf297]
+[ncpu010:335762] [ 7] /gpfs/users/delgaudio/local/gcc13/lib/libstdc++.so.6(+0xae6a2)[0x149ed62ac6a2]
+[ncpu010:335762] [ 8] ./build-harmony/bin/query(+0x6392b)[0x564acf08092b]
+[ncpu010:335762] [ 9] ./build-harmony/bin/query(+0x1f90b)[0x564acf03c90b]
+[ncpu010:335762] [10] ./build-harmony/bin/query(+0xe070)[0x564acf02b070]
+[ncpu010:335762] [11] /lib64/libc.so.6(__libc_start_main+0xf3)[0x149ed5add6a3]
+[ncpu010:335762] [12] ./build-harmony/bin/query(+0x1147e)[0x564acf02e47e]
+[ncpu010:335762] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 3202985 on node ncpu005 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

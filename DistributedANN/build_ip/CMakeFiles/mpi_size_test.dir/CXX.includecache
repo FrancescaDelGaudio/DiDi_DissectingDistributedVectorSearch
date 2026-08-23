@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/gpfs/softs/openmpi/gcc-10.3.0/4.1.1/include/mpi.h
+stddef.h
+-
+mpi_portable_platform.h
+/gpfs/softs/openmpi/gcc-10.3.0/4.1.1/include/mpi_portable_platform.h
+openmpi/ompi/mpi/cxx/mpicxx.h
+/gpfs/softs/openmpi/gcc-10.3.0/4.1.1/include/openmpi/ompi/mpi/cxx/mpicxx.h
+
+/gpfs/softs/openmpi/gcc-10.3.0/4.1.1/include/mpi_portable_platform.h
+omp.h
+/gpfs/softs/openmpi/gcc-10.3.0/4.1.1/include/omp.h
+omp.h
+/gpfs/softs/openmpi/gcc-10.3.0/4.1.1/include/omp.h
+
+/gpfs/users/delgaudio/exp_eval/DistributedANN/src/tools/mpi_size_test.cpp
+mpi.h
+-
+cstdio
+-
+unistd.h
+-
+

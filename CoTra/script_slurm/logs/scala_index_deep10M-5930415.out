@@ -1,0 +1,1273 @@
+==== scala_index DEEP 10M start 2026-06-13T13:44:06+02:00 job=5930415 ====
+nodes=ncpum[007-010] ntasks=4
+DATA=/gpfs/scratch/delgaudio/vectors/DEEP/base.10M.fbin
+INDEX_PREFIX=/gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index
+IB_DEV=mlx5_0
+BIN=/gpfs/users/delgaudio/exp_eval/CoTra/build/tests/scala_index
+==== CoTra cluster conf generated ====
+CONF_FILE=/gpfs/users/delgaudio/exp_eval/CoTra/script_slurm/runtime/cluster-job5930415.conf
+Leader (machine 0): ncpum007
+Nodes (4): ncpum007 ncpum008 ncpum009 ncpum010
+--- conf contents ---
+ncpum007
+2378
+ncpum007=0
+ncpum008=1
+ncpum009=2
+ncpum010=3
+---------------------
+[ncpum007] starting memcached on 10.141.3.7:2378 (host ncpum007)
+memcached keys initialized on 10.141.3.7:2378
+[ncpum007] memcached ready (pid file: /tmp/memcached-cotra-5930415.pid)
+
+==== verify IP mapping (CoTra get_machine_id) ====
+[ncpum007] hostname=ncpum007 id=0 dns_ip=10.141.3.7 local_ips=10.141.3.7 10.149.3.7
+[ncpum007] IP OK (10.141.3.7)
+[ncpum010] hostname=ncpum010 id=3 dns_ip=10.141.3.10 local_ips=10.141.3.10 10.149.3.10
+[ncpum008] hostname=ncpum008 id=1 dns_ip=10.141.3.8 local_ips=10.141.3.8 10.149.3.8
+[ncpum010] IP OK (10.141.3.10)
+[ncpum008] IP OK (10.141.3.8)
+[ncpum009] hostname=ncpum009 id=2 dns_ip=10.141.3.9 local_ips=10.141.3.9 10.149.3.9
+[ncpum009] IP OK (10.141.3.9)
+
+==== launching scala_index on 4 nodes ====
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+Local machine IP addr: 10.141.3.7
+Local machine ID: 0
+qp num per machine = 4
+reset CPU num:128
+Using meta_data_ratio: 0.01
+Local machine IP addr: 10.141.3.7
+Local machine ID: 0
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+IndexParameter
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+Local machine IP addr: 10.141.3.9
+Local machine ID: 2
+qp num per machine = 4
+reset CPU num:256
+Using meta_data_ratio: 0.01
+Local machine IP addr: 10.141.3.9
+Local machine ID: 2
+IndexParameter
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+Local machine IP addr: 10.141.3.8
+Local machine ID: 1
+qp num per machine = 4
+reset CPU num:128
+Using meta_data_ratio: 0.01
+Local machine IP addr: 10.141.3.8
+Local machine ID: 1
+IndexParameter
+max out read num: 16
+Create main mr success. length: 1073741824 align length: 1073741824
+Switch metadata with remote machine..
+Establish eathnet connection ...
+Machine 0 1 2 3 
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+Local machine IP addr: 10.141.3.10
+Local machine ID: 3
+qp num per machine = 4
+reset CPU num:128
+Using meta_data_ratio: 0.01
+Local machine IP addr: 10.141.3.10
+Local machine ID: 3
+IndexParameter
+max out read num: 16
+Create main mr success. length: 1073741824 align length: 1073741824
+Switch metadata with remote machine..
+Establish eathnet connection ...
+Machine 0 1 2 3 
+max out read num: 16
+Create main mr success. length: 1073741824 align length: 1073741824
+Switch metadata with remote machine..
+Establish eathnet connection ...
+Machine 0 1 2 3 
+max out read num: 16
+Create main mr success. length: 1073741824 align length: 1073741824
+Switch metadata with remote machine..
+Establish eathnet connection ...
+Machine 0 1 2 3 
+Connect × × × × Connect √ × × × Connect √ × √ × Connect √ √ √ × Connect √ √ √ √ 
+RDMA communication init over. 
+Executing kmeans_partition()
+Starting index partition: max_degree=48 L=500 Query RAM budget: 1.07106e+11 Indexing ram budget: 120 T: 32
+Start partition 4 parts with 2 replica.
+start gen random slice
+sample p_val: 0.05
+Sampling 0%ptsSampled 500823pts
+Reading 1.5%ptsReading 4.3%ptsReading 6%ptsReading 6.5%ptsReading 7.1%ptsReading 7.4%ptsReading 10.2%ptsReading 12.2%ptsReading 19.3%ptsReading 22.9%ptsReading 23.8%ptsReading 24.6%ptsReading 26.8%ptsReading 27%ptsReading 32.1%ptsReading 32.4%ptsReading 35.7%ptsReading 39.3%ptsReading 39.9%ptsReading 44.2%ptsReading 48%ptsReading 49.7%ptsReading 57.8%ptsReading 58.5%ptsReading 60.3%ptsReading 60.7%ptsReading 62.8%ptsReading 67.8%ptsReading 68.9%ptsReading 69.5%ptsReading 71.7%ptsReading 73.4%ptsReading 73.5%ptsReading 74%ptsReading 74.2%ptsReading 75.8%ptsReading 76.9%ptsReading 79.6%ptsReading 80.5%ptsReading 82.9%ptsReading 89.9%ptsReading 90.3%ptsReading 91.5%ptsReading 92.9%ptsProcessing global k-means (kmeans_partitioning Step)
+Saving global k-center pivots
+Opened: /gpfs/scratch/delgaudio/vectors/DEEP/base.10M.fbin, size: 3840000008, cache_size: 67108864
+<<>> maxDist: 0.000000 avgDist: 0.000000 totalPoints: 0 baseLambda: 0.000000
+<<>> stdDev: 0.000000 newLambda: 0.000000
+<<>> maxDist: 0.000000 avgDist: 0.000000 totalPoints: 0 baseLambda: 0.000000
+<<>> stdDev: 0.000000 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+0 0 0 0 
+0 0 0 0 
+<<>> maxDist: 1.604052 avgDist: 1.099406 totalPoints: 500000 baseLambda: 0.000001
+<<>> stdDev: 0.433013 newLambda: 0.000001
+<<>> maxDist: 1.604052 avgDist: 1.099406 totalPoints: 1000000 baseLambda: 0.000001
+<<>> stdDev: 0.250000 newLambda: 0.000001
+<<>> norp_lambda 0.000001 rp_lambda 0.000001 
+500000 0 0 0 
+500000 500000 0 0 
+<<>> maxDist: 1.604052 avgDist: 1.099369 totalPoints: 1000000 baseLambda: 0.000001
+<<>> stdDev: 0.144571 newLambda: 0.000001
+<<>> maxDist: 1.217543 avgDist: 0.982080 totalPoints: 2000000 baseLambda: 0.000000
+<<>> stdDev: 0.056875 newLambda: 0.000000
+<<>> norp_lambda 0.000001 rp_lambda 0.000000 
+500028 179148 157455 163369 
+513587 679148 382372 424893 
+<<>> maxDist: 1.604052 avgDist: 1.091730 totalPoints: 1500000 baseLambda: 0.000000
+<<>> stdDev: 0.051589 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.974295 totalPoints: 3000000 baseLambda: 0.000000
+<<>> stdDev: 0.022210 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+507381 348984 314927 328708 
+682143 853581 702254 762022 
+<<>> maxDist: 1.604052 avgDist: 1.055420 totalPoints: 2000000 baseLambda: 0.000000
+<<>> stdDev: 0.016507 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.969719 totalPoints: 4000000 baseLambda: 0.000000
+<<>> stdDev: 0.015193 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+553519 499243 466442 480796 
+936474 1081912 946877 1034737 
+<<>> maxDist: 1.200252 avgDist: 0.948371 totalPoints: 2500000 baseLambda: 0.000000
+<<>> stdDev: 0.003865 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.968096 totalPoints: 5000000 baseLambda: 0.000000
+<<>> stdDev: 0.014959 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+633583 634246 610821 621350 
+1171334 1351038 1185286 1292342 
+<<>> maxDist: 1.200252 avgDist: 0.947312 totalPoints: 3000000 baseLambda: 0.000000
+<<>> stdDev: 0.003816 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.967026 totalPoints: 6000000 baseLambda: 0.000000
+<<>> stdDev: 0.014951 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+731757 762815 750231 755197 
+1405294 1622085 1423306 1549315 
+<<>> maxDist: 1.200252 avgDist: 0.946699 totalPoints: 3500000 baseLambda: 0.000000
+<<>> stdDev: 0.005647 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.966261 totalPoints: 7000000 baseLambda: 0.000000
+<<>> stdDev: 0.014933 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+840816 888157 885670 885357 
+1639896 1892709 1660591 1806804 
+<<>> maxDist: 1.498010 avgDist: 0.774702 totalPoints: 4000000 baseLambda: 0.000000
+<<>> stdDev: 0.006786 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.965682 totalPoints: 8000000 baseLambda: 0.000000
+<<>> stdDev: 0.014989 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+953075 1014145 1018394 1014386 
+1872798 2163852 1898559 2064791 
+<<>> maxDist: 1.498010 avgDist: 0.770231 totalPoints: 4500000 baseLambda: 0.000000
+<<>> stdDev: 0.007484 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.965233 totalPoints: 9000000 baseLambda: 0.000000
+<<>> stdDev: 0.014989 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+1066976 1140866 1149965 1142193 
+2107209 2434938 2135887 2321966 
+<<>> maxDist: 1.498010 avgDist: 0.766571 totalPoints: 5000000 baseLambda: 0.000000
+<<>> stdDev: 0.007974 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.964870 totalPoints: 10000000 baseLambda: 0.000000
+<<>> stdDev: 0.014981 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+1181524 1266995 1280991 1270490 
+2341001 2705161 2373627 2580211 
+<<>> maxDist: 1.498010 avgDist: 0.763553 totalPoints: 5500000 baseLambda: 0.000000
+<<>> stdDev: 0.008275 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.964556 totalPoints: 11000000 baseLambda: 0.000000
+<<>> stdDev: 0.014967 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+1297014 1393745 1411586 1397655 
+2575569 2975886 2611035 2837510 
+<<>> maxDist: 1.498010 avgDist: 0.761070 totalPoints: 6000000 baseLambda: 0.000000
+<<>> stdDev: 0.008445 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.964304 totalPoints: 12000000 baseLambda: 0.000000
+<<>> stdDev: 0.014981 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+1413354 1520120 1541738 1524788 
+2809657 3246844 2848220 3095279 
+<<>> maxDist: 1.498010 avgDist: 0.758904 totalPoints: 6500000 baseLambda: 0.000000
+<<>> stdDev: 0.008578 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.964091 totalPoints: 13000000 baseLambda: 0.000000
+<<>> stdDev: 0.014972 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+1529811 1646246 1671707 1652236 
+3043956 3517275 3085670 3353099 
+<<>> maxDist: 1.498010 avgDist: 0.756958 totalPoints: 7000000 baseLambda: 0.000000
+<<>> stdDev: 0.008666 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.963902 totalPoints: 14000000 baseLambda: 0.000000
+<<>> stdDev: 0.014989 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+1646573 1772297 1801378 1779752 
+3277728 3787832 3322741 3611699 
+<<>> maxDist: 1.498010 avgDist: 0.755310 totalPoints: 7500000 baseLambda: 0.000000
+<<>> stdDev: 0.008724 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.963755 totalPoints: 15000000 baseLambda: 0.000000
+<<>> stdDev: 0.014992 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+1763549 1898529 1930903 1907019 
+3511914 4058585 3560017 3869484 
+<<>> maxDist: 1.498010 avgDist: 0.753848 totalPoints: 8000000 baseLambda: 0.000000
+<<>> stdDev: 0.008736 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.963623 totalPoints: 16000000 baseLambda: 0.000000
+<<>> stdDev: 0.014994 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+1881092 2024866 2060390 2033652 
+3746430 4329597 3797050 4126923 
+<<>> maxDist: 1.498010 avgDist: 0.752538 totalPoints: 8500000 baseLambda: 0.000000
+<<>> stdDev: 0.008835 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.963493 totalPoints: 17000000 baseLambda: 0.000000
+<<>> stdDev: 0.014996 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+1997255 2151768 2190035 2160942 
+3979658 4599835 4035153 4385354 
+<<>> maxDist: 1.498010 avgDist: 0.751402 totalPoints: 9000000 baseLambda: 0.000000
+<<>> stdDev: 0.008865 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.963395 totalPoints: 18000000 baseLambda: 0.000000
+<<>> stdDev: 0.014995 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+2114312 2278163 2319207 2288318 
+4213729 4870251 4272489 4643531 
+<<>> maxDist: 1.498010 avgDist: 0.750347 totalPoints: 9500000 baseLambda: 0.000000
+<<>> stdDev: 0.008920 newLambda: 0.000000
+<<>> maxDist: 1.217543 avgDist: 0.963284 totalPoints: 19000000 baseLambda: 0.000000
+<<>> stdDev: 0.014996 newLambda: 0.000000
+<<>> norp_lambda 0.000000 rp_lambda 0.000000 
+2231027 2404600 2449184 2415189 
+4447797 5140806 4509785 4901612 
+Actual no-replica shard sizes: 2348532 2530522 2578002 2542944 
+ Partitioned 10000000 with no-replication to get 10000000 points across 4 shards 
+Actual replica shard sizes: 4682332 5411252 4746781 5159635 
+ Partitioned 10000000 with replication factor 2 to get 20000000 points across 4 shards 
+====Target parts: 4 Number of replicas: 2
+Time for partitioning data : 13.415005 seconds
+====Begin to Retrieve Replica Partitioned Data====
+<<>> size ofT 4
+Reading bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-0_ids_uint32.bin ...
+Opening bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-0_ids_uint32.bin... 
+Metadata: #pts = 4682332, #dims = 1...
+done.
+Shard 0 replica has 4682332 points
+Reading bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_meta_index_subshard-0_ids_uint32.bin ...
+Opening bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_meta_index_subshard-0_ids_uint32.bin... 
+Metadata: #pts = 2348532, #dims = 1...
+done.
+Shard 0 noreplica has 2348532 points
+Reading bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-1_ids_uint32.bin ...
+Opening bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-1_ids_uint32.bin... 
+Metadata: #pts = 5411252, #dims = 1...
+done.
+Shard 1 replica has 5411252 points
+Reading bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_meta_index_subshard-1_ids_uint32.bin ...
+Opening bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_meta_index_subshard-1_ids_uint32.bin... 
+Metadata: #pts = 2530522, #dims = 1...
+done.
+Shard 1 noreplica has 2530522 points
+Reading bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-2_ids_uint32.bin ...
+Opening bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-2_ids_uint32.bin... 
+Metadata: #pts = 4746781, #dims = 1...
+done.
+Shard 2 replica has 4746781 points
+Reading bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_meta_index_subshard-2_ids_uint32.bin ...
+Opening bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_meta_index_subshard-2_ids_uint32.bin... 
+Metadata: #pts = 2578002, #dims = 1...
+done.
+Shard 2 noreplica has 2578002 points
+Reading bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-3_ids_uint32.bin ...
+Opening bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-3_ids_uint32.bin... 
+Metadata: #pts = 5159635, #dims = 1...
+done.
+Shard 3 replica has 5159635 points
+Reading bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_meta_index_subshard-3_ids_uint32.bin ...
+Opening bin file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_meta_index_subshard-3_ids_uint32.bin... 
+Metadata: #pts = 2542944, #dims = 1...
+done.
+Shard 3 noreplica has 2542944 points
+<<>> sizeof read granularity: 384
+Data retrieval 5% finishedData retrieval 10% finishedData retrieval 15% finishedData retrieval 20% finishedData retrieval 25% finishedData retrieval 30% finishedData retrieval 35% finishedData retrieval 40% finishedData retrieval 45% finishedData retrieval 50% finishedData retrieval 55% finishedData retrieval 60% finishedData retrieval 65% finishedData retrieval 70% finishedData retrieval 75% finishedData retrieval 80% finishedData retrieval 85% finishedData retrieval 90% finishedData retrieval 95% finishedData retrieval 100% finishedShard 0 replica written 4682332 points
+Shard 0 noreplica written 2348532 points
+Shard 1 replica written 5411252 points
+Shard 1 noreplica written 2530522 points
+Shard 2 replica written 4746781 points
+Shard 2 noreplica written 2578002 points
+Shard 3 replica written 5159635 points
+Shard 3 noreplica written 2542944 points
+Data retriveal over. 
+Time for partition with kmeans time : 81.155785 seconds
+Partition info send over.
+Building local partition, thread num: 32
+Connect × × × × Connect × √ × × Connect √ √ × × Connect √ √ √ × Connect √ √ √ √ 
+RDMA communication init over. 
+Waiting for partition info ...
+Recv partition info :/gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-1.bin
+Connect × × × × Connect × × × √ Connect √ × × √ Connect √ × √ √ Connect √ √ √ √ 
+RDMA communication init over. 
+Waiting for partition info ...
+Recv partition info :/gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-3.bin
+Partition info all recved.
+Building local partition, thread num: 32
+Partition info all recved.
+Building local partition, thread num: 32
+Connect × × × × Connect × × √ × Connect √ × √ × Connect √ √ √ × Connect √ √ √ √ 
+RDMA communication init over. 
+Waiting for partition info ...
+Recv partition info :/gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-2.bin
+Partition info all recved.
+Building local partition, thread num: 32
+L2: Using AVX2 distance computation DistanceL2Float
+L2: Using AVX2 distance computation DistanceL2Float
+L2: Using AVX2 distance computation DistanceL2Float
+L2: Using AVX2 distance computation DistanceL2Float
+Passed, empty search_params while creating index config
+Passed, empty search_params while creating index config
+Passed, empty search_params while creating index config
+Passed, empty search_params while creating index config
+Using only first 4682332 from file.. 
+Starting index build with 4682332 points... 
+Using only first 5411252 from file.. 
+Starting index build with 5411252 points... 
+Using only first 5159635 from file.. 
+Starting index build with 5159635 points... 
+Using only first 4746781 from file.. 
+Starting index build with 4746781 points... 
+0% of index build completed.2.10669% of index build completed.4.21338% of index build completed.6.32007% of index build completed.8.42676% of index build completed.10.5335% of index build completed.12.6401% of index build completed.14.7468% of index build completed.16.8535% of index build completed.18.9602% of index build completed.21.0669% of index build completed.23.1736% of index build completed.25.2803% of index build completed.27.387% of index build completed.29.4937% of index build completed.31.6004% of index build completed.33.7071% of index build completed.35.8137% of index build completed.37.9204% of index build completed.40.0271% of index build completed.42.1338% of index build completed.44.2405% of index build completed.46.3472% of index build completed.48.4539% of index build completed.50.5606% of index build completed.52.6673% of index build completed.54.774% of index build completed.56.8807% of index build completed.58.9873% of index build completed.61.094% of index0% of index build completed.1.848% of index build completed.3.696% of index build completed.5.544% of index build completed.7.392% of index build completed.9.24001% of index build completed.11.088% of index build completed.12.936% of index build completed.14.784% of index build completed.16.632% of index build completed.18.48% of index build completed.20.328% of index build completed.22.176% of index build completed.24.024% of index build completed.25.872% of index build completed.27.72% of index build completed.29.568% of index build completed.31.416% of index build completed.33.264% of index build completed.35.112% of index build completed.36.96% of index build completed.38.808% of index build completed.40.656% of index build completed.42.504% of index build completed.44.352% of index build completed.46.2% of index build completed.48.048% of index build completed.49.896% of index build completed.51.744% of index build completed.53.592% of index build completed.55.44% of index 0% of index build completed.2.13569% of index build completed.4.27138% of index build completed.6.40706% of index build completed.8.54275% of index build completed.10.6784% of index build completed.12.8141% of index build completed.14.9498% of index build completed.17.0855% of index build completed.19.2212% of index build completed.21.3569% of index build completed.23.4926% of index build completed.25.6283% of index build completed.27.7639% of index build completed.29.8996% of index build completed.32.0353% of index build completed.34.171% of index build completed.36.3067% of index build completed.38.4424% of index build completed.40.5781% of index build completed.42.7138% of index build completed.44.8494% of index build completed.46.9851% of index build completed.49.1208% of index build completed.51.2565% of index build completed.53.3922% of index build completed.55.5279% of index build completed.57.6636% of index build completed.59.7993% of index build completed.61.935% of inde0% of index build completed.1.93812% of index build completed.3.87624% of index build completed.5.81436% of index build completed.7.75249% of index build completed.9.69061% of index build completed.11.6287% of index build completed.13.5669% of index build completed.15.505% of index build completed.17.4431% of index build completed.19.3812% of index build completed.21.3193% of index build completed.23.2575% of index build completed.25.1956% of index build completed.27.1337% of index build completed.29.0718% of index build completed.31.0099% of index build completed.32.9481% of index build completed.34.8862% of index build completed.36.8243% of index build completed.38.7624% of index build completed.40.7006% of index build completed.42.6387% of index build completed.44.5768% of index build completed.46.5149% of index build completed.48.453% of index build completed.50.3912% of index build completed.52.3293% of index build completed.54.2674% of index build completed.56.2055% of inde build completed.63.2007% of index build completed.65.3074% of index build completed.67.4141% of index build completed.69.5208% of index build completed.71.6275% of index build completed.73.7342% of index build completed.75.8409% of index build completed.77.9476% of index build completed.80.0543% of index build completed.82.1609% of index build completed.84.2676% of index build completed.86.3743% of index build completed.88.481% of index build completed.90.5877% of index build completed.92.6944% of index build completed.94.8011% of index build completed.96.9078% of index build completed.99.0145% of index build completed.Starting final cleanup..done. Link time: 615.03s
+Index built with degree: max:32  avg:31.8089  min:2  count(deg<2):0
+Not saving tags as they are not enabled.
+Time taken for save: 2.34472s.
+Local index save to: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-2_mem.index
+x build completed.64.0706% of index build completed.66.2063% of index build completed.68.342% of index build completed.70.4777% of index build completed.72.6134% of index build completed.74.7491% of index build completed.76.8848% of index build completed.79.0205% of index build completed.81.1561% of index build completed.83.2918% of index build completed.85.4275% of index build completed.87.5632% of index build completed.89.6989% of index build completed.91.8346% of index build completed.93.9703% of index build completed.96.106% of index build completed.98.2416% of index build completed.Starting final cleanup..done. Link time: 1030.83s
+Index built with degree: max:32  avg:31.482  min:1  count(deg<2):22
+Not saving tags as they are not enabled.
+Time taken for save: 1.68134s.
+Local index save to: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-0_mem.index
+build completed.57.288% of index build completed.59.136% of index build completed.60.984% of index build completed.62.832% of index build completed.64.68% of index build completed.66.528% of index build completed.68.376% of index build completed.70.224% of index build completed.72.072% of index build completed.73.92% of index build completed.75.768% of index build completed.77.616% of index build completed.79.4641% of index build completed.81.3121% of index build completed.83.1601% of index build completed.85.0081% of index build completed.86.8561% of index build completed.88.7041% of index build completed.90.5521% of index build completed.92.4001% of index build completed.94.2481% of index build completed.96.0961% of index build completed.97.9441% of index build completed.99.7921% of index build completed.Starting final cleanup..done. Link time: 1074.64s
+Index built with degree: max:32  avg:31.5273  min:1  count(deg<2):11
+Not saving tags as they are not enabled.
+Time taken for save: 1.93933s.
+Local index save to: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-1_mem.index
+x build completed.58.1436% of index build completed.60.0818% of index build completed.62.0199% of index build completed.63.958% of index build completed.65.8961% of index build completed.67.8343% of index build completed.69.7724% of index build completed.71.7105% of index build completed.73.6486% of index build completed.75.5867% of index build completed.77.5249% of index build completed.79.463% of index build completed.81.4011% of index build completed.83.3392% of index build completed.85.2774% of index build completed.87.2155% of index build completed.89.1536% of index build completed.91.0917% of index build completed.93.0298% of index build completed.94.968% of index build completed.96.9061% of index build completed.98.8442% of index build completed.Starting final cleanup..done. Link time: 1182.41s
+Index built with degree: max:32  avg:31.8224  min:2  count(deg<2):0
+Not saving tags as they are not enabled.
+Time taken for save: 1.93098s.
+Local index save to: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_subshard-3_mem.index
+All partition index build over...
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+Write Partition Map Info ...
+max vid: 10000000dim: 96
+ no-replica partition 0 size: 2348532
+ no-replica partition 1 size: 2530522
+ no-replica partition 2 size: 2578002
+ no-replica partition 3 size: 2542944
+noreplica id size: 2348532
+noreplica id size: 2530522
+noreplica id size: 2578002
+noreplica id size: 2542944
+Id to Part Map file write over.
+Pos Label Map file write over.
+Label Pos Map file write over.
+======== Partition Checkpoint BEGIN ========
+ noreplica partition 0 size: 2348532
+ replica partition 0 size: 4682332
+All partition index build over...
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+======== Partition Checkpoint BEGIN ========
+ noreplica partition 1 size: 2530522
+All partition index build over...
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+======== Partition Checkpoint BEGIN ========
+ noreplica partition 2 size: 2578002
+Pos Label Map file read over.
+Label Pos Map file read over.
+# max_vid: 10000000, max_degree: 48, # nodeselems(include replica): 4682332
+======== Partition Checkpoint END ========
+Start to merge ...
+Reorganize replica partitions ...
+this partition enterpoint is 1855034
+Starting dispatch & collect ...
+All partition index build over...
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+WARN: Failed to allocate huge pages. Falling back to normal pages.
+======== Partition Checkpoint BEGIN ========
+ noreplica partition 3 size: 2542944
+ replica partition 1 size: 5411252
+Pos Label Map file read over.
+Label Pos Map file read over.
+# max_vid: 10000000, max_degree: 48, # nodeselems(include replica): 5411252
+======== Partition Checkpoint END ========
+Start to merge ...
+Reorganize replica partitions ...
+this partition enterpoint is 2617761
+Starting dispatch & collect ...
+ replica partition 3 size: 5159635
+ replica partition 2 size: 4746781
+Pos Label Map file read over.
+Label Pos Map file read over.
+# max_vid: 10000000, max_degree: 48, # nodeselems(include replica): 5159635
+======== Partition Checkpoint END ========
+Start to merge ...
+Reorganize replica partitions ...
+this partition enterpoint is 724949
+Starting dispatch & collect ...
+Pos Label Map file read over.
+Label Pos Map file read over.
+# max_vid: 10000000, max_degree: 48, # nodeselems(include replica): 4746781
+======== Partition Checkpoint END ========
+Start to merge ...
+Reorganize replica partitions ...
+this partition enterpoint is 3473627
+Starting dispatch & collect ...
+dispatch m0 id num 2348532 ngh num 75716760
+dispatch m1 id num 1290576 ngh num 42178184
+dispatch m2 id num 393751 ngh num 12887754
+dispatch m3 id num 649473 ngh num 21309016
+Dispatch replica partitions ...
+Collect partition 0from other machine ...
+dispatch m0 id num 322200 ngh num 10495864
+dispatch m1 id num 655806 ngh num 21415529
+dispatch m2 id num 1638685 ngh num 53905278
+dispatch m3 id num 2542944 ngh num 83534962
+Dispatch replica partitions ...
+Dispatch partition 0 to machine0 ...
+dispatch m0 id num 188618 ngh num 6052483
+dispatch m1 id num 584140 ngh num 19110916
+dispatch m2 id num 2578002 ngh num 84729601
+dispatch m3 id num 1396021 ngh num 45843636
+Dispatch replica partitions ...
+Dispatch partition 0 to machine0 ...
+dispatch m0 id num 1837714 ngh num 59101276
+dispatch m1 id num 2530522 ngh num 82778326
+dispatch m2 id num 545566 ngh num 17846196
+dispatch m3 id num 497450 ngh num 16287683
+Dispatch replica partitions ...
+Dispatch partition 0 to machine0 ...
+recv collect info from m3 idnum 322200 nghnum 10495864
+recv collect info from m2 idnum 188618 nghnum 6052483
+recv collect info from m1 idnum 1837714 nghnum 59101276
+expect partition id size: 
+m 0:2348532
+m 1:1837714
+m 2:188618
+m 3:322200
+expect partition ngh size: 
+m 0:75716760
+m 1:59101276
+m 2:6052483
+m 3:10495864
+Partition 0 meta Collected
+Partition 0 id Collected
+Partition 0 ngh Collected
+Dispatch partition 1 to machine1 ...
+send dispatch info to m0 idnum 322200 nghnum 10495864
+Partition 0 meta Dispatched
+Partition 0 ids Dispatched
+Partition 0 nghs Dispatched
+Dispatch partition 1 to machine1 ...
+send dispatch info to m0 idnum 1837714 nghnum 59101276
+Partition 0 meta Dispatched
+Partition 0 ids Dispatched
+Partition 0 nghs Dispatched
+Collect partition 1from other machine ...
+send dispatch info to m0 idnum 188618 nghnum 6052483
+Partition 0 meta Dispatched
+Partition 0 ids Dispatched
+Partition 0 nghs Dispatched
+Dispatch partition 1 to machine1 ...
+send dispatch info to m1 idnum 1290576 nghnum 42178184
+Partition 1 meta Dispatched
+Partition 1 ids Dispatched
+Partition 1 nghs Dispatched
+Dispatch partition 2 to machine2 ...
+send dispatch info to m1 idnum 655806 nghnum 21415529
+Partition 1 meta Dispatched
+Partition 1 ids Dispatched
+Partition 1 nghs Dispatched
+Dispatch partition 2 to machine2 ...
+recv collect info from m3 idnum 655806 nghnum 21415529
+recv collect info from m0 idnum 1290576 nghnum 42178184
+recv collect info from m2 idnum 584140 nghnum 19110916
+expect partition id size: 
+m 0:1290576
+m 1:2530522
+m 2:584140
+m 3:655806
+expect partition ngh size: 
+m 0:42178184
+m 1:82778326
+m 2:19110916
+m 3:21415529
+Partition 1 meta Collected
+Partition 1 id Collected
+Partition 1 ngh Collected
+Dispatch partition 2 to machine2 ...
+send dispatch info to m1 idnum 584140 nghnum 19110916
+Partition 1 meta Dispatched
+Partition 1 ids Dispatched
+Partition 1 nghs Dispatched
+Collect partition 2from other machine ...
+send dispatch info to m2 idnum 393751 nghnum 12887754
+Partition 2 meta Dispatched
+Partition 2 ids Dispatched
+Partition 2 nghs Dispatched
+Dispatch partition 3 to machine3 ...
+send dispatch info to m2 idnum 545566 nghnum 17846196
+Partition 2 meta Dispatched
+Partition 2 ids Dispatched
+Partition 2 nghs Dispatched
+Dispatch partition 3 to machine3 ...
+send dispatch info to m2 idnum 1638685 nghnum 53905278
+Partition 2 meta Dispatched
+Partition 2 ids Dispatched
+Partition 2 nghs Dispatched
+Collect partition 3from other machine ...
+recv collect info from m1 idnum 545566 nghnum 17846196
+recv collect info from m0 idnum 393751 nghnum 12887754
+recv collect info from m3 idnum 1638685 nghnum 53905278
+expect partition id size: 
+m 0:393751
+m 1:545566
+m 2:2578002
+m 3:1638685
+expect partition ngh size: 
+m 0:12887754
+m 1:17846196
+m 2:84729601
+m 3:53905278
+Partition 2 meta Collected
+Partition 2 id Collected
+Partition 2 ngh Collected
+Dispatch partition 3 to machine3 ...
+send dispatch info to m3 idnum 649473 nghnum 21309016
+Partition 3 meta Dispatched
+Partition 3 ids Dispatched
+Partition 3 nghs Dispatched
+collect_id_num: 4697064
+Creating inverse map -- shard #0
+send dispatch info to m3 idnum 497450 nghnum 16287683
+Partition 3 meta Dispatched
+Partition 3 ids Dispatched
+Partition 3 nghs Dispatched
+collect_id_num: 5061044
+Creating inverse map -- shard #0
+recv collect info from m1 idnum 497450 nghnum 16287683
+recv collect info from m2 idnum 1396021 nghnum 45843636
+recv collect info from m0 idnum 649473 nghnum 21309016
+expect partition id size: 
+m 0:649473
+m 1:497450
+m 2:1396021
+m 3:2542944
+expect partition ngh size: 
+m 0:21309016
+m 1:16287683
+m 2:45843636
+m 3:83534962
+Partition 3 meta Collected
+Partition 3 id Collected
+Partition 3 ngh Collected
+collect_id_num: 5085888
+Creating inverse map -- shard #0
+send dispatch info to m3 idnum 1396021 nghnum 45843636
+Partition 3 meta Dispatched
+Partition 3 ids Dispatched
+Partition 3 nghs Dispatched
+collect_id_num: 5156004
+Creating inverse map -- shard #0
+Creating inverse map -- shard #1
+Creating inverse map -- shard #1
+Creating inverse map -- shard #2
+Creating inverse map -- shard #2
+Creating inverse map -- shard #1
+Creating inverse map -- shard #1
+Creating inverse map -- shard #3
+Creating inverse map -- shard #3
+Creating inverse map -- shard #2
+Creating inverse map -- shard #2
+Creating inverse map -- shard #3
+node_shard_size: 4697064
+Creating inverse map -- shard #3
+node_shard_size: 5085888
+node_shard_size: 5156004
+node_shard_size: 5061044
+Finished computing node -> shards map
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final.index, cache_size: 1073741824
+max_degree: 48
+Starting merge
+Finished computing node -> shards map
+Finished computing node -> shards map
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final.index, cache_size: 1073741824
+max_degree: 48
+Starting merge
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final.index, cache_size: 1073741824
+max_degree: 48
+Starting merge
+Finished computing node -> shards map
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final.index, cache_size: 1073741824
+max_degree: 48
+Starting merge
+......vid_cnt: 2348532
+Expected size: 393235152
+Finished merge
+.....vid_cnt: 2530522
+Expected size: 453337744
+..vid_cnt: 2578002
+Expected size: 442559888
+........vid_cnt: 2542944
+Expected size: 450186192
+Finished writing 393235160B
+Finished writing 393235160B
+Start transfer index to b1graph.
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final.index, size: 393235152, cache_size: 67108864
+b1graph vnum: 2348532 medoid 3961666 size 1380936828
+read base data from: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_meta_index_subshard-0.bin
+Finished merge
+Finished merge
+Finished merge
+Finished writing 442559896B
+Finished writing 442559896B
+Start transfer index to b1graph.
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final.index, size: 442559888, cache_size: 67108864
+Finished writing 453337752B
+Finished writing 453337752B
+Start transfer index to b1graph.
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final.index, size: 453337744, cache_size: 67108864
+Finished writing 450186200B
+Finished writing 450186200B
+Start transfer index to b1graph.
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final.index, size: 450186192, cache_size: 67108864
+b1graph vnum: 2578002 medoid 7318006 size 1515865188
+read base data from: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_meta_index_subshard-2.bin
+b1graph vnum: 2530522 medoid 4838290 size 1487946948
+read base data from: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_meta_index_subshard-1.bin
+partition_ofs: 2348532
+partition_ofs: 4879054
+partition_ofs: 0
+b1graph vnum: 2542944 medoid 1440835 size 1495251084
+read base data from: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_mem.index_tempFiles_meta_index_subshard-3.bin
+partition_ofs: 7457056
+max deg: 48 medoid: 3961666 index frozen: 0
+2348532 nodes read.
+start write index
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_b1.index, cache_size: 1073741824
+max deg: 48 medoid: 4838290 index frozen: 0
+2530522 nodes read.
+start write index
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_b1.index, cache_size: 1073741824
+max deg: 48 medoid: 7318006 index frozen: 0
+2578002 nodes read.
+start write index
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_b1.index, cache_size: 1073741824
+max deg: 48 medoid: 1440835 index frozen: 0
+2542944 nodes read.
+start write index
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_b1.index, cache_size: 1073741824
+ b1 graph vnum num:2348532
+Transfer index to b1graph over: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_b1.index
+Finished writing 1380936828B
+ b1 graph vnum num:2530522
+Transfer index to b1graph over: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_b1.index
+Finished writing 1487946948B
+ b1 graph vnum num:2542944
+Transfer index to b1graph over: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_b1.index
+Finished writing 1495251084B
+Start transfer b1graph to scalagraph (V3)..
+cumupsize[1] = 2348532
+cumupsize[2] = 4879054
+cumupsize[3] = 7457056
+cumupsize[4] = 10000000
+Start transfer b1graph to scalagraph (V3)..
+cumupsize[1] = 2348532
+cumupsize[2] = 4879054
+cumupsize[3] = 7457056
+cumupsize[4] = 10000000
+Start transfer b1graph to scalagraph (V3)..
+cumupsize[1] = 2348532
+cumupsize[2] = 4879054
+cumupsize[3] = 7457056
+cumupsize[4] = 10000000
+ b1 graph vnum num:2578002
+Transfer index to b1graph over: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_b1.index
+Finished writing 1515865188B
+Start transfer b1graph to scalagraph (V3)..
+cumupsize[1] = 2348532
+cumupsize[2] = 4879054
+cumupsize[3] = 7457056
+cumupsize[4] = 10000000
+Loading kmeans b1graph index from /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_b1.index...
+Kmeans & Index file read over, parition num:4 parition size:2348532size data per element:588
+>>> Step 0. Start compute scala graph partition size ...
+>>> Step 1. Start swap partition info ... 
+send meta to 1
+send meta to 2
+send meta to 3
+recv meta from 3
+recv meta from 1
+recv meta from 2
+]]] swap over
+in_remote_ngh_num[1][0] = 17064367
+in_remote_ngh_num[2][0] = 5451299
+in_remote_ngh_num[3][0] = 8046343
+all_in_remote_ngh_num: 30562009
+EXPECT scala_index_size: 591954468, scala_data_size: 0
+>>> Step 2. Recompute ngh partition ofs ... 
+out_remote_ngh_start_ofs[0] = 469706400
+out_remote_ngh_start_ofs[1] = 506104400
+out_remote_ngh_start_ofs[2] = 515600400
+out_remote_ngh_start_ofs[3] = 508588800
+in_remote_ngh_start_ofs[0] = 469706432
+in_remote_ngh_start_ofs[1] = 469706432
+in_remote_ngh_start_ofs[2] = 537963900
+in_remote_ngh_start_ofs[3] = 559769096
+>>> Step 3. Start reformat index and data ... 
+Rewrite index ...
+Rewrite expect index size 591954468 ...
+INFO: meta part num 2348532 ngh_num 30562009
+Loading kmeans b1graph index from /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_b1.index...
+Kmeans & Index file read over, parition num:4 parition size:2542944size data per element:588
+>>> Step 0. Start compute scala graph partition size ...
+>>> Step 1. Start swap partition info ... 
+send meta to 0
+send meta to 1
+send meta to 2
+recv meta from 0
+recv meta from 1
+recv meta from 2
+]]] swap over
+in_remote_ngh_num[0][3] = 7773045
+in_remote_ngh_num[1][3] = 9301151
+in_remote_ngh_num[2][3] = 6211806
+all_in_remote_ngh_num: 23286002
+Loading kmeans b1graph index from /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_b1.index...
+Kmeans & Index file read over, parition num:4 parition size:2530522size data per element:588
+>>> Step 0. Start compute scala graph partition size ...
+>>> Step 1. Start swap partition info ... 
+send meta to 0
+send meta to 2
+send meta to 3
+recv meta from 3
+recv meta from 0
+recv meta from 2
+]]] swap over
+in_remote_ngh_num[0][1] = 17389122
+in_remote_ngh_num[2][1] = 4046141
+in_remote_ngh_num[3][1] = 8172928
+all_in_remote_ngh_num: 29608191
+EXPECT scala_index_size: 601732840, scala_data_size: 0
+>>> Step 2. Recompute ngh partition ofs ... 
+out_remote_ngh_start_ofs[0] = 559769064
+out_remote_ngh_start_ofs[1] = 591845452
+out_remote_ngh_start_ofs[2] = 554216044
+out_remote_ngh_start_ofs[3] = 601732808
+in_remote_ngh_start_ofs[0] = 508588832
+in_remote_ngh_start_ofs[1] = 539681012
+in_remote_ngh_start_ofs[2] = 576885616
+in_remote_ngh_start_ofs[3] = 601732840
+>>> Step 3. Start reformat index and data ... 
+Rewrite index ...
+Rewrite expect index size 601732840 ...
+INFO: meta part num 2542944 ngh_num 23286002
+EXPECT scala_index_size: 624537196, scala_data_size: 0
+>>> Step 2. Recompute ngh partition ofs ... 
+out_remote_ngh_start_ofs[0] = 469706400
+out_remote_ngh_start_ofs[1] = 575660888
+out_remote_ngh_start_ofs[2] = 534669284
+out_remote_ngh_start_ofs[3] = 539680980
+in_remote_ngh_start_ofs[0] = 506104432
+in_remote_ngh_start_ofs[1] = 575660920
+in_remote_ngh_start_ofs[2] = 575660920
+in_remote_ngh_start_ofs[3] = 591845484
+>>> Step 3. Start reformat index and data ... 
+Rewrite index ...
+Rewrite expect index size 624537196 ...
+INFO: meta part num 2530522 ngh_num 29608191
+Loading kmeans b1graph index from /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_b1.index...
+Kmeans & Index file read over, parition num:4 parition size:2578002size data per element:588
+>>> Step 0. Start compute scala graph partition size ...
+>>> Step 1. Start swap partition info ... 
+send meta to 0
+send meta to 1
+send meta to 3
+recv meta from 3
+recv meta from 0
+recv meta from 1
+]]] swap over
+in_remote_ngh_num[0][2] = 4767221
+in_remote_ngh_num[1][2] = 4886690
+in_remote_ngh_num[3][2] = 6887965
+all_in_remote_ngh_num: 16541876
+EXPECT scala_index_size: 581767936, scala_data_size: 0
+>>> Step 2. Recompute ngh partition ofs ... 
+out_remote_ngh_start_ofs[0] = 537963868
+out_remote_ngh_start_ofs[1] = 575660888
+out_remote_ngh_start_ofs[2] = 554216044
+out_remote_ngh_start_ofs[3] = 576885584
+in_remote_ngh_start_ofs[0] = 515600432
+in_remote_ngh_start_ofs[1] = 534669316
+in_remote_ngh_start_ofs[2] = 554216076
+in_remote_ngh_start_ofs[3] = 554216076
+>>> Step 3. Start reformat index and data ... 
+Rewrite index ...
+Rewrite expect index size 581767936 ...
+INFO: meta part num 2578002 ngh_num 16541876
+0%39.3245%78.649%Step 4. Send & Recv remote ngh ... 
+INFO: ngh recv 3 <<< 0 expect 7773045
+INFO: ngh recv 3 <<< 0 num 7773045 over
+--- Build sync ---
+INFO: ngh recv 3 <<< 1 expect 9301151
+INFO: ngh recv 3 <<< 1 num 9301151 over
+--- Build sync ---
+INFO: ngh recv 3 <<< 2 expect 6211806
+INFO: ngh recv 3 <<< 2 num 6211806 over
+--- Build sync ---
+INFO: ngh send 3 >>> 0 size 8046343
+INFO: ngh send 3 >>> 0 send 8046343 over
+INFO: ngh send 3 >>> 1 size 8172928
+INFO: ngh send 3 >>> 1 send 8172928 over
+INFO: ngh send 3 >>> 2 size 6887965
+INFO: ngh send 3 >>> 2 send 6887965 over
+--- Build sync ---
+part 3 index size 601732840 expect 601732840
+Step 5. Write Scala V3 index ... 
+Write part 3 index size 601732840...
+0%42.5798%85.1596%Step 4. Send & Recv remote ngh ... 
+INFO: ngh send 0 >>> 1 size 17389122
+INFO: ngh send 0 >>> 1 send 17389122 over
+INFO: ngh send 0 >>> 2 size 4767221
+INFO: ngh send 0 >>> 2 send 4767221 over
+INFO: ngh send 0 >>> 3 size 7773045
+INFO: ngh send 0 >>> 3 send 7773045 over
+--- Build sync ---
+INFO: ngh recv 0 <<< 1 expect 17064367
+INFO: ngh recv 0 <<< 1 num 17064367 over
+--- Build sync ---
+INFO: ngh recv 0 <<< 2 expect 5451299
+INFO: ngh recv 0 <<< 2 num 5451299 over
+--- Build sync ---
+INFO: ngh recv 0 <<< 3 expect 8046343
+INFO: ngh recv 0 <<< 3 num 8046343 over
+--- Build sync ---
+part 0 index size 591954468 expect 591954468
+Step 5. Write Scala V3 index ... 
+Write part 0 index size 591954468...
+0%38.7897%77.5795%Step 4. Send & Recv remote ngh ... 
+INFO: ngh recv 2 <<< 0 expect 4767221
+INFO: ngh recv 2 <<< 0 num 4767221 over
+--- Build sync ---
+INFO: ngh recv 2 <<< 1 expect 4886690
+INFO: ngh recv 2 <<< 1 num 4886690 over
+--- Build sync ---
+INFO: ngh send 2 >>> 0 size 5451299
+INFO: ngh send 2 >>> 0 send 5451299 over
+INFO: ngh send 2 >>> 1 size 4046141
+INFO: ngh send 2 >>> 1 send 4046141 over
+INFO: ngh send 2 >>> 3 size 6211806
+INFO: ngh send 2 >>> 3 send 6211806 over
+--- Build sync ---
+INFO: ngh recv 2 <<< 3 expect 6887965
+INFO: ngh recv 2 <<< 3 num 6887965 over
+--- Build sync ---
+part 2 index size 581767936 expect 581767936
+Step 5. Write Scala V3 index ... 
+Write part 2 index size 581767936...
+0%39.5175%79.0351%Step 4. Send & Recv remote ngh ... 
+INFO: ngh recv 1 <<< 0 expect 17389122
+INFO: ngh recv 1 <<< 0 num 17389122 over
+--- Build sync ---
+INFO: ngh send 1 >>> 0 size 17064367
+INFO: ngh send 1 >>> 0 send 17064367 over
+INFO: ngh send 1 >>> 2 size 4886690
+INFO: ngh send 1 >>> 2 send 4886690 over
+INFO: ngh send 1 >>> 3 size 9301151
+INFO: ngh send 1 >>> 3 send 9301151 over
+--- Build sync ---
+INFO: ngh recv 1 <<< 2 expect 4046141
+INFO: ngh recv 1 <<< 2 num 4046141 over
+--- Build sync ---
+INFO: ngh recv 1 <<< 3 expect 8172928
+INFO: ngh recv 1 <<< 3 num 8172928 over
+--- Build sync ---
+part 1 index size 624537196 expect 624537196
+Step 5. Write Scala V3 index ... 
+Write part 1 index size 624537196...
+write 22.6737% write 45.3473% write 68.021% write 90.6946% write 100% partition0index file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_scala.index write over, expect file size 591954468
+Step 6. Write Scala V3 data ... 
+Rewrite part 0 data, size 920624956 ...
+Write part 0 data size 920624956 ...
+write 22.3052% write 44.6104% write 66.9156% write 89.2208% write 100% partition3index file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_scala.index write over, expect file size 601732840
+Step 6. Write Scala V3 data ... 
+Rewrite part 3 data, size 996834460 ...
+Write part 3 data size 996834460 ...
+write 21.4908% write 42.9815% write 64.4723% write 85.963% write 100% partition1index file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_scala.index write over, expect file size 624537196
+Step 6. Write Scala V3 data ... 
+Rewrite part 1 data, size 991965036 ...
+Write part 1 data size 991965036 ...
+write 23.0707% write 46.1413% write 69.212% write 92.2827% write 100% partition2index file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_scala.index write over, expect file size 581767936
+Step 6. Write Scala V3 data ... 
+Rewrite part 2 data, size 1010577196 ...
+Write part 2 data size 1010577196 ...
+write 14.579 %write 29.158 %write 43.7369 %write 58.3159 %write 72.8949 %write 87.4739 %write 100 %Partition 0 data file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_scala.data write over, expect file size 920624956
+write 13.4644 %write 26.9288 %write 40.3932 %write 53.8576 %write 67.322 %write 80.7864 %write 94.2508 %write 100 %Partition 3 data file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_scala.data write over, expect file size 996834460
+write 13.5305 %write 27.061 %write 40.5915 %write 54.122 %write 67.6524 %write 81.1829 %write 94.7134 %write 100 %Partition 1 data file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_scala.data write over, expect file size 991965036
+write 13.2813 %write 26.5626 %write 39.8439 %write 53.1252 %write 66.4065 %write 79.6878 %write 92.9691 %write 100 %Partition 2 data file /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_scala.data write over, expect file size 1010577196
+Scala V3 transfer complete on partition 1
+Scala V3 transfer complete on partition 2
+Scala V3 transfer complete on partition 0
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_temp_b1_final.index, cache_size: 1073741824
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_b1.index, size: 1380936828, cache_size: 67108864
+Scala V3 transfer complete on partition 3
+part b1graph vnum: 2348532 medoid 3961666 size 1380936816
+delta: 12, expect equal to 12..
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_b1.index, size: 1487946948, cache_size: 67108864
+part b1graph vnum: 2530522 medoid 4838290 size 1487946936
+delta: 12, expect equal to 12..
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_b1.index, size: 1515865188, cache_size: 67108864
+part b1graph vnum: 2578002 medoid 7318006 size 1515865176
+delta: 12, expect equal to 12..
+Opened: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_b1.index, size: 1495251084, cache_size: 67108864
+part b1graph vnum: 2542944 medoid 1440835 size 1495251072
+delta: 12, expect equal to 12..
+ b1 graph vnum num:10000000
+Merge index to b1graph over: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_temp_b1_final.index
+Finished writing 5880000012B
+======== TopIndex Checkpoint BEGIN ========
+max vid: 10000000dim: 96
+pos label map file: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_temp_pos2label.map
+label pos map file: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_temp_label2pos.map
+======== TopIndex Checkpoint END ========
+Start build hnsw top index ...
+data type : float 
+fsz: 4 datasz 4
+[INFO] Starting HNSW Top index sampling build with the following parameters:
+       Data Path: /gpfs/scratch/delgaudio/vectors/DEEP/base.10M.fbin
+       Data Type: float
+       Dist Type: float
+       Index Path: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_top.index
+       Sample Percent: 1%
+       M: 16
+       efConstruction: 200
+       Num Threads: 32
+       Part num: 4
+[INFO] label trans file: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_temp_label2pos.map
+[INFO] output index file: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_top.index
+[INFO] File header: numVectors=10000000, dimension=96
+[INFO] Thread 0 assigned vectors 0 to 625000
+[INFO] Thread 1 assigned vectors 625000 to 1250000
+[INFO] Thread 2 assigned vectors 1250000 to 1875000
+[INFO] Thread 3 assigned vectors 1875000 to 2500000
+[INFO] Thread 4 assigned vectors 2500000 to 3125000
+[INFO] Thread 5 assigned vectors 3125000 to 3750000
+[INFO] Thread 6 assigned vectors 3750000 to 4375000
+[INFO] Thread 7 assigned vectors 4375000 to 5000000
+[INFO] Thread 8 assigned vectors 5000000 to 5625000
+[INFO] Thread 9 assigned vectors 5625000 to 6250000
+[INFO] Thread 10 assigned vectors 6250000 to 6875000
+[INFO] Thread 11 assigned vectors 6875000 to 7500000
+[INFO] Thread 12 assigned vectors 7500000 to 8125000
+[INFO] Thread 13 assigned vectors 8125000 to 8750000
+[INFO] Thread 14 assigned vectors 8750000 to 9375000
+[INFO] Thread 15 assigned vectors 9375000 to 10000000
+[INFO] Finished sampling. Total 100335 vectors kept (out of 10000000).
+Verifying sampled vector 0 id: 4375003
+Verifying sampled vector 1 id: 4375173
+Verifying sampled vector 2 id: 4375227
+Verifying sampled vector 3 id: 4375264
+Verifying sampled vector 4 id: 4375849
+Verifying sampled vector 5 id: 4375879
+Verifying sampled vector 6 id: 4376001
+Verifying sampled vector 7 id: 4376062
+Verifying sampled vector 8 id: 4376099
+Verifying sampled vector 9 id: 4376175
+Build save index with float
+ Read Label Pos map file: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_temp_label2pos.map
+vec_size 10000000
+part_num 4
+2348532 2530522 2578002 2542944 
+[INFO] Initializing HNSW index with maxElements=100335, M=16, efConstruction=200
+[INFO] Adding points to the HNSW index...
+[INFO] Saved id map to: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_top.index.id_map
+Enter point: 12991
+level 0 : 93967 accumulated count: 93967
+level 1 : 5992 accumulated count: 99959
+level 2 : 353 accumulated count: 100312
+level 3 : 21 accumulated count: 100333
+level 4 : 2 accumulated count: 100335
+Upper layer points count: 6368
+maxElements = 100335
+maxlevel_ = 4
+size_data_per_element_ = 524
+maxM0_ = 32
+label_offset_ = 516
+Expected index size = 52575592, written index size = 52575592
+[INFO] HNSW index built and saved to: /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_top.index, total 100335 points, expected: 100335
+
+==== index artifacts ====
+-rw-r--r-- 1 delgaudio exter 51M Jun 13 14:10 /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_top.index
+-rw-r--r-- 1 delgaudio exter 878M Jun 13 14:07 /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_scala.data
+-rw-r--r-- 1 delgaudio exter 565M Jun 13 14:06 /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index0_final_scala.index
+-rw-r--r-- 1 delgaudio exter 947M Jun 13 14:07 /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_scala.data
+-rw-r--r-- 1 delgaudio exter 596M Jun 13 14:06 /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index1_final_scala.index
+-rw-r--r-- 1 delgaudio exter 964M Jun 13 14:07 /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_scala.data
+-rw-r--r-- 1 delgaudio exter 555M Jun 13 14:06 /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index2_final_scala.index
+-rw-r--r-- 1 delgaudio exter 951M Jun 13 14:07 /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_scala.data
+-rw-r--r-- 1 delgaudio exter 574M Jun 13 14:06 /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index3_final_scala.index
+-rw-r--r-- 1 delgaudio exter 39M Jun 13 14:05 /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_temp_id2part.map
+-rw-r--r-- 1 delgaudio exter 39M Jun 13 14:05 /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_temp_label2pos.map
+-rw-r--r-- 1 delgaudio exter 39M Jun 13 14:05 /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index_temp_pos2label.map
+==== scala_index done 2026-06-13T14:10:19+02:00 exit=0 ====
+CONF_FILE=/gpfs/users/delgaudio/exp_eval/CoTra/script_slurm/runtime/cluster-job5930415.conf
+Use for scala_anns: --index_path_prefix /gpfs/scratch/delgaudio/cotra/index/deep10M/merged_index --config_file <conf from this job>

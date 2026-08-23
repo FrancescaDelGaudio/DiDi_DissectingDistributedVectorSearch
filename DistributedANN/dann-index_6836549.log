@@ -1,0 +1,164 @@
+launcher: mpirun -np 4 --host ncpu015:1,ncpu026:1,ncpu032:1,ncpu035:1 --map-by ppr:1:node --bind-to none
+############################################################
+# DistributedANN full indexing pipeline
+#   BASE_PATH : /gpfs/scratch/delgaudio/vectors/DEEP/generated_deep_files/pyramid/base.fvecs
+#   INDEX_DIR : /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs
+#   nodes=4 ntasks=4 omp=8
+#   K=32 eps=0.5 R=96 m(pq)=16 head_frac=0.05
+############################################################
+
+==================== PREFLIGHT: MPI wireup ====================
+MPI_COMM_WORLD size reported = 4 (expected 4)
+
+==================== STEP 1: clustering ====================
+
+>>> mpirun -np 4 --host ncpu015:1,ncpu026:1,ncpu032:1,ncpu035:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/build/bin/build_index --base_path /gpfs/scratch/delgaudio/vectors/DEEP/generated_deep_files/pyramid/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs --K 32 --kmeans_iter 20 --kmeans_tol 1e-4 --epsilon 0.5 --max_replicas 5
+2026-07-01 17:03:55
+[rank 0] Dataset: N=10000000  dim=96  K=32  nranks=4
+[rank 0] Params: epsilon=0.500  max_replicas=5  kmeans_iter=20  tol=0.0001
+[rank 0] Loading 2500000 vectors [0, 2500000)
+[rank 2] Loading 2500000 vectors [5000000, 7500000)
+[rank 3] Loading 2500000 vectors [7500000, 10000000)
+[rank 1] Loading 2500000 vectors [2500000, 5000000)
+[rank 0] All ranks loaded data.
+
+[rank 0] k-means++ initialisation complete (sample size=8000)
+[rank 0]  k-means iter  1/20  max_disp=0.737343
+[rank 0]  k-means iter  2/20  max_disp=0.243144
+[rank 0]  k-means iter  3/20  max_disp=0.120334
+[rank 0]  k-means iter  4/20  max_disp=0.090812
+[rank 0]  k-means iter  5/20  max_disp=0.084747
+[rank 0]  k-means iter  6/20  max_disp=0.102737
+[rank 0]  k-means iter  7/20  max_disp=0.082188
+[rank 0]  k-means iter  8/20  max_disp=0.065090
+[rank 0]  k-means iter  9/20  max_disp=0.049075
+[rank 0]  k-means iter 10/20  max_disp=0.043812
+[rank 0]  k-means iter 11/20  max_disp=0.034733
+[rank 0]  k-means iter 12/20  max_disp=0.036847
+[rank 0]  k-means iter 13/20  max_disp=0.037640
+[rank 0]  k-means iter 14/20  max_disp=0.036729
+[rank 0]  k-means iter 15/20  max_disp=0.033852
+[rank 0]  k-means iter 16/20  max_disp=0.030044
+[rank 0]  k-means iter 17/20  max_disp=0.025255
+[rank 0]  k-means iter 18/20  max_disp=0.020679
+[rank 0]  k-means iter 19/20  max_disp=0.017018
+[rank 0]  k-means iter 20/20  max_disp=0.014273
+[rank 0] k-means done: 20 iters  final_disp=0.014273
+
+[rank 0] Running epsilon-replication (eps=0.500 max_rep=5)...
+[rank 0] Replication done: total=10029787  avg replicas/vec=1.00
+
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs/centroids.fvecs
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs/assignments.bin  (N=10000000  total_assignments=10029787  avg=1.00)
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs/meta.json
+
+[rank 0] === Step 1 complete ===
+
+==================== STEP 2: per-cluster Vamana ====================
+
+>>> mpirun -np 4 --host ncpu015:1,ncpu026:1,ncpu032:1,ncpu035:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/build/bin/build_graph --base_path /gpfs/scratch/delgaudio/vectors/DEEP/generated_deep_files/pyramid/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs --R 96 --L 200 --alpha 1.2 --passes 2 --threads 8
+2026-07-01 17:05:44
+[rank 0] Step 2: N=10000000  K=32  dim=96  W=4
+[rank 0] Vamana params: R=96 L=200 alpha=1.20 passes=2
+[rank 0] owns 8 clusters, needs 2376162 vectors
+[rank 1] owns 8 clusters, needs 2528027 vectors
+[rank 3] owns 8 clusters, needs 2575485 vectors
+[rank 2] owns 8 clusters, needs 2546203 vectors
+[rank 0] All ranks loaded cluster vectors.
+[rank 0] built cluster 0: n=197221 medoid_gid=6308931 -> cluster_0.graph
+[rank 0] built cluster 4: n=192342 medoid_gid=4448221 -> cluster_4.graph
+[rank 1] built cluster 1: n=274194 medoid_gid=7789821 -> cluster_1.graph
+[rank 2] built cluster 2: n=255247 medoid_gid=3212017 -> cluster_2.graph
+[rank 3] built cluster 3: n=343048 medoid_gid=1540777 -> cluster_3.graph
+[rank 3] built cluster 7: n=315824 medoid_gid=149963 -> cluster_7.graph
+[rank 0] built cluster 8: n=365982 medoid_gid=2944772 -> cluster_8.graph
+[rank 3] built cluster 11: n=294256 medoid_gid=5912735 -> cluster_11.graph
+[rank 1] built cluster 5: n=330271 medoid_gid=3605689 -> cluster_5.graph
+[rank 0] built cluster 12: n=204085 medoid_gid=7760491 -> cluster_12.graph
+[rank 3] built cluster 15: n=222444 medoid_gid=5389056 -> cluster_15.graph
+[rank 2] built cluster 6: n=476266 medoid_gid=6902888 -> cluster_6.graph
+[rank 1] built cluster 9: n=341040 medoid_gid=6136812 -> cluster_9.graph
+[rank 2] built cluster 10: n=337302 medoid_gid=7175852 -> cluster_10.graph
+[rank 3] built cluster 19: n=532585 medoid_gid=4079788 -> cluster_19.graph
+[rank 0] built cluster 16: n=436567 medoid_gid=4296807 -> cluster_16.graph
+[rank 2] built cluster 14: n=283398 medoid_gid=5915193 -> cluster_14.graph
+[rank 3] built cluster 23: n=177342 medoid_gid=1028964 -> cluster_23.graph
+[rank 1] built cluster 13: n=406220 medoid_gid=5603454 -> cluster_13.graph
+[rank 1] built cluster 17: n=285113 medoid_gid=5705065 -> cluster_17.graph
+[rank 0] built cluster 20: n=323993 medoid_gid=4581603 -> cluster_20.graph
+[rank 2] built cluster 18: n=392144 medoid_gid=983 -> cluster_18.graph
+[rank 2] built cluster 22: n=139851 medoid_gid=1786178 -> cluster_22.graph
+[rank 0] built cluster 24: n=339588 medoid_gid=3809386 -> cluster_24.graph
+[rank 1] built cluster 21: n=390176 medoid_gid=4065244 -> cluster_21.graph
+[rank 3] built cluster 27: n=426319 medoid_gid=7398936 -> cluster_27.graph
+[rank 0] built cluster 28: n=317489 medoid_gid=6898464 -> cluster_28.graph
+[rank 2] built cluster 26: n=355559 medoid_gid=1000330 -> cluster_26.graph
+[rank 3] built cluster 31: n=263943 medoid_gid=4181449 -> cluster_31.graph
+[rank 1] built cluster 25: n=380240 medoid_gid=3474795 -> cluster_25.graph
+[rank 1] built cluster 29: n=122399 medoid_gid=6956553 -> cluster_29.graph
+[rank 2] built cluster 30: n=307339 medoid_gid=6843674 -> cluster_30.graph
+
+[rank 0] === Step 2 complete ===
+
+==================== STEP 3: global stitching ====================
+
+>>> mpirun -np 4 --host ncpu015:1,ncpu026:1,ncpu032:1,ncpu035:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/build/bin/build_stitch --base_path /gpfs/scratch/delgaudio/vectors/DEEP/generated_deep_files/pyramid/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs --R 96 --alpha 1.2
+2026-07-01 17:35:08
+[rank 0] Step 3 (stitching): N=10000000 K=32 dim=96 W=4 R=96 alpha=1.20
+[rank 0] All ranks accumulated neighbour lists.
+[rank 0] clusters read=32  total_edges=653085814  avg_degree=65.3
+[rank 0] replicated nodes (in >1 cluster, merged): 29787 (0.30%)
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs/global_graph.bin
+
+[rank 0] === Step 3 complete ===
+
+==================== STEP 4: PQ ====================
+
+>>> mpirun -np 4 --host ncpu015:1,ncpu026:1,ncpu032:1,ncpu035:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/build/bin/build_pq --base_path /gpfs/scratch/delgaudio/vectors/DEEP/generated_deep_files/pyramid/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs --m 16 --train_size 100000 --iters 25
+2026-07-01 17:39:38
+[rank 0] Step 4 (PQ): N=10000000 dim=96 m=16 ksub=256 -> code=16 bytes
+[rank 0] train_size=100000 iters=25
+[rank 0] Training PQ on 100000 vectors...
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs/pq_codebook.bin
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs/codes.bin (10000000 codes x 16 bytes)
+
+[rank 0] === Step 4 complete ===
+
+==================== STEP 5: head index ====================
+
+>>> mpirun -np 4 --host ncpu015:1,ncpu026:1,ncpu032:1,ncpu035:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/build/bin/build_head --base_path /gpfs/scratch/delgaudio/vectors/DEEP/generated_deep_files/pyramid/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs --head_frac 0.05 --M 16 --efc 200 --method bfs
+2026-07-01 17:39:49
+[rank 0] Step 5 (head index): N=10000000 K=32 dim=96 W=4
+[rank 0] head_frac=0.050 -> C~=500000  method=bfs  M=16 efC=200
+[rank 3] collected 128787 head representatives
+[rank 1] collected 126484 head representatives
+[rank 0] collected 118862 head representatives
+[rank 2] collected 127355 head representatives
+[rank 0] Building HNSW head index over 501488 vectors...
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs/head/head.hnsw (501488 vectors)
+
+[rank 0] === Step 5 complete ===
+
+==================== STEP 6: KV store ====================
+
+>>> mpirun -np 4 --host ncpu015:1,ncpu026:1,ncpu032:1,ncpu035:1 --map-by ppr:1:node --bind-to none /gpfs/users/delgaudio/exp_eval/DistributedANN/build/bin/build_kvstore --base_path /gpfs/scratch/delgaudio/vectors/DEEP/generated_deep_files/pyramid/base.fvecs --index_dir /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs
+2026-07-01 17:40:07
+[rank 0] Step 6 (KV store): N=10000000 dim=96 R=96 m=16 total_edges=653085814
+[rank 0] All ranks assembled node records.
+[rank 0] Written /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs/nodes.bin
+
+[rank 0] === Step 6 complete ===
+
+############################################################
+# INDEXING COMPLETE — artifacts in /gpfs/scratch/delgaudio/dann/index_deep10m_k32_r96_bfs
+total 13G
+-rw-r--r-- 1 delgaudio exter  77M Jul  1 17:05 assignments.bin
+-rw-r--r-- 1 delgaudio exter  13K Jul  1 17:05 centroids.fvecs
+drwxr-xr-x 2 delgaudio exter 4.0K Jul  1 17:35 clusters
+-rw-r--r-- 1 delgaudio exter 153M Jul  1 17:39 codes.bin
+-rw-r--r-- 1 delgaudio exter 2.6G Jul  1 17:39 global_graph.bin
+drwxr-xr-x 2 delgaudio exter 4.0K Jul  1 17:40 head
+-rw-r--r-- 1 delgaudio exter  318 Jul  1 17:05 meta.json
+-rw-r--r-- 1 delgaudio exter  16G Jul  1 17:40 nodes.bin
+-rw-r--r-- 1 delgaudio exter  97K Jul  1 17:39 pq_codebook.bin
+############################################################

@@ -1,0 +1,1169 @@
+[machine 0] run_rdma: com_init ...
+[machine 2] run_rdma: com_init ...
+[machine 3] run_rdma: com_init ...
+[machine 1] run_rdma: com_init ...
+[machine 0] rdma qp connect: 16 threads serial ibv_modify_qp
+[machine 0] ctx->connect thread 1/16
+[machine 2] rdma qp connect: 16 threads serial ibv_modify_qp
+[machine 2] ctx->connect thread 1/16
+[machine 3] rdma qp connect: 16 threads serial ibv_modify_qp
+[machine 3] ctx->connect thread 1/16
+[machine 1] rdma qp connect: 16 threads serial ibv_modify_qp
+[machine 1] ctx->connect thread 1/16
+[machine 0] ctx->connect thread 2/16
+[machine 2] ctx->connect thread 2/16
+[machine 3] ctx->connect thread 2/16
+[machine 1] ctx->connect thread 2/16
+[machine 0] ctx->connect thread 3/16
+[machine 2] ctx->connect thread 3/16
+[machine 3] ctx->connect thread 3/16
+[machine 0] ctx->connect thread 4/16
+[machine 2] ctx->connect thread 4/16
+[machine 1] ctx->connect thread 3/16
+[machine 3] ctx->connect thread 4/16
+[machine 0] ctx->connect thread 5/16
+[machine 2] ctx->connect thread 5/16
+[machine 3] ctx->connect thread 5/16
+[machine 0] ctx->connect thread 6/16
+[machine 1] ctx->connect thread 4/16
+[machine 2] ctx->connect thread 6/16
+[machine 3] ctx->connect thread 6/16
+[machine 0] ctx->connect thread 7/16
+[machine 2] ctx->connect thread 7/16
+[machine 3] ctx->connect thread 7/16
+[machine 0] ctx->connect thread 8/16
+[machine 1] ctx->connect thread 5/16
+[machine 2] ctx->connect thread 8/16
+[machine 3] ctx->connect thread 8/16
+[machine 0] ctx->connect thread 9/16
+[machine 1] ctx->connect thread 6/16
+[machine 2] ctx->connect thread 9/16
+[machine 3] ctx->connect thread 9/16
+[machine 0] ctx->connect thread 10/16
+[machine 2] ctx->connect thread 10/16
+[machine 3] ctx->connect thread 10/16
+[machine 1] ctx->connect thread 7/16
+[machine 0] ctx->connect thread 11/16
+[machine 2] ctx->connect thread 11/16
+[machine 3] ctx->connect thread 11/16
+[machine 0] ctx->connect thread 12/16
+[machine 1] ctx->connect thread 8/16
+[machine 2] ctx->connect thread 12/16
+[machine 3] ctx->connect thread 12/16
+[machine 0] ctx->connect thread 13/16
+[machine 1] ctx->connect thread 9/16
+[machine 2] ctx->connect thread 13/16
+[machine 3] ctx->connect thread 13/16
+[machine 0] ctx->connect thread 14/16
+[machine 3] ctx->connect thread 14/16
+[machine 2] ctx->connect thread 14/16
+[machine 1] ctx->connect thread 10/16
+[machine 0] ctx->connect thread 15/16
+[machine 3] ctx->connect thread 15/16
+[machine 2] ctx->connect thread 15/16
+[machine 1] ctx->connect thread 11/16
+[machine 0] ctx->connect thread 16/16
+[machine 3] ctx->connect thread 16/16
+[machine 2] ctx->connect thread 16/16
+[machine 1] ctx->connect thread 12/16
+[machine 0] run_rdma: com_read_init ...
+[machine 3] run_rdma: com_read_init ...
+[machine 2] run_rdma: com_read_init ...
+[machine 0] run_rdma: com_write_init ...
+[machine 0] com_write_init: thread 1/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 2/16 posting 2048 recv WRs ...
+[machine 3] run_rdma: com_write_init ...
+[machine 1] ctx->connect thread 13/16
+[machine 2] run_rdma: com_write_init ...
+[machine 0] com_write_init: thread 3/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 1/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 1/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 4/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 2/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 2/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 5/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 3/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 3/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 4/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 6/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 4/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 5/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 7/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 5/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 8/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 6/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 6/16 posting 2048 recv WRs ...
+[machine 1] ctx->connect thread 14/16
+[machine 0] com_write_init: thread 9/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 10/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 11/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 12/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 13/16 posting 2048 recv WRs ...
+[machine 1] ctx->connect thread 15/16
+[machine 2] com_write_init: thread 7/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 7/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 8/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 8/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 14/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 9/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 9/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 10/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 10/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 11/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 11/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 12/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 12/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 15/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 13/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 13/16 posting 2048 recv WRs ...
+[machine 0] com_write_init: thread 16/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 14/16 posting 2048 recv WRs ...
+[machine 0] run_rdma: all RDMA init phases done
+[machine 2] com_write_init: thread 14/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 15/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 15/16 posting 2048 recv WRs ...
+[machine 3] com_write_init: thread 16/16 posting 2048 recv WRs ...
+[machine 2] com_write_init: thread 16/16 posting 2048 recv WRs ...
+[machine 3] run_rdma: all RDMA init phases done
+[machine 1] ctx->connect thread 16/16
+[machine 2] run_rdma: all RDMA init phases done
+[machine 1] run_rdma: com_read_init ...
+[m 2] QPHASE scala_v3 enter: load_start=5000 query_load=2500 k=100
+[machine 1] run_rdma: com_write_init ...
+[machine 1] com_write_init: thread 1/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 2/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 3/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 4/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 5/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 6/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 7/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 8/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 9/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 10/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 11/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 12/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 13/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 14/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 15/16 posting 2048 recv WRs ...
+[machine 1] com_write_init: thread 16/16 posting 2048 recv WRs ...
+[machine 1] run_rdma: all RDMA init phases done
+[m 3] QPHASE scala_v3 enter: load_start=7500 query_load=2500 k=100
+[m 0] QPHASE scala_v3 enter: load_start=0 query_load=2500 k=100
+[m 1] QPHASE scala_v3 enter: load_start=2500 query_load=2500 k=100
+[m 2] QPHASE after on_each(all)
+[m 2] QPHASE before scala_search_init (qsize=10000)
+[m 2] scala_search_init: building 10000 global_query (qsize=10000)
+[m 3] QPHASE after on_each(all)
+[m 3] QPHASE before scala_search_init (qsize=10000)
+[m 3] scala_search_init: building 10000 global_query (qsize=10000)
+[m 1] QPHASE after on_each(all)
+[m 1] QPHASE before scala_search_init (qsize=10000)
+[m 1] scala_search_init: building 10000 global_query (qsize=10000)
+[m 0] QPHASE after on_each(all)
+[m 0] QPHASE before scala_search_init (qsize=10000)
+[m 0] scala_search_init: building 10000 global_query (qsize=10000)
+[m 2] scala_search_init: global_query built, entering on_each
+[m 2] scala_search_init: on_each done (init over)
+[m 2] QPHASE after scala_search_init; starting search
+[m 3] scala_search_init: global_query built, entering on_each
+[m 0] scala_search_init: global_query built, entering on_each
+[m 3] scala_search_init: on_each done (init over)
+[m 3] QPHASE after scala_search_init; starting search
+[m 0] scala_search_init: on_each done (init over)
+[m 0] QPHASE after scala_search_init; starting search
+[m 1] scala_search_init: global_query built, entering on_each
+[m 1] scala_search_init: on_each done (init over)
+[m 1] QPHASE after scala_search_init; starting search
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+[m 3][WATCHDOG@standby] STUCK q7503 state=1058437002 leader=5698793 term=5 post=6043644 recv=1057431404 ncpost=5345961 ncrecv=1055452284
+[m 3][WATCHDOG@standby] STUCK q10 state=-100057235 leader=720969 term=10 post=2362273 recv=1064129395 ncpost=2371100 ncrecv=11
+[m 3][WATCHDOG@standby] STUCK q4895197 state=2 leader=5224 term=0 post=0 recv=0 ncpost=454981 ncrecv=0
+[m 3][WATCHDOG@standby] STUCK q15 state=65536 leader=3247849356 term=170 post=983096 recv=65536 ncpost=3 ncrecv=1064139230
+[m 3][WATCHDOG@standby] STUCK q34 state=-2096955392 leader=34 term=0 post=1039548166 recv=853737479 ncpost=3851763496 ncrecv=877789186
+[m 3][WATCHDOG@standby] STUCK q8078881 state=0 leader=0 term=37 post=0 recv=37 ncpost=8359320 ncrecv=1
+[m 3][WATCHDOG@standby] STUCK q2526 state=1060423489 leader=1054994279 term=215 post=379621 recv=2526 ncpost=2 ncrecv=10
+[m 3][WATCHDOG@standby] STUCK q4086032641 state=-399689984 leader=940492605 term=61 post=3739312640 recv=1192747069 ncpost=3906343424 ncrecv=726187837
+[m 3][WATCHDOG@standby] STUCK q5041 state=1064492748 leader=211226 term=247 post=1557497 recv=1060251406 ncpost=348773 ncrecv=1061060239
+[m 3][WATCHDOG@standby] STUCK q1054217059 state=1057449683 leader=8557536 term=221 post=1057313255 recv=9405380 ncpost=1055869393 ncrecv=9296911
+[m 3][WATCHDOG@standby] scan done=3989 pending=6011 stuck=411 qsize=10000 recv_sum=409830643682 (NO PROGRESS since last tick)
+[m 0][WATCHDOG@standby] STUCK q11 state=-1319894979 leader=65536 term=0 post=1064691344 recv=2730548 ncpost=1067809551 ncrecv=2508315
+[m 0][WATCHDOG@standby] STUCK q5012 state=1063989090 leader=4196565 term=109 post=4362429 recv=1065508558 ncpost=3738075 ncrecv=1065455968
+[m 0][WATCHDOG@standby] STUCK q32 state=198 leader=4813 term=219 post=130 recv=131 ncpost=132 ncrecv=133
+[m 0][WATCHDOG@standby] STUCK q1586 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q26 state=-1088523102 leader=8592 term=49 post=12 recv=4833984 ncpost=535965176 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q450 state=422 leader=450 term=183 post=481 recv=468 ncpost=483 ncrecv=486
+[m 0][WATCHDOG@standby] STUCK q3014817808 state=444709672 leader=1966081 term=0 post=3624350288 recv=0 ncpost=3624350296 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q4 state=390 leader=409 term=155 post=450 recv=451 ncpost=452 ncrecv=453
+[m 0][WATCHDOG@standby] STUCK q16604864 state=0 leader=1 term=0 post=9702073 recv=0 ncpost=2245017 ncrecv=0
+[m 0][WATCHDOG@standby] STUCK q48538 state=2631234 leader=0 term=0 post=2476487 recv=0 ncpost=127955 ncrecv=0
+[m 0][WATCHDOG@standby] scan done=3524 pending=6476 stuck=739 qsize=10000 recv_sum=459224775280 (NO PROGRESS since last tick)
+[m 1][WATCHDOG@standby] STUCK q5017 state=-1106755711 leader=16 term=182 post=915537927 recv=1625964462 ncpost=1494155290 ncrecv=2752528277
+[m 1][WATCHDOG@standby] STUCK q1474366465 state=1371378688 leader=2393076543 term=63 post=974605056 recv=2448352063 ncpost=703354368 ncrecv=1930227263
+[m 1][WATCHDOG@standby] STUCK q2542 state=-2070478815 leader=715079581 term=161 post=1962672132 recv=3369156531 ncpost=1608712192 ncrecv=915095440
+[m 1][WATCHDOG@standby] STUCK q63 state=1062640127 leader=354043 term=186 post=3317039110 recv=2424258422 ncpost=482672674 ncrecv=1497120650
+[m 1][WATCHDOG@standby] STUCK q2561 state=10 leader=1070760303 term=1 post=2016215040 recv=1487683544 ncpost=1629946000 ncrecv=1840660383
+[m 1][WATCHDOG@standby] STUCK q5063 state=1060993845 leader=1065725541 term=199 post=1143877 recv=1061834985 ncpost=1725916 ncrecv=1067603398
+[m 1][WATCHDOG@standby] STUCK q456 state=0 leader=82311 term=225 post=198855 recv=1057050215 ncpost=452394 ncrecv=1057727280
+[m 1][WATCHDOG@standby] STUCK q269679 state=3 leader=5315 term=196 post=2 recv=5316 ncpost=4919389 ncrecv=0
+[m 1][WATCHDOG@standby] STUCK q3125197 state=2 leader=0 term=200 post=0 recv=200 ncpost=3487407 ncrecv=1
+[m 1][WATCHDOG@standby] STUCK q5857918 state=2 leader=5315 term=0 post=1060438916 recv=1225080 ncpost=8152 ncrecv=196609
+[m 1][WATCHDOG@standby] scan done=3619 pending=6381 stuck=357 qsize=10000 recv_sum=330279371436 (NO PROGRESS since last tick)
+srun: Job step aborted: Waiting up to 202 seconds for job step to finish.
+slurmstepd: error: *** JOB 5969935 ON ncpum008 CANCELLED AT 2026-06-26T11:16:41 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 5969935.1 ON ncpum008 CANCELLED AT 2026-06-26T11:16:41 DUE TO TIME LIMIT ***

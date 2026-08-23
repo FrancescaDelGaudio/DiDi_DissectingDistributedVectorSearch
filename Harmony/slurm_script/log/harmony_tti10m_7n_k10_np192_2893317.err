@@ -1,0 +1,18 @@
+WARNING: $CFLAGS does not agree with $CFLAGS_modshare counter. The following directories' usage counters were adjusted to match. Note that this may mean that module unloading may not work correctly.
+ -I/softs/openmpi/gcc-10.3.0/4.1.1/include -I/gpfs/softs/eigen/3.4.0/include
+WARNING: $CPPFLAGS does not agree with $CPPFLAGS_modshare counter. The following directories' usage counters were adjusted to match. Note that this may mean that module unloading may not work correctly.
+ -I/softs/openmpi/gcc-10.3.0/4.1.1/include
+WARNING: $LDFLAGS does not agree with $LDFLAGS_modshare counter. The following directories' usage counters were adjusted to match. Note that this may mean that module unloading may not work correctly.
+ -L/softs/openmpi/gcc-10.3.0/4.1.1/lib
+[1;31mError: d % worker must be 0[0m
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[5354,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------

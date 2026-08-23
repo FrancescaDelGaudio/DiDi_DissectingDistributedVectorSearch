@@ -1,0 +1,32 @@
+==== setup_cluster start 2026-06-11T12:23:53+02:00 job=5923352 ====
+==== CoTra cluster conf generated ====
+CONF_FILE=/gpfs/users/delgaudio/exp_eval/CoTra/script_slurm/runtime/cluster-job5923352.conf
+Leader (machine 0): ncpum011
+Nodes (4): ncpum011 ncpum012 ncpum013 ncpum014
+--- conf contents ---
+ncpum011
+2378
+ncpum011=0
+ncpum012=1
+ncpum013=2
+ncpum014=3
+---------------------
+[ncpum011] starting memcached on ncpum011:2378
+[ncpum011] memcached ready (pid file: /tmp/memcached-cotra-5923352.pid)
+
+==== verify machine_id on each node ====
+[ncpum011] CONF_FILE=/gpfs/users/delgaudio/exp_eval/CoTra/script_slurm/runtime/cluster-job5923352.conf
+[ncpum011] conf entry: 
+[ncpum011] OK
+[ncpum014] CONF_FILE=/gpfs/users/delgaudio/exp_eval/CoTra/script_slurm/runtime/cluster-job5923352.conf
+[ncpum012] CONF_FILE=/gpfs/users/delgaudio/exp_eval/CoTra/script_slurm/runtime/cluster-job5923352.conf
+[ncpum012] conf entry: 
+[ncpum012] OK
+[ncpum014] conf entry: 
+[ncpum014] OK
+[ncpum013] CONF_FILE=/gpfs/users/delgaudio/exp_eval/CoTra/script_slurm/runtime/cluster-job5923352.conf
+[ncpum013] conf entry: 
+[ncpum013] OK
+==== setup_cluster end 2026-06-11T12:23:54+02:00 ====
+Saved conf: /gpfs/users/delgaudio/exp_eval/CoTra/script_slurm/runtime/cluster-job5923352.conf
+Use this CONF_FILE in scala_index / scala_anns with --config_file

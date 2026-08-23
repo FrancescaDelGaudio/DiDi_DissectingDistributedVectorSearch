@@ -1,0 +1,1 @@
+/usr/bin/c++  -O2 -DNDEBUG   CMakeFiles/build_head.dir/src/build_head.cpp.o  -o bin/build_head -Wl,-rpath,/gpfs/softs/openmpi/gcc-10.3.0/4.1.1/lib -Wl,-rpath -Wl,/softs/openmpi/gcc-10.3.0/4.1.1/lib -Wl,--enable-new-dtags -pthread /gpfs/softs/openmpi/gcc-10.3.0/4.1.1/lib/libmpi.so /usr/lib/gcc/x86_64-redhat-linux/8/libgomp.so /usr/lib64/libpthread.so 
