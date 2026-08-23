@@ -1,3 +1,0 @@
-==== dist_smoke start 2026-04-23T18:26:04+02:00 jobid=2629787 batch_host=ncpu003 ====
-Se i module falliscono: nodo compute puo usare Lmod/mirror diverso. Su login, esegui: module avail openmpi
-USE_SYSTEM_MPI=1: nessun 'module load' MPI. Verifico mpirun di sistema (deve esistere sui compute):

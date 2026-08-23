@@ -24,8 +24,11 @@ namespace {
 } // namespace
 
 int main(int argc, const char* argv[]) {
-    if (argc != 7) {
-        std::cerr << "Usage ./DistributedBench input-points queries ground-truth-file num_neighbors partition-file router-file" << std::endl;
+    // Optional 7th arg: ef_search (HNSW search budget). Default remains HNSWParameters::ef_search (250).
+    if (argc != 7 && argc != 8) {
+        std::cerr << "Usage ./DistributedBench input-points queries ground-truth-file num_neighbors "
+                     "partition-file router-file [ef_search]"
+                  << std::endl;
         std::abort();
     }
 
@@ -36,6 +39,8 @@ int main(int argc, const char* argv[]) {
     int num_neighbors = std::stoi(k_string);
     std::string partition_file = argv[5];
     std::string router_file = argv[6];
+    const bool ef_search_overridden = (argc == 8);
+    const size_t ef_search_cli = ef_search_overridden ? static_cast<size_t>(std::stoul(argv[7])) : 0;
 
     MPI_Init(nullptr, nullptr);
 
@@ -45,6 +50,15 @@ int main(int argc, const char* argv[]) {
 
     DistributedQueryBenchmark bench;
     bench.num_neighbors = num_neighbors;
+    if (ef_search_overridden) {
+        if (ef_search_cli == 0) {
+            if (rank == 0) {
+                std::cerr << "FATAL: ef_search must be >= 1" << std::endl;
+            }
+            MPI_Abort(MPI_COMM_WORLD, 4);
+        }
+        bench.hnsw_parameters.ef_search = ef_search_cli;
+    }
     bench.LoadPartition(partition_file);
     if (comm_size != bench.num_shards) {
         if (rank == 0) {
@@ -64,6 +78,7 @@ int main(int argc, const char* argv[]) {
         if (rank == 0) {
             std::cout << "partition layout: " << (bench.overlapping_partition_layout ? "overlapping (cover)" : "flat METIS")
                       << " num_shards=" << bench.num_shards << " num_probes=" << bench.num_probes
+                      << " ef_search=" << bench.hnsw_parameters.ef_search
                       << " replicated point copies across ranks=" << total_replicated_points << std::endl;
         }
     }

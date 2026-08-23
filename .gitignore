@@ -1,1 +1,6 @@
 gp-ann/release_*/
+gp-ann/release_*/
+gp-ann/sbatch_*.sh
+gp-ann/submit_*.sh
+gp-ann/submit_*.py
+gp-ann/sbatch_logs/

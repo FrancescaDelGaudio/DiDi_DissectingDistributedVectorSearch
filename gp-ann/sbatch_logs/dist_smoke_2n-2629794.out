@@ -1,9 +1,0 @@
-==== dist_smoke start 2026-04-23T18:30:43+02:00 jobid=2629794 batch_host=ncpu003 ====
-Se i module falliscono: nodo compute puo usare Lmod/mirror diverso. Su login, esegui: module avail openmpi
-WARNING: gcc/10.3.0 cannot be loaded due to a conflict.
-HINT: Might try "module unload gcc" first.
-FATAL: module load openmpi/gcc-10.3.0/4.1.1 fallito. Controlla: module avail openmpi  (sul login o salloc ncpu001)
--------------------------------- /softs/Modules --------------------------------
-openmpi/gcc-8.3.1/4.1.1              openmpi/intel-20U4/4.1.1-ucx-1.10.1  
-openmpi/gcc-10.3.0/4.1.1             openmpi/intel-21U2/4.1.1-ucx-1.10.1  
-openmpi/intel-19U5/4.1.1-ucx-1.10.1  

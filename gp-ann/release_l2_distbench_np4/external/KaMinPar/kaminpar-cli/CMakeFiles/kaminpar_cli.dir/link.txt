@@ -1,2 +1,0 @@
-/usr/bin/ar qc libkaminpar_cli.a CMakeFiles/kaminpar_cli.dir/kaminpar_arguments.cc.o
-/usr/bin/ranlib libkaminpar_cli.a
