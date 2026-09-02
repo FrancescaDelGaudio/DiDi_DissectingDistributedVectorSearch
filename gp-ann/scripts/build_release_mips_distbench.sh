@@ -7,7 +7,7 @@
 #   ./scripts/build_release_mips_distbench.sh 6
 #
 # Verify after build:
-#   strings release_mips_distbench_np3/DistributedBench | grep InnerProduct
+#   strings release_mips_distbench_np3/DistributedBench | grep -E 'InnerProduct|ef_search'
 
 set -euo pipefail
 
@@ -20,8 +20,17 @@ module purge 2>/dev/null || true
 module unload gcc 2>/dev/null || true
 module load gcc/11.3.0
 module load cmake/3.29.1
-module load tbb
-# OpenMPI via MPI_ROOT paths (avoid module load openmpi/gcc-10.3.0 conflicting with gcc/11.3.0)
+
+TBB_ROOT="${TBB_ROOT:-/gpfs/softs/intel/oneapi/tbb/2021.2.0}"
+TBB_CMAKE_DIR="${TBB_ROOT}/lib/cmake/tbb"
+if module load tbb 2>/dev/null; then
+  echo "TBB OK (module)"
+elif test -f "${TBB_CMAKE_DIR}/TBBConfig.cmake"; then
+  echo "TBB OK (filesystem: ${TBB_ROOT})"
+else
+  echo "FATAL: TBB not found. Try: module avail tbb  or set TBB_ROOT." >&2
+  exit 1
+fi
 
 echo "=== Configuring ${BUILD_DIR} (MIPS_DISTANCE=ON DISTBENCH_SHARDS_PROBE=${NP}) ==="
 cmake -S "${GP_ANN_ROOT}" -B "${BUILD_DIR}" \
@@ -32,7 +41,8 @@ cmake -S "${GP_ANN_ROOT}" -B "${BUILD_DIR}" \
   -DMPI_CXX_COMPILER="${MPI_ROOT}/bin/mpicxx" \
   -DMPI_HOME="${MPI_ROOT}" \
   -DMIPS_DISTANCE=ON \
-  -DDISTBENCH_SHARDS_PROBE="${NP}"
+  -DDISTBENCH_SHARDS_PROBE="${NP}" \
+  -DTBB_DIR="${TBB_CMAKE_DIR}"
 
 echo "=== Building DistributedBench ==="
 cmake --build "${BUILD_DIR}" --target DistributedBench -j16
@@ -45,3 +55,4 @@ if [[ "${IP_COUNT}" -lt 1 ]] || [[ "${L2_COUNT}" -gt 0 ]]; then
   exit 1
 fi
 echo "=== OK: ${BUILD_DIR}/DistributedBench (MIPS, shardsProbe=${NP}, InnerProduct symbols=${IP_COUNT}) ==="
+"${BUILD_DIR}/DistributedBench" 2>&1 | head -1 || true

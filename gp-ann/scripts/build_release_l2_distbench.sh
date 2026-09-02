@@ -19,12 +19,16 @@ module purge 2>/dev/null || true
 module unload gcc 2>/dev/null || true
 module load gcc/11.3.0
 module load cmake/3.29.1
-module load tbb
 
-if ! test -f /gpfs/softs/intel/oneapi/tbb/2021.2.0/include/tbb/spin_mutex.h; then
-  echo "WARN: TBB header path may differ; check: module avail tbb"
+TBB_ROOT="${TBB_ROOT:-/gpfs/softs/intel/oneapi/tbb/2021.2.0}"
+TBB_CMAKE_DIR="${TBB_ROOT}/lib/cmake/tbb"
+if module load tbb 2>/dev/null; then
+  echo "TBB OK (module)"
+elif test -f "${TBB_CMAKE_DIR}/TBBConfig.cmake"; then
+  echo "TBB OK (filesystem: ${TBB_ROOT})"
 else
-  echo "TBB OK"
+  echo "FATAL: TBB not found. Try: module avail tbb  or set TBB_ROOT." >&2
+  exit 1
 fi
 
 echo "=== Configuring ${BUILD_DIR} (DISTBENCH_SHARDS_PROBE=${NP}) ==="
@@ -35,7 +39,8 @@ cmake -S "${GP_ANN_ROOT}" -B "${BUILD_DIR}" \
   -DMPI_C_COMPILER="${MPI_ROOT}/bin/mpicc" \
   -DMPI_CXX_COMPILER="${MPI_ROOT}/bin/mpicxx" \
   -DMPI_HOME="${MPI_ROOT}" \
-  -DDISTBENCH_SHARDS_PROBE="${NP}"
+  -DDISTBENCH_SHARDS_PROBE="${NP}" \
+  -DTBB_DIR="${TBB_CMAKE_DIR}"
 
 echo "=== Building DistributedBench ==="
 cmake --build "${BUILD_DIR}" --target DistributedBench -j16

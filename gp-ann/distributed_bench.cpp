@@ -91,9 +91,21 @@ int main(int argc, const char* argv[]) {
 
     MPI_Barrier(MPI_COMM_WORLD);
 
+    Timer query_timer;
+    query_timer.Start();
     const auto local_query_results = bench.ProcessQueries3(my_query_ids, queries);
+    const double local_query_s = query_timer.Stop();
 
     MPI_Barrier(MPI_COMM_WORLD);
+
+    double query_phase_s = 0.0;
+    MPI_Reduce(&local_query_s, &query_phase_s, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
+    if (rank == 0) {
+        const double query_qps = static_cast<double>(queries.n) / query_phase_s;
+        std::cout << "Query phase took " << query_phase_s << " s (max rank wall; "
+                  << queries.n << " queries, distributed)" << std::endl;
+        std::cout << "Query QPS " << query_qps << std::endl;
+    }
 
     std::vector<NNVec> ground_truth = ReadGroundTruth(ground_truth_file);
     if (ground_truth.size() < queries.n) {
