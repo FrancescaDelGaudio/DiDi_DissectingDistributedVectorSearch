@@ -13,8 +13,11 @@
 #include <cstring>
 #include <filesystem>
 #include <fstream>
+#include <iostream>
+#include <limits>
 #include <stdexcept>
 #include <unordered_map>
+#include <vector>
 
 class DistributedQueryBenchmark {
 public:
@@ -401,8 +404,10 @@ public:
             received_responses[response.query_id] += 1;
         };
 
+        size_t remote_requests_received = 0;
         auto return_neighbors = [&](message_queue::Envelope<Request> auto request_envelope) {
             for (const Request& r : request_envelope.message) {
+                ++remote_requests_received;
                 Response response = resolve_request(r);
                 responses_queue.post_message(std::move(response), r.origin_rank);
             }
@@ -416,12 +421,57 @@ public:
 
         requests_queue.terminate(return_neighbors);
 
+        const size_t local_requests_resolved = local_requests.size();
         for (const Request& req : local_requests) {
             Response response = resolve_request(req);
             accept_response(response);
         }
 
         responses_queue.terminate(accept_returned_neighbors);
+
+        // Load-balance stats: HNSW searches executed on this rank (not query ownership).
+        const unsigned long long local_ull = static_cast<unsigned long long>(local_requests_resolved);
+        const unsigned long long remote_ull = static_cast<unsigned long long>(remote_requests_received);
+        const unsigned long long searches_ull = local_ull + remote_ull;
+        const unsigned long long owned_ull = static_cast<unsigned long long>(query_ids.size());
+
+        std::vector<unsigned long long> all_local(static_cast<size_t>(comm_size));
+        std::vector<unsigned long long> all_remote(static_cast<size_t>(comm_size));
+        std::vector<unsigned long long> all_searches(static_cast<size_t>(comm_size));
+        std::vector<unsigned long long> all_owned(static_cast<size_t>(comm_size));
+        MPI_Gather(&local_ull, 1, MPI_UNSIGNED_LONG_LONG, all_local.data(), 1, MPI_UNSIGNED_LONG_LONG, 0, MPI_COMM_WORLD);
+        MPI_Gather(&remote_ull, 1, MPI_UNSIGNED_LONG_LONG, all_remote.data(), 1, MPI_UNSIGNED_LONG_LONG, 0, MPI_COMM_WORLD);
+        MPI_Gather(&searches_ull, 1, MPI_UNSIGNED_LONG_LONG, all_searches.data(), 1, MPI_UNSIGNED_LONG_LONG, 0, MPI_COMM_WORLD);
+        MPI_Gather(&owned_ull, 1, MPI_UNSIGNED_LONG_LONG, all_owned.data(), 1, MPI_UNSIGNED_LONG_LONG, 0, MPI_COMM_WORLD);
+
+        if (rank == 0) {
+            unsigned long long min_s = std::numeric_limits<unsigned long long>::max();
+            unsigned long long max_s = 0;
+            unsigned long long sum_s = 0;
+            std::cout << "Search load per rank "
+                      << "(searches_on_rank = remote_requests_received + local_requests_resolved):"
+                      << std::endl;
+            for (int r = 0; r < comm_size; ++r) {
+                const unsigned long long s = all_searches[static_cast<size_t>(r)];
+                min_s = std::min(min_s, s);
+                max_s = std::max(max_s, s);
+                sum_s += s;
+                std::cout << "  rank " << r
+                          << ": owned_queries=" << all_owned[static_cast<size_t>(r)]
+                          << " remote_requests_received=" << all_remote[static_cast<size_t>(r)]
+                          << " local_requests_resolved=" << all_local[static_cast<size_t>(r)]
+                          << " searches_on_rank=" << s
+                          << std::endl;
+            }
+            const double avg_s = static_cast<double>(sum_s) / static_cast<double>(comm_size);
+            const double imbalance = (min_s == 0) ? 0.0 : static_cast<double>(max_s) / static_cast<double>(min_s);
+            std::cout << "Search load summary: total_searches=" << sum_s
+                      << " min=" << min_s
+                      << " max=" << max_s
+                      << " avg=" << avg_s
+                      << " max/min=" << imbalance
+                      << std::endl;
+        }
 
         size_t completed = 0;
         for (int query_id : query_ids) {

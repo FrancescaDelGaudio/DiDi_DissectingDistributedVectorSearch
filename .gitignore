@@ -1,6 +1,15 @@
-gp-ann/release_*/
-gp-ann/release_*/
-gp-ann/sbatch_*.sh
-gp-ann/submit_*.sh
-gp-ann/submit_*.py
-gp-ann/sbatch_logs/
+# Local result tables
+**/tables*.md
+**/tables*.txt
+**/tables*.tsv
+**/tables*.csv
+
+# Release / build trees (local only)
+**/release_*/
+
+# Job scripts and logs (local only)
+**/sbatch_*.sh
+**/submit_*.sh
+**/submit_*.py
+**/sbatch_logs/
+__pycache__/

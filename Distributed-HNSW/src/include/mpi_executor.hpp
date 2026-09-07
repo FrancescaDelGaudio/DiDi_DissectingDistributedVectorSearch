@@ -253,6 +253,23 @@ namespace mt {
 			for (int i = 0; i < query.getSize(); i++)
 				sendMessage(i, sender, total_wakeup, para.sender_ef, wakeup_k);
 			cout << "#[sender ] finish sending all the task with wake rate: " + std::to_string(total_wakeup * 1.0 / (SIZEWORKER * query.getSize() * 1.0)) << endl;
+			{
+				vector<int>* wake_counter = sender->_waker.getWakeCounter();
+				cout << "#[sender ] per-slave query counts:";
+				int min_c = (*wake_counter)[0], max_c = (*wake_counter)[0], sum_c = 0;
+				for (int i = 0; i < SIZEWORKER; i++) {
+					int c = (*wake_counter)[i];
+					cout << " slave" << i << "=" << c;
+					sum_c += c;
+					if (c < min_c) min_c = c;
+					if (c > max_c) max_c = c;
+				}
+				cout << endl;
+				cout << "#[sender ] total_wakeup=" << total_wakeup
+				     << " avg_per_slave=" << (sum_c * 1.0 / SIZEWORKER)
+				     << " min=" << min_c
+				     << " max=" << max_c << endl;
+			}
 			sendShutdownToSlaves();
 			delete sender;
 		} else if (world_rank == world_size - 1) {

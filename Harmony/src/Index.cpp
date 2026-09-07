@@ -1073,6 +1073,7 @@ void Index::search_group_master(size_t n, const float* queries, size_t k, float*
 
     // Calculate the amount of data to be compared for each query by each worker
     vector<std::unique_ptr<idx_t[]>> queryCompareSize = vector<std::unique_ptr<idx_t[]>>(param->teamCount + 1);
+    vector<size_t> teamListHits(param->teamCount + 1, 0);
     for (int teamId = 1; teamId <= param->teamCount; teamId++) {
         queryCompareSize[teamId] = std::make_unique<idx_t[]>(n);
     }
@@ -1084,10 +1085,54 @@ void Index::search_group_master(size_t n, const float* queries, size_t k, float*
             for (size_t teamId = 1; teamId <= param->teamCount; teamId++) {
                 if (listId >= beginIVFs[teamId] && listId < beginIVFs[teamId] + ivfCounts[teamId]) {
                     queryCompareSize[teamId][q] += lists[listId].get_list_size();
+                    teamListHits[teamId]++;
                     // cout << format("rank {} q{} listid {}", rank, q, listId) << endl;
                 }
             }
         }
+    }
+
+    // Log how many distinct queries each team actually processes (compareSize > 0),
+    // plus list hits and total base-vector comparisons. Workers in the same team share
+    // the same active queries (they only split feature dimensions).
+    {
+        size_t totalActiveAcrossTeams = 0;
+        cout << BLUE << "TeamQueryStats: nq=" << n << " nprobe=" << nprobe
+             << " teamCount=" << param->teamCount << " teamSize=" << param->teamSize << RESET << endl;
+        for (size_t teamId = 1; teamId <= param->teamCount; teamId++) {
+            size_t activeQueries = 0;
+            idx_t compareVectors = 0;
+            for (size_t q = 0; q < n; q++) {
+                if (queryCompareSize[teamId][q] > 0) {
+                    activeQueries++;
+                    compareVectors += queryCompareSize[teamId][q];
+                }
+            }
+            totalActiveAcrossTeams += activeQueries;
+            double activeFrac = n == 0 ? 0.0 : 100.0 * static_cast<double>(activeQueries) / static_cast<double>(n);
+            cout << BLUE
+                 << format(
+                        "TeamQueryStats: team={} active_queries={}/{} ({:.2f}%) list_hits={} "
+                        "compare_vectors={} ivf=[{},{})",
+                        teamId, activeQueries, n, activeFrac, teamListHits[teamId], compareVectors,
+                        beginIVFs[teamId], beginIVFs[teamId] + ivfCounts[teamId])
+                 << RESET << endl;
+            for (size_t rankInsideTeam = 1; rankInsideTeam <= param->teamSize; rankInsideTeam++) {
+                size_t workerRank = (teamId - 1) * param->teamSize + rankInsideTeam;
+                cout << BLUE
+                     << format(
+                            "WorkerQueryStats: worker={} team={} rankInsideTeam={} "
+                            "active_queries={}/{} (same as team; dim-split only)",
+                            workerRank, teamId, rankInsideTeam, activeQueries, n)
+                     << RESET << endl;
+            }
+        }
+        cout << BLUE
+             << format(
+                    "TeamQueryStats: sum_active_queries_over_teams={} "
+                    "(a query can be active on multiple teams)",
+                    totalActiveAcrossTeams)
+             << RESET << endl;
     }
 
     // Precompute the cumulative sums for the query comparison sizes

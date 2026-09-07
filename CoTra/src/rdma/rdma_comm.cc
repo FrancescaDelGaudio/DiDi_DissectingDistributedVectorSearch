@@ -815,6 +815,12 @@ int RdmaCommunication::poll_recv() {
             &recv_computation_cnt, static_cast<char *>(ptr) + offset, sizeof(size_t));
           offset += sizeof(recv_computation_cnt);
           all_computation_cnt += recv_computation_cnt;
+
+          size_t q_core_participation;
+          memcpy(
+              &q_core_participation, static_cast<char *>(ptr) + offset,
+              sizeof(q_core_participation));
+          core_participation_per_machine[m_id] = q_core_participation;
         } else {
           printf("Error: Unexpected buff contorl flag %d.\n", control);
         }
@@ -1126,7 +1132,8 @@ int RdmaCommunication::post_recv(
 
 void RdmaCommunication::send_term(
     int my_machine_id, size_t q_correct, size_t q_total, 
-    size_t q_query_load, double cumu_lat_us, size_t computation_cnt) {
+    size_t q_query_load, double cumu_lat_us, size_t computation_cnt,
+    size_t q_core_participation) {
   // Broadcast term
   auto *buf = send_write_buf.getLocal();
   for (int m = 0; m < MACHINE_NUM; m++) {
@@ -1135,6 +1142,7 @@ void RdmaCommunication::send_term(
       correct += q_correct;
       total += q_total;
       query_load += q_query_load;
+      core_participation_per_machine[my_machine_id] = q_core_participation;
       continue;
     }
     uint32_t buf_id = get_write_send_buf(m);
@@ -1154,6 +1162,10 @@ void RdmaCommunication::send_term(
     memcpy(
       static_cast<char *>(ptr) + offset, &computation_cnt, sizeof(computation_cnt));
     offset += sizeof(computation_cnt);
+    memcpy(
+        static_cast<char *>(ptr) + offset, &q_core_participation,
+        sizeof(q_core_participation));
+    offset += sizeof(q_core_participation);
 
     // printf("q%d >> m[%d] buf%d\n", query->query_id, machine_id, buff_id);
     post_write_send(m, buf_id, offset, TERMINATION);
@@ -1176,6 +1188,9 @@ void RdmaCommunication::reset_term() {
   correct = total = query_load = 0;
   query_lat_sum = 0.0;
   all_computation_cnt = 0;
+  for (int m = 0; m < MACHINE_NUM; m++) {
+    core_participation_per_machine[m] = 0;
+  }
 }
 
 void RdmaCommunication::reset_sendrecv() {

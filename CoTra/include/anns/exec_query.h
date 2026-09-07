@@ -697,6 +697,11 @@ static void test_vs_recall(
 
         appr_alg.termStandBy(k);
 
+        appr_alg.print_core_load_stats(ef);
+        if (appr_alg.rdma_param.machine_id == 0) {
+          appr_alg.print_core_load_stats_leader(ef);
+        }
+
 #ifdef LAT
       double all_lat = 0.0;
       for(uint32_t q = load_start; q < load_start + query_load; q++){

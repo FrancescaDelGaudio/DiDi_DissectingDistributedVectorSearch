@@ -86,6 +86,8 @@ class ScalaSearch : public AlgorithmInterface<dist_t> {
 
   bool should_term{false};
   bool has_send_term{false};
+  // Strategy B: count times this node becomes core (POST stage) per ef iteration
+  size_t core_participation_count_{0};
   // Store the global query pointer.
   QueryMsg<dist_t> **global_query;
   PerThreadStorage<Profiler> all_profiler;
@@ -1956,11 +1958,11 @@ class ScalaSearch : public AlgorithmInterface<dist_t> {
   void sendTerm(size_t correct, size_t total, size_t query_load, double cumu_lat_us = 0.0) {
 #ifdef PROF_COMPUTATION
     rdma_comm.send_term(rdma_param.machine_id, correct, total, 
-      query_load, cumu_lat_us, computation_cnt);
+      query_load, cumu_lat_us, computation_cnt, core_participation_count_);
     computation_cnt = 0;
 #else 
     rdma_comm.send_term(rdma_param.machine_id, correct, total, 
-      query_load, cumu_lat_us, 0);
+      query_load, cumu_lat_us, 0, core_participation_count_);
 #endif
     return;
   }
@@ -2001,7 +2003,42 @@ class ScalaSearch : public AlgorithmInterface<dist_t> {
     return;
   }
 
-  void initTerm() { rdma_comm.reset_term(); }
+  void initTerm() {
+    rdma_comm.reset_term();
+    core_participation_count_ = 0;
+  }
+
+  void record_core_participation() { core_participation_count_++; }
+
+  void print_core_load_stats(size_t ef_val) const {
+    const size_t origin_per_node = anns_param.qsize / MACHINE_NUM;
+    fprintf(
+        stderr,
+        "[CoTra] ef=%zu m=%d core_participations=%zu origin_queries=%zu\n",
+        ef_val, rdma_param.machine_id, core_participation_count_,
+        origin_per_node);
+    fflush(stderr);
+  }
+
+  void print_core_load_stats_leader(size_t ef_val) const {
+    const size_t origin_per_node = anns_param.qsize / MACHINE_NUM;
+    size_t sum = 0;
+    fprintf(stderr, "[CoTra] ef=%zu core_load ", ef_val);
+    for (int m = 0; m < MACHINE_NUM; m++) {
+      fprintf(
+          stderr, "m%d=%zu ", m, rdma_comm.core_participation_per_machine[m]);
+      sum += rdma_comm.core_participation_per_machine[m];
+    }
+    fprintf(
+        stderr, "sum=%zu origin_per_node=%zu\n", sum, origin_per_node);
+    fflush(stderr);
+    cout << ef_val << "\tcore_load";
+    for (int m = 0; m < MACHINE_NUM; m++) {
+      cout << "\tm" << m << "=" << rdma_comm.core_participation_per_machine[m];
+    }
+    cout << "\tsum=" << sum << "\torigin_per_node=" << origin_per_node << "\n";
+    cout.flush();
+  }
 
   // Free QueryMsg objects and per-thread TaskManager global_query arrays after
   // an ef-sweep iteration completes (all threads past standby / check_term).
@@ -2411,6 +2448,7 @@ class ScalaSearch : public AlgorithmInterface<dist_t> {
         if (m == rdma_param.machine_id) {
           // local machine.
           local_is_core = true;
+          record_core_participation();
           for (auto &cand : global_query[query_id]->filterred[m]) {
             global_query[query_id]->candidate_set.emplace(cand);
           }
@@ -2449,6 +2487,7 @@ class ScalaSearch : public AlgorithmInterface<dist_t> {
 #ifdef DEBUG
       printf("recv fork sub-query q%u\n", query_id);
 #endif
+      record_core_participation();
       global_query[query_id]->state = PRE_STAGE;
     }
 

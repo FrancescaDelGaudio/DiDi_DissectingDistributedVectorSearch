@@ -118,8 +118,12 @@ namespace sm {
 			std::set<int> set;
 			for (int i = 0; i < result.size(); i++){
 				set.insert(_map[(int) result.top().second]);
-				//_wake_counter[_map[(int) result.top().second]]++;
 				result.pop();
+			}
+			// Count once per unique woken slave for this query (not once per centroid).
+			for (int slave_id : set) {
+				if (slave_id >= 0 && slave_id < (int)_wake_counter.size())
+					_wake_counter[slave_id]++;
 			}
 			vector<int> waker(set.size());
 			std::copy(set.begin(), set.end(), waker.begin());
