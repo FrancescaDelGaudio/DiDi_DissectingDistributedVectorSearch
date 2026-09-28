@@ -8,6 +8,7 @@
 //       --index_dir <dir> --query_path <fvecs>
 //       [--gt_path <lshbox>] [--k 10] [--L 100] [--BW 64] [--H 5]
 //       [--k_head 50] [--ef_head 100] [--warmup 10] [--num_queries 0]
+//       [--profile_comm 0|1] [--store_hops 0|1]
 //
 // Tunable parameters (recall/QPS trade-off, paper Table 1 uses H=5,BW=128,L=200):
 //   k       final results returned / recall@k
@@ -16,6 +17,7 @@
 //   H       graph hops (beam iterations)
 //   k_head  head index search width
 //   ef_head HNSW efSearch for head index
+//   profile_comm  if 1, time head / hop wall / score / merge / bytes (mean+p99)
 
 #include <mpi.h>
 #include <cstdio>
@@ -47,6 +49,9 @@ struct Args {
     int warmup  = 10;
     int num_queries = 0;   // 0 = all
     int print_results = 0;
+    int profile_comm = 0;  // 1 = enable hop/comm timing
+    int store_hops = 1;    // keep per-hop samples when profiling
+    int empty_hop_iters = 0;  // MPI floor microbench (0 = skip; set e.g. 2000)
 };
 
 static Args parse_args(int argc, char* argv[]) {
@@ -65,6 +70,9 @@ static Args parse_args(int argc, char* argv[]) {
         else if (key == "--warmup")       { a.warmup = std::stoi(val);   i++; }
         else if (key == "--num_queries")  { a.num_queries = std::stoi(val); i++; }
         else if (key == "--print_results"){ a.print_results = std::stoi(val); i++; }
+        else if (key == "--profile_comm") { a.profile_comm = std::stoi(val); i++; }
+        else if (key == "--store_hops")   { a.store_hops = std::stoi(val); i++; }
+        else if (key == "--empty_hop_iters") { a.empty_hop_iters = std::stoi(val); i++; }
     }
     return a;
 }
@@ -82,7 +90,8 @@ int main(int argc, char* argv[])
             fprintf(stderr,
                 "Usage: mpirun -np W %s --index_dir <dir> --query_path <fvecs>\n"
                 "       [--gt_path <lshbox>] [--k 10] [--L 100] [--BW 64] [--H 5]\n"
-                "       [--k_head 50] [--ef_head 100] [--warmup 10] [--num_queries 0]\n",
+                "       [--k_head 50] [--ef_head 100] [--warmup 10] [--num_queries 0]\n"
+                "       [--profile_comm 0|1] [--store_hops 0|1] [--empty_hop_iters N]\n",
                 argv[0]);
         MPI_Finalize();
         return 1;
@@ -143,8 +152,9 @@ int main(int argc, char* argv[])
         }
         printf("[rank 0] Query answering: W=%d  N=%u  dim=%d  metric=%s\n",
                nranks, orch.shard.N_, dim, metric_name(metric));
-        printf("[rank 0] params: k=%d L=%d BW=%d H=%d k_head=%d ef_head=%d\n",
-               args.k, orch.params.L, args.BW, args.H, args.k_head, args.ef_head);
+        printf("[rank 0] params: k=%d L=%d BW=%d H=%d k_head=%d ef_head=%d profile_comm=%d\n",
+               args.k, orch.params.L, args.BW, args.H, args.k_head, args.ef_head,
+               args.profile_comm);
         printf("[rank 0] queries=%u  gt=%s\n", (unsigned)nq_total,
                have_gt ? args.gt_path.c_str() : "(none)");
         fflush(stdout);
@@ -158,16 +168,34 @@ int main(int argc, char* argv[])
     MPI_Bcast(&nq_bcast, 1, MPI_UINT32_T, 0, MPI_COMM_WORLD);
     nq = (idx_t)nq_bcast;
 
-    // Warmup (synchronised).
+    // Warmup (synchronised). Profiling off during warmup.
     for (int w = 0; w < args.warmup; w++) {
         if (rank == 0) {
             orch.search(MPI_COMM_WORLD, rank, nranks,
-                        queries.data() + (size_t)(w % (int)nq_total) * dim, nullptr);
+                        queries.data() + (size_t)(w % (int)nq_total) * dim,
+                        nullptr, nullptr);
         } else {
-            orch.search(MPI_COMM_WORLD, rank, nranks, nullptr, nullptr);
+            orch.search(MPI_COMM_WORLD, rank, nranks, nullptr, nullptr, nullptr);
         }
     }
     MPI_Barrier(MPI_COMM_WORLD);
+
+    // Optional empty-hop MPI floor (same message shape as BW keys, zero scoring).
+    if (args.empty_hop_iters > 0) {
+        int adc_n = orch.pq.m * orch.pq.ksub;
+        EmptyHopFloor floor = measure_empty_hop_floor(
+            MPI_COMM_WORLD, rank, nranks, dim, adc_n, args.BW,
+            args.empty_hop_iters, /*warmup=*/50);
+        if (rank == 0) print_empty_hop_floor(floor);
+        MPI_Barrier(MPI_COMM_WORLD);
+    } else {
+        // Keep ranks aligned if some jobs skip: nothing to do.
+    }
+
+    QueryProfile profile;
+    profile.enabled = (args.profile_comm != 0);
+    profile.store_hops = (args.store_hops != 0);
+    QueryProfile* prof_ptr = profile.enabled ? &profile : nullptr;
 
     // Timed queries.
     double total_recall = 0.0;
@@ -178,7 +206,8 @@ int main(int argc, char* argv[])
         for (idx_t qi = 0; qi < nq; qi++) {
             uint64_t scored = 0;
             auto res = orch.search(MPI_COMM_WORLD, rank, nranks,
-                                   queries.data() + (size_t)qi * dim, &scored);
+                                   queries.data() + (size_t)qi * dim,
+                                   &scored, prof_ptr);
             total_scored += scored;
 
             if (have_gt && qi < (idx_t)gt.num_queries)
@@ -192,7 +221,7 @@ int main(int argc, char* argv[])
         }
     } else {
         for (idx_t qi = 0; qi < nq; qi++)
-            orch.search(MPI_COMM_WORLD, rank, nranks, nullptr, nullptr);
+            orch.search(MPI_COMM_WORLD, rank, nranks, nullptr, nullptr, prof_ptr);
     }
 
     MPI_Barrier(MPI_COMM_WORLD);
@@ -207,12 +236,16 @@ int main(int argc, char* argv[])
         printf("  elapsed_s   : %.2f\n", elapsed);
         printf("  latency avg : %.3f ms\n", (nq > 0 ? elapsed / nq * 1000.0 : 0.0));
         printf("  QPS         : %.1f\n", qps);
-        printf("  nodes/hop avg: %.1f\n", nq > 0 ? (double)total_scored / nq : 0.0);
+        printf("  nodes_scored_avg: %.1f  (total keys / query; label was formerly nodes/hop)\n",
+               nq > 0 ? (double)total_scored / nq : 0.0);
         if (have_gt)
             printf("  recall@%d   : %.4f\n", args.k, recall);
         if (have_gt)
-            printf("SWEEP_SUMMARY k=%d BW=%d H=%d L=%d nq=%u recall@%.0f=%.4f elapsed_s=%.2f qps=%.1f\n",
-                   args.k, args.BW, args.H, orch.params.L, (unsigned)nq, (double)args.k, recall, elapsed, qps);
+            printf("SWEEP_SUMMARY k=%d BW=%d H=%d L=%d nq=%u recall@%.0f=%.4f elapsed_s=%.2f qps=%.1f profile_comm=%d\n",
+                   args.k, args.BW, args.H, orch.params.L, (unsigned)nq, (double)args.k, recall, elapsed, qps,
+                   args.profile_comm);
+        if (profile.enabled)
+            print_profile_summary(profile, args.H, nranks);
         printf("[rank 0] === Done ===\n");
     }
 

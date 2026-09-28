@@ -72,7 +72,21 @@ struct GroundTruth {
     }
 
     void load(const std::string& path) {
-        if (path.size() >= 4 && path.substr(path.size() - 4) == ".bin")
+        // Prefer binary loader for *.bin, and also when the file starts with
+        // (nq,k) int32 header (e.g. GT.100M without a .bin suffix).
+        bool use_bin = (path.size() >= 4 && path.substr(path.size() - 4) == ".bin");
+        if (!use_bin) {
+            FILE* fp = fopen(path.c_str(), "rb");
+            if (fp) {
+                int32_t nq = 0, k = 0;
+                if (fread(&nq, 4, 1, fp) == 1 && fread(&k, 4, 1, fp) == 1 &&
+                    nq > 0 && k > 0 && nq < 10000000 && k < 100000) {
+                    use_bin = true;
+                }
+                fclose(fp);
+            }
+        }
+        if (use_bin)
             load_bin(path);
         else
             load_lshbox(path);

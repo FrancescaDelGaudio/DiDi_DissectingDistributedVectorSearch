@@ -1956,13 +1956,21 @@ class ScalaSearch : public AlgorithmInterface<dist_t> {
   }
 
   void sendTerm(size_t correct, size_t total, size_t query_load, double cumu_lat_us = 0.0) {
+    uint64_t comm_writes = 0, comm_reads = 0;
+    uint64_t comm_write_bytes = 0, comm_read_bytes = 0;
+    get_comm_stats(
+        comm_writes, comm_reads, comm_write_bytes, comm_read_bytes);
 #ifdef PROF_COMPUTATION
-    rdma_comm.send_term(rdma_param.machine_id, correct, total, 
-      query_load, cumu_lat_us, computation_cnt, core_participation_count_);
+    rdma_comm.send_term(
+        rdma_param.machine_id, correct, total, query_load, cumu_lat_us,
+        computation_cnt, core_participation_count_, comm_writes, comm_reads,
+        comm_write_bytes, comm_read_bytes);
     computation_cnt = 0;
-#else 
-    rdma_comm.send_term(rdma_param.machine_id, correct, total, 
-      query_load, cumu_lat_us, 0, core_participation_count_);
+#else
+    rdma_comm.send_term(
+        rdma_param.machine_id, correct, total, query_load, cumu_lat_us, 0,
+        core_participation_count_, comm_writes, comm_reads, comm_write_bytes,
+        comm_read_bytes);
 #endif
     return;
   }
@@ -2005,7 +2013,34 @@ class ScalaSearch : public AlgorithmInterface<dist_t> {
 
   void initTerm() {
     rdma_comm.reset_term();
+    reset_comm_counts();
     core_participation_count_ = 0;
+  }
+
+  void reset_comm_counts() {
+    on_each([&](uint64 tid, uint64 total) {
+      auto *ctx = rdma_comm.rdma_ctx.getLocal();
+      ctx->read_cnt = 0;
+      ctx->write_cnt = 0;
+      ctx->read_size = 0;
+      ctx->write_size = 0;
+    });
+  }
+
+  void get_comm_stats(
+      uint64_t &writes, uint64_t &reads, uint64_t &write_bytes,
+      uint64_t &read_bytes) const {
+    writes = 0;
+    reads = 0;
+    write_bytes = 0;
+    read_bytes = 0;
+    for (uint32_t t = 0; t < getActiveThreads(); ++t) {
+      auto *ctx = rdma_comm.rdma_ctx.getRemote(t);
+      writes += ctx->write_cnt;
+      reads += ctx->read_cnt;
+      write_bytes += ctx->write_size;
+      read_bytes += ctx->read_size;
+    }
   }
 
   void record_core_participation() { core_participation_count_++; }
@@ -2037,6 +2072,59 @@ class ScalaSearch : public AlgorithmInterface<dist_t> {
       cout << "\tm" << m << "=" << rdma_comm.core_participation_per_machine[m];
     }
     cout << "\tsum=" << sum << "\torigin_per_node=" << origin_per_node << "\n";
+    cout.flush();
+  }
+
+  static size_t cotra_termination_write_bytes() {
+    return sizeof(size_t) * 3 + sizeof(double) + sizeof(size_t) * 2 +
+           sizeof(uint64_t) * 4;
+  }
+
+  void print_comm_stats(size_t ef_val) const {
+    const int m = rdma_param.machine_id;
+    // send_term posts TERMINATION to every other node after the snapshot in sendTerm().
+    const uint64_t term_writes = (MACHINE_NUM > 1) ? (MACHINE_NUM - 1) : 0;
+    const uint64_t term_write_bytes =
+        term_writes * cotra_termination_write_bytes();
+    const uint64_t writes =
+        rdma_comm.comm_write_per_machine[m] + term_writes;
+    const uint64_t reads = rdma_comm.comm_read_per_machine[m];
+    const uint64_t write_bytes =
+        rdma_comm.comm_write_bytes_per_machine[m] + term_write_bytes;
+    const uint64_t read_bytes = rdma_comm.comm_read_bytes_per_machine[m];
+    fprintf(
+        stderr,
+        "[CoTra] ef=%zu m=%d writes=%llu reads=%llu write_bytes=%llu "
+        "read_bytes=%llu\n",
+        ef_val, m, static_cast<unsigned long long>(writes),
+        static_cast<unsigned long long>(reads),
+        static_cast<unsigned long long>(write_bytes),
+        static_cast<unsigned long long>(read_bytes));
+    fflush(stderr);
+  }
+
+  void print_comm_stats_leader(size_t ef_val) const {
+    const uint64_t term_writes = (MACHINE_NUM > 1) ? (MACHINE_NUM - 1) : 0;
+    const uint64_t term_write_bytes =
+        term_writes * cotra_termination_write_bytes();
+    uint64_t wsum = 0, rsum = 0, wb_sum = 0, rb_sum = 0;
+    for (int m = 0; m < MACHINE_NUM; m++) {
+      wsum += rdma_comm.comm_write_per_machine[m] + term_writes;
+      rsum += rdma_comm.comm_read_per_machine[m];
+      wb_sum += rdma_comm.comm_write_bytes_per_machine[m] + term_write_bytes;
+      rb_sum += rdma_comm.comm_read_bytes_per_machine[m];
+    }
+    fprintf(
+        stderr,
+        "[CoTra] ef=%zu comm_sum writes=%llu reads=%llu write_bytes=%llu "
+        "read_bytes=%llu\n",
+        ef_val, static_cast<unsigned long long>(wsum),
+        static_cast<unsigned long long>(rsum),
+        static_cast<unsigned long long>(wb_sum),
+        static_cast<unsigned long long>(rb_sum));
+    fflush(stderr);
+    cout << ef_val << "\tcomm_sum\twrites=" << wsum << "\treads=" << rsum
+         << "\twrite_bytes=" << wb_sum << "\tread_bytes=" << rb_sum << "\n";
     cout.flush();
   }
 

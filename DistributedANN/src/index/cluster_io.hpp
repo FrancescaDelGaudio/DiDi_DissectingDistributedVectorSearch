@@ -91,8 +91,9 @@ inline void write_cluster_graph(const std::string& path,
     fclose(fp);
 }
 
-// Lightweight reader for Step 3 stitching: reads ids + adjacency only,
-// SKIPPING the stored full vectors (vectors are obtained from base.fvecs).
+// Lightweight reader for Step 3 stitching pass 1: ids + adjacency only,
+// SKIPPING the stored full vectors (loaded selectively in pass 2 via
+// read_cluster_graph when RobustPrune needs them).
 // Returns false if the file does not exist (e.g. an empty cluster).
 inline bool read_cluster_adjacency(const std::string& path,
                                    uint32_t& cluster_id,

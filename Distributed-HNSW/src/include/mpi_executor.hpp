@@ -212,13 +212,16 @@ namespace mt {
 			mt::Sender* sender;
 			vector<vector<float> > centroids;
 			loadCentroids(centroids, para.centroids_file);
-#ifdef DHNSW_USE_INNER_PRODUCT
+			// Always load the centroid->shard map written at indexing time.
+			// Re-running KaHIP at query time is nondeterministic vs the saved
+			// hnsw_slave* placement and destroys recall (esp. with 6+ shards).
 			vector<int> centroid_shard_map;
 			{
 				string map_path = para.map_address.empty() ? para.hnsw_dir + "/map" : para.map_address;
 				loadCentroidShardMap(centroid_shard_map, map_path);
-				cout << "#[mpi ] loaded MIPS centroid shard map from " << map_path << endl;
+				cout << "#[mpi ] loaded centroid shard map from " << map_path << endl;
 			}
+#ifdef DHNSW_USE_INNER_PRODUCT
 			if (para.mode_code / 10){
 				sender = new Sender(world_size - 2, query, centroids, centroid_shard_map, DATA_DIMENSION, centroids.size(), SIZEWORKER, para.sender_ef);
 				sender->saveHNSW(para.hnsw_dir + "/hnsw_sender");
@@ -227,22 +230,26 @@ namespace mt {
 				sender = new Sender(world_size - 2, query, para.hnsw_dir + "/hnsw_meta", centroids, centroid_shard_map, DATA_DIMENSION, centroids.size(), SIZEWORKER, para.sender_ef);
 #else
 			if (para.mode_code / 10){
-				sender = new Sender(world_size - 2 ,query, centroids, partition, DATA_DIMENSION, centroids.size(), SIZEWORKER, para.sender_ef);
+				sender = new Sender(world_size - 2, query, centroids, centroid_shard_map, DATA_DIMENSION, centroids.size(), SIZEWORKER, para.sender_ef);
 				sender->saveHNSW(para.hnsw_dir + "/hnsw_sender");
 			}
 			else
-				sender = new Sender(world_size - 2, query, para.hnsw_dir + "/hnsw_meta", centroids, partition, DATA_DIMENSION, centroids.size(), SIZEWORKER, para.sender_ef);
+				sender = new Sender(world_size - 2, query, para.hnsw_dir + "/hnsw_meta", centroids, centroid_shard_map, DATA_DIMENSION, centroids.size(), SIZEWORKER, para.sender_ef);
 #endif
-			vector<vector<int> > clusters;
-			mt::loadClusters(clusters, para.cluster_file);
-			for (int i = 0; i < SIZEWORKER; i++){
-				vector<int> members = sender->_waker.getMember(i);
-				vector<int> subset;
-				for (int j = 0; j < members.size(); j++)
-					subset.insert(subset.end(), clusters[members[j]].begin(), clusters[members[j]].end());
-				std::sort(subset.begin(), subset.end());
-				subset.erase(std::unique(subset.begin(), subset.end()), subset.end());
-				saveSubset(i, subset, para.subset_dir);
+			// Only rewrite subset files when (re)building slaves. Query-only
+			// mode must keep the subsets that match the on-disk hnsw_slave*.
+			if (para.mode_code % 10) {
+				vector<vector<int> > clusters;
+				mt::loadClusters(clusters, para.cluster_file);
+				for (int i = 0; i < SIZEWORKER; i++){
+					vector<int> members = sender->_waker.getMember(i);
+					vector<int> subset;
+					for (int j = 0; j < members.size(); j++)
+						subset.insert(subset.end(), clusters[members[j]].begin(), clusters[members[j]].end());
+					std::sort(subset.begin(), subset.end());
+					subset.erase(std::unique(subset.begin(), subset.end()), subset.end());
+					saveSubset(i, subset, para.subset_dir);
+				}
 			}
 
 
@@ -281,7 +288,16 @@ namespace mt {
                 double avg_time;
 				vector<vector<pair<float, int>>> result = receiver.receive(avg_time);
 				Bencher current_bench(result, false);
-				cout << "time || recall"<< endl << std::to_string(avg_time) + " " + std::to_string(truth_bench.avg_recall(current_bench)) << endl;
+				const double recall = truth_bench.avg_recall(current_bench);
+				const double query_phase_s = avg_time * static_cast<double>(QUERY_SIZE);
+				const double qps = (query_phase_s > 0.0)
+					? (static_cast<double>(QUERY_SIZE) / query_phase_s) : 0.0;
+				// avg_time = query-phase wall / n_queries (receiver steady_clock; load excluded)
+				cout << "time || recall"<< endl << std::to_string(avg_time) + " " + std::to_string(recall) << endl;
+				cout << "#[timer] query_phase_wall_s=" << query_phase_s
+				     << " avg_s_per_query=" << avg_time
+				     << " qps=" << qps
+				     << " n_queries=" << QUERY_SIZE << endl;
 				if (para.print_results)
 					printQueryResults(truth_bench, current_bench);
 		} else {

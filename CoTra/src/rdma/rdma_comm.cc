@@ -821,6 +821,26 @@ int RdmaCommunication::poll_recv() {
               &q_core_participation, static_cast<char *>(ptr) + offset,
               sizeof(q_core_participation));
           core_participation_per_machine[m_id] = q_core_participation;
+          offset += sizeof(q_core_participation);
+
+          uint64_t q_writes{0}, q_reads{0};
+          memcpy(
+              &q_writes, static_cast<char *>(ptr) + offset, sizeof(q_writes));
+          offset += sizeof(q_writes);
+          memcpy(&q_reads, static_cast<char *>(ptr) + offset, sizeof(q_reads));
+          offset += sizeof(q_reads);
+          uint64_t q_write_bytes{0}, q_read_bytes{0};
+          memcpy(
+              &q_write_bytes, static_cast<char *>(ptr) + offset,
+              sizeof(q_write_bytes));
+          offset += sizeof(q_write_bytes);
+          memcpy(
+              &q_read_bytes, static_cast<char *>(ptr) + offset,
+              sizeof(q_read_bytes));
+          comm_write_per_machine[m_id] = q_writes;
+          comm_read_per_machine[m_id] = q_reads;
+          comm_write_bytes_per_machine[m_id] = q_write_bytes;
+          comm_read_bytes_per_machine[m_id] = q_read_bytes;
         } else {
           printf("Error: Unexpected buff contorl flag %d.\n", control);
         }
@@ -937,10 +957,8 @@ int RdmaCommunication::post_read(
     // printf("postread buf_id %u vid %u\n", vec.buffer_id, vec.vector_id);
     size_t &r = ctx->wr_cnt[m];
     ctx->sge_list[vec.buffer_id].length = vec_size;
-#ifdef COMM_PROFILE
-    ctx->read_size += vec_size;
     ctx->read_cnt++;
-#endif
+    ctx->read_size += vec_size;
     ctx->wr[m][r].sg_list = &ctx->sge_list[vec.buffer_id];
     ctx->wr[m][r].wr.rdma.remote_addr =
         ctx->remote_mr_msg[m].read_vaddr + offset;
@@ -1059,10 +1077,8 @@ int RdmaCommunication::post_write_send(
 // printf(
 //     "[post send write] m %d, buf %d, size %d, control %d\n", machine_id,
 //     buf_id, size, control);
-#ifdef COMM_PROFILE
-  ctx->write_size += size;
   ctx->write_cnt++;
-#endif
+  ctx->write_size += size;
   if (size > MAX_QUERYBUFFER_SIZE) {
     printf("Error: Exceed the max write buffer size.\n");
     abort();
@@ -1076,6 +1092,10 @@ int RdmaCommunication::post_sg_write_send(
     int machine_id, uint32_t buf_id, std::vector<char *> &sg_ptr,
     std::vector<uint32_t> &sg_size, ControlType control) {
   auto *ctx = rdma_ctx.getLocal();
+  ctx->write_cnt++;
+  for (uint32_t sz : sg_size) {
+    ctx->write_size += sz;
+  }
   size_t offset = MAX_QUERYBUFFER_SIZE * buf_id;
   // TODO: <<16 use macro
   ctx->run_post_sg_write_send(
@@ -1133,7 +1153,8 @@ int RdmaCommunication::post_recv(
 void RdmaCommunication::send_term(
     int my_machine_id, size_t q_correct, size_t q_total, 
     size_t q_query_load, double cumu_lat_us, size_t computation_cnt,
-    size_t q_core_participation) {
+    size_t q_core_participation, uint64_t q_writes, uint64_t q_reads,
+    uint64_t q_write_bytes, uint64_t q_read_bytes) {
   // Broadcast term
   auto *buf = send_write_buf.getLocal();
   for (int m = 0; m < MACHINE_NUM; m++) {
@@ -1143,6 +1164,10 @@ void RdmaCommunication::send_term(
       total += q_total;
       query_load += q_query_load;
       core_participation_per_machine[my_machine_id] = q_core_participation;
+      comm_write_per_machine[my_machine_id] = q_writes;
+      comm_read_per_machine[my_machine_id] = q_reads;
+      comm_write_bytes_per_machine[my_machine_id] = q_write_bytes;
+      comm_read_bytes_per_machine[my_machine_id] = q_read_bytes;
       continue;
     }
     uint32_t buf_id = get_write_send_buf(m);
@@ -1166,6 +1191,16 @@ void RdmaCommunication::send_term(
         static_cast<char *>(ptr) + offset, &q_core_participation,
         sizeof(q_core_participation));
     offset += sizeof(q_core_participation);
+    memcpy(static_cast<char *>(ptr) + offset, &q_writes, sizeof(q_writes));
+    offset += sizeof(q_writes);
+    memcpy(static_cast<char *>(ptr) + offset, &q_reads, sizeof(q_reads));
+    offset += sizeof(q_reads);
+    memcpy(
+        static_cast<char *>(ptr) + offset, &q_write_bytes, sizeof(q_write_bytes));
+    offset += sizeof(q_write_bytes);
+    memcpy(
+        static_cast<char *>(ptr) + offset, &q_read_bytes, sizeof(q_read_bytes));
+    offset += sizeof(q_read_bytes);
 
     // printf("q%d >> m[%d] buf%d\n", query->query_id, machine_id, buff_id);
     post_write_send(m, buf_id, offset, TERMINATION);
@@ -1190,6 +1225,10 @@ void RdmaCommunication::reset_term() {
   all_computation_cnt = 0;
   for (int m = 0; m < MACHINE_NUM; m++) {
     core_participation_per_machine[m] = 0;
+    comm_write_per_machine[m] = 0;
+    comm_read_per_machine[m] = 0;
+    comm_write_bytes_per_machine[m] = 0;
+    comm_read_bytes_per_machine[m] = 0;
   }
 }
 

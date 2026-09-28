@@ -13,3 +13,12 @@
 **/submit_*.py
 **/sbatch_logs/
 __pycache__/
+**/tables*.pdf
+**/tables*.json
+**/*.sbatch
+**/*.slurm
+**/results/
+**/logs/
+**/log/
+**/script_slurm/logs/
+**/script_slurm/runtime/

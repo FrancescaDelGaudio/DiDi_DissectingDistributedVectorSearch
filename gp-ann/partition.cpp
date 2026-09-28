@@ -1,6 +1,8 @@
 #include <fstream>
 #include <iostream>
 #include <random>
+#include <cstdlib>
+#include <string>
 
 #include "kmeans.h"
 #include "metis_io.h"
@@ -97,7 +99,20 @@ int main(int argc, const char* argv[]) {
         part_method = "OGP";
     }
 
-    const double eps = 0.05;
+    // Balance / max-shard-size tolerance:
+    //   max_cluster_size = (1 + eps) * n / k
+    // With fixed-machines-mode, realizable overlap is at most ~eps
+    // (total capacity = (1+eps)*n, so extras <= eps*n). Override via PARTITION_EPS.
+    double eps = 0.05;
+    if (const char* eps_env = std::getenv("PARTITION_EPS")) {
+        eps = std::stod(eps_env);
+        if (!(eps >= 0.0)) {
+            throw std::runtime_error("PARTITION_EPS must be >= 0");
+        }
+    }
+    std::cout << "Using eps=" << eps
+              << " (max_cluster_size=(1+eps)*n/k; fixed-machines realizable overlap <=~eps)"
+              << std::endl;
     std::vector<int> partition;
     Clusters clusters;
     if (part_method == "GP") {

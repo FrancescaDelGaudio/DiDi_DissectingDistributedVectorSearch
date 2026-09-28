@@ -40,6 +40,10 @@ class RdmaCommunication {
   size_t all_computation_cnt{0};
   // per-node core participations (Strategy B), aggregated on leader via TERMINATION
   size_t core_participation_per_machine[MACHINE_NUM]{};
+  uint64_t comm_write_per_machine[MACHINE_NUM]{};
+  uint64_t comm_read_per_machine[MACHINE_NUM]{};
+  uint64_t comm_write_bytes_per_machine[MACHINE_NUM]{};
+  uint64_t comm_read_bytes_per_machine[MACHINE_NUM]{};
 
   RdmaCommunication() {}
   ~RdmaCommunication() {}
@@ -608,7 +612,9 @@ class RdmaCommunication {
   void send_term(
       int my_machine_id, size_t q_correct, size_t q_total, 
       size_t q_query_load, double cumu_lat_us = 0.0, size_t computation_cnt = 0,
-      size_t q_core_participation = 0);
+      size_t q_core_participation = 0, uint64_t q_writes = 0,
+      uint64_t q_reads = 0, uint64_t q_write_bytes = 0,
+      uint64_t q_read_bytes = 0);
   bool check_term();
   void reset_term();
   void reset_sendrecv();

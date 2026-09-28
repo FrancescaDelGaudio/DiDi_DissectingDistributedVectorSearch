@@ -973,8 +973,10 @@ class ScalaBuild {
    * correctness.
    */
   void merge_all_b1_index() {
-    cached_ofstream output(
-        index_param.temp_b1_index, BUFFER_SIZE_FOR_CACHED_IO);
+    // Use a moderate write buffer (not 1 GiB): leader already holds large
+    // build state; 100M merge writes tens of GB to GPFS.
+    const size_t merge_write_cache = 64 * 1024 * 1024;
+    cached_ofstream output(index_param.temp_b1_index, merge_write_cache);
     uint64_t vec_num = index_param.max_vid;
     output.write((char *)&vec_num, sizeof(vec_num));
     output.write((char *)&index_param.medoid, sizeof(index_param.medoid));
@@ -1000,8 +1002,8 @@ class ScalaBuild {
       reader.read((char *)&part_medoid, sizeof(part_medoid));
       size_t part_vec_size = part_vec_num * b1_ele_size;
       printf(
-          "part b1graph vnum: %u medoid %u size %llu\n", part_vec_num,
-          part_medoid, part_vec_size);
+          "part b1graph vnum: %zu medoid %u size %llu\n", part_vec_num,
+          part_medoid, (unsigned long long)part_vec_size);
       size_t delta = fsize - part_vec_size;
       printf("delta: %lu, expect equal to 12..\n", delta);
 

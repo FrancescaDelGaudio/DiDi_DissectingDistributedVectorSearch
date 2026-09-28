@@ -14,7 +14,7 @@
 #define DATA_DIMENSION 96
 #endif
 #ifndef SIZEWORKER
-#define SIZEWORKER 6
+#define SIZEWORKER 8
 #endif
 #ifndef RESULT_TAG
 #define RESULT_TAG 1

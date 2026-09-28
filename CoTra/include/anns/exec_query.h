@@ -68,6 +68,30 @@ static void test_vs_recall(
       fflush(stderr);
     }
   }
+  if (const char *skip = std::getenv("COTRA_EF_SKIP")) {
+    if (*skip) {
+      std::unordered_set<size_t> skip_efs;
+      std::stringstream ss(skip);
+      std::string item;
+      while (std::getline(ss, item, ',')) {
+        if (!item.empty()) {
+          skip_efs.insert(static_cast<size_t>(std::stoul(item)));
+        }
+      }
+      vector<size_t> filtered;
+      filtered.reserve(efs.size());
+      for (size_t e : efs) {
+        if (skip_efs.count(e) == 0) {
+          filtered.push_back(e);
+        }
+      }
+      efs.swap(filtered);
+      fprintf(
+          stderr, "[CoTra] COTRA_EF_SKIP=%s -> %zu ef values in sweep\n", skip,
+          efs.size());
+      fflush(stderr);
+    }
+  }
 #endif
 
   for (size_t ef : efs) {
@@ -700,6 +724,11 @@ static void test_vs_recall(
         appr_alg.print_core_load_stats(ef);
         if (appr_alg.rdma_param.machine_id == 0) {
           appr_alg.print_core_load_stats_leader(ef);
+        }
+
+        appr_alg.print_comm_stats(ef);
+        if (appr_alg.rdma_param.machine_id == 0) {
+          appr_alg.print_comm_stats_leader(ef);
         }
 
 #ifdef LAT

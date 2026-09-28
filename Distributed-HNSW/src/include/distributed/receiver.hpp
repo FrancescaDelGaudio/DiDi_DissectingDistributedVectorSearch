@@ -1,6 +1,7 @@
 #pragma once
 
 #include <mpi.h>
+#include <chrono>
 #include <unordered_map>
 #include <queue>
 #include "distributed/slave.hpp"
@@ -55,39 +56,34 @@ namespace mt {
             _result.resize(n_queries);
         };
 
+        // Times only the query phase on the receiver (steady_clock, single node):
+        // from entering the receive loop until the last query is committed.
+        // Excludes data/index load. Does NOT use cross-node MPI_Wtime().
+        // avg_time = query_phase_wall_s / n_queries (throughput-style mean).
         vector<vector<pair<float, int>>> receive(double& avg_time) {
-            /* Starts the receiver. It will return result stack when all answers
-                are received. */
-
-            // main Loop for receiving message
-//            cout << "#[recv] Inside receiver.receive()" << endl;
             int ef = -1;
             int counter = 0;
-            double total_time = 0;
-//            cout << "#[recv] N queries: " + std::to_string(_n_queries) << endl;
+            using clock = std::chrono::steady_clock;
+            const auto t0 = clock::now();
             while (counter < _n_queries) {
                 int msg_len = sizeof(mt::result_message);
                 void* buffer = malloc(msg_len);
                 mt::receiveResultMessage(buffer, msg_len);
                 mt::result_message* result_msg = (mt::result_message*)buffer;
-//                cout << "===ResultMessage:\nQuery id: " + std::to_string(result_msg->query_id) +
-//                    "\nNum wakeup = " + std::to_string(result_msg->num_wake_up) << endl;
                 Answer& answer = _query_map[result_msg->query_id];
                 ef = result_msg->ef;
-                // Add result into queue
                 _insert_answers(answer.p_queue, result_msg->result_id, result_msg->dist);
-                // Increment counter & check if received data from all slaves
                 answer.n_slaves ++;
                 if (answer.n_slaves == result_msg->num_wake_up) {
                     _commit_answers(answer.p_queue, result_msg->query_id);
                     _query_map.erase(result_msg->query_id);
-                    total_time += MPI_Wtime() - result_msg->start_time;
                     counter++;
                 }
                 free(buffer);
             }
-//            cout << "#[recv] result size: " + std::to_string(_result.size()) << endl;
-            avg_time = total_time / _n_queries;
+            const double query_phase_s =
+                std::chrono::duration<double>(clock::now() - t0).count();
+            avg_time = query_phase_s / static_cast<double>(_n_queries);
             return _result;
         }
 
