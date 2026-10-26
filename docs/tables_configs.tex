@@ -1,0 +1,72 @@
+% Search-parameter grids of the final campaign (16 threads per node), from final_curves.csv.
+
+% ---------------- GP-ANN* ----------------
+\begin{table}[t]
+\centering
+\small
+\caption{GP-ANN$^*$ search configurations (overlap $0.2$, 16 threads per node). The sweep samples combinations of probed shards and $ef$ along the recall range.}
+\label{tab:gpann-config}
+\begin{tabular}{lll}
+\toprule
+\textbf{Setup} & \textbf{Probed shards} & \textbf{$ef$} \\
+\midrule
+DEEP10M, 4 nodes  & 1, 2, 3, 4          & 10, 20, 30, 50, 100, 150, 250 \\
+DEEP10M, 6 nodes  & 1, 2, 3, 4, 6       & 10, 20, 30, 50, 100, 150, 250 \\
+TTI10M, 4 nodes   & 1, 2, 3, 4          & 100, 150, 250, 400 \\
+TTI10M, 6 nodes   & 1, 2, 3, 4, 5, 6    & 100, 150, 250, 400 \\
+DEEP100M, 8 nodes & 1, 2, 3, 4, 8       & 50, 70, 150, 250 \\
+TTI100M, 8 nodes  & 1, 2, 3, 4, 5, 6, 8 & 150, 250, 400 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ---------------- Pyramid* ----------------
+\begin{table}[t]
+\centering
+\small
+\caption{Pyramid$^*$ search configurations (16 threads per node). The same 30 combinations of $K$ and $ef$ are run in every setup.}
+\label{tab:pyramid-config}
+\begin{tabular}{ll}
+\toprule
+\textbf{Parameter} & \textbf{Values} \\
+\midrule
+$K$ (partitions searched per query) & 1, 3, 5, 10, 20, 50, 100 \\
+$ef$ (sub-HNSW search width)       & 50, 100, 200, 400, 800, 1600 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ---------------- CoTra ----------------
+\begin{table}[t]
+\centering
+\small
+\caption{CoTra search configurations (16 threads per node). The same grid is used in every setup.}
+\label{tab:cotra-config}
+\begin{tabular}{ll}
+\toprule
+\textbf{Parameter} & \textbf{Values} \\
+\midrule
+$ef$ & 3, 4, 5, 6, 8, 10, 15, 30, 40, 50, 70, 100, \\
+     & 150, 200, 250, 300, 400, 500, 600 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ---------------- DistributedANN* ----------------
+\begin{table}[t]
+\centering
+\small
+\caption{DistributedANN$^*$ search configurations (batched execution, 16 threads per node). $L$: candidate list size; $BW$: beam width (nodes scored per hop); $H$: number of hops.}
+\label{tab:dann-config}
+\begin{tabular}{llll}
+\toprule
+\textbf{Setup} & \textbf{$L$} & \textbf{$BW$} & \textbf{$H$} \\
+\midrule
+DEEP10M, 4 and 6 nodes & 400, 512, 1024, 2048        & 8--2048    & 10, 20 \\
+TTI10M, 4 and 6 nodes  & 2048, 4096, 8192, 16384     & 64--2048   & 10, 20, 40 \\
+DEEP100M, 8 nodes      & 400, 1024, 2048, 4096, 8192 & 32--4096   & 10, 20, 32 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+{\footnotesize $BW$ ranges over powers of two (DEEP100M also 96).}
+\end{table}

@@ -160,8 +160,10 @@ int main(int argc, char* argv[])
     for (uint32_t i = 0; i < my_count; i++)
         std::copy(vec(my_start + i), vec(my_start + i) + dim,
                   full_vecs.data() + (size_t)i * dim);
-    if (metric == Metric::IP)
-        normalize_rows(full_vecs.data(), (int)my_count, dim);
+    // Full vectors are stored UN-normalised even for IP: they drive the exact
+    // scoring of results, and normalising them would turn MIPS into cosine
+    // similarity (different ranking whenever base norms vary). Normalised
+    // vectors are only used upstream (clustering, graph, PQ) for navigation.
 
     std::vector<uint8_t> nbr_codes((size_t)local_edges * mcode);
     #pragma omp parallel for schedule(static)

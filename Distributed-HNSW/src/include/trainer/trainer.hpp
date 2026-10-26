@@ -98,6 +98,7 @@ namespace dhnsw{
 			}
 		}
 		cout << "[trainer]# cluster loaded successfully from " + path << endl;
+		return counter;
 	}
 
     void save_map (string out_path, vector<int>& map, int num_partition){

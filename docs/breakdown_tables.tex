@@ -1,0 +1,148 @@
+% Query-phase breakdown tables: DEEP100M, 8 nodes, 16 threads per node, 10,000 queries, k = 10.
+% Systems completed so far: DistributedANN (v2, batched), GP-ANN, Harmony.
+% Requires: \usepackage{booktabs}
+% Phase shares are % of the batch query-phase runtime (index loading/building excluded).
+
+% -----------------------------------------------------------------------------
+\begin{table}[t]
+\centering
+\caption{Throughput at fixed recall@10 (DEEP100M, 8 nodes, 16 threads per node).
+DistributedANN saturates at recall $\approx 0.93$ on this index.}
+\label{tab:qps-fixed-recall}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{2}{c}{DistributedANN} & \multicolumn{2}{c}{GP-ANN} & \multicolumn{2}{c}{Harmony} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Target & Recall & QPS & Recall & QPS & Recall & QPS \\
+\midrule
+0.80 & 0.796 & 21{,}432 & 0.795 & 30{,}239 & 0.788 & 2{,}995 \\
+0.90 & 0.901 & 11{,}656 & 0.902 & 20{,}793 & 0.902 & 2{,}524 \\
+0.95 & 0.928$^{\dagger}$ & 4{,}705 & 0.949 & 18{,}475 & 0.954 & 1{,}634 \\
+0.99 & -- & -- & 0.992 & 7{,}189 & 0.991 & 671 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+{\footnotesize $^{\dagger}$Highest recall reached by DistributedANN (BW=512, L=8192, H=20).}
+\end{table}
+
+% -----------------------------------------------------------------------------
+\begin{table*}[t]
+\centering
+\caption{DistributedANN (v2, batched): runtime breakdown per recall target (\% of runtime, averaged over the 8 nodes).
+MPI time is split into transfer and waiting for the slowest node using a second run with a barrier before each exchange.}
+\label{tab:breakdown-dann}
+\small
+\begin{tabular}{llrrrrrrrrr}
+\toprule
+Target & Parameters & Recall & QPS & Routing & Per-hop & Local & MPI & Waiting & Merge & Other \\
+ & (BW, L, H) & & & (head) & routing & search & transfer & & & \\
+\midrule
+0.80 & 32, 400, 10    & 0.796 & 21{,}432 & 31.1 & 6.4 & 28.5 & 11.7 & 3.5 & 6.2 & 12.6 \\
+0.90 & 128, 1024, 10  & 0.901 & 11{,}656 & 16.8 & 9.4 & 32.3 & 8.7  & 8.2 & 8.0 & 16.6 \\
+0.93 & 512, 8192, 20  & 0.928 & 4{,}705  & 7.4  & 8.0 & 37.5 & 12.6 & 9.9 & 9.9 & 14.7 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+{\footnotesize Network payload per query (remote only): 20.9, 54.0 and 148.3\,KiB.}
+\end{table*}
+
+% -----------------------------------------------------------------------------
+\begin{table*}[t]
+\centering
+\caption{GP-ANN (overlap 0.2): runtime breakdown per recall target (\% of runtime, averaged over the 8 ranks).
+Routing and local search run on 16 OpenMP threads per rank; MPI and waiting cannot be separated (asynchronous message queue).}
+\label{tab:breakdown-gp}
+\small
+\begin{tabular}{llrrrrrr}
+\toprule
+Target & Parameters & Recall & QPS & Routing & Local & MPI + & Merge \\
+ & (nprobe, ef) & & & & search & waiting & \\
+\midrule
+0.80 & 1, 50  & 0.795 & 30{,}239 & 63.2 & 12.6 & 23.9 & 0.2 \\
+0.90 & 3, 50  & 0.902 & 20{,}793 & 38.8 & 23.2 & 37.4 & 0.6 \\
+0.95 & 2, 150 & 0.949 & 18{,}475 & 27.4 & 36.6 & 35.8 & 0.3 \\
+0.99 & 4, 400 & 0.992 & 7{,}189  & 12.1 & 52.4 & 35.2 & 0.3 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+{\footnotesize Network payload per query: 0.43, 1.30, 0.87 and 1.74\,KiB.}
+\end{table*}
+
+% -----------------------------------------------------------------------------
+\begin{table*}[t]
+\centering
+\caption{Harmony: runtime breakdown per recall target (\% of runtime).
+Timeline of the master (routing, query distribution, then the worker phase); the worker phase is split with the average worker's times.}
+\label{tab:breakdown-harmony}
+\small
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Target & nprobe & Recall & QPS & Routing & Query & Local & MPI + & Other \\
+ & & & & & distribution & search & waiting & \\
+\midrule
+0.80 & 6  & 0.788 & 2{,}995 & 22.8 & 31.4 & 20.4 & 22.8 & 2.6 \\
+0.90 & 14 & 0.902 & 2{,}524 & 19.3 & 26.0 & 31.5 & 20.5 & 2.7 \\
+0.95 & 28 & 0.954 & 1{,}634 & 12.3 & 18.1 & 40.3 & 25.2 & 4.1 \\
+0.99 & 96 & 0.991 & 671     & 5.4  & 7.4  & 49.8 & 31.8 & 5.6 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+{\footnotesize Local search includes the master's heap warm-up ($<$1\%). Query distribution includes the workers' query setup between broadcasts. Merge (final sort) is $<$0.1\% and is counted in Other.}
+\end{table*}
+
+% -----------------------------------------------------------------------------
+\begin{table*}[t]
+\centering
+\caption{DistributedANN: what a hand-written RDMA layer could remove (\% of runtime).
+Row 3b is measured by replaying the same exchanges with no computation; row 3c is the remainder.}
+\label{tab:rdma-dann}
+\small
+\begin{tabular}{lrrrl}
+\toprule
+Step & 0.80 & 0.90 & 0.93 & Removable by RDMA? \\
+\midrule
+1. MPI communication, total                     & 15.2 & 16.9 & 22.5 & -- \\
+2. $-$ Waiting for the slowest node             & 3.5  & 8.2  & 9.9  & No (idle time) \\
+3. $=$ Time inside MPI exchanges                & 11.7 & 8.7  & 12.6 & split below \\
+\quad 3a. Raw wire time at 100\,Gb/s            & 0.5  & 0.7  & 0.7  & No (physical) \\
+\quad 3b. MPI software cost                     & 0.4--1.4 & 0.6--1.8 & 0.8--2.6 & Yes \\
+\quad 3c. Extra cost in the real run            & 9.8--10.8 & 6.2--7.5 & 9.3--11.1 & Probably not \\
+\midrule
+Realistic saving (3b)                           & 0.4--1.4 & 0.6--1.8 & 0.8--2.6 & \\
+Ceiling (3b + 3c)                               & 11.2 & 8.1 & 11.9 & \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+{\footnotesize 3c (memory setup, compute threads competing for the CPU, nodes reaching the exchange out of step) is inferred, not decomposed; a custom RDMA layer would face the same costs.}
+\end{table*}
+
+% -----------------------------------------------------------------------------
+\begin{table*}[t]
+\centering
+\caption{Harmony: network time versus measured MPI + waiting (estimate from logged counters).}
+\label{tab:rdma-harmony}
+\footnotesize
+\begin{tabular}{lrrrr}
+\toprule
+ & 0.80 & 0.90 & 0.95 & 0.99 \\
+ & (nprobe=6) & (nprobe=14) & (nprobe=28) & (nprobe=96) \\
+\midrule
+1. Partial distances sent within teams (GB)        & 2.7 & 6.3 & 12.4 & 40.9 \\
+2. Minimum wire time at 100\,Gb/s (s / \% runtime) & 0.05 / 1.6 & 0.13 / 3.2 & 0.25 / 4.0 & 0.82 / 5.5 \\
+3. MPI + waiting, average worker (s / \% runtime)  & 0.72 / 21.5 & 0.70 / 17.8 & 1.21 / 19.7 & 3.58 / 24.0 \\
+4. Share of row 3 explained by wire time (\%)      & 8 & 18 & 21 & 23 \\
+5. Query distribution on the master (s)            & 1.04 & 1.02 & 1.11 & 1.10 \\
+6. Data distributed (MB) / wire time               & 4.3 / $<$1\,ms & 5.0 / $<$1\,ms & 6.1 / $<$1\,ms & 11.5 / $\approx$1\,ms \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+{\footnotesize Row 1 assumes every compared vector sends a 4-byte partial distance; pruning may send less.}
+\end{table*}

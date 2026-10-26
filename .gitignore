@@ -3,18 +3,28 @@
 **/tables*.txt
 **/tables*.tsv
 **/tables*.csv
+**/tables*.pdf
+**/tables*.json
 
 # Release / build trees (local only)
 **/release_*/
+**/build/
+**/build-*/
+**/build_*/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/compile_commands.json
+*.o
+*.a
+*.so
+*.bin
+*.log
 
 # Job scripts and logs (local only)
 **/sbatch_*.sh
 **/submit_*.sh
 **/submit_*.py
 **/sbatch_logs/
-__pycache__/
-**/tables*.pdf
-**/tables*.json
 **/*.sbatch
 **/*.slurm
 **/results/
@@ -22,3 +32,11 @@ __pycache__/
 **/log/
 **/script_slurm/logs/
 **/script_slurm/runtime/
+__pycache__/
+
+# Local backups / binaries
+*.bak
+*.bak_*
+**/transport_replay
+**/transport_replay_ompi418
+**/rdma_pingpong

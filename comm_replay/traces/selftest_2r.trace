@@ -1,0 +1,20 @@
+# self-test: every step type, 2 ranks
+ranks 2
+barrier p2p
+p2p 2
+0 1 1000000
+1 0 64
+barrier a2a
+a2a
+5 300000
+200000 7
+barrier multi    # several steps back to back, same pair, sizes shrinking (run-ahead check)
+p2p 1
+0 1 500000
+p2p 1
+0 1 100
+p2p 1
+1 0 4000
+bcast 0 2000000
+barrier sync
+allreduce 8
