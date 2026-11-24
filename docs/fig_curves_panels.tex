@@ -1,0 +1,57 @@
+% Recall/QPS panels (plot_curves_panels6.py): one row = two datasets x {4,6,8} nodes, as fig_build_time_panels.tex.
+% Requires: graphicx, subcaption, and in the PREAMBLE: \DeclareCaptionLabelFormat{rparen}{#2)}
+% Images in figures_new/msmarco_new/ (curve6_<dataset>_<n>n.pdf); legend: figures_new/legend_curves.pdf.
+% \ref{fig:curve-deep10m-6n} -> a.2
+\begin{figure*}[t]
+\centering
+\captionsetup[subfigure]{labelformat=rparen, labelsep=space, font=small, labelfont=bf, textfont=bf, skip=1pt, justification=centering}
+\makeatletter
+\newcommand{\cvpanel}[3]{%
+  \begin{minipage}[t]{0.33\linewidth}\centering
+    \includegraphics[width=\linewidth]{figures_new/msmarco_new/curve6_#1_#2n}\\[-1pt]
+    {\small\bfseries #3) #2 nodes}%
+    \csname phantomsection\endcsname\protected@edef\@currentlabel{#3}\label{fig:curve-#1-#2n}%
+  \end{minipage}}
+\makeatother
+\includegraphics[width=0.8\textwidth]{figures_new/legend_curves.pdf}\\[1pt]
+% ---------------------------------------------------------------- DEEP
+\begin{subfigure}[t]{0.495\textwidth}
+  \cvpanel{deep10m}{4}{a.1}\hfill\cvpanel{deep10m}{6}{a.2}\hfill\cvpanel{deep10m}{8}{a.3}
+  \caption{DEEP10M}\label{fig:curve-deep10m}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+  \cvpanel{deep100m}{4}{b.1}\hfill\cvpanel{deep100m}{6}{b.2}\hfill\cvpanel{deep100m}{8}{b.3}
+  \caption{DEEP100M}\label{fig:curve-deep100m}
+\end{subfigure}\\[2pt]
+% ---------------------------------------------------------------- TTI
+\begin{subfigure}[t]{0.495\textwidth}
+  \cvpanel{tti10m}{4}{c.1}\hfill\cvpanel{tti10m}{6}{c.2}\hfill\cvpanel{tti10m}{8}{c.3}
+  \caption{TTI10M}\label{fig:curve-tti10m}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+  \cvpanel{tti100m}{4}{d.1}\hfill\cvpanel{tti100m}{6}{d.2}\hfill\cvpanel{tti100m}{8}{d.3}
+  \caption{TTI100M}\label{fig:curve-tti100m}
+\end{subfigure}\\[2pt]
+% ---------------------------------------------------------------- MSMARCO
+\begin{subfigure}[t]{0.495\textwidth}
+  \cvpanel{msmarco10m}{4}{e.1}\hfill\cvpanel{msmarco10m}{6}{e.2}\hfill\cvpanel{msmarco10m}{8}{e.3}
+  \caption{MSMARCO10M}\label{fig:curve-msmarco10m}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+  \cvpanel{msmarco100m}{4}{f.1}\hfill\cvpanel{msmarco100m}{6}{f.2}\hfill\cvpanel{msmarco100m}{8}{f.3}
+  \caption{MSMARCO100M}\label{fig:curve-msmarco100m}
+\end{subfigure}
+\caption{Recall@10 vs.\ throughput on 4, 6 and 8 nodes (16~threads per node, $k{=}10$;
+10{,}000 queries on DEEP and TTI, 9{,}376 on MSMARCO; QPS on a logarithmic scale). Each
+curve is the Pareto front of a system, i.e.\ its fastest configuration for each recall
+level; dashed vertical lines mark the recall targets (0.80, 0.90, 0.95, 0.99; also 0.70 on
+TTI10M; 0.80, 0.90, 0.92 on TTI100M with 8 nodes, d.3). On TTI10M (c) DistributedANN$^*$
+reaches at most 0.76--0.77 and Harmony stays below 0.70 (0.40--0.56), so it does not appear;
+on TTI100M (d) both stay below 0.60 and are not shown. DistributedANN$^*$ and Harmony are
+not evaluated on MSMARCO (e, f); on MSMARCO100M (f) only CoTra builds its index
+(Table~\ref{tab:memory_indexing}). DistributedANN$^*$ saturates at recall 0.93 on DEEP100M (b),
+CoTra at 0.97 on MSMARCO, and GP-ANN$^*$ at 0.979 and 0.982 on TTI10M with 4 and 6 nodes
+(c.1, c.2). The same operating points are used for the load and communication analysis
+(Section~\ref{sec:load-comm}).}
+\label{fig:curves}
+\end{figure*}

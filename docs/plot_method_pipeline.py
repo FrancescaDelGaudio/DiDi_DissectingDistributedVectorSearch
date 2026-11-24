@@ -142,15 +142,12 @@ def main():
     bar(ax, bx, bby, [(widths[0], WAIT, None, "Waiting"), (widths[1], PROTO, None, "Protocol"),
                       (widths[2], TRANSFER, None, "Transfer")], fs=6.6)
     xs = [bx, bx + widths[0], bx + widths[0] + widths[1], bx + sum(widths)]
-    for (a, b), who in zip(zip(xs, xs[1:]), ["load balancing", "protocol design", "transport"]):
-        ax.text((a + b) / 2, bby + BAR_H + 0.4, who, ha="center", va="bottom", fontsize=6.2, color=INK_2,
-                style="italic")
     ax.add_patch(Rectangle((xs[3] - 0.8, bby), 0.8, BAR_H, facecolor="none", edgecolor=INK, linewidth=0.9,
                            linestyle=(0, (2, 1.2))))
     rows = [(WAIT, "Waiting", "$= C_{real} - C_{replay}$"),
             (PROTO, "Protocol", "$= C_{replay} - T_{MPI}$"),
             (TRANSFER, "Transfer", "$= T_{MPI}$"),
-            (None, "RDMA gain", "$= T_{MPI} - T_{RDMA}$")]
+            (None, "RDMA gain\non transfer", "$= T_{MPI} - T_{RDMA}$")]
     ry = 14.6
     for colour, name, formula in rows:
         if colour is None:
@@ -158,11 +155,9 @@ def main():
                                    linestyle=(0, (2, 1.2))))
         else:
             ax.add_patch(Rectangle((bx, ry - 0.9), 1.8, 1.8, facecolor=colour, edgecolor="none"))
-        ax.text(bx + 2.6, ry, name, ha="left", va="center", fontsize=TEXT_FS, color=INK)
+        ax.text(bx + 2.6, ry, name, ha="left", va="center", fontsize=TEXT_FS, color=INK, linespacing=1.0)
         ax.text(bx + 11.4, ry, formula, ha="left", va="center", fontsize=MATH_FS, color=INK)
         ry -= 3.2
-    ax.text(bx, 1.9, "shares capped by $T$ \u2212 busiest rank's work", ha="left", va="center",
-            fontsize=6.6, color=INK_2)
 
     for i in range(3):
         arrow(ax, xb[i] + wb[i] + 0.15, y0 + h / 2, xb[i + 1] - 0.15, y0 + h / 2)

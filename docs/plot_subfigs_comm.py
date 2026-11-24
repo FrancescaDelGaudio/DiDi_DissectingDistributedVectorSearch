@@ -43,7 +43,7 @@ A_CATS = {  # label, colour, hatch
 }
 B_CATS = {  # zoom: one bar per component (log axis), in this order inside each recall group
     "transfer": ("Transfer (MPI)", "#7a7974", None),
-    "rdma":     ("RDMA gain",      "#c4c3bf", "////"),
+    "rdma":     ("RDMA gain on transfer", "#c4c3bf", "////"),
     "protocol": ("Protocol",       "#eda100", None),
     "waiting":  ("Waiting",        "#6250d6", None),
     "extra":    ("Other (exchanges slower in the real run)", "#e2e1dd", None),
@@ -53,7 +53,7 @@ RDMA_GAIN = {
     "GP-ANN*":         {"0.80": 0.00545, "0.90": 0.00542, "0.95": 0.00555, "0.99": 0.00224},
     "Harmony":         {"0.80*": 0.00647, "0.90": 0.00560, "0.95": 0.00109, "0.99": 0.00107},
     "DistributedANN*": {"0.80": 0.110, "0.90": 0.120, "0.93*": 0.193},
-    "Pyramid*":        {"0.80": 0.0781, "0.90": 0.0456, "0.95": 0.0271, "0.99": 0.0090},  # job 6977296
+    "Pyramid*":        {"0.80": 1.1146, "0.90": 0.8613, "0.95": 0.5544, "0.99": 0.2096},  # job 7017380
 }
 ZOOM_LOG = (1e-4, 100.0)
 # DistributedANN*: "other" of plot_breakdown6 = extra (exchange time not reproduced by the replay)
@@ -61,23 +61,24 @@ ZOOM_LOG = (1e-4, 100.0)
 DA_SPLIT = {"0.80": (10.18, 11.85), "0.90": (8.97, 19.33), "0.93*": (10.61, 18.16)}
 SLUG = {"GP-ANN*": "gpann", "Harmony": "harmony", "DistributedANN*": "dann", "CoTra": "cotra",
         "Pyramid*": "pyramid"}
-# Pyramid* (job 6977296, K:ef = 3:50 / 10:100 / 20:200 / 100:800, medians of 5 real runs).
-# Average shard, % of the receiver wall time W. Routing = time the sender waits for routed queries,
-# capped at the time the shards are starved (as in the v2 sweep 6963795: 0.54 / 0.22 / 0.11 / 3.3 %),
-# since routing delays the pipeline only then; search = search utilisation x window (plot_breakdown.py);
-# merge = 0 (on the receiver); communication = the rest.
+# Pyramid* (job 7017380: corrected launch, rankfile slot ranges = 16 real cores per process; the earlier
+# job 6977296 pinned every process to one core). K:ef = 3:50 / 10:100 / 20:200 / 100:800, medians of 5 real
+# runs; collect_pyramid_breakdown_fixed.py. Average shard, % of the receiver wall time W. Routing = time the
+# sender waits for routed queries, at most the shards' idle time (routing delays the pipeline only then);
+# search = search utilisation x window; merge = 0 (on the receiver); communication = the rest.
 PYRAMID_A = [  # (target, QPS, routing, search)
-    ("0.80", 13732, 0.54, 8.77), ("0.90", 6668, 0.22, 26.95), ("0.95", 3585, 0.11, 43.61), ("0.99", 723, 3.3, 63.52),
+    ("0.80", 56811, 0.33, 35.93), ("0.90", 33215, 0.16, 42.98), ("0.95", 18256, 0.12, 48.06), ("0.99", 3833, 1.10, 52.92),
 ]
-# Communication split (job 6977296, % of W): transfer = T_MPI of the transfer-only replay; protocol =
+# Communication split (job 7017380, % of W): transfer = T_MPI of the transfer-only replay; protocol =
 # C_replay - T_MPI with C_replay = time the sender spends in MPI_Send in the PYR_COMM_ONLY runs (median
 # of 3; the sender's wait for routed queries is routing, not communication); waiting = the rest of the
-# communication. protocol + transfer stay below T - slowest shard (75.4 / 43.0 / 22.3 / 4.4 %): no cap.
+# communication. No cap (removed from the method for every system): protocol + transfer exceed
+# T - slowest shard (47.3 / 28.8 / 16.1 / 3.3 %), so the protocol share is an upper bound.
 PYRAMID_B = {
-    "0.80": {"transfer": 0.8375, "protocol": 45.02, "waiting": 44.82},
-    "0.90": {"transfer": 0.5516, "protocol": 34.52, "waiting": 37.75},
-    "0.95": {"transfer": 0.3545, "protocol": 18.00, "waiting": 37.93},
-    "0.99": {"transfer": 0.1166, "protocol": 3.86,  "waiting": 29.20},
+    "0.80": {"transfer": 4.433, "protocol": 48.80, "waiting": 10.51},
+    "0.90": {"transfer": 3.460, "protocol": 28.91, "waiting": 24.49},
+    "0.95": {"transfer": 2.288, "protocol": 16.62, "waiting": 32.92},
+    "0.99": {"transfer": 0.794, "protocol": 3.45,  "waiting": 41.73},
 }
 
 plt.rcParams.update({

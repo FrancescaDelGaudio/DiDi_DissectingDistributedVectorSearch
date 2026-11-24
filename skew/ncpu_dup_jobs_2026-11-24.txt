@@ -1,0 +1,21 @@
+# duplicate skew jobs on ncpu, logs in /gpfs/scratch/delgaudio/skew/runs/full_ncpu, submitted 2026-11-24T10:55:00+01:00 (ncpum originals: 7015787-93, 7017382-88)
+== uniform_rep2 (logs /gpfs/scratch/delgaudio/skew/runs/full_ncpu/uniform_rep2)
+  GP-ANN*   : 7026466
+  CoTra     : 7026467
+  DA* low : 7026468
+  DA* mid : 7026469
+  DA* high : 7026470
+== r1a_p25 (logs /gpfs/scratch/delgaudio/skew/runs/full_ncpu/r1a_p25)
+  Pyramid*  : 7026471
+== r1a_p50 (logs /gpfs/scratch/delgaudio/skew/runs/full_ncpu/r1a_p50)
+  Pyramid*  : 7026472
+== r1a_p75 (logs /gpfs/scratch/delgaudio/skew/runs/full_ncpu/r1a_p75)
+  Pyramid*  : 7026473
+== r1a_p90 (logs /gpfs/scratch/delgaudio/skew/runs/full_ncpu/r1a_p90)
+  Pyramid*  : 7026474
+== r1a_p100 (logs /gpfs/scratch/delgaudio/skew/runs/full_ncpu/r1a_p100)
+  Pyramid*  : 7026475
+== uniform_rep1 (logs /gpfs/scratch/delgaudio/skew/runs/full_ncpu/uniform_rep1)
+  Pyramid*  : 7026476
+== uniform_rep2 (logs /gpfs/scratch/delgaudio/skew/runs/full_ncpu/uniform_rep2)
+  Pyramid*  : 7026477

@@ -1,0 +1,52 @@
+% Load-imbalance and communication panels (plot_load_comm_panels5.py, data load_comm_all.csv), same
+% 3 x 5 layout as fig_curves_panels5.tex: one column per dataset, 4/6/8 nodes from top to bottom,
+% one subfigure per panel lettered column by column.
+% Requires: graphicx, subcaption, and in the PREAMBLE: \DeclareCaptionLabelFormat{rparen}{#2)}
+% Images in figures_new/msmarco_new/ (load5_* / comm5_*); legends: figures_new/legend_load.pdf, legend_comm.pdf.
+% \ref{fig:load-deep10m-6n} -> b
+\newcommand{\lcpanel}[4]{% kind (load/comm), dataset key, nodes, dataset name
+  \begin{subfigure}[t]{\linewidth}\centering
+    \includegraphics[width=\linewidth]{figures_new/msmarco_new/#15_#2_#3n}
+    \caption{#4, #3 nodes}\label{fig:#1-#2-#3n}
+  \end{subfigure}}
+\newcommand{\lccolumn}[3]{% kind, dataset key, dataset name
+  \begin{minipage}[t]{0.198\textwidth}\centering
+    \lcpanel{#1}{#2}{4}{#3}\\[3pt]
+    \lcpanel{#1}{#2}{6}{#3}\\[3pt]
+    \lcpanel{#1}{#2}{8}{#3}
+  \end{minipage}}
+\newcommand{\lcgrid}[1]{%
+  \lccolumn{#1}{deep10m}{DEEP10M}\hfill
+  \lccolumn{#1}{deep100m}{DEEP100M}\hfill
+  \lccolumn{#1}{tti10m}{TTI10M}\hfill
+  \lccolumn{#1}{tti100m}{TTI100M}\hfill
+  \lccolumn{#1}{msmarco10m}{MSMARCO10M}}
+
+\begin{figure*}[t]
+\centering
+\captionsetup[subfigure]{labelformat=rparen, labelsep=space, font=small, labelfont=bf, textfont=bf, skip=1pt, justification=centering}
+\includegraphics[width=0.8\textwidth]{figures_new/legend_load.pdf}\\[1pt]
+\lcgrid{load}
+\caption{Load imbalance at each recall@10 target on 4, 6 and 8 nodes: extra work on the busiest node,
+$(L_{\max}/\bar{L}-1)\times 100$, at the operating points of Figure~\ref{fig:curves} (fastest
+configuration reaching the target). Per-node work: searches per rank (GP-ANN$^*$), search tasks per
+shard (Pyramid$^*$), compared vectors per team (Harmony), core participations (CoTra), shard scoring
+time (DistributedANN$^*$). GP-ANN$^*$ has no bar (0\%) when it probes every shard. n/r: target not
+reached. Harmony is not shown on TTI (recall below 0.70), DistributedANN$^*$ not on TTI100M; neither is
+evaluated on MSMARCO10M (m--o).}
+\label{fig:load}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\captionsetup[subfigure]{labelformat=rparen, labelsep=space, font=small, labelfont=bf, textfont=bf, skip=1pt, justification=centering}
+\includegraphics[width=0.8\textwidth]{figures_new/legend_comm.pdf}\\[1pt]
+\lcgrid{comm}
+\caption{Communication volume per query (payload bytes, log scale) at each recall@10 target on 4, 6
+and 8 nodes, at the operating points of Figure~\ref{fig:curves}. GP-ANN$^*$: remote requests and
+responses; Pyramid$^*$: task and result messages; CoTra: RDMA bytes written and read;
+DistributedANN$^*$: measured remote request and response bytes; Harmony: estimated from the
+compared-vector counts. n/r: target not reached. Harmony is not shown on TTI (recall below 0.70),
+DistributedANN$^*$ not on TTI100M; neither is evaluated on MSMARCO10M (m--o).}
+\label{fig:comm}
+\end{figure*}

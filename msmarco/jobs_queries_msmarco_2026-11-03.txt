@@ -1,0 +1,38 @@
+CoTra MSMARCO10M  4p     : 6995967
+CoTra MSMARCO10M  4p hi  : 6995968
+CoTra MSMARCO100M 4p     : 6995969
+CoTra MSMARCO100M 4p hi  : 6995970
+CoTra MSMARCO10M  6p     : 6995971
+CoTra MSMARCO10M  6p hi  : 6995972
+CoTra MSMARCO100M 6p     : 6995973
+CoTra MSMARCO100M 6p hi  : 6995974
+CoTra MSMARCO10M  8p     : 6995975
+CoTra MSMARCO10M  8p hi  : 6995976
+CoTra MSMARCO100M 8p     : 6995977
+CoTra MSMARCO100M 8p hi  : 6995978
+GP MSMARCO10M k=4        : 6995979
+GP MSMARCO10M k=6        : 6995980
+GP MSMARCO10M k=8        : 6995981
+Pyramid MSMARCO10M 4n    : 6995982
+Pyramid MSMARCO10M 6n    : 6995983
+Pyramid MSMARCO10M 8n    : 6995984
+Harmony MSMARCO10M 4n    : 6995985
+Harmony MSMARCO10M 6n    : 6995986
+Harmony MSMARCO10M 8n    : 6995987
+DA MSMARCO10M W=4 a      : 6995988
+DA MSMARCO10M W=4 b      : 6995989
+DA MSMARCO100M W=4 a     : 6995990
+DA MSMARCO100M W=4 b     : 6995991
+DA MSMARCO10M W=6 a      : 6995992
+DA MSMARCO10M W=6 b      : 6995993
+DA MSMARCO100M W=6 a     : 6995994
+DA MSMARCO100M W=6 b     : 6995995
+DA MSMARCO10M W=8 a      : 6995996
+DA MSMARCO10M W=8 b      : 6995997
+DA MSMARCO100M W=8 a     : 6995998
+DA MSMARCO100M W=8 b     : 6995999
+Logs: /gpfs/scratch/delgaudio/vectors/MSMARCOWebSearch/curve_parallel/logs /gpfs/users/delgaudio/exp_eval/CoTra/script_slurm/logs /gpfs/scratch/delgaudio/dhnsw/logs/sweep_v2 /gpfs/scratch/delgaudio/dann/logs/scaling_queries /gpfs/users/delgaudio/exp_eval/Harmony/slurm_script/log
+Harmony MSMARCO10M 4n    : 6996010
+Harmony MSMARCO10M 6n    : 6996011
+Harmony MSMARCO10M 8n    : 6996012
+Logs: /gpfs/scratch/delgaudio/vectors/MSMARCOWebSearch/curve_parallel/logs /gpfs/users/delgaudio/exp_eval/CoTra/script_slurm/logs /gpfs/scratch/delgaudio/dhnsw/logs/sweep_v2 /gpfs/scratch/delgaudio/dann/logs/scaling_queries /gpfs/users/delgaudio/exp_eval/Harmony/slurm_script/log

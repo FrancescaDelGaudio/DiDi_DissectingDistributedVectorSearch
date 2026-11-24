@@ -1,0 +1,21 @@
+% Peak memory of index construction, from Slurm MaxRSS (GiB) of the indexing jobs.
+% Each cell: maximum over all indexing phases and all node counts (4/6/8) of that system.
+% DA MSMARCO 100M: W=4 146 GiB; W=6 98, W=8 74 (resume jobs 6994586/7). GP QA MSMARCO 10M: k4 95, k6 94, k8 70.
+% Requires: amssymb, multirow. table* spans both columns of a two-column layout.
+\begin{table*}[t]
+\centering
+\caption{Peak memory per node (GiB) required by index construction, that is, the value of the most memory-demanding configuration among those described in Section~\ref{sec:indexConstruction}. $\times$: the build went out of memory on our largest nodes (493\,GiB, with a job limit of 480\,GiB for Pyramid* and Harmony), so the peak could not be measured.}
+\label{tab:memory_indexing}
+\begin{tabular}{||l|cccccc||}
+    \hline
+    \multirow{2}{*}{System} & DEEP10M & DEEP100M & TTI10M & TTI100M & MSMARCO10M & MSMARCO100M \\
+     & 3.6\,GiB & 36\,GiB & 7.5\,GiB & 75\,GiB & 29\,GiB & 286\,GiB \\
+    \hline
+    GP-ANN* & 17 \checkmark & 154 \checkmark & 27 \checkmark & 225 \checkmark & 95 \checkmark & $\times$ \\
+    Pyramid* & 6 \checkmark & 56 \checkmark & 15 \checkmark & 154 \checkmark & 58 \checkmark & $\times$ \\
+    Harmony & 4 \checkmark & 75 \checkmark & 17 \checkmark & 152 \checkmark & 58 \checkmark & $\times$ \\
+    CoTra & 11 \checkmark & 49 \checkmark & 14 \checkmark & 80 \checkmark & 42 \checkmark & 315 \checkmark \\
+    DistributedANN* & 4 \checkmark & 42 \checkmark & 4 \checkmark & 41 \checkmark & 15 \checkmark & 146 \checkmark \\
+    \hline
+\end{tabular}
+\end{table*}

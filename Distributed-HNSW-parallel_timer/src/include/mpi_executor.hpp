@@ -26,6 +26,15 @@
 #include <mutex>
 #include <thread>
 
+// PYR_RDMA: the point-to-point calls of the query phase (PYR_Send / PYR_Recv / PYR_Iprobe) go through native
+// RDMA (pyr_rdma.h); without it they are the MPI functions, as before.
+#ifdef PYR_RDMA
+#include "pyr_rdma.h"
+#else
+#define PYR_Send MPI_Send
+#define PYR_Recv MPI_Recv
+#define PYR_Iprobe MPI_Iprobe
+#endif
 #include <boost/program_options/options_description.hpp>
 #include <boost/program_options.hpp>
 #include <boost/program_options/option.hpp>
@@ -139,16 +148,16 @@ namespace mt {
 		ping.index = PROF_PING_INDEX;
 		result_message pong;
 		for (int i = 0; i < SIZEWORKER; i++){
-			MPI_Send((void*) &ping, sizeof(task_message), MPI_BYTE, i, TASK_TAG, MPI_COMM_WORLD);
-			MPI_Recv((void*) &pong, sizeof(result_message), MPI_BYTE, i, PROF_PING_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+			PYR_Send((void*) &ping, sizeof(task_message), MPI_BYTE, i, TASK_TAG, MPI_COMM_WORLD);
+			PYR_Recv((void*) &pong, sizeof(result_message), MPI_BYTE, i, PROF_PING_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 		}
 		for (int i = 0; i < SIZEWORKER; i++){
 			vector<double> rtt_us(PROF_PING_ITERS);
 			double sum = 0;
 			for (int it = 0; it < PROF_PING_ITERS; it++){
 				const prof_clock::time_point t0 = prof_clock::now();
-				MPI_Send((void*) &ping, sizeof(task_message), MPI_BYTE, i, TASK_TAG, MPI_COMM_WORLD);
-				MPI_Recv((void*) &pong, sizeof(result_message), MPI_BYTE, i, PROF_PING_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+				PYR_Send((void*) &ping, sizeof(task_message), MPI_BYTE, i, TASK_TAG, MPI_COMM_WORLD);
+				PYR_Recv((void*) &pong, sizeof(result_message), MPI_BYTE, i, PROF_PING_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 				rtt_us[it] = profSeconds(t0, prof_clock::now()) * 1e6;
 				sum += rtt_us[it];
 			}
@@ -166,7 +175,7 @@ namespace mt {
 		task_message shutdown;
 		shutdown.index = -1;
 		for (int i = 0; i < SIZEWORKER; i++)
-			MPI_Send((void*) &shutdown, sizeof(task_message), MPI_BYTE, i, TASK_TAG, MPI_COMM_WORLD);
+			PYR_Send((void*) &shutdown, sizeof(task_message), MPI_BYTE, i, TASK_TAG, MPI_COMM_WORLD);
 	}
 
 	void printQueryResults(const Bencher& truth, const Bencher& got){
@@ -187,7 +196,7 @@ namespace mt {
 	}
 
 	void receiveResultMessage(void* buffer, int msg_len){
-		MPI_Recv(buffer, msg_len, MPI_BYTE, MPI_ANY_SOURCE, MPI_ANY_TAG,
+		PYR_Recv(buffer, msg_len, MPI_BYTE, MPI_ANY_SOURCE, MPI_ANY_TAG,
 		MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 	}
 
@@ -263,6 +272,9 @@ namespace mt {
 			cout << "#[error ] wrong number process initialled" << endl;
 			MPI_Abort(MPI_COMM_WORLD, 0);
 		}
+#ifdef PYR_RDMA
+		gp_rdma::init(MPI_COMM_WORLD);   // queue pairs and rings set up once, before any timed phase
+#endif
 
 		if (world_rank == world_size - 2) {
 		    void* v;
@@ -368,7 +380,7 @@ namespace mt {
 							sender->_waker.countWake(r.dest);
 							total_wakeup += r.tm.num_wake_up;
 							for (size_t d = 0; d < r.dest.size(); d++)
-								MPI_Send((void*) &r.tm, sizeof(task_message), MPI_BYTE, r.dest[d], TASK_TAG, MPI_COMM_WORLD);
+								PYR_Send((void*) &r.tm, sizeof(task_message), MPI_BYTE, r.dest[d], TASK_TAG, MPI_COMM_WORLD);
 							if (dump_dest && *dump_dest)
 								sent_dest.insert(sent_dest.end(), r.dest.begin(), r.dest.end());
 							sent++;
@@ -509,7 +521,7 @@ namespace mt {
 							return 0;
 						const prof_clock::time_point s0 = prof_clock::now();
 						for (size_t i = 0; i < out.size(); i++)
-							MPI_Send((void*) &out[i], sizeof(result_message), MPI_BYTE, world_size - 1, RESULT_TAG, MPI_COMM_WORLD);
+							PYR_Send((void*) &out[i], sizeof(result_message), MPI_BYTE, world_size - 1, RESULT_TAG, MPI_COMM_WORLD);
 						prof_last = prof_clock::now();
 						prof_send_s += profSeconds(s0, prof_last);
 						const size_t n = out.size();
@@ -530,12 +542,12 @@ namespace mt {
 						bool did = false;
 						for (int m = 0; m < 256 && !done; m++) {
 							int flag = 0;
-							MPI_Iprobe(sender_rank, TASK_TAG, MPI_COMM_WORLD, &flag, MPI_STATUS_IGNORE);
+							PYR_Iprobe(sender_rank, TASK_TAG, MPI_COMM_WORLD, &flag, MPI_STATUS_IGNORE);
 							if (!flag)
 								break;
 							task_message tm;
 							const prof_clock::time_point r0 = prof_clock::now();
-							MPI_Recv((void*) &tm, sizeof(task_message), MPI_BYTE, sender_rank, TASK_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+							PYR_Recv((void*) &tm, sizeof(task_message), MPI_BYTE, sender_rank, TASK_TAG, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 							const prof_clock::time_point r1 = prof_clock::now();
 							prof_recv_s += profSeconds(r0, r1);
 							did = true;
@@ -545,7 +557,7 @@ namespace mt {
 									result_message pong;
 									memset(&pong, 0, sizeof(pong));
 									pong.query_id = PROF_PING_INDEX;
-									MPI_Send((void*) &pong, sizeof(result_message), MPI_BYTE, sender_rank, PROF_PING_TAG, MPI_COMM_WORLD);
+									PYR_Send((void*) &pong, sizeof(result_message), MPI_BYTE, sender_rank, PROF_PING_TAG, MPI_COMM_WORLD);
 								} else {
 									done = true;
 								}
@@ -631,6 +643,9 @@ namespace mt {
 			delete slave;
 		}
 		MPI_Barrier(MPI_COMM_WORLD);
+#ifdef PYR_RDMA
+		gp_rdma::finalize();
+#endif
 		MPI_Finalize();
 	}
 

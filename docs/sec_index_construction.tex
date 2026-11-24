@@ -1,0 +1,49 @@
+\subsection{Index Construction and Throughput}
+\label{sec:indexConstruction}
+We build one index per system for each dataset (DEEP, TTI and MSMARCO, with 10M
+and 100M vectors) and each cluster size (4, 6 and 8 nodes), with the
+parameters of the original papers: GP-ANN$^{*}$ partitions the data into as
+many shards as nodes with overlap 0.2, Pyramid$^{*}$ builds a meta-HNSW over
+10K centroids and one sub-HNSW per node, CoTra builds one partition per node,
+DistributedANN$^{*}$ uses 32 (10M) and 256 (100M) clusters, and Harmony builds a
+single IVF index with 4096 (10M) and 10000 (100M) lists, which is the same for
+every cluster size. Table~\ref{tab:memory_indexing} reports the peak memory per
+node of each construction, and Figure~\ref{fig:build_time} its time.
+
+\textbf{Memory.} On 10M and 100M vectors of DEEP and TTI every system fits in
+our nodes, but on MSMARCO100M (286\,GiB of 768-dimensional vectors) only CoTra
+and DistributedANN$^{*}$ complete the construction. GP-ANN$^{*}$, Pyramid$^{*}$
+and Harmony run out of memory even on our largest nodes (493\,GiB), because a
+phase of their construction runs on a single node and needs a second copy of the
+vectors besides the dataset itself (for the routing index of GP-ANN$^{*}$, the
+inner-product transformation of Pyramid$^{*}$ and the IVF lists of Harmony),
+which exceeds the memory of a node. For Pyramid$^{*}$ on MSMARCO, the graph of centroids given to the KaHIP
+partitioner is made undirected first, since KaHIP requires it and the directed
+HNSW graph makes it fail.
+
+\textbf{Time.} Harmony is by far the fastest to build, from 1~minute (DEEP10M) to
+23~minutes (TTI100M), since an IVF index only requires training the centroids and
+assigning the vectors to them. On 10M vectors of DEEP and TTI, GP-ANN$^{*}$, CoTra
+and DistributedANN$^{*}$ take between 10 and 40~minutes, while on 100M vectors
+they take 2--4~hours (GP-ANN$^{*}$, CoTra) and 3--8~hours
+(DistributedANN$^{*}$). The higher dimensionality of MSMARCO makes construction
+3--7$\times$ slower than on TTI with the same number of vectors for GP-ANN$^{*}$,
+CoTra and DistributedANN$^{*}$, and
+MSMARCO100M takes 14--19~hours with CoTra and 17--33~hours with
+DistributedANN$^{*}$. Pyramid$^{*}$ shows the widest variation: a few minutes on
+TTI10M, but hours on DEEP10M and about two days on DEEP100M, where almost all
+the time is spent in the hierarchical balanced k-means of the original code.
+
+\textbf{Scalability.} Adding nodes shortens the construction only for the systems
+whose construction is fully distributed: going from 4 to 8~nodes reduces the
+time of CoTra and DistributedANN$^{*}$ by 24--55\% across all datasets. For the
+other systems, the dominant phase runs on a single node and does not benefit from
+more nodes. Harmony builds the same index regardless of the cluster size.
+GP-ANN$^{*}$ spends 80--95\% of its time in the single-node partitioning and
+QueryAttribution (routing index and routing tables), so only the construction of
+the shards is distributed and its total time stays almost constant (on TTI10M it
+even grows from 35 to 40~minutes). For
+Pyramid$^{*}$, the k-means and the partitioning of the centroids run on a single
+node and dominate the total, so the construction time does not decrease
+consistently with the number of nodes; it does so only on MSMARCO10M, where it
+drops from 1.8 to 1.0~hours.

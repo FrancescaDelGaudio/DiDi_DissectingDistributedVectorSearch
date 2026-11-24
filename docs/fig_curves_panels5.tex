@@ -1,0 +1,38 @@
+% Recall/QPS panels (plot_curves_panels6.py --five): 3 x 5 grid, one column per dataset (4/6/8 nodes from
+% top to bottom), one subfigure per panel, lettered column by column: a-c DEEP10M, d-f DEEP100M, ...
+% MSMARCO100M (CoTra only) not shown.
+% Requires: graphicx, subcaption, and in the PREAMBLE: \DeclareCaptionLabelFormat{rparen}{#2)}
+% Images in figures_new/msmarco_new/ (curve5_<dataset>_<n>n.pdf); legend: figures_new/legend_curves.pdf.
+% \ref{fig:curve-deep10m-6n} -> b
+\begin{figure*}[t]
+\centering
+\captionsetup[subfigure]{labelformat=rparen, labelsep=space, font=small, labelfont=bf, textfont=bf, skip=1pt, justification=centering}
+\newcommand{\cvpanel}[3]{% dataset key, nodes, dataset name
+  \begin{subfigure}[t]{\linewidth}\centering
+    \includegraphics[width=\linewidth]{figures_new/msmarco_new/curve5_#1_#2n}
+    \caption{#3, #2 nodes}\label{fig:curve-#1-#2n}
+  \end{subfigure}}
+\newcommand{\cvcolumn}[2]{% dataset key, dataset name
+  \begin{minipage}[t]{0.198\textwidth}\centering
+    \cvpanel{#1}{4}{#2}\\[3pt]
+    \cvpanel{#1}{6}{#2}\\[3pt]
+    \cvpanel{#1}{8}{#2}
+  \end{minipage}}
+\includegraphics[width=0.8\textwidth]{figures_new/legend_curves.pdf}\\[1pt]
+\cvcolumn{deep10m}{DEEP10M}\hfill
+\cvcolumn{deep100m}{DEEP100M}\hfill
+\cvcolumn{tti10m}{TTI10M}\hfill
+\cvcolumn{tti100m}{TTI100M}\hfill
+\cvcolumn{msmarco10m}{MSMARCO10M}
+\caption{Recall@10 vs.\ throughput on 4, 6 and 8 nodes (16~threads per node, $k{=}10$;
+10{,}000 queries on DEEP and TTI, 9{,}376 on MSMARCO; QPS on a logarithmic scale). Each
+curve is the Pareto front of a system, i.e.\ its fastest configuration for each recall
+level; dashed vertical lines mark the recall targets (0.80, 0.90, 0.95, 0.99; also 0.70 on
+TTI10M; 0.80, 0.90, 0.92 on TTI100M with 8 nodes, l). On TTI10M (g--i) DistributedANN$^*$
+reaches at most 0.76--0.77 and Harmony stays below 0.70 (0.40--0.56), so it does not appear;
+on TTI100M (j--l) both stay below 0.60 and are not shown. DistributedANN$^*$ and Harmony are
+not evaluated on MSMARCO (m--o). DistributedANN$^*$ saturates at recall 0.93 on DEEP100M (d--f),
+CoTra at 0.97 on MSMARCO10M (m--o), and GP-ANN$^*$ at 0.979 and 0.982 on TTI10M with 4 and 6
+nodes (g, h).}
+\label{fig:curves}
+\end{figure*}

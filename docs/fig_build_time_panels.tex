@@ -1,0 +1,47 @@
+% Build-time panels (plot_build_time_panels.py): one row = two datasets x {4,6,8} nodes.
+% Requires: graphicx, subcaption, and in the PREAMBLE (after \usepackage{subcaption}):
+%   \DeclareCaptionLabelFormat{rparen}{#2)}
+% \ref{fig:build_time_DEEP10M_6n} -> a.2 (e.g. Figure~\ref{fig:build_time}~\ref{fig:build_time_DEEP10M_6n})
+% Images in figures_new/msmarco_new/ (build_time_<DATASET>_<n>n.pdf).
+\begin{figure*}[t]
+\centering
+\captionsetup[subfigure]{labelformat=rparen, labelsep=space, font=small, labelfont=bf, textfont=bf, skip=1pt, justification=centering}
+\makeatletter
+\newcommand{\btpanel}[3]{%
+  \begin{minipage}[t]{0.33\linewidth}\centering
+    \includegraphics[width=\linewidth]{figures_new/msmarco_new/build_time_#1_#2n}\\[-1pt]
+    {\small\bfseries #3) #2 nodes}%
+    \csname phantomsection\endcsname\protected@edef\@currentlabel{#3}\label{fig:build_time_#1_#2n}%
+  \end{minipage}}
+\makeatother
+\includegraphics[width=0.8\textwidth]{figures_new/msmarco_new/legend_build_time_panels}\\[1pt]
+% ---------------------------------------------------------------- DEEP
+\begin{subfigure}[t]{0.495\textwidth}
+  \btpanel{DEEP10M}{4}{a.1}\hfill\btpanel{DEEP10M}{6}{a.2}\hfill\btpanel{DEEP10M}{8}{a.3}
+  \caption{DEEP10M}\label{fig:build_time_deep10m}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+  \btpanel{DEEP100M}{4}{b.1}\hfill\btpanel{DEEP100M}{6}{b.2}\hfill\btpanel{DEEP100M}{8}{b.3}
+  \caption{DEEP100M}\label{fig:build_time_deep100m}
+\end{subfigure}\\[2pt]
+% ---------------------------------------------------------------- TTI
+\begin{subfigure}[t]{0.495\textwidth}
+  \btpanel{TTI10M}{4}{c.1}\hfill\btpanel{TTI10M}{6}{c.2}\hfill\btpanel{TTI10M}{8}{c.3}
+  \caption{TTI10M}\label{fig:build_time_tti10m}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+  \btpanel{TTI100M}{4}{d.1}\hfill\btpanel{TTI100M}{6}{d.2}\hfill\btpanel{TTI100M}{8}{d.3}
+  \caption{TTI100M}\label{fig:build_time_tti100m}
+\end{subfigure}\\[2pt]
+% ---------------------------------------------------------------- MSMARCO
+\begin{subfigure}[t]{0.495\textwidth}
+  \btpanel{MSMARCO10M}{4}{e.1}\hfill\btpanel{MSMARCO10M}{6}{e.2}\hfill\btpanel{MSMARCO10M}{8}{e.3}
+  \caption{MSMARCO10M}\label{fig:build_time_msmarco10m}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.495\textwidth}
+  \btpanel{MSMARCO100M}{4}{f.1}\hfill\btpanel{MSMARCO100M}{6}{f.2}\hfill\btpanel{MSMARCO100M}{8}{f.3}
+  \caption{MSMARCO100M}\label{fig:build_time_msmarco100m}
+\end{subfigure}
+\caption{Index construction time (log scale) on 4, 6 and 8 nodes. OOM: the index does not fit in the memory of our largest nodes (Table~\ref{tab:memory_indexing}).}
+\label{fig:build_time}
+\end{figure*}

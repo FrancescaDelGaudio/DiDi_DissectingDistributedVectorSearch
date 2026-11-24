@@ -54,6 +54,14 @@ endif()
 
 link_libraries(-lpthread)
 
+# PYR_RDMA=ON: query-phase point-to-point calls over native RDMA (src/include/pyr_rdma.h), links libibverbs.
+option(PYR_RDMA "Pyramid query phase over native RDMA instead of MPI" OFF)
+if(PYR_RDMA)
+	add_definitions(-DPYR_RDMA=1)
+	link_libraries(ibverbs)
+	message(STATUS "PYR_RDMA=ON: query-phase point-to-point over native RDMA")
+endif()
+
 if(BUILD_MPI_ONLY)
 	INCLUDE_DIRECTORIES(${DistributedHNSW_SOURCE_DIR}/src/include)
 else()

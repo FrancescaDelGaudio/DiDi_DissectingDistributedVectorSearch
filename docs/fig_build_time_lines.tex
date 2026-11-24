@@ -1,0 +1,36 @@
+% Build time vs number of nodes (plot_build_time_lines.py): six panels in one row, one per dataset.
+% Requires: graphicx, subcaption, and in the PREAMBLE (after \usepackage{subcaption}):
+%   \DeclareCaptionLabelFormat{rparen}{#2)}
+% Panel widths are proportional to the PDF sizes (DEEP10M is wider: it carries the y-axis title),
+% so every plot area is printed at the same size. Images in figures_new/msmarco_new/.
+\begin{figure*}[t]
+\centering
+\captionsetup[subfigure]{labelformat=rparen, labelsep=space, font=small, labelfont=bf, textfont=bf, skip=1pt, justification=centering}
+\includegraphics[width=0.8\textwidth]{figures_new/msmarco_new/legend_buildline}\\[1pt]
+\begin{subfigure}[t]{0.185\textwidth}
+  \includegraphics[width=\linewidth]{figures_new/msmarco_new/buildline_deep10m}
+  \caption{DEEP10M}\label{fig:build_time_deep10m}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.162\textwidth}
+  \includegraphics[width=\linewidth]{figures_new/msmarco_new/buildline_deep100m}
+  \caption{DEEP100M}\label{fig:build_time_deep100m}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.162\textwidth}
+  \includegraphics[width=\linewidth]{figures_new/msmarco_new/buildline_tti10m}
+  \caption{TTI10M}\label{fig:build_time_tti10m}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.162\textwidth}
+  \includegraphics[width=\linewidth]{figures_new/msmarco_new/buildline_tti100m}
+  \caption{TTI100M}\label{fig:build_time_tti100m}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.162\textwidth}
+  \includegraphics[width=\linewidth]{figures_new/msmarco_new/buildline_msmarco10m}
+  \caption{MSMARCO10M}\label{fig:build_time_msmarco10m}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.162\textwidth}
+  \includegraphics[width=\linewidth]{figures_new/msmarco_new/buildline_msmarco100m}
+  \caption{MSMARCO100M}\label{fig:build_time_msmarco100m}
+\end{subfigure}
+\caption{Index construction time (log scale) on 4, 6 and 8 nodes. On MSMARCO100M the indexes of GP-ANN$^*$, Pyramid$^*$ and Harmony do not fit in the memory of our largest nodes (Table~\ref{tab:memory_indexing}).}
+\label{fig:build_time}
+\end{figure*}

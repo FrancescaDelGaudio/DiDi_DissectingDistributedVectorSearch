@@ -58,6 +58,13 @@ target_link_libraries(DistributedBench PUBLIC OpenMP::OpenMP_CXX)
 set(DISTBENCH_SHARDS_PROBE 6 CACHE STRING "Max shards to probe per query in DistributedBench")
 target_compile_definitions(DistributedBench PRIVATE DISTBENCH_SHARDS_PROBE=${DISTBENCH_SHARDS_PROBE})
 
+# GP_RDMA: query-phase communication over native RDMA (src/rdma_transport.h) instead of MPI.
+OPTION(GP_RDMA "DistributedBench query phase over native RDMA (libibverbs)" OFF)
+if(GP_RDMA)
+	target_compile_definitions(DistributedBench PRIVATE GP_RDMA)
+	target_link_libraries(DistributedBench PUBLIC ibverbs)
+endif(GP_RDMA)
+
 OPTION(MIPS_DISTANCE "Use MIPS distance instead of L2" OFF)
 if(MIPS_DISTANCE)
 	foreach(target IN LISTS TARGETS)

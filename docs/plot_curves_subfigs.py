@@ -43,7 +43,7 @@ plt.rcParams.update({
 })
 
 
-def panel(name, setup, systems, targets, xr, pts):
+def panel(name, setup, systems, targets, xr, pts, ysubs=(1.0, 5.0)):
     fig, ax = plt.subplots(figsize=(W, H))
     for t in targets:
         ax.axvline(t, color="#7a7974", lw=0.7, ls=(0, (3, 2)), zorder=1)
@@ -56,7 +56,7 @@ def panel(name, setup, systems, targets, xr, pts):
         ax.plot([p[0] for p in front], [p[1] for p in front], color=st["color"], lw=1.1,
                 marker=st["marker"], ms=3.4, mec="white", mew=0.4, zorder=3)
     ax.set_yscale("log")
-    ax.yaxis.set_major_locator(LogLocator(base=10, subs=(1.0, 5.0)))
+    ax.yaxis.set_major_locator(LogLocator(base=10, subs=ysubs))
     ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v / 1000:g}k" if v >= 1000 else f"{v:g}"))
     ax.yaxis.set_minor_locator(LogLocator(base=10, subs=range(2, 10)))
     ax.yaxis.set_minor_formatter(NullFormatter())

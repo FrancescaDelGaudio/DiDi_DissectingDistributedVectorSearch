@@ -1,4 +1,9 @@
 #pragma once
+// GP_RDMA: the MPI calls of the query phase (message-queue and the statistics gathers) go through
+// native RDMA instead of MPI; nothing else changes (see rdma_transport.h). Must precede message-queue.
+#ifdef GP_RDMA
+#include "rdma_transport.h"
+#endif
 #include <cstdlib>
 #include <string>
 
@@ -683,6 +688,10 @@ public:
                 prof_search_calls / (double) std::max<size_t>(1, prof_search_batches),
                 prof_sec(prof_t0, prof_m1), route_work, prof_route_wall, prof_post_req, search_work, prof_search_wall,
                 prof_sec(prof_q0, prof_q1), prof_sec(prof_s0, prof_s1), prof_sec(prof_m0, prof_m1));
+            // GP_IN_WARMUP=1 (set by distributed_bench.cpp during the untimed warm-up pass): tag the line
+            // "#[wprof]" so that the analyses, which read "#[prof ]", only see the timed pass.
+            if (const char* w = std::getenv("GP_IN_WARMUP"); w && std::string(w) == "1")
+                std::memcpy(line, "#[wprof]", 8);
             std::fputs(line, stdout);
             if (const char* lb = std::getenv("GP_LOG_BYTES"); lb && std::string(lb) == "1") {
                 std::string b = "#[bytes] rank" + std::to_string(rank) + " req_to=";

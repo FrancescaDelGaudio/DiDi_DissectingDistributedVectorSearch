@@ -1,0 +1,106 @@
+#!/usr/bin/bash
+# ===========================================================================
+# Skewed-workload runs on DEEP100M, 8 nodes, reference system versions (non-RDMA GP-ANN* and
+# Pyramid*, batched DistributedANN*, CoTra, Harmony). Workloads from skewgen.py (wl/<name>/).
+#
+#   MODE=pilot : 2 configs per system (~0.90 and highest-recall point of the uniform curves).
+#
+# Usage: WORKLOADS="h1a_p100 h16_p100" ./submit_skew_runs.sh [--dry-run]
+# Logs:  /gpfs/scratch/delgaudio/skew/runs/<workload>/
+# ===========================================================================
+set -euo pipefail
+
+DRY_RUN=0
+[[ "${1:-}" == "--dry-run" ]] && DRY_RUN=1
+MODE="${MODE:-pilot}"
+WORKLOADS="${WORKLOADS:?WORKLOADS required, e.g. \"h1a_p100 h16_p100\"}"
+
+WL_ROOT="${WL_ROOT:-/gpfs/scratch/delgaudio/skew/workloads/wl}"
+RUN_ROOT=/gpfs/scratch/delgaudio/skew/runs
+DEEP=/gpfs/scratch/delgaudio/vectors/DEEP
+GP_ROOT=/gpfs/users/delgaudio/exp_eval/gp-ann-parallel_timer
+PYR_ROOT=/gpfs/users/delgaudio/exp_eval/Distributed-HNSW-parallel_timer
+DA_ROOT=/gpfs/users/delgaudio/exp_eval_da_batch/DistributedANN
+COTRA_ROOT=/gpfs/users/delgaudio/exp_eval/CoTra
+HMY_ROOT=/gpfs/users/delgaudio/exp_eval/Harmony
+
+case "$MODE" in
+  pilot)
+    GP_POINTS="3:50 4:400"                         # nprobe:ef
+    PYR_RUNS="10:100 100:800"                      # K:ef
+    HMY_TASKS="7,12"                               # k=10, nprobe 16 / 96 (harmony_array_task_map.sh)
+    COTRA_EFS="50,400"
+    DA_POINTS="128:20:1024 2048:20:8192"           # BW:H:L
+    ;;
+  *) echo "unknown MODE=$MODE" >&2; exit 1 ;;
+esac
+
+submit() {
+  if [[ "${DRY_RUN}" -eq 1 ]]; then
+    echo "[dry-run] sbatch $*" >&2
+    echo "DRYRUN"
+  else
+    sbatch --parsable "$@"
+  fi
+}
+
+for W in $WORKLOADS; do
+  WD="${WL_ROOT}/${W}"
+  [[ -f "${WD}/query.fbin" ]] || { echo "FATAL: missing workload ${WD}" >&2; exit 1; }
+  HMY_DS=$(cat "${WD}/harmony_dataset.txt")
+  LOG="${RUN_ROOT}/${W}"
+  if [[ "${DRY_RUN}" -eq 0 ]]; then
+    mkdir -p "${LOG}" "${WD}/pyramid"
+    ln -sfn "${DEEP}/base.100M.fvecs" "${WD}/pyramid/base.fvecs"
+    ln -sfn "${WD}/query.fvecs" "${WD}/pyramid/query.fvecs"
+  fi
+  echo "== ${W} (logs ${LOG})"
+
+  # ---- GP-ANN* (MPI, parallel_timer): one array task per (nprobe, ef)
+  CFG="${LOG}/gp_config.tsv"
+  if [[ "${DRY_RUN}" -eq 0 ]]; then
+    printf 'task_id\tjob_name\tnodes\toverlap\tnprobe\tef_search\trecall_k\tpartition_file\trouter_index\tbench\n' > "${CFG}"
+    i=0
+    for pt in $GP_POINTS; do
+      np=${pt%%:*}; ef=${pt##*:}
+      printf '%d\tskew_%s_np%s_ef%s\t8\t0.2\t%s\t%s\t10\t%s\t%s\t%s\n' "$i" "$W" "$np" "$ef" "$np" "$ef" \
+        "${DEEP}/base.100M.partition.k=8.GP.o=0.2" "${DEEP}/base.100M.partition.k=8.GP.o=0.2.routing_index" \
+        "${GP_ROOT}/build_np${np}/DistributedBench" >> "${CFG}"
+      i=$((i + 1))
+    done
+  fi
+  NGP=$(( $(echo $GP_POINTS | wc -w) - 1 ))
+  echo "  GP-ANN*   : $(submit -J "skew-gp-${W}" -p ncpum -N 8 -n 8 -t 01:00:00 --array="0-${NGP}" \
+      -o "${LOG}/gp_%A_%a.log" -e "${LOG}/gp_%A_%a.log" \
+      --export="ALL,CONFIG=${CFG},BASE_FBIN=${DEEP}/base.100M.fbin,QUERY_FBIN=${WD}/query.fbin,GT_BIN=${WD}/GT.bin" \
+      "${GP_ROOT}/sbatch_distbench_curve_array.sh")"
+
+  # ---- Pyramid* (MPI v2, build/bug_8_k10): one job, sequential (K, ef) runs
+  echo "  Pyramid*  : $(submit -J "skew-pyr-${W}" -p ncpum -N 8 -n 10 -t 01:00:00 \
+      -o "${LOG}/pyr_%j.log" -e "${LOG}/pyr_%j.log" \
+      --export="ALL,TAG=skew_${W},NUM_SUBHNSW=8,DHNSW=${PYR_ROOT}/build/bug_8_k10,DATA=${WD}/pyramid,OUT=${DEEP}/pyramid_100M/index_8shard_m10k,GT=${WD}/gt_k10.lshbox,DIM=96,RUNS=${PYR_RUNS},RUN_TIMEOUT=1800,SLURM_LOG_DIR=${LOG}" \
+      "${PYR_ROOT}/script/sbatch_sweep_v2.sh")"
+
+  # ---- Harmony (original, OMP 16): array tasks of harmony_array_task_map.sh
+  echo "  Harmony   : $(submit -J "skew-hmy-${W}" --array="${HMY_TASKS}" \
+      -o "${LOG}/hmy_%A_%a.out" -e "${LOG}/hmy_%A_%a.err" \
+      --export="ALL,HARMONY_DATASET=${HMY_DS}" \
+      "${HMY_ROOT}/slurm_script/sbatch_array_deep100m_8n.sh")"
+
+  # ---- CoTra (original, 8 partitions): one job, in-process ef list
+  # COTRA_EFS contains commas -> passed through the environment, not inside --export
+  echo "  CoTra     : $(COTRA_EFS="${COTRA_EFS}" submit -J "skew-cotra-${W}" -t 02:00:00 \
+      -o "${LOG}/cotra_%j.out" -e "${LOG}/cotra_%j.err" \
+      --export="ALL,COTRA_DATASET=deep,COTRA_RES_KNN=10,COTRA_QUERY_PATH=${WD}/query.fbin,COTRA_GT_PATH=${WD}/GT_cotra.bin" \
+      "${COTRA_ROOT}/script_slurm/scala_anns_8p.slurm")"
+
+  # ---- DistributedANN* (batched): one job per (BW, H, L)
+  for pt in $DA_POINTS; do
+    IFS=: read -r bw h l <<<"$pt"
+    echo "  DA* ${pt} : $(submit -J "skew-da-${W}-bw${bw}" -p ncpum -N 8 -n 8 --ntasks-per-node=1 \
+        --cpus-per-task=16 --exclusive -t 03:00:00 \
+        -o "${LOG}/da_bw${bw}_%j.log" -e "${LOG}/da_bw${bw}_%j.log" \
+        --export="ALL,THREADS_LIST=16,K_LIST=10,CHUNK_LIST=0,BW_LIST=${bw},H_LIST=${h},L_LIST=${l},INDEX_DIR=/gpfs/scratch/delgaudio/dann/index_deep100m_k256_w8,QUERY_PATH=${WD}/query.fbin,GT_PATH=${WD}/GT.bin" \
+        "${DA_ROOT}/script/query_batch_generic.sbatch")"
+  done
+done
